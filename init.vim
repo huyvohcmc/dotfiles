@@ -85,6 +85,9 @@ nmap <c-l> 4l
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeFind<CR>
 
+" Activate fzf search panel
+map ; :Files<CR>
+
 " Show hidden files
 let NERDTreeShowHidden = 1
 
