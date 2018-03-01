@@ -1,12 +1,16 @@
 " Neovim installation: https://github.com/neovim/neovim/wiki/Installing-Neovim
-" Maintainer: Huy Vo
-
 
 if (has("termguicolors"))
   set termguicolors
 endif
 
-syntax on
+if !has('gui_running')
+  set t_Co=256
+endif
+
+if !exists("g:syntax_on")
+  syntax enable
+endif
 
 let mapleader = ","
 let g:mapleader = ","
@@ -19,10 +23,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'w0rp/ale'
 Plug 'mhinz/vim-startify'
@@ -32,13 +36,16 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" List ends here. Plugins become visible to Neovim after this call.
+" List ends here. Plugins become visible to vim after this call.
 call plug#end()
 
 " Colorscheme
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 20
 colorscheme nord
 
+" General
 set hidden
 set wildmenu
 set showcmd
@@ -46,6 +53,8 @@ set ignorecase
 set smartcase
 set nobackup
 set noswapfile
+set laststatus=2
+set showtabline=2
 set scrolloff=10
 set sidescroll=1
 set sidescrolloff=15
@@ -61,6 +70,7 @@ set ruler
 set rulerformat=%l\:%c
 set showmatch
 set cursorline
+set noshowmode
 set hlsearch incsearch ignorecase smartcase
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set list listchars=tab:·\ ,space:·,trail:·,eol:¬
@@ -74,6 +84,12 @@ noremap <up> <C-w><up>
 noremap <down> <C-w><down>
 noremap <left> <C-w><left>
 noremap <right> <C-w><right>
+
+" Disable scrollbars (real hackers don't use scrollbars for navigation!)
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
@@ -91,15 +107,26 @@ map ; :Files<CR>
 " Show hidden files
 let NERDTreeShowHidden = 1
 
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+" Run NERDTreeTabs on console vim startup
+let g:nerdtree_tabs_open_on_console_startup = 2
 
-" Airline basic config
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
+" Ignore compiled files
+let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+
+" LightLine config
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
+      \ },
+      \ 'enable': {
+      \   'tabline': 1,
+      \ },
+      \ }
 
 " Ale linters
 let g:ale_linters = {
