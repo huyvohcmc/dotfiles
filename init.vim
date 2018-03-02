@@ -1,5 +1,8 @@
 " Neovim installation: https://github.com/neovim/neovim/wiki/Installing-Neovim
 
+" This must be first, because it changes other options as side effect
+set nocompatible
+
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -12,32 +15,38 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Change the mapleader from \ to ,
 let mapleader = ","
 let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fast reload vim config
+map <leader>s :source ~/.config/nvim/init.vim<CR>
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'w0rp/ale'
-Plug 'mhinz/vim-startify'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe'
-Plug 'pangloss/vim-javascript'
+Plug 'mhinz/vim-startify'
 Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 
 " List ends here. Plugins become visible to vim after this call.
 call plug#end()
+
+" Use file type plugins
+filetype plugin indent on
 
 " Colorscheme
 let g:nord_italic = 1
@@ -46,34 +55,38 @@ let g:nord_comment_brightness = 20
 colorscheme nord
 
 " General
-set hidden
-set wildmenu
-set showcmd
-set ignorecase
-set smartcase
-set nobackup
-set noswapfile
-set laststatus=2
-set showtabline=2
-set scrolloff=10
-set sidescroll=1
-set sidescrolloff=15
 set autochdir
 set autoindent
-set copyindent
 set autoread
+set copyindent
+set cursorline
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set hidden
 set history=500
+set hlsearch incsearch ignorecase smartcase
+set ignorecase
+set laststatus=2
 set lazyredraw
-set relativenumber
+set linespace=10
+set list listchars=tab:.\ ,space:.,trail:.,eol:¬
+set nobackup
+set noshowmode
+set noswapfile
+set nowrap
 set number
+set relativenumber
 set ruler
 set rulerformat=%l\:%c
+set scrolloff=10
+set showcmd
 set showmatch
-set cursorline
-set noshowmode
-set hlsearch incsearch ignorecase smartcase
-set expandtab tabstop=2 shiftwidth=2 softtabstop=2
-set list listchars=tab:·\ ,space:·,trail:·,eol:¬
+set showtabline=2
+set sidescroll=1
+set sidescrolloff=15
+set smartcase
+set smarttab
+set title
+set wildmenu
 
 " Disable useless arrow keys
 noremap <Up> <NOP>
@@ -106,9 +119,6 @@ map ; :Files<CR>
 
 " Show hidden files
 let NERDTreeShowHidden = 1
-
-" Run NERDTreeTabs on console vim startup
-let g:nerdtree_tabs_open_on_console_startup = 2
 
 " Ignore compiled files
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
