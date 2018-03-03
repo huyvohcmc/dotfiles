@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Declare the list of plugins.
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
 Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -39,6 +40,7 @@ Plug 'mhinz/vim-startify'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 
@@ -113,6 +115,12 @@ nmap <c-l> 4l
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeFind<CR>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
 
 " Activate fzf search panel
 map ; :Files<CR>
