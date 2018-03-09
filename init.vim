@@ -126,8 +126,10 @@ let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
 
-" Activate fzf search panel
-map ; :Files<CR>
+" Activate FZF search panel
+nnoremap <leader>p :History<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>t :Files<CR>
 
 " Show hidden files
 let NERDTreeShowHidden = 1
