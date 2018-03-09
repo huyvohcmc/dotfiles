@@ -90,10 +90,6 @@ set smarttab
 set title
 set wildmenu
 
-" Underline current line
-hi clear CursorLine
-hi CursorLine gui=underline cterm=underline
-
 " Disable useless arrow keys
 noremap <Up> <NOP>
 inoremap <Down> <NOP>
