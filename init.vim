@@ -91,7 +91,7 @@ set title
 set wildmenu
 
 " Disable useless arrow keys
-noremap <Up> <NOP>
+inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
