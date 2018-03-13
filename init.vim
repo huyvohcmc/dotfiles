@@ -1,12 +1,9 @@
-" Neovim installation: https://github.com/neovim/neovim/wiki/Installing-Neovim
-
 " This must be first, because it changes other options as side effect
 set nocompatible
 
 if (has("termguicolors"))
   set termguicolors
 endif
-
 if !has('gui_running')
   set t_Co=256
 endif
@@ -27,9 +24,7 @@ map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
-
 " Declare the list of plugins.
-Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'arcticicestudio/nord-vim'
@@ -41,9 +36,16 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 " List ends here. Plugins become visible to vim after this call.
 call plug#end()
 
@@ -55,6 +57,9 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 20
 colorscheme nord
+
+" Enable auto-completion on startup
+let g:deoplete#enable_at_startup = 1
 
 " General
 set autochdir
@@ -112,26 +117,24 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-" NERDTree mapping
-map <C-n> :NERDTreeToggle<CR>
-map <C-c> :NERDTreeFind<CR>
-
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
 " Activate FZF search panel
 nnoremap <leader>p :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
+" NERDTree mapping
+map <C-n> :NERDTreeToggle<CR>
+map <C-c> :NERDTreeFind<CR>
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
 " Show hidden files
 let NERDTreeShowHidden = 1
-
 " Ignore compiled files
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+" Run NERDTreeTabs on console startup
+let g:nerdtree_tabs_open_on_console_startup = 2
 
 " LightLine config
 let g:lightline = {
