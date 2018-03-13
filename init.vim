@@ -1,20 +1,6 @@
 " This must be first, because it changes other options as side effect
 set nocompatible
 
-set termguicolors
-set t_Co=256
-syntax enable
-
-" Change the mapleader from \ to ,
-let mapleader = ","
-let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
-" Fast reload vim config
-map <leader>s :source ~/.config/nvim/init.vim<CR>
-
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
 " Declare the list of plugins.
@@ -39,8 +25,21 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+set termguicolors
+set t_Co=256
+syntax enable
+
 " List ends here. Plugins become visible to vim after this call.
 call plug#end()
+
+" Change the mapleader from \ to ,
+let mapleader = ","
+let g:mapleader = ","
+" Fast saving
+nmap <leader>w :w!<cr>
+" Fast reload vim config
+map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Use file type plugins
 filetype plugin indent on
@@ -144,6 +143,14 @@ let g:lightline = {
       \ },
       \ }
 
+" Ale basic config
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_set_highlights = 0
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 " Ale linters
 let g:ale_linters = {
 \   'javascript': ['eslint'],
@@ -155,12 +162,3 @@ let g:ale_fixers = {
 \   'ruby': ['rubocop'],
 \   'python': ['autopep8'],
 \ }
-
-" Ale basic config
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_set_highlights = 0
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
