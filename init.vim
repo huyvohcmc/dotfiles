@@ -1,16 +1,9 @@
 " This must be first, because it changes other options as side effect
 set nocompatible
 
-if (has("termguicolors"))
-  set termguicolors
-endif
-if !has('gui_running')
-  set t_Co=256
-endif
-
-if !exists("g:syntax_on")
-  syntax enable
-endif
+set termguicolors
+set t_Co=256
+syntax enable
 
 " Change the mapleader from \ to ,
 let mapleader = ","
