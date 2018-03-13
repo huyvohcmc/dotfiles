@@ -1,5 +1,9 @@
 " This must be first, because it changes other options as side effect
 set nocompatible
+set termguicolors
+set t_Co=256
+syntax enable
+filetype plugin indent on
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
@@ -11,8 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -25,33 +28,8 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-
-set termguicolors
-set t_Co=256
-syntax enable
-
 " List ends here. Plugins become visible to vim after this call.
 call plug#end()
-
-" Change the mapleader from \ to ,
-let mapleader = ","
-let g:mapleader = ","
-" Fast saving
-nmap <leader>w :w!<cr>
-" Fast reload vim config
-map <leader>s :source ~/.config/nvim/init.vim<CR>
-
-" Use file type plugins
-filetype plugin indent on
-
-" Colorscheme
-let g:nord_italic = 1
-let g:nord_italic_comments = 1
-let g:nord_comment_brightness = 20
-colorscheme nord
-
-" Enable auto-completion on startup
-let g:deoplete#enable_at_startup = 1
 
 " General
 set autochdir
@@ -86,6 +64,28 @@ set smartcase
 set smarttab
 set title
 set wildmenu
+
+" Colorscheme
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 20
+colorscheme nord
+
+" Change the mapleader from \ to ,
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast reload vim config
+map <leader>s :source ~/.config/nvim/init.vim<CR>
+
+" Enable auto-completion on startup
+let g:deoplete#enable_at_startup = 1
+
+" Hide search highlights with ,<cr>
+map <silent> <leader><cr> :noh<cr>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
@@ -151,6 +151,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_highlights = 0
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+
 " Ale linters
 let g:ale_linters = {
 \   'javascript': ['eslint'],
