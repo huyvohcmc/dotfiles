@@ -1,9 +1,6 @@
-" This must be first, because it changes other options as side effect
-set nocompatible
-set termguicolors
-set t_Co=256
-syntax enable
-filetype plugin indent on
+"==================================================
+" Vim configuration made with blood sweat and tears
+"==================================================
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
@@ -21,17 +18,17 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Valloric/YouCompleteMe'
 " List ends here. Plugins become visible to vim after this call.
 call plug#end()
 
+" Safeguard syntax enable
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
 " General
+filetype plugin indent on
 set autochdir
 set autoindent
 set autoread
@@ -41,10 +38,9 @@ set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
 set hlsearch incsearch ignorecase smartcase
-set ignorecase
 set laststatus=2
 set lazyredraw
-set linespace=10
+set linespace=20
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set nobackup
 set noshowmode
@@ -60,10 +56,11 @@ set showmatch
 set showtabline=2
 set sidescroll=1
 set sidescrolloff=15
-set smartcase
 set smarttab
+set termguicolors
 set title
 set wildmenu
+set wildmode=list:longest,full
 
 " Colorscheme
 let g:nord_italic = 1
@@ -71,21 +68,12 @@ let g:nord_italic_comments = 1
 let g:nord_comment_brightness = 20
 colorscheme nord
 
-" Change the mapleader from \ to ,
+" Leader mapping
 let mapleader = ","
 let g:mapleader = ","
-
-" Fast saving
 nmap <leader>w :w!<cr>
-
-" Fast reload vim config
-map <leader>s :source ~/.config/nvim/init.vim<CR>
-
-" Enable auto-completion on startup
-let g:deoplete#enable_at_startup = 1
-
-" Hide search highlights with ,<cr>
 map <silent> <leader><cr> :noh<cr>
+map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
@@ -96,12 +84,6 @@ noremap <up> <C-w><up>
 noremap <down> <C-w><down>
 noremap <left> <C-w><left>
 noremap <right> <C-w><right>
-
-" Disable scrollbars (real hackers don't use scrollbars for navigation!)
-set guioptions-=r
-set guioptions-=R
-set guioptions-=l
-set guioptions-=L
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
@@ -114,19 +96,18 @@ nnoremap <leader>p :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" NERDTree mapping
+" NERDTree mapping and config
 map <C-n> :NERDTreeToggle<CR>
 map <C-c> :NERDTreeFind<CR>
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Show hidden files
 let NERDTreeShowHidden = 1
-" Ignore compiled files
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+
 " Run NERDTreeTabs on console startup
 let g:nerdtree_tabs_open_on_console_startup = 2
+
+" NERDCommenter config
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
 
 " LightLine config
 let g:lightline = {
