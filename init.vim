@@ -58,6 +58,7 @@ set sidescroll=1
 set sidescrolloff=15
 set smarttab
 set termguicolors
+set tags=./tags
 set title
 set wildmenu
 set wildmode=list:longest,full
