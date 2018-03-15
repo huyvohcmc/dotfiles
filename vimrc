@@ -40,7 +40,6 @@ set history=500
 set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
-set linespace=20
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set nobackup
 set noshowmode
@@ -57,6 +56,8 @@ set showtabline=2
 set sidescroll=1
 set sidescrolloff=15
 set smarttab
+set tags=./tags
+set termguicolors
 set title
 set wildmenu
 set wildmode=list:longest,full
@@ -66,8 +67,6 @@ let g:nord_italic = 0
 let g:nord_italic_comments = 0
 let g:nord_comment_brightness = 20
 colorscheme nord
-
-set termguicolors
 
 " Leader mapping
 let mapleader = ","

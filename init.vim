@@ -40,7 +40,6 @@ set history=500
 set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
-set linespace=20
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set nobackup
 set noshowmode
