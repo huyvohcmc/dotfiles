@@ -37,7 +37,7 @@ set cursorline
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
-set hlsearch incsearch ignorecase smartcase
+set incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
@@ -62,6 +62,10 @@ set title
 set wildmenu
 set wildmode=list:longest,full
 
+" Highlight search but not when sourcing
+set hls
+let @/ = ""
+
 " Colorscheme
 let g:nord_comment_brightness = 20
 colorscheme nord
@@ -70,7 +74,7 @@ colorscheme nord
 let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :set hlsearch!<cr>
 map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Disable useless arrow keys
