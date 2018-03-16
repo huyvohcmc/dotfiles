@@ -25,10 +25,6 @@ Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
-" Colorscheme
-let g:nord_comment_brightness = 20
-colorscheme nord
-
 " General
 filetype plugin indent on
 set autochdir
@@ -43,34 +39,36 @@ set history=500
 set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
+set linebreak
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set nobackup
 set noshowmode
 set noswapfile
-set wrap
-set linebreak
 set number
 set relativenumber
 set ruler
 set rulerformat=%l\:%c
-set scrolloff=10
 set showcmd
 set showmatch
 set showtabline=2
-set sidescroll=1
-set sidescrolloff=15
+set scrolloff=10
 set smarttab
-set termguicolors
 set tags=./tags
+set termguicolors
 set title
 set wildmenu
 set wildmode=list:longest,full
+set wrap
+
+" Colorscheme
+let g:nord_comment_brightness = 20
+colorscheme nord
 
 " Leader mapping
 let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
-map <silent> <leader><cr> :set hlsearch!<cr>
+map <silent> <leader><cr> :noh<cr>
 map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Disable useless arrow keys
