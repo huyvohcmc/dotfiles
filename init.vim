@@ -68,6 +68,7 @@ colorscheme nord
 let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
 map <silent> <leader><cr> :let @/=""<cr>
 map <leader>s :source ~/.config/nvim/init.vim<CR>
 
