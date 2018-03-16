@@ -32,7 +32,6 @@ set autoindent
 set autoread
 set background=dark
 set copyindent
-set cursorline
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
@@ -43,14 +42,14 @@ set linebreak
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set mouse=""
 set nobackup
+set nocursorline
+set nocursorcolumn
 set noshowmode
 set noswapfile
 set number
 set relativenumber
-set ruler
 set rulerformat=%l\:%c
-set showcmd
-set showmatch
+set noshowmatch
 set showtabline=2
 set scrolloff=10
 set smarttab
