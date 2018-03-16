@@ -2,6 +2,11 @@
 " Vim configuration made with blood sweat and tears
 "==================================================
 
+" Load nvim faster
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+let g:ruby_path='/usr/bin/ruby'
+
 " Safeguard
 if !exists("g:syntax_on")
   syntax enable
@@ -39,7 +44,7 @@ set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set linebreak
-set list listchars=tab:.\ ,space:.,trail:.,eol:¬
+set list listchars=tab:.\ ,trail:.,eol:¬
 set mouse=""
 set nobackup
 set nocursorline
