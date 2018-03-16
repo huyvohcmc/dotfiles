@@ -2,9 +2,13 @@
 " Vim configuration made with blood sweat and tears
 "==================================================
 
+" Safeguard
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
-" Declare the list of plugins.
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'arcticicestudio/nord-vim'
@@ -19,32 +23,32 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
-" List ends here. Plugins become visible to vim after this call.
 call plug#end()
 
-" Safeguard syntax enable
-if !exists("g:syntax_on")
-  syntax enable
-endif
+" Colorscheme
+let g:nord_comment_brightness = 20
+colorscheme nord
 
 " General
 filetype plugin indent on
 set autochdir
 set autoindent
 set autoread
+set background=dark
 set copyindent
 set cursorline
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
-set incsearch ignorecase smartcase
+set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
 set nobackup
 set noshowmode
 set noswapfile
-set nowrap
+set wrap
+set linebreak
 set number
 set relativenumber
 set ruler
@@ -61,14 +65,6 @@ set tags=./tags
 set title
 set wildmenu
 set wildmode=list:longest,full
-
-" Highlight search but not when sourcing
-set hls
-let @/ = ""
-
-" Colorscheme
-let g:nord_comment_brightness = 20
-colorscheme nord
 
 " Leader mapping
 let mapleader = ","
@@ -142,7 +138,6 @@ let g:ale_linters = {
 \   'python': ['flake8'],
 \ }
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \   'python': ['autopep8'],
 \ }
