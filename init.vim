@@ -41,6 +41,7 @@ set laststatus=2
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,space:.,trail:.,eol:¬
+set mouse=""
 set nobackup
 set noshowmode
 set noswapfile
@@ -68,7 +69,7 @@ colorscheme nord
 let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :let @/=""<cr>
 map <leader>s :source ~/.config/nvim/init.vim<CR>
 
 " Disable useless arrow keys
