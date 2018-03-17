@@ -22,11 +22,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
-Plug 'Valloric/YouCompleteMe'
+Plug 'roxma/nvim-completion-manager'
 call plug#end()
 
 " General
@@ -92,6 +92,13 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
+" Use <TAB> to select Nvim completion popup menu
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Hide the menu and also start a new line
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
 " Activate FZF search panel
 nnoremap <leader>p :History<CR>
 nnoremap <leader>b :Buffers<CR>
@@ -136,11 +143,11 @@ let g:ale_set_quickfix = 1
 
 " Ale linters
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
-\   'python': ['flake8'],
-\ }
+      \   'javascript': ['eslint'],
+      \   'ruby': ['rubocop'],
+      \   'python': ['flake8'],
+      \ }
 let g:ale_fixers = {
-\   'ruby': ['rubocop'],
-\   'python': ['autopep8'],
-\ }
+      \   'ruby': ['rubocop'],
+      \   'python': ['autopep8'],
+      \ }
