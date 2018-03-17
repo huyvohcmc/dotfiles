@@ -5,7 +5,6 @@
 " Load nvim faster
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
-let g:ruby_path='/usr/bin/ruby'
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -44,7 +43,7 @@ set hlsearch incsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set linebreak
-set list listchars=tab:.\ ,trail:.,eol:¬
+set list listchars=tab:.\ ,trail:.,space:.,eol:¬
 set mouse=""
 set nobackup
 set nocursorline
@@ -75,7 +74,7 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 map <silent> <leader><cr> :let @/=""<cr>
-map <leader>s :source ~/.config/nvim/init.vim<CR>
+map <leader>s :source ~/.config/nvim/init.vim<cr>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
