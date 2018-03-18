@@ -2,9 +2,10 @@
 " Vim configuration made with blood sweat and tears
 "==================================================
 
-" Load nvim faster
+" Faster loading
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Safeguard
 if !exists("g:syntax_on")
