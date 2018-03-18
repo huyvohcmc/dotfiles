@@ -1,48 +1,30 @@
-# load custom executable functions
-for function in ~/.zsh/functions/*; do
-  source $function
-done
+export ZSH=~/.oh-my-zsh
 
-# extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
-# these are loaded first, second, and third, respectively.
-_load_settings() {
-  _dir="$1"
-  if [ -d "$_dir" ]; then
-    if [ -d "$_dir/pre" ]; then
-      for config in "$_dir"/pre/**/*(N-.); do
-        if [ ${config:e} = "zwc" ] ; then continue ; fi
-        . $config
-      done
-    fi
+export TERM="xterm-256color"
 
-    for config in "$_dir"/**/*(N-.); do
-      case "$config" in
-        "$_dir"/pre/*)
-          :
-          ;;
-        "$_dir"/post/*)
-          :
-          ;;
-        *)
-          if [[ -f $config && ${config:e} != "zwc" ]]; then
-            . $config
-          fi
-          ;;
-      esac
-    done
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
-    if [ -d "$_dir/post" ]; then
-      for config in "$_dir"/post/**/*(N-.); do
-        if [ ${config:e} = "zwc" ] ; then continue ; fi
-        . $config
-      done
-    fi
-  fi
-}
-_load_settings "$HOME/.zsh/configs"
+CASE_SENSITIVE="false"
 
-# Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+HYPHEN_INSENSITIVE="true"
 
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+ENABLE_CORRECTION="false"
+
+COMPLETION_WAITING_DOTS="false"
+
+plugins=(
+  dotenv
+  zsh-autosuggestions
+  history-substring-search
+)
+autoload -U compinit && compinit
+
+alias nvcf="nvim ~/.config/nvim/init.vim"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source $HOME/.rvm/scripts/rvm
+
+source $ZSH/oh-my-zsh.sh
