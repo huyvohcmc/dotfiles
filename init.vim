@@ -28,6 +28,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'roxma/nvim-completion-manager'
+Plug 'tell-k/vim-autopep8'
 call plug#end()
 
 " General
@@ -146,9 +147,7 @@ let g:ale_set_quickfix = 1
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \   'ruby': ['rubocop'],
-      \   'python': ['flake8'],
       \ }
 let g:ale_fixers = {
       \   'ruby': ['rubocop'],
-      \   'python': ['autopep8'],
       \ }
