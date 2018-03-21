@@ -22,7 +22,7 @@ autoload -U compinit && compinit
 
 alias nvcf="nvim ~/.config/nvim/init.vim"
 
-alias nv="nvim"
+alias v="nvim"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
