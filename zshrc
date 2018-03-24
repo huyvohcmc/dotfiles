@@ -2,6 +2,8 @@ export ZSH=~/.oh-my-zsh
 
 export TERM="xterm-256color"
 
+export EDITOR=nvim
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 CASE_SENSITIVE="false"
