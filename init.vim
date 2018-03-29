@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'bling/vim-bufferline'
+Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -75,14 +76,17 @@ let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
-map <silent> <leader><cr> :let @/=""<cr>
-map <leader>s :source ~/.config/nvim/init.vim<cr>
+map <leader>s :source %<cr>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 
 " Easy navigation
 noremap <leader>e <c-w>w
