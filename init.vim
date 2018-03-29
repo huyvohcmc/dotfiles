@@ -29,6 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'roxma/nvim-completion-manager'
 Plug 'tell-k/vim-autopep8'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 
 " General
@@ -93,6 +94,10 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
+
+" Git mapping
+map <silent> gb :Gblame<CR>
+map <silent> ghub :Gbrowse<CR>
 
 " Use <TAB> to select Nvim completion popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
