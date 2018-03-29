@@ -15,26 +15,25 @@ endif
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-surround'
 Plug 'arcticicestudio/nord-vim'
+Plug 'bling/vim-bufferline'
 Plug 'itchyny/lightline.vim'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-startify'
-Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
 Plug 'roxma/nvim-completion-manager'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
 Plug 'tell-k/vim-autopep8'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 call plug#end()
 
 " General
 filetype plugin indent on
-set autochdir
 set autoindent
 set autoread
 set background=dark
@@ -49,16 +48,16 @@ set linebreak
 set list listchars=tab:.\ ,trail:.,space:.,eol:¬
 set mouse=""
 set nobackup
-set nocursorline
 set nocursorcolumn
+set nocursorline
+set noshowmatch
 set noshowmode
 set noswapfile
 set number
 set relativenumber
 set rulerformat=%l\:%c
-set noshowmatch
-set showtabline=2
 set scrolloff=10
+set showtabline=2
 set smarttab
 set tags=./tags
 set termguicolors
@@ -84,12 +83,11 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-noremap <up> <C-w><up>
-noremap <down> <C-w><down>
-noremap <left> <C-w><left>
-noremap <right> <C-w><right>
 
-" Navigate 4x faster when holding down Ctrl
+" Easy navigation
+noremap <leader>e <c-w>w
+
+" Scrolling 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
@@ -112,13 +110,14 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " NERDTree mapping and config
-map <C-n> :NERDTreeToggle<CR>
-map <C-c> :NERDTreeFind<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
 
 " Run NERDTreeTabs on console startup
 let g:nerdtree_tabs_open_on_console_startup = 2
+let g:nerdtree_tabs_smart_startup_focus = 2
 
 " NERDCommenter config
 let g:NERDSpaceDelims = 1
@@ -134,9 +133,16 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \ },
-      \ 'enable': {
-      \   'tabline': 1,
-      \ },
+      \ }
+let g:lightline.separator = {
+      \ 'left': '', 'right': ''
+      \ }
+let g:lightline.subseparator = {
+      \ 'left': '', 'right': ''
+      \ }
+let g:lightline.tabline = {
+      \ 'left': [ [ 'tabs' ] ],
+      \ 'right': [ [ 'close' ] ]
       \ }
 
 " Ale basic config
