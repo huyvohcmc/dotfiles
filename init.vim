@@ -55,6 +55,7 @@ set noshowmatch
 set noshowmode
 set noswapfile
 set number
+set updatetime=100
 set relativenumber
 set rulerformat=%l\:%c
 set scrolloff=10
@@ -74,9 +75,9 @@ colorscheme nord
 " Leader mapping
 let mapleader = ","
 let g:mapleader = ","
-nmap <leader>w :w!<cr>
+nmap <leader>s :w!<cr>
 nmap <leader>q :q!<cr>
-map <leader>s :source %<cr>
+map <silent> <leader><cr> :noh<cr>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
@@ -89,7 +90,7 @@ nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
 " Easy navigation
-noremap <leader>e <c-w>w
+noremap <leader>w <c-w>w
 
 " Scrolling 4x faster when holding down Ctrl
 nmap <c-j> 4j
