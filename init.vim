@@ -78,6 +78,12 @@ nmap <leader>s :w!<cr>
 nmap <leader>q :q!<cr>
 map <silent> <leader><cr> :noh<cr>
 
+" Easy navigation
+noremap <leader>w <c-w>w
+
+" Ag search
+map <leader>ag <esc>:Ag<space>
+
 " Disable useless arrow keys
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
@@ -87,9 +93,6 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
-
-" Easy navigation
-noremap <leader>w <c-w>w
 
 " Scrolling 4x faster when holding down Ctrl
 nmap <c-j> 4j
