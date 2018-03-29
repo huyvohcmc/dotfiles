@@ -22,7 +22,7 @@ plugins=(
 
 autoload -U compinit && compinit
 
-alias nvcf="nvim ~/.config/nvim/init.vim"
+alias vc="nvim ~/.config/nvim/init.vim"
 
 alias v="nvim"
 
