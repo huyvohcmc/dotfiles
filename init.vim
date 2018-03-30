@@ -74,12 +74,12 @@ colorscheme nord
 " Leader mapping
 let mapleader = ","
 let g:mapleader = ","
-nmap <leader>s :w!<cr>
+nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 map <silent> <leader><cr> :noh<cr>
 
 " Easy navigation
-noremap <leader>w <c-w>w
+noremap <leader>s <c-w>w
 
 " Ag search
 map <leader>ag <esc>:Ag<space>
