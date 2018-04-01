@@ -60,7 +60,7 @@ set rulerformat=%l\:%c
 set scrolloff=10
 set showtabline=2
 set smarttab
-set tags=./tags
+set tags=tags;/
 set termguicolors
 set title
 set wildmenu
