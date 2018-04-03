@@ -18,7 +18,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'roxma/nvim-completion-manager'
@@ -121,10 +120,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
-
-" Run NERDTreeTabs on console startup
-let g:nerdtree_tabs_open_on_console_startup = 2
-let g:nerdtree_tabs_smart_startup_focus = 2
 
 " NERDCommenter config
 let g:NERDSpaceDelims = 1
