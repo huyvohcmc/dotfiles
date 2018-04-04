@@ -40,11 +40,11 @@ set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
-set hlsearch incsearch ignorecase smartcase
+set hlsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set linebreak
-set list listchars=tab:.\ ,trail:.,space:.,eol:¬
+set list
 set mouse=""
 set nobackup
 set nocursorcolumn
@@ -59,7 +59,6 @@ set rulerformat=%l\:%c
 set scrolloff=10
 set showtabline=2
 set smarttab
-set tags=tags;/
 set termguicolors
 set title
 set wildmenu
