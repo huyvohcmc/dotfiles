@@ -67,6 +67,7 @@ set wrap
 
 " Colorscheme
 let g:nord_comment_brightness = 20
+let g:nord_uniform_diff_background = 1
 colorscheme nord
 
 " Leader mapping
