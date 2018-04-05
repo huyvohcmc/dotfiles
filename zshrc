@@ -15,6 +15,9 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="false"
 
 plugins=(
+  git
+  docker
+  docker-compose
   dotenv
   zsh-autosuggestions
   history-substring-search
