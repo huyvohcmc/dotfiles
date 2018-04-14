@@ -31,6 +31,11 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 call plug#end()
 
+" Colorscheme
+let g:nord_comment_brightness = 20
+let g:nord_uniform_diff_background = 1
+colorscheme nord
+
 " General
 filetype plugin indent on
 set autoindent
@@ -47,7 +52,7 @@ set linebreak
 set list
 set mouse=""
 set nobackup
-set nocursorline
+set cursorline
 set noshowmatch
 set noshowmode
 set noswapfile
@@ -64,10 +69,9 @@ set wildmenu
 set wildmode=list:longest,full
 set wrap
 
-" Colorscheme
-let g:nord_comment_brightness = 20
-let g:nord_uniform_diff_background = 1
-colorscheme nord
+" Underline currrent line
+hi clear CursorLine
+hi CursorLine gui=underline cterm=underline
 
 " Leader mapping
 let mapleader = ","
