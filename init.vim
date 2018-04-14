@@ -29,6 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " Colorscheme
