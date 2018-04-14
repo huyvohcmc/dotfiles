@@ -3,8 +3,8 @@
 "==================================================
 
 " Faster loading
-let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/local/bin/python'
 let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Safeguard
@@ -20,6 +20,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -30,7 +31,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
-Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 " Colorscheme
@@ -59,7 +59,6 @@ set noshowmode
 set noswapfile
 set nowrap
 set number
-set updatetime=100
 set relativenumber
 set rulerformat=%l\:%c
 set scrolloff=10
@@ -67,6 +66,7 @@ set showtabline=2
 set smarttab
 set termguicolors
 set title
+set updatetime=100
 set wildmenu
 set wildmode=list:longest,full
 
