@@ -52,10 +52,10 @@ set linebreak
 set list
 set mouse=""
 set nobackup
-set cursorline
 set noshowmatch
 set noshowmode
 set noswapfile
+set nowrap
 set number
 set updatetime=100
 set relativenumber
@@ -67,11 +67,9 @@ set termguicolors
 set title
 set wildmenu
 set wildmode=list:longest,full
-set wrap
 
-" Underline currrent line
+" Clear cursor line in NERDTree
 hi clear CursorLine
-hi CursorLine gui=underline cterm=underline
 
 " Leader mapping
 let mapleader = ","
