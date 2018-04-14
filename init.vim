@@ -47,7 +47,6 @@ set linebreak
 set list
 set mouse=""
 set nobackup
-set nocursorcolumn
 set nocursorline
 set noshowmatch
 set noshowmode
