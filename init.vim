@@ -38,6 +38,7 @@ let g:nord_uniform_diff_background = 1
 colorscheme nord
 
 " General
+" Some are enabled by default (:h vim-differences)
 filetype plugin indent on
 set autoindent
 set autoread
@@ -46,11 +47,11 @@ set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=500
-set hlsearch ignorecase smartcase
+set noincsearch hlsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set linebreak
-set list
+set list listchars=tab:.\ ,trail:.
 set mouse=""
 set nobackup
 set noshowmatch
@@ -59,10 +60,12 @@ set noswapfile
 set nowrap
 set number
 set relativenumber
-set rulerformat=%l\:%c
+set ruler rulerformat=%l\:%c
 set scrolloff=10
+set showcmd
 set showtabline=2
 set smarttab
+set tags=./tags;,tags
 set termguicolors
 set title
 set updatetime=100
@@ -71,11 +74,10 @@ set wildmode=list:longest,full
 
 " Leader mapping
 let mapleader = ","
-let g:mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
-map <silent> <leader><cr> :noh<cr>
-map <silent> <leader>f <C-]>
+nmap <silent> <leader><cr> :silent :nohlsearch<cr>
+nmap <silent> <leader>f <C-]>
 
 " Easy navigation
 noremap <leader>s <c-w>w
