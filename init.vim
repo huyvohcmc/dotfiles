@@ -21,10 +21,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'roxma/nvim-completion-manager'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tell-k/vim-autopep8'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
@@ -125,10 +125,6 @@ let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
 
 " Clear cursor line in NERDTree
 hi clear CursorLine
-
-" NERDCommenter config
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
 
 " LightLine config
 let g:lightline = {
