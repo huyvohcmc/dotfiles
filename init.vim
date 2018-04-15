@@ -69,15 +69,13 @@ set updatetime=100
 set wildmenu
 set wildmode=list:longest,full
 
-" Clear cursor line in NERDTree
-hi clear CursorLine
-
 " Leader mapping
 let mapleader = ","
 let g:mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 map <silent> <leader><cr> :noh<cr>
+map <silent> <leader>f <C-]>
 
 " Easy navigation
 noremap <leader>s <c-w>w
@@ -122,6 +120,9 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+
+" Clear cursor line in NERDTree
+hi clear CursorLine
 
 " NERDCommenter config
 let g:NERDSpaceDelims = 1
