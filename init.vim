@@ -45,14 +45,14 @@ set background=dark
 set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
-set history=500
-set noincsearch hlsearch ignorecase smartcase
+set history=1000
 set laststatus=2
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
 set mouse=""
 set nobackup
+set noincsearch hlsearch ignorecase smartcase
 set noshowmatch
 set noshowmode
 set noswapfile
@@ -60,7 +60,7 @@ set nowrap
 set number
 set relativenumber
 set ruler rulerformat=%l\:%c
-set scrolloff=10
+set scrolloff=3
 set showcmd
 set showtabline=2
 set smarttab
