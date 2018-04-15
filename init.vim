@@ -1,5 +1,5 @@
 "==================================================
-" Vim configuration made with blood sweat and tears
+" Neovim configuration made with blood sweat and tears
 "==================================================
 
 " Faster loading
