@@ -116,11 +116,11 @@ map <silent> gb :Gblame<CR>
 map <silent> ghub :Gbrowse<CR>
 
 " Git gutter custom symbols
-let g:gitgutter_sign_added = '◆'
-let g:gitgutter_sign_modified = '◆'
-let g:gitgutter_sign_removed = '◆'
-let g:gitgutter_sign_removed_first_line = '◆'
-let g:gitgutter_sign_modified_removed = '◇'
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '●'
+let g:gitgutter_sign_removed = '━'
+let g:gitgutter_sign_removed_first_line = '━'
+let g:gitgutter_sign_modified_removed = '┅'
 
 " Use <TAB> to select Nvim completion popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -166,8 +166,8 @@ let g:lightline.tabline = {
       \ }
 
 " Ale basic config
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '✖'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '▲'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
