@@ -77,7 +77,10 @@ let mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 nmap <silent> <leader><cr> :silent :nohlsearch<cr>
+
+" Tag mapping
 nmap <silent> <leader>f <C-]>
+nmap <silent> <leader>o <C-o>
 
 " Easy navigation
 noremap <leader>s <c-w>w
