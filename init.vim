@@ -81,6 +81,10 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 nmap <silent> <leader><cr> :silent :nohlsearch<cr>
 
+" Prettier
+let g:prettier#exec_cmd_async = 1
+nmap <Leader>py <Plug>(Prettier)
+
 " Tag mapping
 nmap <silent> <leader>f <C-]>
 nmap <silent> <leader>o <C-o>
