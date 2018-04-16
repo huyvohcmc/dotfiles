@@ -30,6 +30,9 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'scss', 'json', 'graphql', 'markdown'] }
 call plug#end()
 
 " Colorscheme
