@@ -48,13 +48,13 @@ set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
 set history=1000
+set incsearch hlsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
 set mouse=""
 set nobackup
-set noincsearch hlsearch ignorecase smartcase
 set noshowmatch
 set noshowmode
 set noswapfile
