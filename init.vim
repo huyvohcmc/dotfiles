@@ -45,7 +45,6 @@ colorscheme nord
 filetype plugin indent on
 set autoindent
 set autoread
-set background=dark
 set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
