@@ -12,7 +12,7 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
-" Plugins will be downloaded under the specified directory.
+" Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -40,8 +40,7 @@ let g:nord_comment_brightness = 20
 let g:nord_uniform_diff_background = 1
 colorscheme nord
 
-" General
-" Some are enabled by default (:h vim-differences)
+" General settings (some are enabled by default, see :h vim-differences)
 filetype plugin indent on
 set autoindent
 set autoread
@@ -80,19 +79,8 @@ nnoremap <leader>w :w!<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <silent> <leader><cr> :silent :nohlsearch<cr>
 
-" Prettier
-let g:prettier#exec_cmd_async = 1
-nnoremap <Leader>py <Plug>(Prettier)
-
-" Tag mapping
-nnoremap <silent> <leader>f <C-]>
-nnoremap <silent> <leader>o <C-o>
-
 " Easy navigation
 noremap <leader>s <c-w>w
-
-" Ag search
-map <leader>ag <esc>:Ag<space>
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
@@ -110,6 +98,21 @@ nnoremap <c-k> 4k
 nnoremap <c-h> 4h
 nnoremap <c-l> 4l
 
+" NERDTree mapping and config
+map <leader>n :NERDTreeToggle<CR>
+map <leader>c :NERDTreeFind<CR>
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+let NERDTreeHighlightCursorline = 0
+
+" Activate FZF search panel
+nnoremap <leader>p :History<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>t :Files<CR>
+
+" Ag search
+map <leader>ag <esc>:Ag<space>
+
 " Git mapping
 map <silent> gb :Gblame<CR>
 map <silent> ghub :Gbrowse<CR>
@@ -121,24 +124,16 @@ let g:gitgutter_sign_removed = '━'
 let g:gitgutter_sign_removed_first_line = '━'
 let g:gitgutter_sign_modified_removed = '┅'
 
+" Tag mapping
+nnoremap <silent> <leader>f <C-]>
+nnoremap <silent> <leader>o <C-o>
+
 " Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Hide ncm menu and also start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-
-" Activate FZF search panel
-nnoremap <leader>p :History<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>t :Files<CR>
-
-" NERDTree mapping and config
-map <leader>n :NERDTreeToggle<CR>
-map <leader>c :NERDTreeFind<CR>
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
-let NERDTreeHighlightCursorline = 0
 
 " LightLine config
 let g:lightline = {
@@ -161,6 +156,10 @@ let g:lightline.tabline = {
       \ 'left': [ [ 'tabs' ] ],
       \ 'right': [ [ 'close' ] ]
       \ }
+
+" Prettier
+let g:prettier#exec_cmd_async = 1
+nnoremap <Leader>py <Plug>(Prettier)
 
 " Ale basic config
 let g:ale_sign_error = '✗'
