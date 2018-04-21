@@ -76,17 +76,17 @@ set wildmode=list:longest,full
 
 " Leader mapping
 let mapleader = ","
-nmap <leader>w :w!<cr>
-nmap <leader>q :q!<cr>
-nmap <silent> <leader><cr> :silent :nohlsearch<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>q :q!<cr>
+nnoremap <silent> <leader><cr> :silent :nohlsearch<cr>
 
 " Prettier
 let g:prettier#exec_cmd_async = 1
-nmap <Leader>py <Plug>(Prettier)
+nnoremap <Leader>py <Plug>(Prettier)
 
 " Tag mapping
-nmap <silent> <leader>f <C-]>
-nmap <silent> <leader>o <C-o>
+nnoremap <silent> <leader>f <C-]>
+nnoremap <silent> <leader>o <C-o>
 
 " Easy navigation
 noremap <leader>s <c-w>w
@@ -105,10 +105,10 @@ nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
 " Scrolling 4x faster when holding down Ctrl
-nmap <c-j> 4j
-nmap <c-k> 4k
-nmap <c-h> 4h
-nmap <c-l> 4l
+nnoremap <c-j> 4j
+nnoremap <c-k> 4k
+nnoremap <c-h> 4h
+nnoremap <c-l> 4l
 
 " Git mapping
 map <silent> gb :Gblame<CR>
