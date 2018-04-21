@@ -77,7 +77,7 @@ set wildmode=list:longest,full
 let mapleader = ","
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <silent> <leader><cr> :silent :nohlsearch<cr>
+nnoremap <silent> <leader><cr> :silent :let @/ = ""<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
