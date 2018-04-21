@@ -121,11 +121,11 @@ let g:gitgutter_sign_removed = '━'
 let g:gitgutter_sign_removed_first_line = '━'
 let g:gitgutter_sign_modified_removed = '┅'
 
-" Use <TAB> to select Nvim completion popup menu
+" Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Hide the menu and also start a new line
+" Hide ncm menu and also start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " Activate FZF search panel
@@ -138,9 +138,7 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
-
-" Clear cursor line in NERDTree
-hi clear CursorLine
+let NERDTreeHighlightCursorline = 0
 
 " LightLine config
 let g:lightline = {
