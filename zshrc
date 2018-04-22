@@ -2,7 +2,7 @@ export ZSH=~/.oh-my-zsh
 
 export EDITOR=nvim
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="agnoster"
 
 CASE_SENSITIVE="false"
 
