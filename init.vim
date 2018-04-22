@@ -7,11 +7,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_host_prog = '/usr/local/bin/python'
 let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
-" Safeguard
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
@@ -34,6 +29,11 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'css', 'scss', 'json', 'graphql', 'markdown'] }
 call plug#end()
+
+" Safeguard
+if !exists("g:syntax_on")
+  syntax enable
+endif
 
 " Colorscheme
 let g:nord_comment_brightness = 20
