@@ -47,7 +47,7 @@ set autoread
 set copyindent
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 set hidden
-set history=1000
+set history=500
 set incsearch hlsearch ignorecase smartcase
 set laststatus=2
 set lazyredraw
