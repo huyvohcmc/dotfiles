@@ -27,7 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'scss', 'json', 'graphql', 'markdown'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 call plug#end()
 
 " Safeguard
@@ -158,7 +158,6 @@ let g:lightline.tabline = {
 
 " Prettier
 let g:prettier#exec_cmd_async = 1
-nnoremap <leader>p :Prettier<CR>
 
 " Ale basic config
 let g:ale_sign_error = '✗'
