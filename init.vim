@@ -105,7 +105,7 @@ let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
 let NERDTreeHighlightCursorline = 0
 
 " Activate FZF search panel
-nnoremap <leader>p :History<CR>
+nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
@@ -158,7 +158,7 @@ let g:lightline.tabline = {
 
 " Prettier
 let g:prettier#exec_cmd_async = 1
-nnoremap <Leader>py <Plug>(Prettier)
+nnoremap <leader>p :Prettier<CR>
 
 " Ale basic config
 let g:ale_sign_error = '✗'
