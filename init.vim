@@ -124,8 +124,8 @@ let g:gitgutter_sign_removed_first_line = '━'
 let g:gitgutter_sign_modified_removed = '┅'
 
 " Tag mapping
-nnoremap <silent> <leader>f <C-]>
-nnoremap <silent> <leader>o <C-o>
+nnoremap <silent> <space>f <c-]>
+nnoremap <silent> <space>t <c-t>
 
 " Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
