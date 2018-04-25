@@ -130,7 +130,6 @@ nnoremap <silent> <space>t <c-t>
 " Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " Hide ncm menu and also start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
@@ -144,12 +143,6 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \ },
-      \ }
-let g:lightline.separator = {
-      \ 'left': '', 'right': ''
-      \ }
-let g:lightline.subseparator = {
-      \ 'left': '', 'right': ''
       \ }
 let g:lightline.tabline = {
       \ 'left': [ [ 'tabs' ] ],
