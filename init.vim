@@ -62,6 +62,7 @@ set nowrap
 set number
 set relativenumber
 set ruler rulerformat=%l\:%c
+set scrolloff=999
 set showcmd
 set showtabline=2
 set smarttab
