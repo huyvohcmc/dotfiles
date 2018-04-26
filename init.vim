@@ -128,6 +128,9 @@ let g:gitgutter_sign_modified_removed = '┅'
 nnoremap <silent> <space>f <c-]>
 nnoremap <silent> <space>t <c-t>
 
+" Gutentag exclude
+let g:gutentags_ctags_exclude = ['*.min.js', '*.min.css', 'build', 'vendor', '.git', 'node_modules', '*.vim/bundle/*']
+
 " Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -139,10 +142,11 @@ let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
+      \   'gutentags': 'gutentags#statusline',
       \ },
       \ }
 let g:lightline.tabline = {
