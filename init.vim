@@ -124,10 +124,6 @@ let g:gitgutter_sign_removed = '━'
 let g:gitgutter_sign_removed_first_line = '━'
 let g:gitgutter_sign_modified_removed = '┅'
 
-" Tag mapping
-nnoremap <silent> <space>f <c-]>
-nnoremap <silent> <space>t <c-t>
-
 " Gutentag exclude
 let g:gutentags_ctags_exclude = ['*.min.js', '*.min.css', 'build', 'vendor', '.git', 'node_modules', '*.vim/bundle/*']
 
