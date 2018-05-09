@@ -58,7 +58,6 @@ set nobackup
 set noshowmatch
 set noshowmode
 set noswapfile
-set nowrap
 set number
 set relativenumber
 set ruler rulerformat=%l\:%c
@@ -72,6 +71,7 @@ set title
 set updatetime=100
 set wildmenu
 set wildmode=list:longest,full
+set wrap
 
 " Leader mapping
 let mapleader = ","
