@@ -103,7 +103,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
-let NERDTreeHighlightCursorline = 0
 
 " Activate FZF search panel
 nnoremap <leader>h :History<CR>
