@@ -42,10 +42,6 @@ Here are some of my favorite Homebrew packages:
 - the_silver_searcher
 - universal_ctags
 
-## Version managers
-
-I'm also use [rvm](https://rvm.io/) and [nvm](https://github.com/creationix/nvm) to managing my Ruby and React environments.
-
 ## IRB customizations
 
 I use [awesome_print](https://github.com/awesome-print/awesome_print) to pretty prints Ruby objects in full color:
