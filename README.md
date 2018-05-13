@@ -13,8 +13,9 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 ## What I use
 
 - Font: Fira Code 16px
-- Searching tool: The Silver Searcher
 - Terminal: iterm2 with Nord colorscheme
+- Searching tool: The Silver Searcher
+- Command-line finder: fzf
 - IRB customization: awesome_print
 
 ## Installation
