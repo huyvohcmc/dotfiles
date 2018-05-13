@@ -6,17 +6,17 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 ## Prerequisites
 
 - Neovim: https://github.com/neovim/neovim
-- vim-plug: https://github.com/junegunn/vim-plug
-- zsh + oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+- Vim-plug: https://github.com/junegunn/vim-plug
+- Zsh + Oh My Zsh: https://github.com/robbyrussell/oh-my-zsh
 - Tmux: https://github.com/tmux/tmux
 
 ## What I use
 
-- Font: Fira Code 16px
-- Terminal: iterm2 with Nord colorscheme
-- Searching tool: The Silver Searcher
-- Command-line finder: fzf
-- IRB customization: awesome_print
+- **Font**: Fira Code 16px
+- **Terminal**: iterm2 with Nord colorscheme
+- **Searching tool**: The Silver Searcher
+- **Command-line finder**: fzf
+- **IRB customization**: awesome_print
 
 ## Installation
 
