@@ -14,7 +14,7 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 
 - Font: Fira Code 16px
 - Searching tool: The Silver Searcher
-- iterm2's colorscheme: Nord
+- Terminal: iterm2 with Nord colorscheme
 - IRB customization: awesome_print
 
 ## Installation
