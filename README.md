@@ -27,7 +27,7 @@ ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 
 ## Terminal
 
-I use [iTerm2](https://www.iterm2.com/) as the main terminal. The choice of font is [Fira Code](https://github.com/tonsky/FiraCode) 16px. Both iTerm2 and Fira Code support ligatures, which is a nice feature to have. An alternative choice for Fira Code is [Iosevka](https://github.com/be5invis/Iosevka) (highly recommend).
+I use [iTerm2](https://www.iterm2.com/) as the main terminal. The choice of font is [Iosevka](https://github.com/be5invis/Iosevka) 17 pt. Both iTerm2 and Iosevka support ligatures, which is a very nice feature. An alternative choice for Iosevka is ([Fira Code](https://github.com/tonsky/FiraCode) highly recommend).
 
 ## Homebrew packages
 
@@ -40,6 +40,7 @@ Here are some of my favorite Homebrew packages:
 - zsh-autosuggestions
 - zsh-completions
 - the_silver_searcher
+- bash-completion
 - universal_ctags
 
 ## IRB customizations
