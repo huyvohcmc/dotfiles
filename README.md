@@ -10,6 +10,15 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 - Zsh + Oh My Zsh: https://github.com/robbyrussell/oh-my-zsh
 - Tmux: https://github.com/tmux/tmux
 
+### Homebrew packages
+
+- fzf
+- the_silver_searcher
+- universal_ctags
+- zsh-autosuggestions
+- zsh-completions
+- bash-completion
+
 ## Installation
 
 ```
@@ -29,19 +38,13 @@ ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 
 I use [iTerm2](https://www.iterm2.com/) as the main terminal. The choice of font is [Iosevka](https://github.com/be5invis/Iosevka) 17 pt. Both iTerm2 and Iosevka support ligatures, which is a very nice feature. An alternative choice for Iosevka is ([Fira Code](https://github.com/tonsky/FiraCode) highly recommend).
 
-## Homebrew packages
+## Nord themes
 
-Here are some of my favorite Homebrew packages:
-
-- neovim
-- fzf
-- zsh
-- zplug
-- zsh-autosuggestions
-- zsh-completions
-- the_silver_searcher
-- bash-completion
-- universal_ctags
+- [nord-vim](https://github.com/arcticicestudio/nord-vim)
+- [nord-iterm2](https://github.com/arcticicestudio/nord-iterm2)
+- [nord-tmux](https://github.com/arcticicestudio/nord-tmux)
+- [nord-slack](https://github.com/arcticicestudio/nord-slack)
+- [nord-dircolors](https://github.com/arcticicestudio/nord-dircolors)
 
 ## IRB customizations
 
