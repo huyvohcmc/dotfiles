@@ -17,7 +17,6 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 - universal_ctags
 - zsh-autosuggestions
 - zsh-completions
-- bash-completion
 
 ## Installation
 
