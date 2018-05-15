@@ -4,7 +4,7 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 
 ### Screenshot
 
-![terminal](terminal.png)
+![screenshot](screenshot.png)
 
 ### Prerequisites
 
