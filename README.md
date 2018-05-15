@@ -41,11 +41,3 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 ```
-
-## IRB customizations
-
-I use [awesome_print](https://github.com/awesome-print/awesome_print) to pretty prints Ruby objects in full color:
-
-```
-gem install awesome_print
-```
