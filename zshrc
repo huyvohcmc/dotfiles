@@ -20,7 +20,6 @@ plugins=(
   zsh-autosuggestions
   history-substring-search
 )
-
 autoload -U compinit && compinit
 
 alias vc="nvim ~/.config/nvim/init.vim"
@@ -28,14 +27,11 @@ alias vc="nvim ~/.config/nvim/init.vim"
 alias v="nvim"
 
 export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-
-export PATH="$HOME/.cargo/bin:$PATH"
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
