@@ -16,7 +16,6 @@ plugins=(
   git
   docker
   docker-compose
-  dotenv
   zsh-autosuggestions
   history-substring-search
 )
