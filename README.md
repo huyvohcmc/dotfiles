@@ -6,6 +6,12 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 
 ![screenshot](screenshot.png)
 
+**Terminal**: iTerm2
+
+**Colorscheme**: Nord
+
+**Font**: Fira Code Retina 16pt
+
 ## Prerequisites
 
 Neovim requires Python 2, Python 3, Ruby and Node installed (https://github.com/neovim/neovim/wiki/FAQ).
@@ -36,19 +42,26 @@ chsh -s $(which zsh)
 Install zsh-autosuggestions:
 
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ```
 
 Install zsh-completions:
 
 ```
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-completions \
+    ~/.oh-my-zsh/custom/plugins/zsh-completions
 ```
 
-Install Neovim and vim-plug:
+Install Neovim:
 
 ```
 brew install neovim
+```
+
+Install vim-plug:
+
+```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
@@ -82,4 +95,19 @@ Install dotfiles:
 
 ```
 cd ~/.dotfiles && ./install.sh
+```
+
+## Neovim
+
+In order to get `ALE` to work properly, you should install `rubocop` gem and `eslint` package:
+
+```
+gem install rubocop
+npm install -g eslint
+```
+
+## IRB customizations
+
+```
+gem install awesome_print interactive_editor
 ```
