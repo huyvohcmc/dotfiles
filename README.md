@@ -72,22 +72,14 @@ Install tmux:
 brew install tmux
 ```
 
-Clone this project to ~/.dotfiles directory:
+Clone this project into `~/.dotfiles` directory:
 
 ```
 git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
 ```
 
-Remove default config files:
+Install dotfiles:
 
 ```
-```
-
-Create symbolic links:
-
-```
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/zshrc ~/.zshrc
-ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+cd ~/.dotfiles && ./install.sh
 ```
