@@ -25,6 +25,8 @@ alias vc="nvim ~/.config/nvim/init.vim"
 
 alias v="nvim"
 
+alias dotfiles="cd ~/.dotfiles"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
