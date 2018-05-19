@@ -123,8 +123,16 @@ let g:gitgutter_sign_removed = '━'
 let g:gitgutter_sign_removed_first_line = '━'
 let g:gitgutter_sign_modified_removed = '┅'
 
-" Gutentag exclude
+" Gutentags exclude
+let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
 let g:gutentags_ctags_exclude = ['*.min.js', '*.min.css', 'build', 'vendor', '.git', 'node_modules', '*.vim/bundle/*']
+
+" Refresh statusline after Gutentags background process has ended
+augroup MyGutentagsStatusLineRefresher
+  autocmd!
+  autocmd User GutentagsUpdating call lightline#update()
+  autocmd User GutentagsUpdated call lightline#update()
+augroup END
 
 " Use <TAB> to select nvim-completion-manager's popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
