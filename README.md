@@ -6,11 +6,7 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 
 ![screenshot](screenshot.png)
 
-**Terminal**: iTerm2
-
-**Colorscheme**: Nord
-
-**Font**: Fira Code Retina 16pt
+**Terminal**: iTerm2 with Nord colorscheme and Fira Code font (16pt).
 
 ## Prerequisites
 
