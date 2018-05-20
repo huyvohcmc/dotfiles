@@ -42,15 +42,13 @@ chsh -s $(which zsh)
 Install zsh-autosuggestions:
 
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions \
-    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ```
 
 Install zsh-completions:
 
 ```
-git clone https://github.com/zsh-users/zsh-completions \
-    ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 ```
 
 Install Neovim:
@@ -69,8 +67,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 Install universtal-ctags:
 
 ```
-brew tap universal-ctags/universal-ctags
-brew install --HEAD universal-ctags
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
 Install the_silver_searcher:
