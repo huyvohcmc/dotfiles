@@ -19,75 +19,75 @@ Because this dotfiles aims to Ruby and React development, [rvm](https://rvm.io/)
 Install Homebrew:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Add the following line to `.bashrc` file:
 
 ```
-export PATH=/usr/local/bin:$PATH
+$ export PATH=/usr/local/bin:$PATH
 ```
 
 Install zsh and set zsh as the default shell:
 
 ```
-brew install zsh
-chsh -s $(which zsh)
+$ brew install zsh
+$ chsh -s $(which zsh)
 ```
 
 Install zsh-autosuggestions:
 
 ```
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ```
 
 Install zsh-completions:
 
 ```
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+$ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 ```
 
 Install Neovim:
 
 ```
-brew install neovim
+$ brew install neovim
 ```
 
 Install vim-plug:
 
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 Install universtal-ctags:
 
 ```
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+$ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
 Install the_silver_searcher:
 
 ```
-brew install the_silver_searcher
+$ brew install the_silver_searcher
 ```
 
 Install tmux:
 
 ```
-brew install tmux
+$ brew install tmux
 ```
 
 Clone this project into `~/.dotfiles` directory:
 
 ```
-git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
+$ git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
 ```
 
 Install dotfiles:
 
 ```
-cd ~/.dotfiles && ./install.sh
+$ cd ~/.dotfiles && ./install.sh
 ```
 
 ## Neovim
@@ -95,12 +95,12 @@ cd ~/.dotfiles && ./install.sh
 In order to get `ALE` to work properly, you should install `rubocop` gem and `eslint` package:
 
 ```
-gem install rubocop
-npm install -g eslint
+$ gem install rubocop
+$ npm install -g eslint
 ```
 
 ## IRB customizations
 
 ```
-gem install awesome_print interactive_editor
+$ gem install awesome_print interactive_editor
 ```
