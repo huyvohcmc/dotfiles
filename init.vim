@@ -11,7 +11,6 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -37,8 +36,9 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-let g:challenger_deep_termcolors = 16
-colorscheme challenger_deep
+let g:nord_comment_brightness = 20
+let g:nord_uniform_diff_background = 1
+colorscheme nord
 
 " General settings (some are enabled by default, see :h vim-differences)
 filetype plugin indent on
@@ -142,7 +142,7 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " LightLine config
 let g:lightline = {
-      \ 'colorscheme': 'challenger_deep',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
