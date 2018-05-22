@@ -6,7 +6,7 @@ A set of neovim, zsh, git, and tmux configuration files, made with blood sweat a
 
 ![screenshot](screenshot.png)
 
-**Terminal**: [iTerm2](https://www.iterm2.com/) with [Nord](https://github.com/arcticicestudio/nord-iterm2) colorscheme and [Fira Code](https://github.com/tonsky/FiraCode) font (16pt).
+**Terminal**: [iTerm2](https://www.iterm2.com/) with [Nord](https://github.com/arcticicestudio/nord-iterm2) colorscheme and [Iosevka](https://github.com/be5invis/Iosevka) font (17pt).
 
 ## Prerequisites
 
