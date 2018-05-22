@@ -2,7 +2,28 @@ export ZSH=~/.oh-my-zsh
 
 export EDITOR=nvim
 
-ZSH_THEME="hyperzsh"
+ZSH_THEME="spaceship"
+
+SPACESHIP_PROMPT_ORDER=(
+  user
+  host
+  dir
+  git
+  line_sep
+  jobs
+  exit_code
+  char
+)
+
+SPACESHIP_PROMPT_ADD_NEWLINE="false"
+
+SPACESHIP_PROMPT_SEPARATE_LINE="false"
+
+SPACESHIP_CHAR_SYMBOL="➜  "
+
+SPACESHIP_USER_SHOW="always"
+
+SPACESHIP_HOST_SHOW="always"
 
 CASE_SENSITIVE="false"
 
