@@ -173,9 +173,10 @@ let g:ale_set_quickfix = 1
 
 " Ale linters
 let g:ale_linters = {
-      \   'javascript': ['eslint'],
       \   'ruby': ['rubocop'],
+      \   'javascript': ['eslint'],
       \ }
 let g:ale_fixers = {
       \   'ruby': ['rubocop'],
+      \   'javascript': ['eslint'],
       \ }
