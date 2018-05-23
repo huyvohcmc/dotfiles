@@ -1830,13 +1830,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>353 448 528 77 0 0 1440 878 </string>
+	<string>356 388 528 77 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>284 387 796 473 0 0 1440 878 </string>
+	<string>160 216 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>51 8 1387 862 0 0 1440 878 </string>
+	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-227 900 1920 1058 -227 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2096,6 +2096,8 @@
 			</dict>
 			<key>Blend</key>
 			<real>0.37791967147435901</real>
+			<key>Blink Allowed</key>
+			<false/>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -2162,6 +2164,8 @@
 				<key>Red Component</key>
 				<real>0.17621420323848724</real>
 			</dict>
+			<key>Cursor Type</key>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>Yes</string>
 			<key>Custom Directory</key>
@@ -2497,7 +2501,7 @@
 				<real>0.87367779016494751</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.082830255681818177</real>
+			<real>0.10209517045454546</real>
 			<key>Mouse Reporting</key>
 			<false/>
 			<key>Name</key>
@@ -2557,7 +2561,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Space</key>
 			<integer>-1</integer>
 			<key>Sync Title</key>
@@ -2586,7 +2590,7 @@
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
-			<integer>9</integer>
+			<integer>8</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
