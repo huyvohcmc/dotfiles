@@ -2519,7 +2519,7 @@
 			<key>Rows</key>
 			<integer>300</integer>
 			<key>Screen</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>Scrollback Lines</key>
 			<integer>100000</integer>
 			<key>Scrollback in Alternate Screen</key>
@@ -2679,7 +2679,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-22T10:49:42Z</date>
+	<date>2018-05-23T10:49:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
