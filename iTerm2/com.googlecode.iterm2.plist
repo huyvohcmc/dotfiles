@@ -1836,9 +1836,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>49 0 1391 878 0 0 1440 878 </string>
+	<string>51 8 1387 862 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>49 0 1391 878 0 0 1440 878 </string>
+	<string>-227 900 1920 1058 -227 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
@@ -2519,7 +2519,7 @@
 			<key>Rows</key>
 			<integer>300</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>Scrollback Lines</key>
 			<integer>100000</integer>
 			<key>Scrollback in Alternate Screen</key>
