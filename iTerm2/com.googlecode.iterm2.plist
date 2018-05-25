@@ -1832,7 +1832,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>225 254 528 77 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>420 344 796 473 0 0 1440 878 </string>
+	<string>452 369 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
