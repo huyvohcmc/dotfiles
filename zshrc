@@ -12,6 +12,9 @@ ZSH_THEME="agnoster"
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
 alias dotfiles="cd ~/.dotfiles"
+go() {
+  cd ~/Projects/"$1"
+}
 
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
