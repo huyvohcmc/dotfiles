@@ -1,12 +1,15 @@
-# dotfiles
+<div align="center">
 
-A set of neovim, zsh, git, and tmux configuration files, made with blood sweat and tears.
+<img src="screenshot.png" />
 
-## Screenshot
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
-![screenshot](screenshot.png)
+<p>A set of neovim, zsh, git, and tmux configuration files, made with blood sweat and tears.</p>
 
-**Terminal**: [iTerm2](https://www.iterm2.com/) with [Nord](https://github.com/arcticicestudio/nord-iterm2) theme and [Iosevka](https://github.com/be5invis/Iosevka) font (17pt).
+</div>
+
+---
 
 ## Prerequisites
 
@@ -27,40 +30,36 @@ Make sure the following requirements are installed:
 Clone this project into `~/.dotfiles` directory:
 
 ```
-git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
+$ git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
 ```
 
-Install dotfiles:
+Create symbolic links:
 
 ```
-cd ~/.dotfiles && ./install.sh
+$ cd ~/.dotfiles && ./install.sh
+```
+
+## Iosevka
+
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My iTerm2 use Iosevka 17 pt with character width set to 530.
+
+## Neovim
+
+My Vim configuration is for Ruby and React development, so you should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) can work properly:
+
+```
+$ gem install rubocop
+$ npm install -g eslint
 ```
 
 ## ZSH plugins
 
-Install zsh-completions:
-
-```
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-```
-
-Install zsh-autosuggestions:
-
-```
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-```
-
-## Neovim plugins
-
-In order to get [ALE](https://github.com/w0rp/ale) to work properly, you need to install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint):
-
-```
-gem install rubocop
-npm install -g eslint
-```
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ## IRB customizations
 
 ```
-gem install awesome_print interactive_editor
+$ gem install awesome_print interactive_editor
 ```
