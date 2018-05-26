@@ -54,9 +54,7 @@ $ npm install -g eslint
 
 ## ZSH plugins
 
-- [zsh-completions](https://github.com/zsh-users/zsh-completions)
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+[zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) are my most favorite plugins for zsh.
 
 ## IRB customizations
 
