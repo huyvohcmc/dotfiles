@@ -2,7 +2,7 @@
 
 <img src="screenshot.png" />
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 <p>A set of neovim, zsh, git, and tmux configuration files, made with blood sweat and tears.</p>
@@ -54,7 +54,7 @@ $ npm install -g eslint
 
 ## ZSH plugins
 
-[zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) are my most favorite plugins for zsh.
+I use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for better development environment.
 
 ## IRB customizations
 
