@@ -39,9 +39,9 @@ Create symbolic links:
 $ cd ~/.dotfiles && ./install.sh
 ```
 
-## Iosevka
+## ZSH plugins
 
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My iTerm2 use Iosevka 17 pt with character width set to 530.
+I only use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
 
 ## Neovim
 
@@ -52,12 +52,6 @@ $ gem install rubocop
 $ npm install -g eslint
 ```
 
-## ZSH plugins
+## Iosevka
 
-I use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) for better development environment.
-
-## IRB customizations
-
-```
-$ gem install awesome_print interactive_editor
-```
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My iTerm2 use Iosevka 17 pt with character width set to 530.
