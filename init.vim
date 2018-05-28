@@ -79,6 +79,10 @@ nnoremap <leader>w :w!<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <silent> <leader><cr> :silent :let @/ = ""<cr>
 
+" System clipboard mapping
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+
 " Easy navigation
 noremap <leader>s <c-w>w
 
