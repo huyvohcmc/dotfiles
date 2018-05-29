@@ -54,4 +54,4 @@ $ npm install -g eslint
 
 ## Iosevka
 
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My iTerm2 use Iosevka 17 pt with character width set to 530.
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. I use Iosevka 17 pt with character width set to 545.
