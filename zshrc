@@ -28,4 +28,4 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 source $HOME/.rvm/scripts/rvm
 source $ZSH/oh-my-zsh.sh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
