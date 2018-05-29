@@ -101,8 +101,8 @@ nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
 " NERDTree mapping and config
-map <leader>n :NERDTreeToggle<CR>
-map <leader>c :NERDTreeFind<CR>
+noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
 
@@ -112,11 +112,11 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " Ag search
-map <leader>ag <esc>:Ag<space>
+noremap <leader>ag <esc>:Ag<space>
 
 " Git mapping
-map <silent> gb :Gblame<CR>
-map <silent> ghub :Gbrowse<CR>
+noremap <silent> gb :Gblame<CR>
+noremap <silent> ghub :Gbrowse<CR>
 
 " Git gutter custom symbols
 let g:gitgutter_sign_added = '✚'
