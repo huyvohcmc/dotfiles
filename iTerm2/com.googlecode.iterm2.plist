@@ -1788,7 +1788,7 @@
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/iTerm2</string>
+	<string>~/tender-iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{878, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -1830,13 +1830,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>485 933 528 77 -227 900 1920 1058 </string>
+	<string>730 160 528 77 0 0 1440 878 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>562 1395 796 473 -227 900 1920 1058 </string>
+	<string>452 346 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-227 900 1920 1058 -227 900 1920 1058 </string>
+	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>-227 900 1920 1058 -227 900 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2501,7 +2503,7 @@
 				<real>0.87367779016494751</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.10209517045454546</real>
+			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<false/>
 			<key>Name</key>
