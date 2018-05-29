@@ -85,6 +85,10 @@ nnoremap <leader>p "+p
 
 " Easy navigation
 noremap <leader>s <c-w>w
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-h> <c-w>h
+noremap <c-l> <c-w>l
 
 " Disable useless arrow keys
 inoremap <Up> <NOP>
@@ -95,12 +99,6 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
-
-" Scrolling 4x faster when holding down Ctrl
-nnoremap <c-j> 4j
-nnoremap <c-k> 4k
-nnoremap <c-h> 4h
-nnoremap <c-l> 4l
 
 " NERDTree mapping and config
 map <leader>n :NERDTreeToggle<CR>
