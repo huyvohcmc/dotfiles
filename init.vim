@@ -26,8 +26,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 call plug#end()
 
 " Safeguard
@@ -39,6 +39,12 @@ endif
 let g:nord_comment_brightness = 20
 let g:nord_uniform_diff_background = 1
 colorscheme nord
+
+highlight clear CursorLineNr
+augroup Nord
+  autocmd!
+  autocmd ColorScheme nord highlight CursorLineNr guifg=#E5E9F0 ctermfg=7
+augroup end
 
 " General settings (some are enabled by default, see :h vim-differences)
 filetype plugin indent on
