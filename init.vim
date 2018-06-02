@@ -75,7 +75,7 @@ set wrap
 
 " Leader mapping
 let mapleader = ","
-nnoremap <leader>w :w!<cr>
+nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <silent> <leader><cr> :silent :let @/ = ""<cr>
 
