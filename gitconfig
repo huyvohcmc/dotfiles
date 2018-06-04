@@ -24,7 +24,7 @@
 [merge]
   ff = only
 [commit]
-  template = ~/.stCommitMsg
+  template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
