@@ -69,7 +69,7 @@ set relativenumber
 set ruler rulerformat=%l\:%c
 set scrolloff=10
 set showcmd
-set showtabline=2
+set showtabline=1
 set smarttab
 set tags=./tags;,tags
 set termguicolors
