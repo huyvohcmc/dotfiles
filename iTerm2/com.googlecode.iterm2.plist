@@ -1830,17 +1830,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>472 242 528 77 0 0 1440 878 </string>
+	<string>431 235 528 77 0 0 1440 878 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>492 393 796 473 0 0 1440 878 </string>
+	<string>497 351 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-227 900 1920 1058 -227 900 1920 1058 </string>
+	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>49 0 1391 878 0 0 1440 878 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>

@@ -39,14 +39,6 @@ Create symbolic links:
 $ cd ~/.dotfiles && ./install.sh
 ```
 
-## Iosevka
-
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My font configuration is regular Iosevka 16 pt and 575 character width.
-
-## ZSH plugins
-
-I only use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
-
 ## Neovim
 
 This configuration is maded for Ruby and React development, so you should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) to work properly:
@@ -55,3 +47,11 @@ This configuration is maded for Ruby and React development, so you should instal
 $ gem install rubocop
 $ npm install -g eslint
 ```
+
+## ZSH plugins
+
+I only use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
+
+## Iosevka
+
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My font config is regular Iosevka, 16 pt and 560 character width.
