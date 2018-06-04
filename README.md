@@ -41,7 +41,7 @@ $ cd ~/.dotfiles && ./install.sh
 
 ## Iosevka
 
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. I use Iosevka 17 pt with character width set to 545.
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My font configuration is regular Iosevka 16 pt and 575 character width.
 
 ## ZSH plugins
 
