@@ -166,6 +166,7 @@ let g:lightline.tabline = {
       \ }
 
 " Prettier
+nmap <leader>py <Plug>(Prettier)
 let g:prettier#exec_cmd_async = 1
 
 " Ale basic config
