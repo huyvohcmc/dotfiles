@@ -1830,11 +1830,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>431 235 528 77 0 0 1440 878 </string>
+	<string>431 1054 528 77 -227 900 1920 1080 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>497 351 796 473 0 0 1440 878 </string>
+	<string>497 340 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -2515,13 +2515,13 @@
 			<key>Normal Font</key>
 			<string>Iosevka 16</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
 			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>300</integer>
 			<key>Screen</key>
@@ -2685,7 +2685,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-04T02:55:46Z</date>
+	<date>2018-06-05T13:22:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
