@@ -1,6 +1,6 @@
 _Store
-DS_Store
-DS_Store?
+.DS_Store
+.DS_Store?
 *.sw[nop]
 .Trashes
 .bundle
