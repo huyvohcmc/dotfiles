@@ -48,10 +48,16 @@ $ gem install rubocop
 $ npm install -g eslint
 ```
 
-## ZSH plugins
+## ZSH
 
-I only use [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
+Install [purer](https://github.com/DFurnes/purer), a ZSH prompt based on [pure](https://github.com/sindresorhus/pure):
+
+```
+$ npm install --global purer-prompt
+```
+
+Next, install [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
 
 ## Iosevka
 
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best programming fonts out there. My font config is regular Iosevka, 16 pt and 560 character width.
+My iTerm2 use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (575 width).
