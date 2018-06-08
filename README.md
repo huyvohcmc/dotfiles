@@ -41,7 +41,7 @@ $ cd ~/.dotfiles && ./install.sh
 
 ## Neovim
 
-This configuration is maded for Ruby and React development, so you should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) to work properly:
+You should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) to work properly:
 
 ```
 $ gem install rubocop
@@ -60,4 +60,4 @@ Next, install [zsh-completions](https://github.com/zsh-users/zsh-completions) an
 
 ## Iosevka
 
-My iTerm2 use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (575 width).
+My iTerm2 use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (575 width). Use the default tff from its release if you don't think the font is too narrow.
