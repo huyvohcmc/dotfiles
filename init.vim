@@ -10,9 +10,9 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
+Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -36,15 +36,7 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-let g:nord_comment_brightness = 20
-let g:nord_uniform_diff_background = 1
-colorscheme nord
-
-highlight clear CursorLineNr
-augroup Nord
-  autocmd!
-  autocmd ColorScheme nord highlight CursorLineNr guifg=#E5E9F0 ctermfg=7
-augroup end
+colorscheme tender
 
 " General settings (some are enabled by default, see :h vim-differences)
 filetype plugin indent on
@@ -150,7 +142,7 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " LightLine config
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'tender',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
