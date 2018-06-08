@@ -5,13 +5,14 @@ plugins=(
   zsh-autosuggestions
   history-substring-search
 )
-autoload -U compinit && compinit
 
-ZSH_THEME="agnoster"
+autoload -U promptinit; promptinit
+prompt purer
 
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
 alias dotfiles="cd ~/.dotfiles"
+
 go() {
   cd ~/Projects/"$1"
 }
