@@ -24,6 +24,7 @@ Make sure the following requirements are installed:
 - zsh and oh-my-zsh
 - universal-ctags
 - the_silver_searcher
+- reattach-to-user-namespace
 
 ## Installation
 
