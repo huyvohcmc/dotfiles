@@ -6,10 +6,12 @@
 	<false/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AlternateMouseScrollStringForDown</key>
-	<string>\e</string>
+	<string></string>
 	<key>AlternateMouseScrollStringForUp</key>
-	<string>\e</string>
+	<string></string>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -2177,11 +2179,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>320 298 928 394 0 0 1440 900 </string>
+	<string>123 424 1018 447 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 0 1393 878 0 0 1440 900 </string>
+	<string>47 0 1393 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>47 0 1393 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
