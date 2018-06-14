@@ -112,6 +112,9 @@ nnoremap <leader>t :Files<CR>
 " Ag search
 noremap <leader>ag <esc>:Ag<space>
 
+" Support comment for JSX
+autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
+
 " Git mapping
 noremap <silent> gb :Gblame<CR>
 noremap <silent> ghub :Gbrowse<CR>
