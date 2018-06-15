@@ -34,7 +34,7 @@ Clone this project into `~/.dotfiles` directory:
 $ git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
 ```
 
-Create symbolic links:
+Install dotfiles:
 
 ```
 $ cd ~/.dotfiles && ./install.sh
