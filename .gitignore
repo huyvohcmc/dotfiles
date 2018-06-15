@@ -1,0 +1,16 @@
+**/.DS_Store
+*.sw[nop]
+.Trashes
+.bundle
+.byebug_history
+.env
+db/*.sqlite3
+log/*.log
+rerun.txt
+tags
+tags.lock
+tags.temp
+!tags/
+tmp/**/*
+!tmp/cache/.keep
+*.pyc
