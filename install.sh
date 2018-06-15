@@ -1,19 +1,18 @@
 #!/bin/sh
 
-echo 'Starting...'
+printf "Move your dotfiles into ~/.dotfiles.old ... "
+mkdir -p ~/.dotfiles.old
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/.dotfiles.old/
+[ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.dotfiles.old/
+[ -f ~/.gitignore ] && mv ~/.gitignore ~/.dotfiles.old/
+[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.dotfiles.old/
+[ -f ~/.config/nvim/init.vim ] && mv ~/.config/nvim/init.vim ~/.dotfiles.old/
+printf "done\n"
 
-# Remove default config files if they're already exist
-[ -f ~/.zshrc ] && rm -rf ~/.zshrc
-[ -f ~/.gitconfig ] && rm -rf ~/.gitconfig
-[ -f ~/.gitignore ] && rm -rf ~/.gitignore
-[ -f ~/.tmux.conf ] && rm -rf ~/.tmux.conf
-[ -f ~/.config/nvim/init.vim ] && rm -rf ~/.config/nvim/init.vim
-
-# Create symbolic links
+printf "Create symbolic links ... "
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore ~/.gitignore
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
-
-echo 'Done'
+printf "done\n"
