@@ -31,4 +31,4 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
