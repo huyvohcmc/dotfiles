@@ -2,6 +2,9 @@
 
 <img src="screenshot.png" />
 
+<br />
+<br />
+
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
@@ -28,7 +31,7 @@ Make sure the following requirements are installed:
 
 ## Installation
 
-Clone this project into `~/.dotfiles` directory:
+Clone this project:
 
 ```
 $ git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
