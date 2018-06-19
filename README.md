@@ -64,4 +64,4 @@ Next, install [zsh-completions](https://github.com/zsh-users/zsh-completions) an
 
 ## Iosevka
 
-I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (575 width). Use the default tff from its release if you don't think the font is too narrow.
+I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (550 width). Use the default tff from its release if you don't think the font is too narrow.
