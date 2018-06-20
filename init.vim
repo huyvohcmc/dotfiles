@@ -19,7 +19,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
@@ -111,9 +111,6 @@ nnoremap <leader>t :Files<CR>
 
 " Ag search
 noremap <leader>ag <esc>:Ag<space>
-
-" Support comment for JSX
-autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 
 " Git mapping
 noremap <silent> gb :Gblame<CR>
