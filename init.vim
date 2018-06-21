@@ -140,6 +140,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Hide ncm menu and also start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
+" Prettier
+nmap <leader>e <Plug>(Prettier)
+let g:prettier#exec_cmd_async = 1
+
 " LightLine config
 let g:lightline = {
       \ 'colorscheme': 'tender',
@@ -156,10 +160,6 @@ let g:lightline.tabline = {
       \ 'left': [ [ 'tabs' ] ],
       \ 'right': [ [ 'close' ] ]
       \ }
-
-" Prettier
-nmap <leader>e <Plug>(Prettier)
-let g:prettier#exec_cmd_async = 1
 
 " Ale basic config
 let g:ale_sign_error = '✖'
