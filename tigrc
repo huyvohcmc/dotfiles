@@ -1,0 +1,8 @@
+bind status P !git push origin HEAD
+bind status D !@?rm %(file)
+bind generic + !git commit --amend
+bind generic 9 !@sh -c "echo -n %(commit) | xclip -selection c"
+bind main ! !git revert %(commit)
+bind stash D !?git stash drop %(stash)
+bind stash A !?git stash apply %(stash)
+bind status S !?git stash save --keep-index %(prompt)

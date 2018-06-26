@@ -7,6 +7,7 @@ mkdir -p ~/.dotfiles.old
 [ -f ~/.gitignore ] && mv ~/.gitignore ~/.dotfiles.old/
 [ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.dotfiles.old/
 [ -f ~/.config/nvim/init.vim ] && mv ~/.config/nvim/init.vim ~/.dotfiles.old/
+[ -f ~/.tigrc ] && mv ~/.tigrc ~/.dotfiles.old/
 printf "done\n"
 
 printf "Create symbolic links ... "
@@ -15,4 +16,5 @@ ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/gitignore ~/.gitignore
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/tigrc ~/.zshrc
 printf "done\n"
