@@ -20,6 +20,7 @@ Make sure the following requirements are installed:
 
 - homebrew
 - git
+- tig
 - neovim
 - vim-plug
 - tmux
