@@ -66,3 +66,7 @@ Next, install [zsh-completions](https://github.com/zsh-users/zsh-completions) an
 ## Iosevka
 
 I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (550 width). Use the default tff from its release if you don't think the font is too narrow.
+
+## Will this work on Windows?
+
+![Did you just say Windows?](http://i3.kym-cdn.com/photos/images/newsfeed/000/549/293/504.gif)
