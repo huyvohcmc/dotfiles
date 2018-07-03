@@ -149,7 +149,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " Prettier
-nmap <leader>p <Plug>(Prettier)
+nmap <leader>e <Plug>(Prettier)
 let g:prettier#exec_cmd_async = 1
 
 " LightLine config
