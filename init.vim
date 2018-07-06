@@ -99,6 +99,7 @@ nnoremap <Right> <NOP>
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
+let NERDTreeMinimalUI = 1
 let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
 
 " Activate FZF search panel
