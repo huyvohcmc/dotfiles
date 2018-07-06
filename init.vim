@@ -41,7 +41,10 @@ set autoindent
 set autoread
 set clipboard=unnamedplus
 set copyindent
-set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set expandtab
+set tabstop=2
+set shiftwidth=0 " Always have the same value with `tabstop`
+set softtabstop=-1 "Always have the same value with `shiftwidth`
 set hidden
 set history=500
 set incsearch hlsearch ignorecase smartcase
