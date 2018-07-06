@@ -15,12 +15,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'lambdalisue/gina.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -116,7 +116,7 @@ nnoremap <leader>t :Files<CR>
 " Ag search
 noremap <leader>ag <esc>:Ag<space>
 
-" Git mapping
+" vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
 noremap <silent> ghub :Gbrowse<CR>
 
@@ -153,7 +153,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gina#component#repo#branch',
+      \   'gitbranch': 'fugitive#head',
       \   'gutentags': 'gutentags#statusline',
       \ },
       \ }
