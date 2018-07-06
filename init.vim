@@ -120,7 +120,7 @@ noremap <leader>ag <esc>:Ag<space>
 noremap <silent> gb :Gblame<CR>
 noremap <silent> ghub :Gbrowse<CR>
 
-" Signify
+" Signify config
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 " Custom sign symbols
@@ -128,7 +128,9 @@ let g:signify_sign_add = '✚'
 let g:signify_sign_change = '●'
 let g:signify_sign_delete = '━'
 let g:signify_sign_delete_first_line = '━'
-" Highlighting groups for signs
+" Override SignColumn background color
+highlight SignColumn guibg=#282828
+" Sign highlighting
 highlight link SignifySignAdd GitGutterAdd
 highlight link SignifySignChange GitGutterChange
 highlight link SignifySignDelete GitGutterDelete
