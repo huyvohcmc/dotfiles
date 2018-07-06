@@ -100,7 +100,13 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeIgnore = ['\.o$', '\~', '\.pyc$', '\.git$', '\.hg$', '\.DS_Store']
+let NERDTreeIgnore = [
+      \ '^\~$[[dir]]',
+      \ '^\.git$[[dir]]',
+      \ '^\.o$[[file]]',
+      \ '^\.pyc$[[file]]',
+      \ '^\.DS_Store$[[file]]',
+      \ ]
 
 " Activate FZF search panel
 nnoremap <leader>h :History<CR>
