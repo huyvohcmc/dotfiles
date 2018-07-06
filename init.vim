@@ -25,9 +25,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
-Plug 'prettier/vim-prettier', {
-      \ 'do': 'yarn install',
-      \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 call plug#end()
 
 " Safeguard
@@ -138,10 +135,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Hide ncm menu and also start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
-" Prettier
-nmap <leader>e <Plug>(Prettier)
-let g:prettier#exec_cmd_async = 1
-
 " LightLine config
 let g:lightline = {
       \ 'colorscheme': 'tender',
@@ -177,5 +170,8 @@ let g:ale_linters = {
       \ }
 let g:ale_fixers = {
       \   'ruby': ['rubocop'],
-      \   'javascript': ['eslint'],
+      \   'javascript': ['prettier'],
       \ }
+
+" ALE quickfix with Prettier
+nmap <leader>e <Plug>(ale_fix)
