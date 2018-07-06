@@ -9,13 +9,13 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
-Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'mhinz/vim-signify'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -120,12 +120,20 @@ noremap <leader>ag <esc>:Ag<space>
 noremap <silent> gb :Gblame<CR>
 noremap <silent> ghub :Gbrowse<CR>
 
-" Git gutter custom symbols
-let g:gitgutter_sign_added = '✚'
-let g:gitgutter_sign_modified = '●'
-let g:gitgutter_sign_removed = '━'
-let g:gitgutter_sign_removed_first_line = '━'
-let g:gitgutter_sign_modified_removed = '┅'
+" Signify
+let g:signify_vcs_list = [ 'git' ]
+let g:signify_realtime = 1
+" Custom sign symbols
+let g:signify_sign_add = '✚'
+let g:signify_sign_change = '●'
+let g:signify_sign_delete = '━'
+let g:signify_sign_delete_first_line = '━'
+" Highlighting groups for signs
+highlight link SignifySignAdd GitGutterAdd
+highlight link SignifySignChange GitGutterChange
+highlight link SignifySignDelete GitGutterDelete
+highlight link SignifySignChangeDelete GitGutterChangeDelete
+highlight link SignifySignDeleteFirstLine SignifySignDelete
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
