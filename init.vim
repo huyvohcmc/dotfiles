@@ -15,6 +15,7 @@ Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree'
@@ -23,7 +24,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 call plug#end()
 
@@ -136,6 +136,20 @@ highlight link SignifySignChange GitGutterChange
 highlight link SignifySignDelete GitGutterDelete
 highlight link SignifySignChangeDelete GitGutterChangeDelete
 highlight link SignifySignDeleteFirstLine SignifySignDelete
+
+" Sandwich config
+runtime macros/sandwich/keymap/surround.vim
+" If you have not copied default recipes
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+" Add spaces inside braket
+let g:sandwich#recipes += [
+      \   {'buns': ['{ ', ' }'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['{']},
+      \   {'buns': ['[ ', ' ]'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['[']},
+      \   {'buns': ['( ', ' )'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['(']},
+      \   {'buns': ['{\s*', '\s*}'],   'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['{']},
+      \   {'buns': ['\[\s*', '\s*\]'], 'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['[']},
+      \   {'buns': ['(\s*', '\s*)'],   'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['(']},
+      \ ]
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
