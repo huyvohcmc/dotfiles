@@ -132,10 +132,11 @@ augroup MyGutentagsStatusLineRefresher
   autocmd User GutentagsUpdated call lightline#update()
 augroup END
 
-" Use <TAB> to select nvim-completion-manager's popup menu
+" Nvim-Completion-Manager
+" Use <TAB> to select auto-complete menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" Hide ncm menu and also start a new line
+" Hide auto-complete menu and start a new line
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " LightLine config
