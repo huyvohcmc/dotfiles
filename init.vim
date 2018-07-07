@@ -17,7 +17,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
-Plug 'roxma/nvim-completion-manager'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
@@ -32,6 +33,12 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Enable ncm2 for all buffer
+autocmd BufEnter * call ncm2#enable_for_buffer()
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 " Colorscheme
 colorscheme tender
 
@@ -40,6 +47,7 @@ filetype plugin indent on
 set autoindent
 set autoread
 set clipboard=unnamedplus
+set completeopt=noinsert,menuone,noselect
 set copyindent
 set expandtab
 set tabstop=2
@@ -61,6 +69,7 @@ set number
 set relativenumber
 set ruler rulerformat=%l\:%c
 set scrolloff=10
+set shortmess+=c
 set showcmd
 set showtabline=1
 set smarttab
@@ -158,13 +167,6 @@ augroup MyGutentagsStatusLineRefresher
   autocmd User GutentagsUpdating call lightline#update()
   autocmd User GutentagsUpdated call lightline#update()
 augroup END
-
-" Nvim-Completion-Manager
-" Use <TAB> to select auto-complete menu
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" Hide auto-complete menu and start a new line
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 " LightLine config
 let g:lightline = {
