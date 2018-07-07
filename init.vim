@@ -138,9 +138,7 @@ highlight link SignifySignDeleteFirstLine SignifySignDelete
 
 " Sandwich config
 runtime macros/sandwich/keymap/surround.vim
-" If you have not copied default recipes
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
-" Add spaces inside braket
 let g:sandwich#recipes += [
       \   {'buns': ['{ ', ' }'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['{']},
       \   {'buns': ['[ ', ' ]'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['[']},
