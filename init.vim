@@ -123,14 +123,13 @@ noremap <silent> ghub :Gbrowse<CR>
 " Signify config
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
-" Custom sign symbols
-let g:signify_sign_add = '✚'
-let g:signify_sign_change = '●'
-let g:signify_sign_delete = '━'
-let g:signify_sign_delete_first_line = '━'
-" Override SignColumn background color
+let g:signify_sign_show_count = 0
+let g:signify_sign_add = '▪'
+let g:signify_sign_change = '▪'
+let g:signify_sign_delete = '▪'
+let g:signify_sign_delete_first_line = '▪'
+" Small hack, will remove this when tender get update
 highlight SignColumn guibg=#282828
-" Sign highlighting
 highlight link SignifySignAdd GitGutterAdd
 highlight link SignifySignChange GitGutterChange
 highlight link SignifySignDelete GitGutterDelete
