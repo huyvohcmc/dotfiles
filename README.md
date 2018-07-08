@@ -72,7 +72,7 @@ Install `vim-plug`, a minimalist Vim plugin manager: https://github.com/junegunn
 
 Then open `nvim` and install all plugins: `PlugInstall`. You should also run `:checkhealth` to check your `nvim` condition.
 
-What's inside `init.vim`:
+What's inside `init.vim`?
 
 - [tender](https://github.com/jacoborus/tender.vim) - A 24bit colorscheme for Vim, Airline and Lightline
 - [lightline](https://github.com/itchyny/lightline.vim) - A light and configurable statusline/tabline plugin for Vim
@@ -81,8 +81,8 @@ What's inside `init.vim`:
 - [ALE](https://github.com/w0rp/ale) - Asynchronous Lint Engine
 - [Polyglot](https://github.com/sheerun/vim-polyglot) - A solid language pack for Vim
 - [ncm2](https://github.com/ncm2/ncm2) - Completion framework for Neovim
-  - [nvim-yarb](https://github.com/roxma/nvim-yarp)
   - [ncm2-tagprefix](https://github.com/ncm2/ncm2-tagprefix)
+  - [nvim-yarb](https://github.com/roxma/nvim-yarp)
 - [Gutentags](https://github.com/ludovicchabant/vim-gutentags) - A Vim plugin that manages your tag files
 - [Easymotion](https://github.com/easymotion/vim-easymotion) - Vim motions on speed!
 - [Sandwich](https://github.com/machakann/vim-sandwich) - A plugin to add/delete/replace surroundings of text
@@ -160,6 +160,13 @@ Visit `Iosevka` main repo for more build instructions.
 ## Will... will this work on Windows?
 
 ![Did you just say Windows?](http://i3.kym-cdn.com/photos/images/newsfeed/000/549/293/504.gif)
+
+## Inspired By
+
+- [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
+- [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [Drew Neil's dotfiles](https://github.com/nelstrom/dotfiles)
+- [Kutsan Kaplan's dotfiles](https://github.com/kutsan/dotfiles)
 
 ## License
 
