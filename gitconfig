@@ -21,5 +21,6 @@
 [diff]
   colorMoved = zebra
 [user]
-  name = Huy Vo
-  email = huyvohcmc@gmail.com
+  # set in ~/.gitconfig_local and included
+[include]
+  path = ~/.gitconfig_local
