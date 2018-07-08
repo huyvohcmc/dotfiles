@@ -29,11 +29,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'w0rp/ale'
 call plug#end()
 
-" General settings (some are enabled by default, see :h vim-differences)
+" General settings (see :h vim-differences)
 filetype plugin indent on
-set autoindent
-set autoread
-set clipboard=unnamedplus
+set clipboard=unnamed
 set completeopt=noinsert,menuone,noselect
 set copyindent
 set expandtab
@@ -41,32 +39,18 @@ set tabstop=2
 set shiftwidth=0 " Always have the same value with `tabstop`
 set softtabstop=-1 "Always have the same value with `shiftwidth`
 set hidden
-set history=500
-set incsearch hlsearch ignorecase smartcase
-set laststatus=2
+set ignorecase smartcase
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
-set mouse=""
-set nobackup
-set noshowmatch
 set noshowmode
 set noswapfile
-set number
-set relativenumber
-set ruler rulerformat=%l\:%c
+set number relativenumber
+set rulerformat=%l\:%c
 set scrolloff=10
 set shortmess+=c
-set showcmd
-set showtabline=1
-set smarttab
-set tags=./tags;,tags
 set termguicolors
-set title
-set updatetime=100
-set wildmenu
 set wildmode=list:longest,full
-set wrap
 
 " Safeguard
 if !exists("g:syntax_on")
