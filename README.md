@@ -33,19 +33,19 @@ Make sure the following requirements are installed:
 
 Clone this project (suppose you are at `$HOME`):
 
-```
-git clone git@github.com:huyvohcmc/dotfiles.git dotfiles
+```bash
+$ git clone git@github.com:huyvohcmc/dotfiles.git dotfiles
 ```
 
 Create a backup for existing dotfiles at `~/dotfiles.backup` and install the new ones:
 
-```
-cd dotfiles && ./bootstrap.sh
+```bash
+$ cd dotfiles && ./bootstrap.sh
 ```
 
 The bootstrap script support 3 arguments:
 
-- `--install | -i` is set by default
+- `--install | -i` to symlink the dotfiles in this repo
 - `--update | -u` to fetch the latest dotfiles from remote
 - `--backup | -b` to backup the dotfiles and save to `~/.dotfiles.backup`
 
