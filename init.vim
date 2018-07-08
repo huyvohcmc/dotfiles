@@ -144,7 +144,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " LightLine config
 let g:lightline = {
-      \ 'colorscheme': 'tender',
+      \ 'colorscheme': 'tenderplus',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
