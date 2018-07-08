@@ -8,6 +8,8 @@ function install() {
   ln -sf ~/dotfiles/tigrc ~/.tigrc
   ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
   ln -sf ~/dotfiles/ruby/gemrc ~/.gemrc
+  ln -sf ~/dotfiles/eslintrc.json ~/.eslintrc.json
+  ln -sf ~/dotfiles/prettierrc ~/.prettierrc
   echo "Dotfiles have been installed!"
 }
 
@@ -25,6 +27,8 @@ function backup() {
   [ -f ~/.tigrc ] && cp $(realpath ~/.tigrc) ~/dotfiles.backup/
   [ -f ~/.config/nvim/init.vim ] && cp $(realpath ~/.config/nvim/init.vim) ~/dotfiles.backup/
   [ -f ~/.gemrc ] && cp $(realpath ~/.gemrc) ~/dotfiles.backup/
+  [ -f ~/.eslintrc.json ] && cp $(realpath ~/.gemrc) ~/dotfiles.backup/
+  [ -f ~/.prettierrc ] && cp $(realpath ~/.gemrc) ~/dotfiles.backup/
   echo "Dotfiles have been backed up!"
 }
 
