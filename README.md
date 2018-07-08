@@ -138,6 +138,13 @@ Where `~/.gitconfig_local` is simply:
   email = huyvohcmc@gmail.com
 ```
 
+I also use a `.gitmessage` template for co-authored commits on GitHub:
+
+```bash
+# ~/.gitmessage
+Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
+```
+
 ## Iosevka
 
 I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (550 width). Use the default tff from its release if you don't think the font is too narrow.
