@@ -2,8 +2,8 @@
 
 function install() {
   ln -sf ~/dotfiles/zshrc ~/.zshrc
-  ln -sf ~/dotfiles/gitconfig ~/.gitconfig
-  ln -sf ~/dotfiles/gitignore ~/.gitignore
+  ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
+  ln -sf ~/dotfiles/git/gitignore ~/.gitignore
   ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
   ln -sf ~/dotfiles/tigrc ~/.tigrc
   ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
