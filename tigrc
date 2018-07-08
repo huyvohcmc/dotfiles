@@ -1,5 +1,4 @@
-set cmdline-args = --all
-
+set main-options = --all
 bind status P !git push origin HEAD
 bind status D !@?rm %(file)
 bind generic + !git commit --amend
