@@ -2,8 +2,6 @@ plugins=(
   git
   docker
   docker-compose
-  zsh-autosuggestions
-  history-substring-search
 )
 
 autoload -U promptinit; promptinit
@@ -30,5 +28,8 @@ source $HOME/.rvm/scripts/rvm
 source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
