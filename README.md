@@ -147,7 +147,15 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 
 ## Iosevka
 
-I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (550 width). Use the default tff from its release if you don't think the font is too narrow.
+I built a customized version of [Iosevka](https://github.com/be5invis/Iosevka) because the original tff is too narrow for my eyes.
+
+1. Clone the repository
+2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
+3. Install necessary libs by `npm install`
+4. Open `parameters.toml`, change the value of `width` to `550`
+5. `make`
+
+Visit `Iosevka` main repo for more build instructions.
 
 ## Will... will this work on Windows?
 
