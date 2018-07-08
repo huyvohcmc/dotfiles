@@ -147,6 +147,12 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 
 ## Iosevka
 
+Install the fonts in `fonts/iosevka`:
+
+```bash
+$ ./install.sh
+```
+
 I built a customized version of [Iosevka](https://github.com/be5invis/Iosevka) because the original tff is too narrow for my eyes.
 
 1. Clone the repository
