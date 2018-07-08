@@ -88,3 +88,7 @@ I use a custom build of [Iosevka](https://github.com/be5invis/Iosevka) (550 widt
 ## Will... will this work on Windows?
 
 ![Did you just say Windows?](http://i3.kym-cdn.com/photos/images/newsfeed/000/549/293/504.gif)
+
+## License
+
+This repository is licensed under the terms of the MIT license, do whatever the hell you want with it.
