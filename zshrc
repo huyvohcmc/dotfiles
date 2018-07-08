@@ -11,7 +11,7 @@ prompt purer
 
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
-alias dotfiles="cd ~/.dotfiles"
+alias dotfiles="cd ~/dotfiles"
 
 go() {
   cd ~/Projects/"$1"
