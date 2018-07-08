@@ -29,14 +29,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'w0rp/ale'
 call plug#end()
 
-" Safeguard
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
-" Colorscheme
-colorscheme tender
-
 " General settings (some are enabled by default, see :h vim-differences)
 filetype plugin indent on
 set autoindent
@@ -75,6 +67,14 @@ set updatetime=100
 set wildmenu
 set wildmode=list:longest,full
 set wrap
+
+" Safeguard
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
+" Colorscheme
+colorscheme tender
 
 " Leader mapping
 let mapleader = ","
@@ -185,26 +185,18 @@ let g:lightline.tabline = {
       \ 'right': [ [ 'close' ] ]
       \ }
 
-" Ale basic config
+" ALE config
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '▲'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_set_highlights = 0
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
-
-" Ale linters
-let g:ale_linters = {
-      \   'ruby': ['rubocop'],
-      \   'javascript': ['eslint'],
-      \ }
-let g:ale_fixers = {
-      \   'ruby': ['rubocop'],
-      \   'javascript': ['prettier'],
-      \ }
+let g:ale_set_highlights = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint'] }
+let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
 
 " ALE quickfix with Prettier
 nmap <leader>e <Plug>(ale_fix)
