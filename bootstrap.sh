@@ -7,6 +7,7 @@ function install() {
   ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
   ln -sf ~/dotfiles/tigrc ~/.tigrc
   ln -sf ~/dotfiles/init.vim ~/.config/nvim/init.vim
+  ln -sf ~/dotfiles/ruby/gemrc ~/.gemrc
   echo "Dotfiles have been installed!"
 }
 
@@ -23,6 +24,7 @@ function backup() {
   [ -f ~/.tmux.conf ] && cp $(realpath ~/.tmux.conf) ~/dotfiles.backup/
   [ -f ~/.tigrc ] && cp $(realpath ~/.tigrc) ~/dotfiles.backup/
   [ -f ~/.config/nvim/init.vim ] && cp $(realpath ~/.config/nvim/init.vim) ~/dotfiles.backup/
+  [ -f ~/.gemrc ] && cp $(realpath ~/.gemrc) ~/dotfiles.backup/
   echo "Dotfiles have been backed up!"
 }
 
