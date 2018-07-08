@@ -34,13 +34,13 @@ Make sure the following requirements are installed:
 Clone this project:
 
 ```
-$ git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
+git clone git@github.com:huyvohcmc/dotfiles.git ~/.dotfiles
 ```
 
 Install dotfiles:
 
 ```
-$ cd ~/.dotfiles && ./install.sh
+cd ~/.dotfiles && ./install.sh
 ```
 
 ## Neovim
@@ -48,8 +48,8 @@ $ cd ~/.dotfiles && ./install.sh
 You should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) to work properly:
 
 ```
-$ gem install rubocop
-$ npm install -g eslint
+gem install rubocop
+npm install -g eslint
 ```
 
 ## ZSH
@@ -57,7 +57,7 @@ $ npm install -g eslint
 Install [purer](https://github.com/DFurnes/purer), a ZSH prompt based on [pure](https://github.com/sindresorhus/pure):
 
 ```
-$ npm install --global purer-prompt
+npm install --global purer-prompt
 ```
 
 Next, install [zsh-completions](https://github.com/zsh-users/zsh-completions) and [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions). You can visit [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins) for more useful stuff.
