@@ -1,16 +1,9 @@
-<div align="center">
+## Dotfiles are meant to be shared
 
-<img src="screenshot.png" />
-
-<br />
-<br />
+![screenshot](screenshot.png)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
-
-<p>A set of neovim, zsh, git, and tmux configuration files, made with blood sweat and tears.</p>
-
-</div>
 
 ---
 
@@ -51,21 +44,21 @@ The bootstrap script support 3 arguments:
 
 ## Git Credentials
 
-I move my git username and email to `~/.gitconfig_local` to prevent people from accidentally committing under my name:
+To prevent people from accidentally committing under my name:
 
 ```bash
-# ~/.gitconfig
+# gitconfig
 [user]
-  # set in ~/.gitconfig_local and included
+  # set in ~/.gitconfig_local
 [include]
   path = ~/.gitconfig_local
 ```
 
-Where the local config is simply:
+Where `~/.gitconfig_local` is simply:
 
 ```bash
 [user]
-  name = huyvohcmc
+  name = Huy Vo
   email = huyvohcmc@gmail.com
 ```
 
