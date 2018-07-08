@@ -49,6 +49,26 @@ The bootstrap script support 3 arguments:
 - `--update | -u` to fetch the latest dotfiles from remote
 - `--backup | -b` to backup the dotfiles and save to `~/.dotfiles.backup`
 
+## Git Credentials
+
+I move my git username and email to `~/.gitconfig_local` to prevent people from accidentally committing under my name:
+
+```bash
+# ~/.gitconfig
+[user]
+  # set in ~/.gitconfig_local and included
+[include]
+  path = ~/.gitconfig_local
+```
+
+Where the local config is simply:
+
+```bash
+[user]
+  name = huyvohcmc
+  email = huyvohcmc@gmail.com
+```
+
 ## Neovim
 
 You should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) in order for [ALE](https://github.com/w0rp/ale) to work properly:
