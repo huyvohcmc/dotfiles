@@ -60,6 +60,16 @@ endif
 " Colorscheme
 colorscheme tender
 
+" I hate arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
 " Leader mapping
 let mapleader = ","
 nnoremap <leader>w :w<cr>
