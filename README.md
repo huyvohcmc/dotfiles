@@ -51,7 +51,7 @@ Node Version Manager - Simple bash script to manage multiple active node.js vers
 Clone this project (suppose you are at `$HOME`):
 
 ```bash
-$ git clone git@github.com:huyvohcmc/dotfiles.git dotfiles
+$ git clone git@github.com:huyvohcmc/dotfiles.git
 ```
 
 Create a backup for existing dotfiles at `~/dotfiles.backup` and install the new ones:
@@ -150,7 +150,7 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 Install the fonts in `fonts/iosevka`:
 
 ```bash
-$ ./install.sh
+$ cd fonts && ./install.sh
 ```
 
 I built a customized version of [Iosevka](https://github.com/be5invis/Iosevka) because the original tff is too narrow for my eyes.
