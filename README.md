@@ -118,7 +118,7 @@ $ brew install zsh-history-substring-search
 
 Just like `purer`, these plugins are already set in `zshrc` so you don't need to do anthing else.
 
-## Git Credentials
+## Git
 
 To prevent people from accidentally committing under my name:
 
@@ -167,12 +167,15 @@ Visit `Iosevka` main repo for more build instructions.
 
 ![Did you just say Windows?](http://i3.kym-cdn.com/photos/images/newsfeed/000/549/293/504.gif)
 
-## Inspired By
+## Acknowledgement
 
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
 - [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [Adam Eivy's dotfiles](https://github.com/atomantic/dotfiles)
 - [Drew Neil's dotfiles](https://github.com/nelstrom/dotfiles)
 - [Kutsan Kaplan's dotfiles](https://github.com/kutsan/dotfiles)
+- [Kris Leech's vimfiles](https://github.com/krisleech/vimfiles)
+- [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 
 ## License
 
