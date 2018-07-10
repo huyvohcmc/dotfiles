@@ -17,9 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-tagprefix'
-Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
@@ -147,8 +145,7 @@ augroup MyGutentagsStatusLineRefresher
   autocmd User GutentagsUpdated call lightline#update()
 augroup END
 
-" ncm2
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" nvim-completion-manager
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
