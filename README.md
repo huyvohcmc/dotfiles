@@ -13,7 +13,7 @@ Make sure the following requirements are installed:
 
 ### Homebrew
 
-Install Homebrew, if you haven't: https://brew.sh/.
+Install Homebrew, if you haven't: https://brew.sh.
 
 Then use Homebrew to install some necessary packages:
 
@@ -35,7 +35,7 @@ $ ./brew.sh
 
 ### RVM
 
-RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io/.
+RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
 
 ### NVM
 
