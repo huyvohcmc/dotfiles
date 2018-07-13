@@ -29,7 +29,7 @@ call plug#end()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set copyindent
 set expandtab
