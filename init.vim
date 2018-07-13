@@ -72,7 +72,7 @@ inoremap <right> <nop>
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <silent> <leader><cr> :silent :let @/ = ""<cr>
+nnoremap <silent> <leader><cr> :let @/ = ""<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
