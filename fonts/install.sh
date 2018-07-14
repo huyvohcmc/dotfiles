@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 install() {
-  cp ~/dotfiles/fonts/iosevka/ttf/*.ttf ~/Library/Fonts
+  cp ~/dotfiles/fonts/iosevka-custom/ttf/*.ttf ~/Library/Fonts
 }
 
 install

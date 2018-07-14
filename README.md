@@ -151,15 +151,15 @@ Install the fonts in `fonts/iosevka`:
 $ cd fonts && ./install.sh
 ```
 
-I built a customized version of [Iosevka](https://github.com/be5invis/Iosevka) because the original tff is too narrow for my eyes.
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best font for programmers, it looks so good to the eye and supports ligatures. It also has many prebuilt variants, and if you build yourself you can customize the look of many different characters. Here is how I built a custom Iosevka version for my very own:
 
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. Open `parameters.toml`, change the value of `width` to `550`
-5. `make`
+4. `make custom-config design='termlig ligset-haskell'`
+5. `make custom`
 
-Visit `Iosevka` main repo for more build instructions.
+Visit Iosevka's main repo for more build instructions.
 
 ## Will... will this work on Windows?
 
