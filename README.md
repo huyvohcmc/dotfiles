@@ -20,7 +20,6 @@ Then use Homebrew to install some necessary packages:
 - vim
 - neovim
 - tmux
-- tmate
 - git
 - tig
 - zsh
