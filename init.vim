@@ -17,7 +17,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
-Plug 'roxma/nvim-completion-manager'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-tagprefix'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
@@ -145,7 +147,13 @@ augroup MyGutentagsStatusLineRefresher
   autocmd User GutentagsUpdated call lightline#update()
 augroup END
 
-" nvim-completion-manager
+" Enable ncm2 for all buffers
+augroup EnableNcm2ForAllBuffers
+  autocmd!
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+augroup END
+
+" Use <TAB> to select the popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
