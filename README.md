@@ -79,7 +79,7 @@ What's inside `init.vim`?
 - [fzf](https://github.com/junegunn/fzf.vim) - A command-line fuzzy finder for Vim
 - [ALE](https://github.com/w0rp/ale) - Asynchronous Lint Engine
 - [Polyglot](https://github.com/sheerun/vim-polyglot) - A solid language pack for Vim
-- [nvim-completion-manager](https://github.com/roxma/nvim-completion-manager) - Completion framework for Neovim
+- [ncm2](https://github.com/ncm2/ncm2) - Completion framework for Neovim
 - [Gutentags](https://github.com/ludovicchabant/vim-gutentags) - A Vim plugin that manages your tag files
 - [Easymotion](https://github.com/easymotion/vim-easymotion) - Vim motions on speed!
 - [Sandwich](https://github.com/machakann/vim-sandwich) - A plugin to add/delete/replace surroundings of text
@@ -117,7 +117,7 @@ Just like `purer`, these plugins are already set in `zshrc` so you don't need to
 
 ## Git
 
-To prevent people from accidentally committing under my name:
+To prevent people from accidentally committing under your name:
 
 ```bash
 # gitconfig
