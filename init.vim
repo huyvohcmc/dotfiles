@@ -96,7 +96,7 @@ let NERDTreeIgnore = [
       \ '^\.DS_Store$[[file]]',
       \ ]
 
-" Activate FZF search panel
+" FZF mapping
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
