@@ -103,6 +103,7 @@ nnoremap <leader>t :Files<CR>
 
 " Ag search
 noremap <leader>ag <esc>:Ag<space>
+noremap <leader>aw <esc>:Ag <c-r><c-w><cr>
 
 " vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
