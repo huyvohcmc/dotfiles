@@ -149,10 +149,7 @@ augroup MyGutentagsStatusLineRefresher
 augroup END
 
 " Enable ncm2 for all buffers
-augroup EnableNcm2ForAllBuffers
-  autocmd!
-  autocmd BufEnter * call ncm2#enable_for_buffer()
-augroup END
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " Use <TAB> to select the popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
