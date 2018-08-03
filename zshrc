@@ -10,6 +10,8 @@ prompt purer
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
 alias dotfiles="cd ~/dotfiles"
+alias herostag='hero $@ --context solomon.ehrocks.com'
+alias heroprod='hero $@ --context david.ehrocks.com'
 
 go() {
   cd ~/Projects/"$1"
