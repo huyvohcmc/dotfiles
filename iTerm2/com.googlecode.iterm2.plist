@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AlternateMouseScrollStringForDown</key>
@@ -1193,7 +1193,7 @@
 	<key>DimOnlyText</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
-	<false/>
+	<true/>
 	<key>EnableDivisionView</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
@@ -1283,13 +1283,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>345 323 934 262 0 0 1440 900 </string>
+	<string>445 1309 934 537 -227 900 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>433 364 620 392 0 0 1440 878 </string>
+	<string>574 1273 620 392 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>259 473 928 401 0 0 1440 878 </string>
+	<string>202 391 796 486 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -2120,8 +2120,10 @@
 	<string>/Users/huyvo/dotfiles/iTerm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
@@ -2129,7 +2131,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-30T05:30:35Z</date>
+	<date>2018-08-09T11:20:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -2163,7 +2165,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.7</string>
+	<string>3.2.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
