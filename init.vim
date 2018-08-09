@@ -37,7 +37,7 @@ set copyindent
 set expandtab
 set tabstop=2
 set shiftwidth=0 " Always have the same value with `tabstop`
-set softtabstop=-1 "Always have the same value with `shiftwidth`
+set softtabstop=-1 " Always have the same value with `shiftwidth`
 set hidden
 set ignorecase smartcase
 set lazyredraw
@@ -103,7 +103,7 @@ nnoremap <leader>t :Files<CR>
 
 " Ag search
 noremap <leader>ag <esc>:Ag<space>
-noremap <leader>aw <esc>:Ag <c-r><c-w><cr>
+noremap <leader>aw <esc>:Ag <c-r><c-w>
 
 " vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
