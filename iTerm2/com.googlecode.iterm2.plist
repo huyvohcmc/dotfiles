@@ -1283,13 +1283,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>445 1309 934 537 -227 900 1920 1080 </string>
+	<string>662 292 934 269 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>574 1273 620 392 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>202 391 796 486 0 0 1440 878 </string>
+	<string>441 363 796 486 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1308,7 +1308,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Title Setting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -1968,7 +1968,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Iosevka-Term-Lig-Medium 16</string>
+			<string>Iosevka-Term-Medium 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -2131,7 +2131,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-09T11:20:26Z</date>
+	<date>2018-08-11T16:53:08Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -2149,9 +2149,9 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>TerminalVMargin</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1525499136</real>
 	<key>UseBorder</key>
@@ -2162,6 +2162,8 @@
 	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
@@ -2169,6 +2171,8 @@
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
+	<key>metalMaximizeThroughput</key>
 	<false/>
 </dict>
 </plist>
