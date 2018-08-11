@@ -150,13 +150,12 @@ Install the fonts in `fonts/iosevka`:
 $ cd fonts && ./install.sh
 ```
 
-[Iosevka](https://github.com/be5invis/Iosevka) is one of the best font for programmers, it looks so good to the eye and supports ligatures. It also has many prebuilt variants, and if you build yourself you can customize the look of many different characters. Here is how I built a custom Iosevka version for my very own:
+[Iosevka](https://github.com/be5invis/Iosevka) is one of the best font for programmers, it looks so good to the eye and supports ligatures. It also has many prebuilt variants, and if you build yourself you can customize the look of many different characters. Here is how I built an Iosevka version for my own:
 
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. `make custom-config design='termlig ligset-haskell'`
-5. `make custom`
+4. `npm run build -- contents:iosevka-term`
 
 Visit Iosevka's main repo for more build instructions.
 
