@@ -1283,7 +1283,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>662 292 934 269 0 0 1440 900 </string>
+	<string>284 329 934 135 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>574 1273 620 392 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
@@ -2123,7 +2123,7 @@
 	<key>SUAutomaticallyUpdate</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
@@ -2131,7 +2131,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-11T16:53:08Z</date>
+	<date>2018-08-11T17:11:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
