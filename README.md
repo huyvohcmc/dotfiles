@@ -73,7 +73,7 @@ Then open `nvim` and install all plugins: `PlugInstall`. You should also run `:c
 
 What's inside `init.vim`?
 
-- [tender](https://github.com/jacoborus/tender.vim) - A 24bit colorscheme for Vim, Airline and Lightline
+- [material](https://github.com/kaicataldo/material.vim) - A dark color scheme for Vim/Neovim based on the Material color scheme
 - [lightline](https://github.com/itchyny/lightline.vim) - A light and configurable statusline/tabline plugin for Vim
 - [NERDTree](https://github.com/scrooloose/nerdtree) - A tree explorer plugin for Vim
 - [fzf](https://github.com/junegunn/fzf.vim) - A command-line fuzzy finder for Vim
