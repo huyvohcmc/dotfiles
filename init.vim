@@ -11,9 +11,9 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 call plug#begin('~/.config/nvim/plugged')
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
-Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'kaicataldo/material.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
@@ -58,7 +58,8 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-colorscheme tender
+let g:material_theme_style = 'dark'
+colorscheme material
 
 " I hate arrow keys
 nnoremap <up> <nop>
@@ -117,13 +118,6 @@ let g:signify_sign_add = '▪'
 let g:signify_sign_change = '▪'
 let g:signify_sign_delete = '▪'
 let g:signify_sign_delete_first_line = '▪'
-" Small hack, will remove this when tender get update
-highlight SignColumn guibg=#282828
-highlight link SignifySignAdd GitGutterAdd
-highlight link SignifySignChange GitGutterChange
-highlight link SignifySignDelete GitGutterDelete
-highlight link SignifySignChangeDelete GitGutterChangeDelete
-highlight link SignifySignDeleteFirstLine SignifySignDelete
 
 " Sandwich config
 runtime macros/sandwich/keymap/surround.vim
@@ -157,7 +151,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " LightLine config
 let g:lightline = {
-      \ 'colorscheme': 'tenderplus',
+      \ 'colorscheme': 'material_vim',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
