@@ -15,6 +15,7 @@ brew install tig
 brew install zsh
 brew install universal-ctags
 brew install the_silver_searcher
+brew install bat
 
 # Remove outdated versions from the cellar
 brew cleanup
