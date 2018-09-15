@@ -181,8 +181,14 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint'] }
-let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
+let g:ale_linters = {
+      \ 'ruby': ['rubocop'],
+      \ 'javascript': ['eslint', 'prettier', 'flow'],
+      \ }
+let g:ale_fixers = {
+      \ 'ruby': ['rubocop'],
+      \ 'javascript': ['prettier'],
+      \ }
 
 " ALE quickfix with Prettier
 nmap <leader>e <Plug>(ale_fix)
