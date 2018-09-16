@@ -97,6 +97,8 @@ $ gem install rubocop
 $ npm install -g eslint
 ```
 
+![nvim](nvim.png)
+
 ## Language Server Protocol
 
 - [solargraph](https://github.com/castwide/solargraph) - A Ruby language server
