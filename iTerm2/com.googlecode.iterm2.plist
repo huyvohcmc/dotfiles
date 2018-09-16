@@ -1630,7 +1630,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>285 276 937 512 0 0 1440 878 </string>
+	<string>285 229 770 429 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1995,6 +1995,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string>tmux attach -t 0 || tmux new -s 0</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
