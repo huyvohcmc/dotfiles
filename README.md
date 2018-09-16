@@ -80,6 +80,7 @@ What's inside `init.vim`?
 - [ALE](https://github.com/w0rp/ale) - Asynchronous Lint Engine
 - [Polyglot](https://github.com/sheerun/vim-polyglot) - A solid language pack for Vim
 - [ncm2](https://github.com/ncm2/ncm2) - Completion framework for Neovim
+- [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim) - Language Server Protocol (LSP) support for vim and neovim
 - [Gutentags](https://github.com/ludovicchabant/vim-gutentags) - A Vim plugin that manages your tag files
 - [Easymotion](https://github.com/easymotion/vim-easymotion) - Vim motions on speed!
 - [Sandwich](https://github.com/machakann/vim-sandwich) - A plugin to add/delete/replace surroundings of text
@@ -95,6 +96,10 @@ Note: you should install [rubocop](https://github.com/bbatsov/rubocop) and [esli
 $ gem install rubocop
 $ npm install -g eslint
 ```
+
+## Language Server Protocol
+
+- [solargraph](https://github.com/castwide/solargraph) - A Ruby language server
 
 ## ZSH
 
