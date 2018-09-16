@@ -1630,11 +1630,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>42 1026 606 469 -227 900 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>285 433 928 394 0 0 1440 900 </string>
+	<string>285 276 937 512 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>41 0 1399 878 0 0 1440 900 </string>
+	<string>41 0 1399 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>41 0 1399 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2301,7 +2301,7 @@
 			<key>Minimum Contrast</key>
 			<real>0.16226473721590909</real>
 			<key>Mouse Reporting</key>
-			<false/>
+			<true/>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
@@ -2472,7 +2472,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-08-25T15:01:37Z</date>
+	<date>2018-09-16T12:30:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
