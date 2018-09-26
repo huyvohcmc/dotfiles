@@ -24,3 +24,5 @@
   # set in ~/.gitconfig_local and included
 [include]
   path = ~/.gitconfig_local
+[pager]
+  branch = false
