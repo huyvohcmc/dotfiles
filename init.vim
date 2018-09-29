@@ -197,6 +197,7 @@ let g:ale_fixers = {
 " ALE quickfix with Prettier
 nmap <leader>e <Plug>(ale_fix)
 
+" Language Server Clients
 let g:LanguageClient_serverCommands = {
       \ 'ruby': ['solargraph', 'stdio'],
       \ }
