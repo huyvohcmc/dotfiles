@@ -105,9 +105,10 @@ nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" Ag search
+" The silver searcher
 noremap <leader>ag <esc>:Ag<space>
 noremap <leader>aw <esc>:Ag <c-r><c-w>
+noremap <leader>ah <esc>:Ag<up><cr>
 
 " vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
