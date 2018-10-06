@@ -108,12 +108,7 @@ $ npm install --global purer-prompt
 
 `zshrc` is already set `purer` as the default prompt.
 
-Next, install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search):
-
-```bash
-$ brew install zsh-autosuggestions
-$ brew install zsh-history-substring-search
-```
+Next, install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search).
 
 Just like `purer`, these plugins are already set in `zshrc` so you don't need to do anthing else.
 
