@@ -28,6 +28,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'w0rp/ale'
 Plug 'ap/vim-css-color'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -191,6 +192,23 @@ let g:ale_fixers = {
       \ 'ruby': ['rubocop'],
       \ 'javascript': ['prettier'],
       \ }
+
+" Startify config
+let g:startify_custom_header = [
+      \ "        .          .        ",
+      \ "      ';;,.        ::'      ",
+      \ "    ,:::;,,'       :ccc,    ",
+      \ "   ,::c::,,,,.     :cccc,   ",
+      \ "   ,cccc:;;;;;.    cllll,   ",
+      \ "   ,cccc;.;;;;;,   cllll;   ",
+      \ "   ;cccc; .;;;;;;. coooo;   ",
+      \ "   ;llll;   ,:::::'loooo;   ",
+      \ "   ;llll:    ':::::loooo:   ",
+      \ "   :oooo:     .::::llodd:   ",
+      \ "   .;ooo:       ;cclooo:.   ",
+      \ "     .;oc        'coo;.     ",
+      \ "       .'         .,.       ",
+      \ ]
 
 " ALE quickfix with Prettier
 nmap <leader>e <Plug>(ale_fix)
