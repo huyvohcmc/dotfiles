@@ -51,6 +51,7 @@ set scrolloff=10
 set shortmess+=c
 set termguicolors
 set wildmode=list:longest,full
+set hlsearch
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -193,3 +194,6 @@ let g:ale_fixers = {
 
 " ALE quickfix with Prettier
 nmap <leader>e <Plug>(ale_fix)
+
+" Clear search highlight
+nnoremap <silent> <leader>l :nohlsearch<CR>
