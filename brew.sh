@@ -15,7 +15,6 @@ brew install tig
 brew install zsh
 brew install universal-ctags
 brew install the_silver_searcher
-brew install bat
 brew install reattach-to-user-namespace
 
 # Remove outdated versions from the cellar

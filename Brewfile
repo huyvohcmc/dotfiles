@@ -35,7 +35,6 @@ brew "pinentry-mac"
 brew "pkg-config"
 brew "portmidi"
 brew "postgresql@9.4", restart_service: true, link: true
-brew "qt@5.5"
 brew "reattach-to-user-namespace"
 brew "redis", restart_service: true
 brew "ruby-build"
@@ -53,8 +52,6 @@ brew "watchman"
 brew "wget"
 brew "zplug"
 brew "zsh"
-brew "zsh-autosuggestions"
-brew "zsh-history-substring-search"
 brew "caryll/tap/otfcc-mac64"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "fastlane"
