@@ -77,6 +77,11 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <silent> <leader><cr> :let @/ = ""<cr>
 
+" Edit and source configs
+let $MYVIMRC = '$HOME/.config/nvim/init.vim'
+nnoremap <silent> <leader>ec :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sc :source $MYVIMRC<CR>
+
 " Easy navigation
 noremap <leader>s <c-w>w
 noremap <c-j> <c-w>j
