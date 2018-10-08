@@ -10,6 +10,7 @@ brew upgrade
 brew install vim --with-override-system-vi
 brew install neovim
 brew install tmux
+brew install bat
 brew install git
 brew install tig
 brew install zsh

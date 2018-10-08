@@ -54,7 +54,4 @@ brew "zplug"
 brew "zsh"
 brew "caryll/tap/otfcc-mac64"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
-cask "fastlane"
-cask "font-hack-nerd-font"
-cask "ngrok"
 cask "react-native-debugger"
