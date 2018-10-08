@@ -17,17 +17,6 @@ Install Homebrew, if you haven't: https://brew.sh.
 
 Then use Homebrew to install some necessary packages:
 
-- vim
-- neovim
-- tmux
-- git
-- tig
-- zsh
-- universal-ctags
-- the_silver_searcher
-
-You can use the provided script to install the requirements:
-
 ```bash
 $ ./brew.sh
 ```
