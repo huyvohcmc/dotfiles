@@ -22,6 +22,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10 # normal minimum is 15 (2
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+# Enable font smoothing
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
