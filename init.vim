@@ -9,6 +9,7 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
+Plug 'ap/vim-css-color'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
@@ -27,7 +28,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'w0rp/ale'
-Plug 'ap/vim-css-color'
 call plug#end()
 
 " General settings (see :h vim-differences)
