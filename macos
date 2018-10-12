@@ -6,8 +6,8 @@ defaults write com.apple.Dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.Dock autohide-time-modifier -float 0
 
-# Set the icon size of Dock items to 32 pixels
-defaults write com.apple.Dock tilesize -int 30
+# Set the icon size of Dock items to 28 pixels
+defaults write com.apple.Dock tilesize -int 28
 
 # Lock the dock size
 defaults write com.apple.Dock size-immutable -bool yes
