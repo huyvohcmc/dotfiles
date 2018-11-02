@@ -1582,7 +1582,7 @@
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iTerm2</string>
+	<string>~/dotfiles/itermcolors</string>
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
 	<true/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -1632,7 +1632,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-39 930 606 469 -308 800 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>140 373 928 394 0 0 1280 777 </string>
+	<string>176 358 928 394 0 0 1280 777 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1640,7 +1640,7 @@
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>39 0 1241 777 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>671 -194 1399 878 0 0 1440 878 </string>
+	<string>39 0 1241 777 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795_selection</key>
@@ -2317,7 +2317,7 @@
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
-			<false/>
+			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
