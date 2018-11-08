@@ -30,6 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
 Plug 'w0rp/ale'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 " General settings (see :h vim-differences)
