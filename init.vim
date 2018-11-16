@@ -20,12 +20,13 @@ Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-tagprefix'
+Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rhubarb'
@@ -64,21 +65,12 @@ endif
 " Colorscheme
 colorscheme tender
 
-" I hate arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Leader mapping
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <silent> <leader><cr> :let @/ = ""<cr>
+nnoremap <leader>r :source %<cr>
+nnoremap <leader><cr> :noh<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
@@ -92,13 +84,7 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeIgnore = [
-      \ '^\~$[[dir]]',
-      \ '^\.git$[[dir]]',
-      \ '^\.o$[[file]]',
-      \ '^\.pyc$[[file]]',
-      \ '^\.DS_Store$[[file]]',
-      \ ]
+let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
 
 " FZF mapping
 nnoremap <leader>h :History<CR>
