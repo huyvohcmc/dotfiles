@@ -1,6 +1,4 @@
-"=====================================================
 " Neovim configuration made with blood sweat and tears
-"=====================================================
 
 " Faster loading
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -84,17 +82,17 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
+let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.git$[[dir]]', '^\.DS_Store$[[file]]']
 
 " FZF mapping
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" The silver searcher
-noremap <leader>ag <esc>:Ag<space>
-noremap <leader>aw <esc>:Ag <c-r><c-w>
-noremap <leader>ah <esc>:Ag<up><cr>
+" Ripgrep
+noremap <leader>rg <esc>:Rg<space>
+noremap <leader>rw <esc>:Rg <c-r><c-w>
+noremap <leader>rh <esc>:Rg<up><cr>
 
 " vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
