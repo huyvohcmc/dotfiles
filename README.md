@@ -1,6 +1,6 @@
 ## Dotfiles are meant to be shared
 
-![screenshot](screenshot.png)
+![zsh](screenshot/zsh.png)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-water.svg)](https://forthebadge.com)
@@ -18,7 +18,7 @@ Install Homebrew, if you haven't: https://brew.sh.
 Then use Homebrew to install some necessary packages:
 
 ```bash
-$ ./brew.sh
+$ brew bundle
 ```
 
 ### RVM
@@ -85,7 +85,7 @@ $ gem install rubocop
 $ npm install -g eslint
 ```
 
-![nvim](nvim.png)
+![nvim](screenshot/nvim.png)
 
 ## ZSH
 
