@@ -145,10 +145,6 @@ $ cd fonts && ./install.sh
 
 Visit Iosevka's main repo for more build instructions.
 
-## Will... will this work on Windows?
-
-![Did you just say Windows?](http://i3.kym-cdn.com/photos/images/newsfeed/000/549/293/504.gif)
-
 ## Acknowledgement
 
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
