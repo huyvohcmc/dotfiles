@@ -36,7 +36,7 @@ call plug#end()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set copyindent
 set expandtab
@@ -71,6 +71,22 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :source %<cr>
 nnoremap <leader><cr> :noh<cr>
+
+" Remap 'c', 'C', 'd', 'D', 'x' and 'X' to save text in a custom register
+nnoremap c "cc
+vnoremap c "cc
+nnoremap C "cC
+vnoremap C "cC
+
+nnoremap d "dd
+vnoremap d "dd
+nnoremap D "dD
+vnoremap D "dD
+
+nnoremap x "xx
+vnoremap x "xx
+nnoremap X "xX
+vnoremap X "xX
 
 " Easy navigation
 noremap <leader>s <c-w>w
