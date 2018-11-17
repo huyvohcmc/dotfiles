@@ -67,7 +67,7 @@ colorscheme tender
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>r :source %<cr>
+nnoremap <leader>re :source %<cr>
 nnoremap <leader><cr> :noh<cr>
 
 " Easy navigation
