@@ -134,20 +134,15 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " LightLine config
-let g:lightline = {
-      \ 'colorscheme': 'tenderplus',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'gutentags' ] ],
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'gutentags': 'gutentags#statusline',
-      \ },
+let g:lightline = {}
+let g:lightline.colorscheme = 'tenderplus'
+let g:lightline.component_function = {
+      \ 'gitbranch': 'fugitive#head',
+      \ 'gutentags': 'gutentags#statusline',
       \ }
-let g:lightline.tabline = {
-      \ 'left': [ [ 'tabs' ] ],
-      \ 'right': [ [ 'close' ] ]
+let g:lightline.active = {
+      \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified', 'gutentags' ] ],
+      \ 'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
       \ }
 
 " ALE config
