@@ -1,38 +1,41 @@
-## Dotfiles are meant to be shared
+# Dotfiles are meant to be shared
 
 ![zsh](screenshot/zsh.png)
+<p align='center'>
+<img src='https://img.shields.io/badge/built%20for-hackers-ff69b4.svg?logo=dependabot'>
+<img src='https://img.shields.io/badge/pretty-awesome-yellow.svg?logo=sourcegraph'>
+<img src='https://img.shields.io/badge/compatibility-betamax-red.svg?logo=docker'>
+<img src='https://img.shields.io/badge/makes%20people-smile-blue.svg?logo=travis'>
+<img src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=lgtm'>
+</p>
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-water.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/compatibility-betamax.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
+-----
 
 ## Prerequisites
 
 Make sure the following requirements are installed:
 
-### Homebrew
+#### Homebrew
 
 Install Homebrew, if you haven't: https://brew.sh.
 
-Then use Homebrew to install some necessary packages:
+Then use Homebrew to install some necessary packages defined in `Brewfile`:
 
 ```bash
 $ brew bundle
 ```
 
-### RVM
+#### ZSH
+
+[The Z shell](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes.
+
+#### RVM
 
 RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
 
-### NVM
+#### NVM
 
 Node Version Manager - Simple bash script to manage multiple active node.js versions. To install nvm: https://github.com/creationix/nvm.
-
-### Oh My Zsh
-
-[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a ZSH framework, I will soon replace it with [prezto](https://github.com/sorin-ionescu/prezto).
-
 
 ## Installation
 
@@ -62,21 +65,24 @@ Then open `nvim` and install all plugins: `PlugInstall`. You should also run `:c
 
 What's inside `init.vim`?
 
-- [tender](https://github.com/jacoborus/tender.vim) - A 24bit colorscheme for Vim, Airline and Lightline
-- [lightline](https://github.com/itchyny/lightline.vim) - A light and configurable statusline/tabline plugin for Vim
-- [NERDTree](https://github.com/scrooloose/nerdtree) - A tree explorer plugin for Vim
-- [fzf](https://github.com/junegunn/fzf.vim) - A command-line fuzzy finder for Vim
-- [ALE](https://github.com/w0rp/ale) - Asynchronous Lint Engine
-- [Polyglot](https://github.com/sheerun/vim-polyglot) - A solid language pack for Vim
-- [ncm2](https://github.com/ncm2/ncm2) - Completion framework for Neovim
-- [Gutentags](https://github.com/ludovicchabant/vim-gutentags) - A Vim plugin that manages your tag files
-- [Easymotion](https://github.com/easymotion/vim-easymotion) - Vim motions on speed!
-- [Sandwich](https://github.com/machakann/vim-sandwich) - A plugin to add/delete/replace surroundings of text
-- [Signify](https://github.com/mhinz/vim-signify) - Show a diff using Vim its sign column
-- [Tcomment](https://github.com/tomtom/tcomment_vim) - Comment vim-plugin
-- [Fugitive](https://github.com/tpope/vim-fugitive) - A Git wrapper vim-plugin
+- [tender](https://github.com/jacoborus/tender.vim) - a 24bit colorscheme for Vim, Airline and Lightline
+- [lightline](https://github.com/itchyny/lightline.vim) - a light and configurable statusline/tabline plugin for Vim
+- [NERDTree](https://github.com/scrooloose/nerdtree) - a tree explorer plugin for Vim
+- [fzf](https://github.com/junegunn/fzf.vim) - a command-line fuzzy finder for Vim
+- [ALE](https://github.com/w0rp/ale) - asynchronous Lint Engine
+- [polyglot](https://github.com/sheerun/vim-polyglot) - a solid language pack for Vim
+- [ncm2](https://github.com/ncm2/ncm2) - completion framework for Neovim
+- [gutentags](https://github.com/ludovicchabant/vim-gutentags) - a Vim plugin that manages your tag files
+- [easymotion](https://github.com/easymotion/vim-easymotion) - vim motions on speed!
+- [signify](https://github.com/mhinz/vim-signify) - show a diff using Vim its sign column
+- [tcomment](https://github.com/tomtom/tcomment_vim) - comment vim-plugin
+- [fugitive](https://github.com/tpope/vim-fugitive) - a git wrapper vim-plugin
 - [rhubarb](https://github.com/tpope/vim-rhubarb) - GitHub extension for fugitive.vim
-- [Rails](https://github.com/tpope/vim-rails) - Ruby on Rails power tools
+- [rails](https://github.com/tpope/vim-rails) - Ruby on Rails power tools
+- [surround](https://github.com/tpope/vim-surround) - quoting/parenthesizing made simple
+- [repeat](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
+- [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in Ruby
+- [targets](https://github.com/wellle/targets.vim) - plugin that provides additional text objects
 
 Note: you should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) so `ALE` can work properly:
 
@@ -87,7 +93,9 @@ $ npm install -g eslint
 
 ![nvim](screenshot/nvim.png)
 
-## ZSH
+## ZSH & Oh-My-Zsh
+
+[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a delightful community-driven framework for managing your zsh configuration.
 
 Install [purer](https://github.com/DFurnes/purer), a ZSH prompt based on [pure](https://github.com/sindresorhus/pure):
 
@@ -97,9 +105,13 @@ $ npm install --global purer-prompt
 
 `zshrc` is already set `purer` as the default prompt.
 
-Next, install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) and [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search).
+Oh-My-Zsh plugins included:
 
-Just like `purer`, these plugins are already set in `zshrc` so you don't need to do anthing else.
+- git
+- docker
+- docker-compose
+- zsh-autosuggestions
+- history-substring-search
 
 ## Git
 
@@ -141,7 +153,7 @@ $ cd fonts && ./install.sh
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. `npm run build -- contents:iosevka-term`
+4. `npm run build -- contents:iosevka (--design:ligset-haskell)`
 
 Visit Iosevka's main repo for more build instructions.
 
