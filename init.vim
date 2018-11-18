@@ -14,12 +14,11 @@ Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'machakann/vim-sandwich'
 Plug 'mhinz/vim-signify'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-tagprefix'
 Plug 'roxma/nvim-yarp'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -27,7 +26,9 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 call plug#end()
@@ -63,7 +64,7 @@ endif
 " Colorscheme
 colorscheme tender
 
-" Leader mapping
+" Leader general mapping
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
@@ -94,7 +95,7 @@ noremap <leader>rg <esc>:Rg<space>
 noremap <leader>rw <esc>:Rg <c-r><c-w>
 noremap <leader>rh <esc>:Rg<up><cr>
 
-" vim-fugitive and vim-rhubarb
+" Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
 noremap <silent> ghub :Gbrowse<CR>
 
@@ -113,18 +114,6 @@ highlight link SignifySignChange GitGutterChange
 highlight link SignifySignDelete GitGutterDelete
 highlight link SignifySignChangeDelete GitGutterChangeDelete
 highlight link SignifySignDeleteFirstLine SignifySignDelete
-
-" Sandwich config
-runtime macros/sandwich/keymap/surround.vim
-let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
-let g:sandwich#recipes += [
-      \   {'buns': ['{ ', ' }'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['{']},
-      \   {'buns': ['[ ', ' ]'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['[']},
-      \   {'buns': ['( ', ' )'], 'nesting': 1, 'match_syntax': 1, 'kind': ['add', 'replace'], 'action': ['add'], 'input': ['(']},
-      \   {'buns': ['{\s*', '\s*}'],   'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['{']},
-      \   {'buns': ['\[\s*', '\s*\]'], 'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['[']},
-      \   {'buns': ['(\s*', '\s*)'],   'nesting': 1, 'regex': 1, 'match_syntax': 1, 'kind': ['delete', 'replace', 'textobj'], 'action': ['delete'], 'input': ['(']},
-      \ ]
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
@@ -162,6 +151,7 @@ let g:lightline.tabline = {
       \ }
 
 " ALE config
+nmap <leader>e <Plug>(ale_fix)
 let g:ale_sign_error = '✖'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
@@ -170,14 +160,5 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {
-      \ 'ruby': ['rubocop'],
-      \ 'javascript': ['eslint', 'prettier', 'flow'],
-      \ }
-let g:ale_fixers = {
-      \ 'ruby': ['rubocop'],
-      \ 'javascript': ['prettier'],
-      \ }
-
-" ALE quickfix with Prettier
-nmap <leader>e <Plug>(ale_fix)
+let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier', 'flow'] }
+let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
