@@ -68,7 +68,7 @@ let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>re :source %<cr>
-nnoremap <leader><cr> :noh<cr>
+nnoremap <silent><leader><cr> :nohlsearch<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
