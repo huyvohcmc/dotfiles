@@ -1628,17 +1628,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>333 1442 934 77 -640 800 2560 1440 </string>
+	<string>207 137 934 77 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-39 930 606 469 -308 800 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>353 255 918 494 0 0 1280 777 </string>
+	<string>647 1806 918 423 -640 800 2560 1440 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>39 0 1241 777 0 0 1280 777 </string>
+	<string>-283 1058 1241 777 -640 800 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>39 0 1241 777 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2315,7 +2315,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Iosevka-Term 16</string>
+			<string>Iosevka 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -2488,7 +2488,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-17T12:27:26Z</date>
+	<date>2018-11-18T12:27:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
