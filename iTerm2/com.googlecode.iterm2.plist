@@ -1628,19 +1628,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>207 137 934 77 0 0 1280 777 </string>
+	<string>-177 1247 934 77 -322 800 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-39 930 606 469 -308 800 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>647 1806 918 423 -640 800 2560 1440 </string>
+	<string>498 1428 918 423 -322 800 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-283 1058 1241 777 -640 800 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
 	<string>39 0 1241 777 0 0 1280 800 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>-322 800 1241 777 -322 800 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>-308 800 1920 1080 -308 800 1920 1080 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
@@ -2315,7 +2315,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Iosevka 16</string>
+			<string>Iosevka 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -2488,7 +2488,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-18T12:27:26Z</date>
+	<date>2018-11-19T12:41:58Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
