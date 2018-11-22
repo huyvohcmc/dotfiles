@@ -91,9 +91,9 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " Ripgrep
-noremap <leader>rg <esc>:Rg<space>
-noremap <leader>rw <esc>:Rg <c-r><c-w>
-noremap <leader>rh <esc>:Rg<up><cr>
+noremap <leader>ag <esc>:Rg<space>
+noremap <leader>aw <esc>:Rg <c-r><c-w>
+noremap <leader>ah <esc>:Rg<up><cr>
 
 " Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
