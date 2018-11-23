@@ -28,6 +28,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[ -f ~/.secret_aliases ] && source ~/.secret_aliases
+[ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
