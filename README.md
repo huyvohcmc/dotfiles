@@ -45,17 +45,18 @@ Clone this project (suppose you are at `$HOME`):
 $ git clone git@github.com:huyvohcmc/dotfiles.git
 ```
 
-Create a backup for existing dotfiles at `~/dotfiles.backup` and install the new ones:
+Create a backup for your existing dotfiles and install the new ones ([stow](https://www.gnu.org/software/stow/) must be installed - see `Brewfile`):
 
 ```bash
-$ cd dotfiles && ./bootstrap.sh
+$ cd dotfiles
+$ make stow
 ```
 
-The bootstrap script support 3 arguments:
+To remove dotfiles:
 
-- `--install | -i` to symlink the dotfiles in this repo
-- `--update | -u` to fetch the latest dotfiles from remote
-- `--backup | -b` to backup the dotfiles and save to `~/.dotfiles.backup`
+```bash
+$ make unstow
+```
 
 ## Neovim
 
