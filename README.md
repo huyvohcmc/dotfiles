@@ -85,13 +85,6 @@ What's inside `init.vim`?
 - [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in Ruby
 - [targets](https://github.com/wellle/targets.vim) - plugin that provides additional text objects
 
-Note: you should install [rubocop](https://github.com/bbatsov/rubocop) and [eslint](https://github.com/eslint/eslint) so `ALE` can work properly:
-
-```bash
-$ gem install rubocop
-$ npm install -g eslint
-```
-
 ![nvim](screenshot/nvim.png)
 
 ## ZSH & Oh-My-Zsh
