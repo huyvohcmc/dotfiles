@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Remove the auto-hiding Dock delay
 defaults write com.apple.Dock autohide-delay -float 0
 
