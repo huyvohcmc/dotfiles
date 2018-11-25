@@ -1,6 +1,6 @@
 # Dotfiles are meant to be shared
 
-![zsh](screenshot/zsh.png)
+![htop](screenshots/htop.png)
 <p align='center'>
 <img src='https://img.shields.io/badge/built%20for-hackers-ff69b4.svg?logo=dependabot'>
 <img src='https://img.shields.io/badge/pretty-awesome-yellow.svg?logo=sourcegraph'>
@@ -85,7 +85,7 @@ What's inside `init.vim`?
 - [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in Ruby
 - [targets](https://github.com/wellle/targets.vim) - plugin that provides additional text objects
 
-![nvim](screenshot/nvim.png)
+![nvim](screenshots/nvim.png)
 
 ## ZSH & Oh-My-Zsh
 
