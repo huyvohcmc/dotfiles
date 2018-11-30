@@ -7,7 +7,6 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
-Plug 'ap/vim-css-color'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
@@ -55,6 +54,7 @@ set scrolloff=10
 set shortmess+=c
 set termguicolors
 set wildmode=list:longest,full
+let loaded_matchparen = 1
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -83,6 +83,7 @@ noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
+let NERDTreeHighlightCursorline = 0
 let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.git$[[dir]]', '^\.DS_Store$[[file]]']
 
 " FZF mapping
@@ -91,9 +92,9 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " Ripgrep
-noremap <leader>ag <esc>:Rg<space>
-noremap <leader>aw <esc>:Rg <c-r><c-w>
-noremap <leader>ah <esc>:Rg<up><cr>
+noremap <leader>ag <esc>:Ag<space>
+noremap <leader>aw <esc>:Ag <c-r><c-w>
+noremap <leader>ah <esc>:Ag<up><cr>
 
 " Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
@@ -147,7 +148,7 @@ let g:lightline.active = {
 
 " ALE config
 nmap <leader>e <Plug>(ale_fix)
-let g:ale_sign_error = '✖'
+let g:ale_sign_error = '×'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
