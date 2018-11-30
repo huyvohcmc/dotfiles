@@ -8,13 +8,14 @@ plugins=(
 )
 autoload -U promptinit; promptinit
 prompt purer
+PURE_PROMPT_SYMBOL='⍉'
 
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
 
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='rg --files --ignore --hidden --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
