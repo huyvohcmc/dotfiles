@@ -4,12 +4,9 @@
   ui = true
 [alias]
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-  l = log --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(reset)%s%C(reset)' --all
-  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold magenta)%aD (%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(bold red)%an%C(reset) %s%C(reset)%n' --all
-  lgs = log -p --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(bold magenta)<%an>%C(reset) - %C(white)%s%C(reset)%n' --all
 [core]
   excludesfile = ~/.gitignore
-  editor = "nvim"
+  editor = $EDITOR
 [merge]
   ff = only
 [commit]
