@@ -50,10 +50,11 @@ set noshowmode
 set noswapfile
 set number relativenumber
 set rulerformat=%l\:%c
-set scrolloff=10
+set scrolloff=5
 set shortmess+=c
 set termguicolors
 set wildmode=list:longest,full
+set ttimeoutlen=0
 let loaded_matchparen = 1
 
 " Safeguard
@@ -68,7 +69,7 @@ colorscheme tender
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>re :source %<cr>
+nnoremap <leader>r :source %<cr>
 nnoremap <silent><leader><cr> :nohlsearch<cr>
 
 " Easy navigation
@@ -91,7 +92,7 @@ nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" Ripgrep
+" The silver searcher
 noremap <leader>ag <esc>:Ag<space>
 noremap <leader>aw <esc>:Ag <c-r><c-w>
 noremap <leader>ah <esc>:Ag<up><cr>
@@ -120,13 +121,6 @@ highlight link SignifySignDeleteFirstLine SignifySignDelete
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
 let g:gutentags_ctags_exclude = ['*.min.js', '*.min.css', 'build', 'vendor', '.git', 'node_modules', '*.vim/bundle/*']
 
-" Refresh statusline after Gutentags background process has ended
-augroup MyGutentagsStatusLineRefresher
-  autocmd!
-  autocmd User GutentagsUpdating call lightline#update()
-  autocmd User GutentagsUpdated call lightline#update()
-augroup END
-
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
 
@@ -139,10 +133,9 @@ let g:lightline = {}
 let g:lightline.colorscheme = 'tenderplus'
 let g:lightline.component_function = {
       \ 'gitbranch': 'fugitive#head',
-      \ 'gutentags': 'gutentags#statusline',
       \ }
 let g:lightline.active = {
-      \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified', 'gutentags' ] ],
+      \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
       \ 'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
       \ }
 
@@ -156,5 +149,5 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier', 'flow'] }
+let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier'] }
 let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
