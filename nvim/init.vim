@@ -79,6 +79,14 @@ noremap <c-k> <c-w>k
 noremap <c-h> <c-w>h
 noremap <c-l> <c-w>l
 
+" Automatic closing brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+
 " NERDTree mapping and config
 noremap <leader>n :NERDTreeToggle<CR>
 noremap <leader>c :NERDTreeFind<CR>
