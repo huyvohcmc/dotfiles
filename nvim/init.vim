@@ -85,7 +85,7 @@ noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeHighlightCursorline = 0
-let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.git$[[dir]]', '^\.DS_Store$[[file]]']
+let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
 
 " FZF mapping
 nnoremap <leader>h :History<CR>
