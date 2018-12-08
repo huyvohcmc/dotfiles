@@ -10,6 +10,7 @@
 [merge]
   ff = only
 [commit]
+  verbose = true
   template = ~/.gitmessage
 [fetch]
   prune = true
