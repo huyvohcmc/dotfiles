@@ -1,54 +1,105 @@
 # Dotfiles are meant to be shared
 
-![htop](screenshots/htop.png)
-<p align='center'>
-<img src='https://img.shields.io/badge/built%20for-hackers-ff69b4.svg?logo=dependabot'>
-<img src='https://img.shields.io/badge/pretty-awesome-yellow.svg?logo=sourcegraph'>
-<img src='https://img.shields.io/badge/compatibility-betamax-red.svg?logo=docker'>
-<img src='https://img.shields.io/badge/makes%20people-smile-blue.svg?logo=travis'>
-<img src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?logo=lgtm'>
-</p>
+![for hackers](https://img.shields.io/badge/built%20for-hackers-50dd7e.svg?logo=dependabot&style=flat-square)
+![awesome](https://img.shields.io/badge/pretty-awesome-ffc24b.svg?logo=sourcegraph&style=flat-square)
+![compatible](https://img.shields.io/badge/compatibility-betamax-f43753.svg?logo=docker&style=flat-square)
+![smile](https://img.shields.io/badge/makes%20people-smile-57c7fe.svg?logo=travis&style=flat-square)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?logo=lgtm&style=flat-square)
 
------
+-------
+
+## Table of Contents
+
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Postinstall](#postinstall)
+  * [Screenshots](#screenshots)
+  * [What's inside init.vim?](#whats-inside-initvim)
+  * [Highlights](#highlights)
+  * [Git congfig](#git-config)
+  * [Iosevka](#iosevka)
+  * [Inspired by](#inspired-by)
+  * [License](#license)
+
+-------
 
 ## Prerequisites
 
 Make sure the following requirements are installed:
 
-#### Homebrew
+<details>
+<summary>Homebrew</summary>
+<br>
 
-Install Homebrew, if you haven't: https://brew.sh.
+Install [Homebrew](https://brew.sh) if you haven't.
+</details>
 
-Then use Homebrew to install some necessary packages defined in `Brewfile`:
+<details>
+<summary>Git</summary>
+<br>
+
+You can either install git via Xcode Command Line Tools or by running `git --version` from your terminal.
+</details>
+
+<details>
+<summary>Zsh & Oh-My-Zsh</summary>
+<br>
+
+[The Z shell](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a delightful community-driven framework for managing your zsh configuration.
+
+This project use [purer](https://github.com/DFurnes/purer) as the prompt theme for zsh:
+
+```
+$ npm install --global purer-prompt
+```
+</details>
+
+<details>
+<summary>RVM</summary>
+<br>
+
+RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
+</details>
+
+<details>
+<summary>NVM</summary>
+<br>
+
+Node Version Manager - Simple bash script to manage multiple active node.js versions. To install nvm: https://github.com/creationix/nvm.
+</details>
+
+<details>
+<summary>Neovim</summary>
+<br>
+
+[Neovim](https://github.com/neovim/neovim) (nvim) is a forked version of Vim and arguable to be a lot faster. Follow this guide to build [nvim from source](https://github.com/neovim/neovim/wiki/Building-Neovim) and this guide to install [vim-plug](https://github.com/junegunn/vim-plug) as the main nvim plugin manager.
+</details>
+
+<details>
+<summary>Tmux</summary>
+<br>
+
+[Tmux](https://github.com/tmux/tmux/wiki) is the terminal multiplexer I can't live without. 
+</details>
+
+## Installation
+
+Clone this project at `$HOME`:
+
+```bash
+$ git clone git@github.com:huyvohcmc/dotfiles.git
+$ cd dotfiles
+```
+
+Use Homebrew to install some necessary packages defined in `Brewfile`:
 
 ```bash
 $ brew bundle
 ```
 
-#### ZSH
-
-[The Z shell](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes.
-
-#### RVM
-
-RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
-
-#### NVM
-
-Node Version Manager - Simple bash script to manage multiple active node.js versions. To install nvm: https://github.com/creationix/nvm.
-
-## Installation
-
-Clone this project (suppose you are at `$HOME`):
+Create a backup of your existing dotfiles, remove them in `$HOME` and install the new ones using [stow](https://www.gnu.org/software/stow/):
 
 ```bash
-$ git clone git@github.com:huyvohcmc/dotfiles.git
-```
-
-Create a backup for your existing dotfiles and install the new ones ([stow](https://www.gnu.org/software/stow/) must be installed - see `Brewfile`):
-
-```bash
-$ cd dotfiles
 $ make stow
 ```
 
@@ -58,13 +109,29 @@ To remove dotfiles:
 $ make unstow
 ```
 
-## Neovim
+## Postinstall
 
-Install `vim-plug`, a minimalist Vim plugin manager: https://github.com/junegunn/vim-plug.
+Open nvim and install all plugins: `:PlugInstall`. You should also run `:checkhealth` to check your nvim condition.
 
-Then open `nvim` and install all plugins: `PlugInstall`. You should also run `:checkhealth` to check your `nvim` condition.
+Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a tmux session to fetch the plugins listed in `.tmux.conf`.
 
-What's inside `init.vim`?
+## Screenshots
+
+<details>
+<summary>Expand</summary>
+<br>
+
+![zsh](screenshots/zsh.png)
+> iTerm2 tender colorscheme, nnn and tig
+
+![nvim](screenshots/nvim.png)
+> Nvim with Iosevka font 14pt
+</details>
+
+## What's inside init.vim?
+
+<details>
+<br>
 
 - [tender](https://github.com/jacoborus/tender.vim) - a 24bit colorscheme for Vim, Airline and Lightline
 - [lightline](https://github.com/itchyny/lightline.vim) - a light and configurable statusline/tabline plugin for Vim
@@ -84,37 +151,31 @@ What's inside `init.vim`?
 - [repeat](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
 - [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in Ruby
 - [targets](https://github.com/wellle/targets.vim) - plugin that provides additional text objects
+</details>
 
-![nvim](screenshots/nvim.png)
+## Highlights
 
-## ZSH & Oh-My-Zsh
+The `Brewfile` contains some interesting CLI tools for better development like
 
-[Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a delightful community-driven framework for managing your zsh configuration.
+- `bat`, an alternative of `cat`
+- `htop`, an interactive process viewer for Unix systems
+- `nnn`, a very fast terminal file manager
+- `wd`, jump to custom directories in zsh
+- `ripgrep`, a line-oriented search tool
+- `stow`, a symlink farm manager
+- `the_silver_searcher`, a code searching tool (used in vim)
+- `fzf`, command-line fuzzy finder
+- `tig`, text-mode interface for git
+- `universal-ctags`, a programming tool to generate tag files
 
-Install [purer](https://github.com/DFurnes/purer), a ZSH prompt based on [pure](https://github.com/sindresorhus/pure):
-
-```bash
-$ npm install --global purer-prompt
-```
-
-`zshrc` is already set `purer` as the default prompt.
-
-Oh-My-Zsh plugins included:
-
-- git
-- docker
-- docker-compose
-- zsh-autosuggestions
-- history-substring-search
-
-## Git
+## Git config
 
 To prevent people from accidentally committing under your name:
 
 ```bash
-# gitconfig
+# .gitconfig
 [user]
-  # set in ~/.gitconfig_local
+  # set in ~/.gitconfig_local and included
 [include]
   path = ~/.gitconfig_local
 ```
@@ -123,8 +184,8 @@ Where `~/.gitconfig_local` is simply:
 
 ```bash
 [user]
-  name = Huy Vo
-  email = huyvohcmc@gmail.com
+  name = <your_name>
+  email = <your_email>
 ```
 
 I also use a `.gitmessage` template for co-authored commits on GitHub:
@@ -136,31 +197,24 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 
 ## Iosevka
 
-Install the fonts in `fonts/iosevka`:
-
-```bash
-$ cd fonts && ./install.sh
-```
-
 [Iosevka](https://github.com/be5invis/Iosevka) is one of the best font for programmers, it looks so good to the eye and supports ligatures. It also has many prebuilt variants, and if you build yourself you can customize the look of many different characters. Here is how I built an Iosevka version for my own:
 
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. `npm run build -- contents:iosevka (--design:ligset-haskell)`
+4. `npm run build -- contents:iosevka --design:ligset-haskell`
+5. `npm run build -- contents:iosevka-term` (for term version)
 
 Visit Iosevka's main repo for more build instructions.
 
-## Acknowledgement
+## Inspired by
 
+- [xero's dotfiles](https://github.com/xero/dotfiles)
+- [Drew Neil's dotfiles](https://github.com/nelstrom/dotfiles)
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
 - [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
-- [Adam Eivy's dotfiles](https://github.com/atomantic/dotfiles)
-- [Drew Neil's dotfiles](https://github.com/nelstrom/dotfiles)
-- [Kutsan Kaplan's dotfiles](https://github.com/kutsan/dotfiles)
-- [Kris Leech's vimfiles](https://github.com/krisleech/vimfiles)
 - [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 
 ## License
 
-This repository is available under the [MIT license](LICENSE). Do whatever the hell you want with it.
+This repository is available under the [MIT license](LICENSE). Feel free to fork and modify the dotfiles as you please.
