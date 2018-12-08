@@ -7,7 +7,7 @@ plugins=(
 )
 autoload -U promptinit; promptinit
 prompt purer
-PURE_PROMPT_SYMBOL='⍉'
+PURE_PROMPT_SYMBOL='▷'
 
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
