@@ -126,7 +126,7 @@ Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `pr
 
 ## What's inside init.vim?
 
-Visit [nvim's wiki](https://github.com/huyvohcmc/dotfiles/wiki/Nvim-plugins<Paste>) for more details.
+Visit [nvim's wiki](https://github.com/huyvohcmc/dotfiles/wiki/Nvim-plugins) for more details.
 
 ## Highlights
 
