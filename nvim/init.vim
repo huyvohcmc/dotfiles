@@ -7,7 +7,8 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
-Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+Plug 'justinmk/vim-gtfo'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -69,7 +70,7 @@ colorscheme tender
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>r :source %<cr>
+nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :nohlsearch<cr>
 
 " Easy navigation
