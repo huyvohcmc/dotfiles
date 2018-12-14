@@ -6,8 +6,6 @@
 ![smile](https://img.shields.io/badge/makes%20people-smile-57c7fe.svg?logo=travis&style=flat-square)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?logo=lgtm&style=flat-square)
 
--------
-
 ## Table of Contents
 
   * [Prerequisites](#prerequisites)
@@ -20,8 +18,6 @@
   * [Iosevka](#iosevka)
   * [Special thanks](#special-thanks)
   * [License](#license)
-
--------
 
 ## Prerequisites
 
