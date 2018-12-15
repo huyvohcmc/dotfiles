@@ -56,7 +56,6 @@ set shortmess+=c
 set termguicolors
 set wildmode=list:longest,full
 set ttimeoutlen=0
-let loaded_matchparen = 1
 
 " Safeguard
 if !exists("g:syntax_on")
