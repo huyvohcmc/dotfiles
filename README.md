@@ -155,7 +155,7 @@ To prevent people from accidentally committing under your name:
 ```bash
 # .gitconfig
 [user]
-  # set in ~/.gitconfig_local and included
+  # set in ~/.gitconfig_local
 [include]
   path = ~/.gitconfig_local
 ```
