@@ -62,6 +62,10 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Vim sneak autocmd
+autocmd colorscheme * hi Sneak guifg=black guibg=white ctermfg=black ctermbg=white
+autocmd colorscheme * hi SneakScope guibg=black ctermfg=white ctermbg=black
+
 " Colorscheme
 colorscheme tender
 
@@ -70,7 +74,7 @@ let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
-nnoremap <silent><leader><cr> :nohlsearch<cr>
+nnoremap <silent><leader><cr> :let @/ = ""<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
