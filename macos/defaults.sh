@@ -1,3 +1,6 @@
+# Free the Dock
+defaults write com.apple.Dock size-immutable -bool no; killall Dock
+
 # Remove the auto-hiding Dock delay
 defaults write com.apple.Dock autohide-delay -float 0
 
@@ -5,10 +8,7 @@ defaults write com.apple.Dock autohide-delay -float 0
 defaults write com.apple.Dock autohide-time-modifier -float 0
 
 # Set the icon size of Dock items to 28 pixels
-defaults write com.apple.Dock tilesize -int 28
-
-# Lock the dock size
-defaults write com.apple.Dock size-immutable -bool yes
+defaults write com.apple.Dock tilesize -int 30
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -24,8 +24,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # Enable subpixel font rendering on non-Apple LCDs
-# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+# https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
-# Reset dock
-killall Dock
+# Lock the Dock size
+defaults write com.apple.Dock size-immutable -bool yes; killall Dock
