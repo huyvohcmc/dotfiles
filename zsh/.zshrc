@@ -2,8 +2,6 @@ plugins=(
   wd
   git
   docker-compose
-  zsh-autosuggestions
-  history-substring-search
 )
 autoload -U promptinit; promptinit
 prompt purer
@@ -24,6 +22,8 @@ export NVM_DIR="$HOME/.nvm"
 
 source $HOME/.rvm/scripts/rvm
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
