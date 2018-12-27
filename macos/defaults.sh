@@ -7,7 +7,7 @@ defaults write com.apple.Dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.Dock autohide-time-modifier -float 0
 
-# Set the icon size of Dock items to 28 pixels
+# Set the icon size of Dock items
 defaults write com.apple.Dock tilesize -int 30
 
 # Disable press-and-hold for keys in favor of key repeat
