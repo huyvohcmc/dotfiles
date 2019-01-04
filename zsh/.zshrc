@@ -1,8 +1,4 @@
-plugins=(
-  wd
-  git
-  docker-compose
-)
+plugins=(wd git docker-compose)
 autoload -U promptinit; promptinit
 prompt purer
 PURE_PROMPT_SYMBOL='▶'
@@ -16,15 +12,13 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-source $HOME/.rvm/scripts/rvm
-source $ZSH/oh-my-zsh.sh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
+[ -f $NVM_DIR/nvm.sh ] && \. $NVM_DIR/nvm.sh
+[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+[ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
+[ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
 
