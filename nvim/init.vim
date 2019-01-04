@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'rstacruz/vim-closer'
 call plug#end()
 
 " General settings (see :h vim-differences)
