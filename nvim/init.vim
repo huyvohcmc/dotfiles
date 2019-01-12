@@ -32,6 +32,8 @@ call plug#end()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
+set autoindent
+set autoread
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set copyindent
@@ -40,18 +42,31 @@ set tabstop=2
 set shiftwidth=0 " Always have the same value with `tabstop`
 set softtabstop=-1 " Always have the same value with `shiftwidth`
 set hidden
+set history=500
+set incsearch hlsearch ignorecase smartcase
+set laststatus=2
 set ignorecase smartcase
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
+set mouse=""
+set nobackup
+set noshowmatch
 set noshowmode
 set noswapfile
 set number relativenumber
-set rulerformat=%l\:%c
+set ruler rulerformat=%l\:%c
 set scrolloff=5
 set shortmess+=c
+set showcmd
+set showtabline=1
+set smarttab
+set tags=./tags;,tags
 set termguicolors
+set title
+set wildmenu
 set wildmode=list:longest,full
+set wrap
 set ttimeoutlen=0
 
 " Safeguard
@@ -142,7 +157,6 @@ let g:lightline.component_function = {
       \ }
 let g:lightline.active = {
       \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
-      \ 'right': [ [ 'lineinfo' ], [ 'percent' ], [ 'filetype' ] ]
       \ }
 
 " ALE config
