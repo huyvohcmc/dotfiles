@@ -14,7 +14,7 @@
   * [Terminal](#terminal)
   * [What's inside init.vim?](#whats-inside-initvim)
   * [Highlights](#highlights)
-  * [.gitconfig](#gitconfig)
+  * [Git config](#git-config)
   * [Iosevka](#iosevka)
   * [Special thanks](#special-thanks)
   * [License](#license)
@@ -24,43 +24,36 @@
 Make sure the following requirements are installed:
 
 <details>
-<summary>Homebrew</summary>
+<summary>Expand</summary>
+
+### Homebrew
+
 Install [Homebrew](https://brew.sh) if you haven't.
-</details>
 
-<details>
-<summary>Git</summary>
+### Git
+
 You can either install git via Xcode Command Line Tools or by running `git --version` from your terminal.
-</details>
 
-<details>
-<summary>Zsh & Oh-My-Zsh</summary>
+### Zsh & Oh-My-Zsh
+
 [The Z shell](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a delightful community-driven framework for managing your zsh configuration.
 
-This project use [purer](https://github.com/DFurnes/purer) as the prompt theme for zsh:
+This project use [purer](https://github.com/DFurnes/purer) as the prompt theme for zsh: `npm install --global purer-prompt`
 
-```
-$ npm install --global purer-prompt
-```
-</details>
+### RVM
 
-<details>
-<summary>RVM</summary>
 RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
-</details>
 
-<details>
-<summary>NVM</summary>
+### NVM
+
 Node Version Manager - Simple bash script to manage multiple active node.js versions. To install nvm: https://github.com/creationix/nvm.
-</details>
 
-<details>
-<summary>Neovim</summary>
+### Neovim
+
 [Neovim](https://github.com/neovim/neovim) (nvim) is a forked version of Vim and arguable to be a lot faster. Follow this guide to build [nvim from source](https://github.com/neovim/neovim/wiki/Building-Neovim) and this guide to install [vim-plug](https://github.com/junegunn/vim-plug) as the main nvim plugin manager.
-</details>
 
-<details>
-<summary>Tmux</summary>
+### Tmux
+
 [Tmux](https://github.com/tmux/tmux/wiki) is the terminal multiplexer I can't live without. 
 </details>
 
@@ -101,38 +94,19 @@ Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `pr
 
 <details>
 <summary>Expand</summary>
-<br>
 
 ![preview](screenshots/preview.png)
-> iTerm2 tender colorscheme, nnn and tig
+
+*iTerm2 tender colorscheme, nnn and tig*
 
 ![nvim](screenshots/nvim.png)
-> Nvim with Iosevka font 14pt
+
+*Nvim with Iosevka font 14pt*
 </details>
 
 ## What's inside init.vim?
 
-<details>
-
-- [tender](https://github.com/jacoborus/tender.vim) - a 24bit colorscheme for Vim, Airline and Lightline
-- [lightline](https://github.com/itchyny/lightline.vim) - a light and configurable statusline/tabline plugin for Vim
-- [NERDTree](https://github.com/scrooloose/nerdtree) - a tree explorer plugin for Vim
-- [fzf](https://github.com/junegunn/fzf.vim) - a command-line fuzzy finder for Vim
-- [ALE](https://github.com/w0rp/ale) - asynchronous Lint Engine
-- [polyglot](https://github.com/sheerun/vim-polyglot) - a solid language pack for Vim
-- [ncm2](https://github.com/ncm2/ncm2) - completion framework for Neovim
-- [gutentags](https://github.com/ludovicchabant/vim-gutentags) - a Vim plugin that manages your tag files
-- [easymotion](https://github.com/easymotion/vim-easymotion) - vim motions on speed!
-- [signify](https://github.com/mhinz/vim-signify) - show a diff using Vim its sign column
-- [tcomment](https://github.com/tomtom/tcomment_vim) - comment vim-plugin
-- [fugitive](https://github.com/tpope/vim-fugitive) - a git wrapper vim-plugin
-- [rhubarb](https://github.com/tpope/vim-rhubarb) - GitHub extension for fugitive.vim
-- [rails](https://github.com/tpope/vim-rails) - Ruby on Rails power tools
-- [surround](https://github.com/tpope/vim-surround) - quoting/parenthesizing made simple
-- [repeat](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
-- [endwise](https://github.com/tpope/vim-endwise) - wisely add "end" in Ruby
-- [targets](https://github.com/wellle/targets.vim) - plugin that provides additional text objects
-</details>
+Visit [the wiki](https://github.com/huyvohcmc/dotfiles/wiki/Neovim-plugins) for more details.
 
 ## Highlights
 
@@ -148,7 +122,7 @@ The `Brewfile` contains some interesting CLI tools for better development like
 - `tig`, text-mode interface for git
 - `universal-ctags`, a programming tool to generate tag files
 
-## .gitconfig
+## Git config
 
 To prevent people from accidentally committing under your name:
 
