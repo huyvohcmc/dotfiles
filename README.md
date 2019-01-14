@@ -5,6 +5,7 @@
 ![compatible](https://img.shields.io/badge/compatibility-betamax-f43753.svg?logo=docker&style=flat-square)
 ![smile](https://img.shields.io/badge/makes%20people-smile-57c7fe.svg?logo=travis&style=flat-square)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?logo=lgtm&style=flat-square)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles?ref=badge_shield)
 
 ## Table of Contents
 
@@ -18,6 +19,9 @@
   * [Iosevka](#iosevka)
   * [Inspired by](#inspired-by)
   * [License](#license)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles?ref=badge_large)
 
 ## Prerequisites
 
