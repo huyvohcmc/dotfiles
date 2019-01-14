@@ -10,10 +10,7 @@ prompt purer
 alias v="nvim"
 alias vc="nvim ~/.config/nvim/init.vim"
 alias dotfiles="cd ~/dotfiles"
-
-go() {
-  cd ~/Projects/"$1"
-}
+go() { cd ~/Projects/"$1" }
 
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
@@ -31,5 +28,6 @@ source $ZSH/oh-my-zsh.sh
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+[ -f ~/.secret_aliases ] && source ~/.secret_aliases
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
