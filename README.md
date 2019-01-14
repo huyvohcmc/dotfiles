@@ -107,7 +107,7 @@ Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `pr
 <summary>Expand</summary>
 <br>
 
-![zsh](screenshots/zsh.png)
+![preview](screenshots/preview.png)
 > iTerm2 tender colorscheme, nnn and tig
 
 ![nvim](screenshots/nvim.png)
@@ -193,8 +193,7 @@ Visit Iosevka's main repo for more build instructions.
 
 ## Special thanks
 
-- [xero's dotfiles](https://github.com/xero/dotfiles)
-- [Drew Neil's dotfiles](https://github.com/nelstrom/dotfiles)
+- [ahmedelgabri's dotfiles](https://github.com/ahmedelgabri/dotfiles)
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
 - [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
