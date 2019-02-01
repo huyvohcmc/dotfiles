@@ -980,12 +980,14 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>205 1268 445 103 -535 900 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>418 373 796 486 0 0 1440 877 </string>
+	<string>249 1475 918 423 -535 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 1080 1440 877 -240 900 1920 1080 </string>
+	<string>-80 1346 1440 877 -535 900 2560 1440 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795_selection</key>
@@ -1658,7 +1660,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Iosevka 14</string>
+			<string>Iosevka-Medium 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -1817,7 +1819,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-01-22T09:02:06Z</date>
+	<date>2019-01-31T15:15:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
