@@ -1,4 +1,4 @@
-# Dotfiles are meant to be shared
+# Dotfiles madness
 
 ![for hackers](https://img.shields.io/badge/built%20for-hackers-50dd7e.svg?logo=dependabot&style=flat-square)
 ![awesome](https://img.shields.io/badge/pretty-awesome-ffc24b.svg?logo=sourcegraph&style=flat-square)
@@ -169,5 +169,7 @@ Visit Iosevka's main repo for more build instructions.
 - [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 
 ## License
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles?ref=badge_large)
 
 This repository is available under the [MIT license](LICENSE). Feel free to fork and modify the dotfiles as you please.
