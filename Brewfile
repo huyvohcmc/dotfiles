@@ -29,6 +29,7 @@ brew "libtool"
 brew "graphviz"
 brew "htop"
 brew "hub"
+brew "hugo"
 brew "imagemagick@6", link: true
 brew "libidn"
 brew "libmikmod"
