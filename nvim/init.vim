@@ -126,16 +126,13 @@ noremap <silent> ghub :Gbrowse<CR>
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
-let g:signify_sign_add = '▪'
-let g:signify_sign_change = '▪'
-let g:signify_sign_delete = '▪'
-let g:signify_sign_delete_first_line = '▪'
+let g:signify_sign_add = '┃'
+let g:signify_sign_change = '┃'
+let g:signify_sign_delete = '━'
 highlight SignColumn guibg=#282828
-highlight link SignifySignAdd GitGutterAdd
-highlight link SignifySignChange GitGutterChange
+highlight SignifySignAdd guifg=#5af78d ctermfg=185
+highlight SignifySignChange guifg=#ffc24b ctermfg=153
 highlight link SignifySignDelete GitGutterDelete
-highlight link SignifySignChangeDelete GitGutterChangeDelete
-highlight link SignifySignDeleteFirstLine SignifySignDelete
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
