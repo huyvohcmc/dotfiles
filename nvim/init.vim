@@ -26,8 +26,12 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'rstacruz/vim-closer'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tagprefix'
+Plug 'ncm2/ncm2-path'
+Plug 'roxma/nvim-yarp'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -138,18 +142,12 @@ highlight link SignifySignDelete GitGutterDelete
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
 let g:gutentags_ctags_exclude = ['*.min.js', '*.min.css', 'build', 'vendor', '.git', 'node_modules', '*.vim/bundle/*']
 
-" Use tab for trigger completion with characters ahead and navigate
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " LightLine config
 let g:lightline = {}
