@@ -11,7 +11,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-gtfo'
 Plug 'itchyny/lightline.vim'
 Plug 'jacoborus/tender.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'mhinz/vim-signify'
@@ -33,6 +33,7 @@ Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'fvictorio/vim-yank-queue'
+Plug 'Galooshi/vim-import-js'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -97,6 +98,8 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
+nnoremap <leader>v :vertical resize +10<cr>
+nnoremap <leader>V :vertical resize -10<cr>
 
 " Easy navigation
 noremap <leader>s <c-w>w
