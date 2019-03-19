@@ -32,8 +32,6 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
-Plug 'fvictorio/vim-yank-queue'
-Plug 'Galooshi/vim-import-js'
 call plug#end()
 
 " General settings (see :h vim-differences)
