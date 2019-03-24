@@ -6,12 +6,13 @@
 ![smile](https://img.shields.io/badge/makes%20people-smile-57c7fe.svg?logo=travis&style=flat-square)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?logo=lgtm&style=flat-square)
 
+![preview](./screenshots/preview.png)
+
 ## Table of Contents
 
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
   * [Postinstall](#postinstall)
-  * [Terminal](#terminal)
   * [What's inside init.vim?](#whats-inside-initvim)
   * [Highlights](#highlights)
   * [Git config](#git-config)
@@ -89,20 +90,6 @@ $ make unstow
 Open nvim and install all plugins: `:PlugInstall`. You should also run `:checkhealth` to check your nvim condition.
 
 Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a tmux session to fetch the plugins listed in `.tmux.conf`.
-
-## Screenshots
-
-<details>
-<summary>Expand</summary>
-
-![preview](screenshots/preview.png)
-
-*iTerm2 tender colorscheme, nnn and tig*
-
-![nvim](screenshots/nvim.png)
-
-*Nvim with Iosevka font 14pt*
-</details>
 
 ## What's inside init.vim?
 
