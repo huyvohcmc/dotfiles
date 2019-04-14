@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-gtfo'
 Plug 'itchyny/lightline.vim'
-Plug 'jacoborus/tender.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -32,6 +31,7 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
+Plug 'huyvohcmc/atlas.vim'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -88,7 +88,7 @@ map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
 " Colorscheme
-colorscheme tender
+colorscheme atlas
 
 " Leader general mapping
 let mapleader = ","
@@ -132,13 +132,9 @@ noremap <silent> ghub :Gbrowse<CR>
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
-let g:signify_sign_add = '┃'
-let g:signify_sign_change = '┃'
+let g:signify_sign_add = '▸'
+let g:signify_sign_change = '▸'
 let g:signify_sign_delete = '━'
-highlight SignColumn guibg=#282828
-highlight SignifySignAdd guifg=#5af78d ctermfg=185
-highlight SignifySignChange guifg=#ffc24b ctermfg=153
-highlight link SignifySignDelete GitGutterDelete
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
@@ -153,7 +149,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " LightLine config
 let g:lightline = {}
-let g:lightline.colorscheme = 'tenderplus'
+let g:lightline.colorscheme = 'atlas'
 let g:lightline.component_function = {
       \ 'gitbranch': 'fugitive#head',
       \ }
