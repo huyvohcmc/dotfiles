@@ -132,9 +132,7 @@ noremap <silent> ghub :Gbrowse<CR>
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
-let g:signify_sign_add = '▸'
-let g:signify_sign_change = '▸'
-let g:signify_sign_delete = '━'
+let g:signify_sign_change = '-'
 
 " Gutentags exclude
 let g:gutentags_exclude_project_root = ['/usr/local', '/Users/huyvo']
