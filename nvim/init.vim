@@ -72,6 +72,7 @@ set wildmenu
 set wildmode=list:longest,full
 set wrap
 set ttimeoutlen=0
+set matchpairs+=<:>
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -96,15 +97,25 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
-nnoremap <leader>v :vertical resize +10<cr>
-nnoremap <leader>V :vertical resize -10<cr>
+nnoremap <silent><right> :vertical resize +10<cr>
+nnoremap <silent><left> :vertical resize -10<cr>
+nnoremap <silent><up> :resize +10<cr>
+nnoremap <silent><down> :resize -10<cr>
 
 " Easy navigation
-noremap <leader>s <c-w>w
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-h> <c-w>h
-noremap <c-l> <c-w>l
+nnoremap <leader>s <c-w>w
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Navigate properly when lines are wrapped
+nnoremap j gj
+nnoremap k gk
+
+" Use tab to jump between blocks, because it's easier
+nnoremap <tab> %
+vnoremap <tab> %
 
 " NERDTree mapping and config
 noremap <leader>n :NERDTreeToggle<CR>
