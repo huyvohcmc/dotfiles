@@ -1,4 +1,4 @@
-# Dotfiles madness
+# Enter The Eternal Laziness
 
 ![for hackers](https://img.shields.io/badge/built%20for-hackers-50dd7e.svg?logo=dependabot&style=flat-square)
 ![awesome](https://img.shields.io/badge/pretty-awesome-ffc24b.svg?logo=sourcegraph&style=flat-square)
