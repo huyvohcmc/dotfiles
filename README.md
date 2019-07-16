@@ -143,8 +143,8 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. `npm run build -- contents:iosevka --design:ligset-haskell`
-5. `npm run build -- contents:iosevka-term` (for term version)
+4. `npm run build -- contents::iosevka`
+5. `npm run build -- contents::iosevka-term` (for term version)
 
 Visit Iosevka's main repo for more build instructions.
 
