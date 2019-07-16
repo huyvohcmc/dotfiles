@@ -73,6 +73,7 @@ set wildmode=list:longest,full
 set wrap
 set ttimeoutlen=0
 set matchpairs+=<:>
+set splitright
 
 " Safeguard
 if !exists("g:syntax_on")
