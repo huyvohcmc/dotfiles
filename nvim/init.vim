@@ -124,6 +124,7 @@ noremap <leader>c :NERDTreeFind<CR>
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeHighlightCursorline = 0
+let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
 
 " FZF mapping
