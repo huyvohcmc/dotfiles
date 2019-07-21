@@ -8,7 +8,6 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
 Plug 'justinmk/vim-sneak'
-Plug 'justinmk/vim-gtfo'
 Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
