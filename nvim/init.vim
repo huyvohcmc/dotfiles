@@ -36,6 +36,9 @@ call plug#end()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
+if !exists("termguicolors")
+  set termguicolors
+endif
 set autoindent
 set autoread
 set clipboard=unnamedplus
@@ -66,7 +69,6 @@ set showcmd
 set showtabline=1
 set smarttab
 set tags=./tags;,tags
-set termguicolors
 set title
 set wildmenu
 set wildmode=list:longest,full
@@ -80,6 +82,9 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Colorscheme
+colorscheme atlas
+
 " Vim sneak autocmd
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
@@ -88,9 +93,6 @@ map f <Plug>Sneak_s
 map F <Plug>Sneak_S
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
-
-" Colorscheme
-colorscheme atlas
 
 " Leader general mapping
 let mapleader = ","
