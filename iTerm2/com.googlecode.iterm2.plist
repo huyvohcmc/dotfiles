@@ -921,13 +921,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -1103,13 +1103,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1129,13 +1129,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -1335,9 +1335,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>396 1398 620 392 -254 900 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>52 1943 928 394 -567 900 2560 1440 </string>
+	<string>210 427 928 394 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-567 1714 1401 877 -567 900 2560 1440 </string>
+	<string>39 0 1401 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 2 1439 872 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
@@ -1360,13 +1360,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -1542,13 +1542,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1570,13 +1570,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 				<key>Red Component</key>
-				<real>0.15686275064945221</real>
+				<real>0.14117647707462311</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1629,13 +1629,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.91647690534591675</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.91648870706558228</real>
 				<key>Red Component</key>
-				<real>0.9137254901960784</real>
+				<real>0.91646724939346313</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
