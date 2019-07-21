@@ -1335,9 +1335,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>396 1398 620 392 -254 900 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>52 1851 796 486 -567 900 2560 1440 </string>
+	<string>52 1943 928 394 -567 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-567 1720 1401 877 -567 900 2560 1440 </string>
+	<string>-567 1714 1401 877 -567 900 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 2 1439 872 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
@@ -1629,13 +1629,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.91647690534591675</real>
+				<real>0.9137254901960784</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.91648870706558228</real>
+				<real>0.9137254901960784</real>
 				<key>Red Component</key>
-				<real>0.91646724939346313</real>
+				<real>0.9137254901960784</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -2002,7 +2002,7 @@
 				<real>0.29264676570892334</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.17198597301136365</real>
+			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -2171,7 +2171,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-07-20T03:30:53Z</date>
+	<date>2019-07-21T04:20:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUSkippedVersion</key>
