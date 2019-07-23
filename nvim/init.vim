@@ -75,6 +75,8 @@ set wrap
 set ttimeoutlen=0
 set matchpairs+=<:>
 set splitright
+set modelines=0
+set nomodeline
 
 " Safeguard
 if !exists("g:syntax_on")
