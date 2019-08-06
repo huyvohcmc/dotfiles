@@ -31,6 +31,7 @@ Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'huyvohcmc/atlas.vim'
+Plug 'dunckr/js_alternate.vim'
 call plug#end()
 
 " General settings (see :h vim-differences)
