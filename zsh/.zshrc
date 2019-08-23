@@ -55,7 +55,7 @@ inside_ssh(){
   [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]
 }
 
-if ! inside_ssh; then
-  connect_to_most_recent_tmux_session
-fi
+# if ! inside_ssh; then
+#   connect_to_most_recent_tmux_session
+# fi
 # }}}
