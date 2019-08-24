@@ -1350,9 +1350,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>341 350 928 394 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-49 754 1401 877 -254 900 1920 1080 </string>
+	<string>39 0 1401 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 1440 900 0 0 1440 900 </string>
+	<string>39 0 1401 877 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795_selection</key>
@@ -1803,13 +1803,6 @@
 					<key>Text</key>
 					<string>[1;6A</string>
 				</dict>
-				<key>0xf700-0x280000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x41</string>
-				</dict>
 				<key>0xf701-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -1830,13 +1823,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;6B</string>
-				</dict>
-				<key>0xf701-0x280000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x42</string>
 				</dict>
 				<key>0xf702-0x220000</key>
 				<dict>
@@ -1862,9 +1848,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string>b</string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -1890,9 +1876,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string>f</string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -2343,9 +2329,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
+		<string>{{-567, 900}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{269, 595}</string>
+		<string>{563, 2111}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -2354,7 +2340,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>586356353.13475895</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>76</integer>
+	<integer>93</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3091,7 +3077,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-21T10:44:43Z</date>
+	<date>2019-08-24T16:50:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
