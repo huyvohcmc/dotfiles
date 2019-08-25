@@ -32,6 +32,7 @@ Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
 Plug 'huyvohcmc/atlas.vim'
 Plug 'dunckr/js_alternate.vim'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -109,10 +110,6 @@ nnoremap <silent><down> :resize -10<cr>
 
 " Easy navigation
 nnoremap <leader>s <c-w>w
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
 
 " Navigate properly when lines are wrapped
 nnoremap j gj
