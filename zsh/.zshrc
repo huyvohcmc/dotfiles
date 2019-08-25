@@ -12,9 +12,9 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -f $NVM_DIR/nvm.sh ] && \. $NVM_DIR/nvm.sh
-[ -f $HOME/.rvm/scripts/rvm ] && source $HOME/.rvm/scripts/rvm
+[ -s "$ZSH/oh-my-zsh.sh" ] && . "$ZSH/oh-my-zsh.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
@@ -55,7 +55,7 @@ inside_ssh(){
   [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]
 }
 
-# if ! inside_ssh; then
-#   connect_to_most_recent_tmux_session
-# fi
+if ! inside_ssh; then
+  connect_to_most_recent_tmux_session
+fi
 # }}}
