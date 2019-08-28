@@ -181,17 +181,3 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier'] }
 let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
-
-" Set clipboard provider to pbcopy for MacOS
-let g:clipboard = {
-      \ 'name': 'pbcopy',
-      \ 'copy': {
-      \    '+': 'pbcopy',
-      \    '*': 'pbcopy',
-      \  },
-      \ 'paste': {
-      \    '+': 'pbpaste',
-      \    '*': 'pbpaste',
-      \ },
-      \ 'cache_enabled': 0,
-      \ }
