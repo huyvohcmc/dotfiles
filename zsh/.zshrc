@@ -17,7 +17,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
+[ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
