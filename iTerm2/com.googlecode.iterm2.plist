@@ -2319,6 +2319,7 @@
 		<string>3.3.1</string>
 		<string>3.2.8</string>
 		<string>3.3.0</string>
+		<string>3.3.3</string>
 	</array>
 	<key>NoSyncBFPFavorites</key>
 	<array/>
@@ -2331,9 +2332,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{-567, 900}, {2560, 1440}}</string>
+		<string>{{-254, 900}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{563, 2111}</string>
+		<string>{80, 1680}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -2342,7 +2343,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>586356353.13475895</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>125</integer>
+	<integer>142</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3127,7 +3128,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-31T10:33:24Z</date>
+	<date>2019-09-11T05:13:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -3177,7 +3178,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.2</string>
+	<string>3.3.3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
