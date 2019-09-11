@@ -62,7 +62,7 @@ set nobackup
 set noshowmatch
 set noshowmode
 set noswapfile
-set number relativenumber
+set number
 set ruler rulerformat=%l\:%c
 set scrolloff=5
 set shortmess+=c
