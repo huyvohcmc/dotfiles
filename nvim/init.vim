@@ -101,10 +101,10 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
-nnoremap <silent><right> :vertical resize +10<cr>
-nnoremap <silent><left> :vertical resize -10<cr>
-nnoremap <silent><up> :resize +10<cr>
-nnoremap <silent><down> :resize -10<cr>
+nnoremap <silent><leader><right> :vertical resize +10<cr>
+nnoremap <silent><leader><left> :vertical resize -10<cr>
+nnoremap <silent><leader><up> :resize +10<cr>
+nnoremap <silent><leader><down> :resize -10<cr>
 
 " Easy navigation
 nnoremap <leader>s <c-w>w
