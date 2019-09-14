@@ -65,7 +65,7 @@ set noswapfile
 set number
 set ruler rulerformat=%l\:%c
 set scrolloff=5
-set shortmess+=c
+set shortmess+=cW
 set showcmd
 set showtabline=1
 set smarttab
