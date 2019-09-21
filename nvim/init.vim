@@ -42,7 +42,7 @@ if !exists("termguicolors")
 endif
 set autoindent
 set autoread
-set clipboard=unnamedplus
+set clipboard^=unnamed
 set completeopt=noinsert,menuone,noselect
 set copyindent
 set expandtab
