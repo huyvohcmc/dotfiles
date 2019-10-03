@@ -6,7 +6,6 @@ plugins=(wd git docker-compose)
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -g ''"
 
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
