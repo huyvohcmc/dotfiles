@@ -36,9 +36,7 @@ call plug#end()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
-if !exists("termguicolors")
-  set termguicolors
-endif
+set termguicolors
 set autoindent
 set autoread
 set clipboard^=unnamed
