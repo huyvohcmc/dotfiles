@@ -130,7 +130,6 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'rg --files'
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
