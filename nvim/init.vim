@@ -87,6 +87,7 @@ endif
 " Colorscheme
 set background=dark
 colorscheme plain
+hi! VertSplit guifg=#222222
 
 " Vim Sneak
 let g:sneak#label = 1
