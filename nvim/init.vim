@@ -8,7 +8,6 @@ let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 " Plugins will be downloaded under the specified directory
 call plug#begin('~/.config/nvim/plugged')
 Plug 'justinmk/vim-sneak'
-Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -30,9 +29,9 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
-Plug 'huyvohcmc/atlas.vim'
 Plug 'dunckr/js_alternate.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'andreypopp/vim-colors-plain'
 call plug#end()
 
 " General settings (see :h vim-differences)
@@ -86,9 +85,10 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-colorscheme atlas
+set background=dark
+colorscheme plain
 
-" Vim sneak autocmd
+" Vim Sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
 let g:sneak#absolute_dir = 1
@@ -128,15 +128,16 @@ let NERDTreeHighlightCursorline = 0
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_Store$[[file]]']
 
-" FZF mapping
+" FZF
+let $FZF_DEFAULT_COMMAND = 'rg --files'
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" The silver searcher
-noremap <leader>ag <esc>:Ag<space>
-noremap <leader>aw <esc>:Ag <c-r><c-w>
-noremap <leader>ah <esc>:Ag<up><cr>
+" Ripgrep
+noremap <leader>rg <esc>:Rg<space>
+noremap <leader>rw <esc>:Rg <c-r><c-w>
+noremap <leader>rh <esc>:Rg<up><cr>
 
 " Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
@@ -215,16 +216,6 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" LightLine config
-let g:lightline = {}
-let g:lightline.colorscheme = 'atlas'
-let g:lightline.component_function = {
-      \ 'gitbranch': 'fugitive#head',
-      \ }
-let g:lightline.active = {
-      \ 'left': [ [ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
-      \ }
 
 " ALE config
 nmap <leader>e <Plug>(ale_fix)
