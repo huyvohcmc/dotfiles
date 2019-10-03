@@ -146,6 +146,9 @@ let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
 let g:signify_sign_change = '-'
+hi! link SignifySignAdd DiffAdd
+hi! link SignifySignChange DiffChange
+hi! link SignifySignDelete DiffDelete
 
 " Gutentags setup
 let g:gutentags_add_default_project_roots = 0
@@ -227,3 +230,7 @@ let g:ale_set_highlights = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier'] }
 let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
+hi! link ALEError DiffDelete
+hi! link ALEErrorSign DiffDelete
+hi! link ALEWarning DiffChange
+hi! link ALEWarningSign DiffChange
