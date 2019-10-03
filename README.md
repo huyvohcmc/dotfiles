@@ -1,62 +1,18 @@
-# Enter The Eternal Laziness
+# Dotfiles for life
 
-![for hackers](https://img.shields.io/badge/built%20for-hackers-50dd7e.svg?logo=dependabot&style=flat-square)
-![awesome](https://img.shields.io/badge/pretty-awesome-ffc24b.svg?logo=sourcegraph&style=flat-square)
-![compatible](https://img.shields.io/badge/compatibility-betamax-f43753.svg?logo=docker&style=flat-square)
-![smile](https://img.shields.io/badge/makes%20people-smile-57c7fe.svg?logo=travis&style=flat-square)
-![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?logo=lgtm&style=flat-square)
+Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration files.
 
 ![screenshot](screenshot.png)
 
-## Table of Contents
-
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-  * [Postinstall](#postinstall)
-  * [What's inside init.vim?](#whats-inside-initvim)
-  * [Highlights](#highlights)
-  * [Git config](#git-config)
-  * [Iosevka](#iosevka)
-  * [Special thanks](#special-thanks)
-  * [License](#license)
-
 ## Prerequisites
 
-Make sure the following requirements are installed:
-
-<details>
-<summary>Expand</summary>
-
-### Homebrew
-
-Install [Homebrew](https://brew.sh) if you haven't.
-
-### Git
-
-You can either install git via Xcode Command Line Tools or by running `git --version` from your terminal.
-
-### Zsh & Oh-My-Zsh
-
-[The Z shell](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), is an extended version of the Bourne Shell (sh), with plenty of new features, and support for plugins and themes. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is a delightful community-driven framework for managing your zsh configuration.
-
-This project use [purer](https://github.com/DFurnes/purer) as the prompt theme for zsh: `npm install --global purer-prompt`
-
-### RVM
-
-RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Install RVM: https://rvm.io.
-
-### NVM
-
-Node Version Manager - Simple bash script to manage multiple active node.js versions. To install nvm: https://github.com/creationix/nvm.
-
-### Neovim
-
-[Neovim](https://github.com/neovim/neovim) (nvim) is a forked version of Vim and arguable to be a lot faster. Follow this guide to build [nvim from source](https://github.com/neovim/neovim/wiki/Building-Neovim) and this guide to install [vim-plug](https://github.com/junegunn/vim-plug) as the main nvim plugin manager.
-
-### Tmux
-
-[Tmux](https://github.com/tmux/tmux/wiki) is the terminal multiplexer I can't live without. 
-</details>
+- [Homebrew](https://brew.sh/)
+- [Git](https://git-scm.com/)
+- [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and its framework [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- [Rvm](https://rvm.io/)
+- [Nvm](https://github.com/nvm-sh/nvm)
+- Neovim since it's far better than Vim IMO
+- Tmux
 
 ## Installation
 
@@ -85,31 +41,13 @@ To remove dotfiles:
 $ make unstow
 ```
 
-## Postinstall
+## Post-installation
 
 Open nvim and install all plugins: `:PlugInstall`. You should also run `:checkhealth` to check your nvim condition.
 
 Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a tmux session to fetch the plugins listed in `.tmux.conf`.
 
-## What's inside init.vim?
-
-Visit [the wiki](https://github.com/huyvohcmc/dotfiles/wiki/Neovim-plugins) for more details.
-
-## Highlights
-
-The `Brewfile` contains some interesting CLI tools for better development like
-
-- `bat`, an alternative of `cat`
-- `htop`, an interactive process viewer for Unix systems
-- `nnn`, a very fast terminal file manager
-- `ripgrep`, a line-oriented search tool
-- `stow`, a symlink farm manager
-- `the_silver_searcher`, a code searching tool (used in vim)
-- `fzf`, command-line fuzzy finder
-- `tig`, text-mode interface for git
-- `universal-ctags`, a programming tool to generate tag files
-
-## Git config
+## Git Config
 
 To prevent people from accidentally committing under your name:
 
@@ -148,7 +86,7 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 
 Visit Iosevka's main repo for more build instructions.
 
-## Special thanks
+## Acknowledgement
 
 - [ahmedelgabri's dotfiles](https://github.com/ahmedelgabri/dotfiles)
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
