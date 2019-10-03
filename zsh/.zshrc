@@ -6,7 +6,7 @@ plugins=(wd git docker-compose)
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
