@@ -104,7 +104,8 @@ endif
 " Colorscheme
 set background=dark
 colorscheme plain
-hi! VertSplit guifg=#222222
+hi clear VertSplit
+hi VertSplit guifg=#191919
 hi! link PmenuSel TermCursor
 hi! link Todo Comment
 hi! Search guifg=#ffffff guibg=NONE gui=underline,Bold
@@ -156,14 +157,13 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " Floating window
-let $FZF_DEFAULT_OPTS = '--layout=reverse'
 let g:fzf_layout = { 'window': 'call OpenFloatingWin()' }
 function! OpenFloatingWin()
   let height = &lines - 3
   let width = float2nr(&columns - (&columns * 2 / 10))
   let col = float2nr((&columns - width) / 2)
-  "Set the position, size, etc. of the floating window.
-  "The size configuration here may not be so flexible, and there's room for further improvement.
+  " Set the position, size, etc. of the floating window.
+  " The size configuration here may not be so flexible, and there's room for further improvement.
   let opts = {
         \ 'relative': 'editor',
         \ 'row': height * 0.3,
@@ -173,7 +173,7 @@ function! OpenFloatingWin()
         \ }
   let buf = nvim_create_buf(v:false, v:true)
   let win = nvim_open_win(buf, v:true, opts)
-  "Set Floating Window Highlighting
+  " Set Floating Window Highlighting
   call setwinvar(win, '&winhl', 'Normal:Pmenu')
   setlocal
         \ buftype=nofile
@@ -183,21 +183,6 @@ function! OpenFloatingWin()
         \ norelativenumber
         \ signcolumn=no
 endfunction
-
-" Customize fzf colors to match color scheme
-let g:fzf_colors = { 'fg': ['fg', 'Normal'],
-      \ 'bg':      ['bg', 'Normal'],
-      \ 'hl':      ['fg', 'Comment'],
-      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-      \ 'hl+':     ['fg', 'Statement'],
-      \ 'info':    ['fg', 'PreProc'],
-      \ 'border':  ['fg', 'Ignore'],
-      \ 'prompt':  ['fg', 'Conditional'],
-      \ 'pointer': ['fg', 'Exception'],
-      \ 'marker':  ['fg', 'Keyword'],
-      \ 'spinner': ['fg', 'Label'],
-      \ 'header':  ['fg', 'Comment'] }
 
 " Ripgrep
 noremap <leader>rg <esc>:Rg<space>
