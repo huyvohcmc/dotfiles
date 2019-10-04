@@ -1,5 +1,3 @@
-" https://github.com/huyvohcmc/dotfiles
-
 " Faster loading
 if has('nvim')
   let g:python_host_skip_check = 1
