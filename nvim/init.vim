@@ -29,7 +29,6 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tagprefix'
 Plug 'ncm2/ncm2-path'
 Plug 'roxma/nvim-yarp'
-Plug 'dunckr/js_alternate.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'andreypopp/vim-colors-plain'
 call plug#end()
@@ -86,6 +85,10 @@ endif
 set background=dark
 colorscheme plain
 hi! VertSplit guifg=#222222
+hi! link PmenuSel TermCursor
+hi! link Todo Comment
+hi! Search guifg=#ffffff guibg=NONE gui=underline,Bold
+hi! IncSearch guifg=#ffffff guibg=NONE
 
 " Vim Sneak
 let g:sneak#label = 1
