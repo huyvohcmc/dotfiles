@@ -11,39 +11,39 @@ Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration f
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and its framework [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [Rvm](https://rvm.io/)
 - [Nvm](https://github.com/nvm-sh/nvm)
-- Neovim since it's far better than Vim IMO
-- Tmux
+- [Neovim](https://neovim.io/) since it's far better than Vim IMO
+- [Tmux](https://github.com/tmux/tmux)
 
 ## Installation
 
 Clone this project at `$HOME`:
 
 ```bash
-$ git clone git@github.com:huyvohcmc/dotfiles.git
-$ cd dotfiles
+git clone git@github.com:huyvohcmc/dotfiles.git
+cd dotfiles
 ```
 
 Use Homebrew to install some necessary packages defined in `Brewfile`:
 
 ```bash
-$ brew bundle
+brew bundle
 ```
 
 Create a backup of your existing dotfiles, remove them in `$HOME` and install the new ones using [stow](https://www.gnu.org/software/stow/):
 
 ```bash
-$ make stow
+make stow
 ```
 
 To remove dotfiles:
 
 ```bash
-$ make unstow
+make unstow
 ```
 
 ## Post-installation
 
-Open nvim and install all plugins: `:PlugInstall`. You should also run `:checkhealth` to check your nvim condition.
+Install [minpac](https://github.com/k-takata/minpac), then open nvim and install all plugins with `:PackUpdate`. You should also run `:checkhealth` to check your nvim condition.
 
 Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a tmux session to fetch the plugins listed in `.tmux.conf`.
 
@@ -81,8 +81,7 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 1. Clone the repository
 2. Ensure `nodejs` >= 8.4, `ttfautohint` and `otfcc` are installed
 3. Install necessary libs by `npm install`
-4. `npm run build -- contents::iosevka`
-5. `npm run build -- contents::iosevka-term` (for term version)
+4. `npm run build -- contents::iosevka` (or `npm run build -- contents::iosevka-term` for term version)
 
 Visit Iosevka's main repo for more build instructions.
 
