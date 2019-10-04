@@ -18,26 +18,26 @@ Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration f
 
 Clone this project at `$HOME`:
 
-```bash
+```sh
 git clone git@github.com:huyvohcmc/dotfiles.git
 cd dotfiles
 ```
 
 Use Homebrew to install some necessary packages defined in `Brewfile`:
 
-```bash
+```sh
 brew bundle
 ```
 
 Create a backup of your existing dotfiles, remove them in `$HOME` and install the new ones using [stow](https://www.gnu.org/software/stow/):
 
-```bash
+```sh
 make stow
 ```
 
 To remove dotfiles:
 
-```bash
+```sh
 make unstow
 ```
 
@@ -51,7 +51,7 @@ Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `pr
 
 To prevent people from accidentally committing under your name:
 
-```bash
+```sh
 # .gitconfig
 [user]
   # set in ~/.gitconfig_local
@@ -61,7 +61,7 @@ To prevent people from accidentally committing under your name:
 
 Where `~/.gitconfig_local` is simply:
 
-```bash
+```sh
 [user]
   name = <your_name>
   email = <your_email>
@@ -69,7 +69,7 @@ Where `~/.gitconfig_local` is simply:
 
 I also use a `.gitmessage` template for co-authored commits on GitHub:
 
-```bash
+```sh
 # ~/.gitmessage
 Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 ```
