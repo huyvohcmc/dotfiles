@@ -5,33 +5,46 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_host_prog = '/usr/local/bin/python'
 let g:ruby_host_prog = 'rvm system do neovim-ruby-host'
 
-" Plugins will be downloaded under the specified directory
-call plug#begin('~/.config/nvim/plugged')
-Plug 'justinmk/vim-sneak'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
-Plug 'wellle/targets.vim'
-Plug 'rstacruz/vim-closer'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tagprefix'
-Plug 'ncm2/ncm2-path'
-Plug 'roxma/nvim-yarp'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'andreypopp/vim-colors-plain'
-call plug#end()
+" Minpac
+packadd minpac
+let s:plugins = exists('*minpac#init')
+
+call minpac#init()
+" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Load the plugins right now. (optional)
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('justinmk/vim-sneak')
+call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
+call minpac#add('junegunn/fzf.vim')
+call minpac#add('ludovicchabant/vim-gutentags')
+call minpac#add('mhinz/vim-signify')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('tomtom/tcomment_vim')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-rhubarb')
+call minpac#add('tpope/vim-surround')
+call minpac#add('w0rp/ale')
+call minpac#add('wellle/targets.vim')
+call minpac#add('rstacruz/vim-closer')
+call minpac#add('ncm2/ncm2')
+call minpac#add('ncm2/ncm2-bufword')
+call minpac#add('ncm2/ncm2-tagprefix')
+call minpac#add('ncm2/ncm2-path')
+call minpac#add('roxma/nvim-yarp')
+call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('andreypopp/vim-colors-plain')
+
+" Define user commands for updating/cleaning the plugins.
+" Each of them loads minpac, reloads .vimrc to register the
+" information of plugins, then performs the task.
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
