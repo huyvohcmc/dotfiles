@@ -73,8 +73,6 @@ set list listchars=tab:.\ ,trail:.
 set matchpairs+=<:>
 set mouse=""
 set nobackup
-set nomodeline
-set noshowmatch
 set noshowmode
 set noswapfile
 set ruler
