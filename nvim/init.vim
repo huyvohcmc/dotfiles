@@ -18,11 +18,14 @@ endif
 " Minpac
 packadd minpac
 let s:plugins = exists('*minpac#init')
-
+if !s:plugins "{{{
+  fun! InstallPlug() " Bootstrap plugin manager on new systems.
+    exe '!git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac'
+  endfun
+else
 call minpac#init()
 " minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
 call minpac#add('k-takata/minpac', {'type': 'opt'})
-" Load the plugins right now. (optional)
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
 call minpac#add('junegunn/fzf.vim')
@@ -46,6 +49,7 @@ call minpac#add('ncm2/ncm2-path')
 call minpac#add('roxma/nvim-yarp')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('andreypopp/vim-colors-plain')
+endif "}}}
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads .vimrc to register the
