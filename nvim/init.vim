@@ -1,4 +1,4 @@
-" Faster loading
+" Faster loading (https://neovim.io/doc/user/provider.html)
 if has('nvim')
   let g:python_host_skip_check = 1
   let g:python3_host_skip_check = 1
@@ -23,7 +23,6 @@ call minpac#init()
 " minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 " Load the plugins right now. (optional)
-call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
 call minpac#add('junegunn/fzf.vim')
@@ -57,46 +56,39 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
-set termguicolors
 set autoindent
 set autoread
 set clipboard^=unnamed
 set completeopt=noinsert,menuone,noselect
 set copyindent
-set expandtab
-set tabstop=2
-set shiftwidth=0 " Always have the same value with `tabstop`
-set softtabstop=-1 " Always have the same value with `shiftwidth`
+" Don't mess with 'tabstop', with 'expandtab' it isn't used.
+" Instead set softtabstop=-1, then 'shiftwidth' is used.
+set expandtab shiftwidth=2 softtabstop=-1
 set hidden
-set history=500
 set incsearch hlsearch ignorecase smartcase
 set laststatus=2
-set ignorecase smartcase
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
+set matchpairs+=<:>
 set mouse=""
 set nobackup
+set nomodeline
 set noshowmatch
 set noshowmode
 set noswapfile
-set ruler rulerformat=%l\:%c
+set ruler
 set scrolloff=5
 set shortmess+=cW
-set showcmd
-set showtabline=1
 set smarttab
-set tags=./tags;,tags
-set title
-set wildmenu
-set wildmode=list:longest,full
-set wrap
-set ttimeoutlen=0
-set matchpairs+=<:>
 set splitright
-set modelines=0
-set nomodeline
-set wildignore+=tags,gwt-unitCache/*,*/__pycache__/*,build/*,build.?/*
+set tags=./tags;,tags
+set termguicolors
+set ttimeoutlen=0
+set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
+set wildmenu
+set wildmode=longest:full,list,full
+set wrap
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -126,15 +118,13 @@ map T <Plug>Sneak_T
 let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q!<cr>
+nnoremap <leader>s <c-w>w
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
 nnoremap <silent><leader><right> :vertical resize +10<cr>
 nnoremap <silent><leader><left> :vertical resize -10<cr>
 nnoremap <silent><leader><up> :resize +10<cr>
 nnoremap <silent><leader><down> :resize -10<cr>
-
-" Easy navigation
-nnoremap <leader>s <c-w>w
 
 " Navigate properly when lines are wrapped
 nnoremap j gj

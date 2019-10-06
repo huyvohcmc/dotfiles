@@ -11,7 +11,7 @@ Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration f
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH) and its framework [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [Rvm](https://rvm.io/)
 - [Nvm](https://github.com/nvm-sh/nvm)
-- [Neovim](https://neovim.io/) since it's far better than Vim IMO
+- [Neovim](https://neovim.io/)
 - [Tmux](https://github.com/tmux/tmux)
 
 ## Installation
@@ -88,9 +88,8 @@ Visit Iosevka's main repo for more build instructions.
 ## Acknowledgement
 
 - [ahmedelgabri's dotfiles](https://github.com/ahmedelgabri/dotfiles)
+- [justinmk's dotfiles](https://github.com/justinmk/config)
 - [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
-- [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
-- [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 
 ## License
 
