@@ -60,8 +60,6 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
-set autoindent
-set autoread
 set clipboard^=unnamed
 set completeopt=noinsert,menuone,noselect
 set copyindent
@@ -70,27 +68,21 @@ set copyindent
 set expandtab shiftwidth=2 softtabstop=-1
 set hidden
 set incsearch hlsearch ignorecase smartcase
-set laststatus=2
 set lazyredraw
 set linebreak
 set list listchars=tab:.\ ,trail:.
 set matchpairs+=<:>
-set mouse=""
 set nobackup
 set noshowmode
 set noswapfile
-set ruler
 set scrolloff=5
 set shortmess+=cW
-set smarttab
 set splitright
 set tags=./tags;,tags
 set termguicolors
 set ttimeoutlen=0
 set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
-set wildmenu
 set wildmode=longest:full,list,full
-set wrap
 
 " Safeguard
 if !exists("g:syntax_on")
@@ -119,14 +111,10 @@ map T <Plug>Sneak_T
 " Leader general mapping
 let mapleader = ","
 nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q!<cr>
+nnoremap <leader>q :q<cr>
 nnoremap <leader>s <c-w>w
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
-nnoremap <silent><leader><right> :vertical resize +10<cr>
-nnoremap <silent><leader><left> :vertical resize -10<cr>
-nnoremap <silent><leader><up> :resize +10<cr>
-nnoremap <silent><leader><down> :resize -10<cr>
 
 " Navigate properly when lines are wrapped
 nnoremap j gj
