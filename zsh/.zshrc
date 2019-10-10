@@ -1,5 +1,4 @@
-autoload -U promptinit; promptinit
-prompt purer
+ZSH_THEME="hyperzsh"
 
 plugins=(wd git docker-compose)
 
