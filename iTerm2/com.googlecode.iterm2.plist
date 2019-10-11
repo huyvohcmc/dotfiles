@@ -1350,7 +1350,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>341 350 928 394 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 -91 1920 1057 1440 -91 1920 1057 </string>
+	<string>-387 1070 1401 877 -567 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1440 -91 1920 1057 1440 -91 1920 1080 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
@@ -2302,7 +2302,7 @@
 			<key>Use Italic Font</key>
 			<false/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
@@ -2338,9 +2338,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1440, -91}, {1920, 1080}}</string>
+		<string>{{-567, 900}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{2013, 772}</string>
+		<string>{-208, 1745}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -2349,7 +2349,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>586356353.13475895</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>238</integer>
+	<integer>246</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3150,7 +3150,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-10T01:09:31Z</date>
+	<date>2019-10-11T01:11:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

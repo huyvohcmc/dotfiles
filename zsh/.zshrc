@@ -1,4 +1,4 @@
-ZSH_THEME="hyperzsh"
+ZSH_THEME="zeit"
 
 plugins=(wd git docker-compose)
 
