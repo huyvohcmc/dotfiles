@@ -5,6 +5,7 @@ plugins=(wd git docker-compose)
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
+export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!.git/*" --glob "!node_modules/*"'
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
