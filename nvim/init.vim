@@ -137,8 +137,6 @@ let NERDTreeIgnore = ['^\~$[[dir]]', '^\.o$[[file]]', '^\.pyc$[[file]]', '^\.DS_
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
-" nnoremap <leader>t :call fzf#vim#files('.', {'options': g:fzf_preview_source})<CR>
-" let g:fzf_preview_source="--preview='bat {} --theme=\"Sublime Snazzy\" --style=numbers,changes --color=always'"
 
 " Ripgrep
 noremap <leader>rg <esc>:Rg<space>
