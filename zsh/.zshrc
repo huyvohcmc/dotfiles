@@ -1,6 +1,6 @@
 ZSH_THEME="zeit"
 
-plugins=(wd git docker-compose)
+plugins=(git docker-compose)
 
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
@@ -18,6 +18,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.aliases ] && source ~/.aliases
+
+[ -f ~/.zsh/z.lua/z.lua ] && eval "$(lua ~/.zsh/z.lua/z.lua --init zsh enhanced once)"
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
