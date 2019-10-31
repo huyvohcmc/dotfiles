@@ -1,7 +1,5 @@
-[user]
-  # set in ~/.gitconfig_local
 [include]
-  path = ~/.gitconfig_local
+  path = ~/.gitconfig.local
 [core]
   editor = $EDITOR
   excludesfile = ~/.gitignore
