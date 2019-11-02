@@ -2,26 +2,30 @@ ZSH_THEME="zeit"
 
 plugins=(git docker-compose)
 
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin"
 export ZSH=~/.oh-my-zsh
 export EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
 export RIPGREP_CONFIG_PATH="$HOME/.rgrc"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!.git/*" --glob "!node_modules/*"'
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin"
-
 [ -s "$ZSH/oh-my-zsh.sh" ] && . "$ZSH/oh-my-zsh.sh"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.aliases ] && source ~/.aliases
-
+[ -f ~/.secrets ] && source ~/.secrets
 [ -f ~/.zsh/z.lua/z.lua ] && eval "$(lua ~/.zsh/z.lua/z.lua --init zsh enhanced once)"
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# aliases
+alias v='nvim'
+alias vc='nvim ~/.config/nvim/init.vim'
+alias zb='z -b'
+alias l='exa -lahF'
+alias find='fd'
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
