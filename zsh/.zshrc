@@ -24,7 +24,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!.
 alias v='nvim'
 alias vc='nvim ~/.config/nvim/init.vim'
 alias zb='z -b'
-alias l='exa -lahF'
 alias find='fd'
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
