@@ -1350,9 +1350,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>341 350 928 394 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>-567 900 2560 1417 -567 900 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1440 -91 1920 1057 1440 -91 1920 1080 </string>
+	<string>1572 4 1440 877 1440 -91 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_D8D8ABC3-6005-4D94-8358-5F8262B38795_selection</key>
@@ -1373,13 +1373,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.14117647058823529</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 				<key>Red Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -1464,13 +1464,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.94117647409439087</real>
+				<real>0.90196078431372551</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.94509810209274292</real>
+				<real>0.90980392156862744</real>
 				<key>Red Component</key>
-				<real>0.94509810209274292</real>
+				<real>0.90980392156862744</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -1542,26 +1542,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.94117647409439087</real>
+				<real>0.90196078431372551</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.94509810209274292</real>
+				<real>0.90980392156862744</real>
 				<key>Red Component</key>
-				<real>0.94509810209274292</real>
+				<real>0.90980392156862744</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.14117647058823529</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 				<key>Red Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1585,13 +1585,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.14117647058823529</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 				<key>Red Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.12549019607843137</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1699,13 +1699,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.92156857252120972</real>
+				<real>0.90196078431372551</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.94117647409439087</real>
+				<real>0.90980392156862744</real>
 				<key>Red Component</key>
-				<real>0.93725490570068359</real>
+				<real>0.90980392156862744</real>
 			</dict>
 			<key>Guid</key>
 			<string>D8D8ABC3-6005-4D94-8358-5F8262B38795</string>
@@ -2330,17 +2330,17 @@
 	<array/>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>Hack</string>
 		<string>Hack Nerd Font</string>
 		<string>Monaco</string>
 		<string>Iosevka</string>
-		<string>Menlo</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
+		<string>{{-567, 900}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{90, 707}</string>
+		<string>{286, 2056}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -2349,7 +2349,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>586356353.13475895</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>277</integer>
+	<integer>389</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3090,6 +3090,11 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSearchHistory2</key>
+	<array>
+		<string>1234</string>
+		<string>kkkkkkkkkkkkj</string>
+	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>566911717.16493797</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -3154,7 +3159,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-15T12:20:58Z</date>
+	<date>2019-11-15T03:33:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
