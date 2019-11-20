@@ -1,7 +1,7 @@
 [include]
   path = ~/.gitconfig.local
 [core]
-  editor = $EDITOR
+  editor = nvim
   excludesfile = ~/.gitignore
   ignorecase = false
   abbrev = 12
