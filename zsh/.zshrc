@@ -4,13 +4,24 @@ export PATH="/usr/local/sbin:$PATH"
 export ZSH=~/.oh-my-zsh
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
-# Plugins
-export PLUGINS=$HOME/.zsh/plugins
-[ -f $PLUGINS/git/git.zsh ] && source $PLUGINS/git/git.zsh
-[ -f $PLUGINS/docker-compose/docker-compose.zsh ] && source $PLUGINS/docker-compose/docker-compose.zsh
-[ -f $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -f $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source $PLUGINS/zsh-history-substring-search/zsh-history-substring-search.zsh
-[ -f $PLUGINS/z.lua/z.lua ] && eval "$(lua $PLUGINS/z.lua/z.lua --init zsh enhanced once)"
+# Install zplugin if not already
+if [ ! -d $HOME/.zplugin ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+fi
+
+### Added by Zplugin's installer
+source $HOME/.zplugin/bin/zplugin.zsh
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+# Load plugins
+zplugin load zsh-users/zsh-history-substring-search
+zplugin light zsh-users/zsh-autosuggestions
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+
+# Z.lua
+[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # Theme
 export THEMES=$HOME/dotfiles/zsh/themes
