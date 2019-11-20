@@ -46,10 +46,11 @@ brew "pkg-config"
 brew "portmidi"
 brew "postgresql@9.4", restart_service: true, link: true
 brew "python@2"
+brew "ruby-build"
+brew "rbenv"
 brew "redis", restart_service: true
 brew "ripgrep"
 brew "ruby"
-brew "ruby-build"
 brew "sdl"
 brew "sdl2"
 brew "sdl_image"
