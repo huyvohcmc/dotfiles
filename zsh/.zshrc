@@ -49,9 +49,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!.
 # Ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.rgrc
 
-# Secrets
+# Aliases and secrets
+source $HOME/dotfiles/zsh/aliases
 [ -f ~/.secrets ] && source ~/.secrets
-
-# Aliases
-alias v='nvim'
-alias vc='nvim ~/.config/nvim/init.vim'
