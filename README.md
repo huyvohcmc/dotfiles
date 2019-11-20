@@ -89,7 +89,7 @@ Visit Iosevka's main repo for more build instructions.
 
 - [ahmedelgabri's dotfiles](https://github.com/ahmedelgabri/dotfiles)
 - [justinmk's dotfiles](https://github.com/justinmk/config)
-- [thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
+- [joshtronic's dotfiles](https://github.com/joshtronic/dotfiles)
 
 ## License
 
