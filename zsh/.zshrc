@@ -33,11 +33,11 @@ if [[ -s ~/.rbenv/shims/ruby ]]; then
   PATH=$HOME/.rbenv/shims:$PATH
 fi
 rbenv() {
-  eval "$(command rbenv init -)"
+  eval "$(command rbenv init - --no-rehash)"
   rbenv "$@"
 }
 
-# NVM
+# Nvm
 export NVM_DIR=$HOME/.nvm
 if [ -f $HOME/.nvm/alias/default ]; then
   PATH=${PATH}:${HOME}/.nvm/versions/node/v$(cat ~/.nvm/alias/default)/bin
