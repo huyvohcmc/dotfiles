@@ -1,10 +1,43 @@
 export PATH="/usr/local/sbin:$PATH"
+export EDITOR=nvim
 
-# Oh-My-Zsh
-export ZSH=~/.oh-my-zsh
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+# History file configuration
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=50000
+SAVEHIST=10000
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
 
-# Install zplugin if not already
+# Completion
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+unsetopt menu_complete
+unsetopt flowcontrol
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
+
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+
+# Colors
+autoload -U colors && colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+setopt auto_cd
+setopt multios
+setopt prompt_subst
+
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+
+# Install Zplugin if not already
 if [ ! -d $HOME/.zplugin ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 fi
