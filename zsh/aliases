@@ -1,2 +1,16 @@
 alias v='nvim'
 alias vc='nvim ~/.config/nvim/init.vim'
+
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+alias -- -='cd -'
+alias md='mkdir -p'
+alias rd=rmdir
+alias d='dirs -v | head -10'
+alias lsa='ls -lah'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+ls -G . &>/dev/null && alias ls='ls -G'
