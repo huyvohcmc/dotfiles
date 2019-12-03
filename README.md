@@ -53,13 +53,11 @@ To prevent people from accidentally committing under your name:
 
 ```sh
 # .gitconfig
-[user]
-  # set in ~/.gitconfig_local
 [include]
-  path = ~/.gitconfig_local
+  path = ~/.gitconfig.local
 ```
 
-Where `~/.gitconfig_local` is simply:
+Where `~/.gitconfig.local` is simply:
 
 ```sh
 [user]
