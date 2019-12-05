@@ -18,8 +18,10 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 144
-    lines: 36
+    columns: 80
+    lines: 24
+
+  startup_mode: Maximized
 
   # Window padding (changes require restart)
   #
@@ -47,13 +49,10 @@ window:
   #     - transparent: Title bar, transparent background, but no title bar buttons
   decorations: full
 
-  # When true, alacritty starts maximized.
-  start_maximized: true
-
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 5000
+  history: 10000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
@@ -64,9 +63,6 @@ scrolling:
   # The `faux_multiplier` setting controls the number of lines the terminal
   # should scroll when the alternate screen buffer is active. This is used
   # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
@@ -86,7 +82,7 @@ font:
   normal:
     family: Iosevka
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    # style: Light
 
   # Bold font face
   bold:
@@ -122,73 +118,66 @@ font:
   # it is recommended to set `use_thin_strokes` to `false`
   use_thin_strokes: true
 
-# Display the time it takes to redraw each frame.
-render_timer: false
-
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
-# # Colors (Snazzy)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x282a36'
-#     foreground: '0xeff0eb'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x282a36'
-#     red:     '0xff5c57'
-#     green:   '0x5af78e'
-#     yellow:  '0xf3f99d'
-#     blue:    '0x57c7ff'
-#     magenta: '0xff6ac1'
-#     cyan:    '0x9aedfe'
-#     white:   '0xf1f1f0'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x686868'
-#     red:     '0xff5c57'
-#     green:   '0x5af78e'
-#     yellow:  '0xf3f99d'
-#     blue:    '0x57c7ff'
-#     magenta: '0xff6ac1'
-#     cyan:    '0x9aedfe'
-#     white:   '0xf1f1f0'
-
-# Colors (Tender)
+# Colors (Gravy)
 colors:
   # Default colors
   primary:
-    background: '0x282828'
-    foreground: '0xeeeeee'
-
-  cursor:
-    text: '0x282828'
-    cursor: '0xeeeeee'
+    background: '0x212121'
+    foreground: '0xeff0eb'
 
   # Normal colors
   normal:
-    black:   '0x282828'
-    red:     '0xf43753'
-    green:   '0xc9d05c'
-    yellow:  '0xffc24b'
-    blue:    '0xb3deef'
-    magenta: '0xd3b987'
-    cyan:    '0x73cef4'
-    white:   '0xeeeeee'
+    black:   '0x212121'
+    red:     '0xff5c57'
+    green:   '0x5af78e'
+    yellow:  '0xf3f99d'
+    blue:    '0x57c7ff'
+    magenta: '0xff6ac1'
+    cyan:    '0x9aedfe'
+    white:   '0xf1f1f0'
 
   # Bright colors
   bright:
-    black:   '0x4c4c4c'
-    red:     '0xf43753'
-    green:   '0xc9d05c'
-    yellow:  '0xffc24b'
-    blue:    '0xb3deef'
-    magenta: '0xd3b987'
-    cyan:    '0x73cef4'
-    white:   '0xfeffff'
+    black:   '0x212121'
+    red:     '0xff5c57'
+    green:   '0x5af78e'
+    yellow:  '0xf3f99d'
+    blue:    '0x57c7ff'
+    magenta: '0xff6ac1'
+    cyan:    '0x9aedfe'
+    white:   '0xf1f1f0'
+
+# # Colors (Iceberg)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x161821'
+#     foreground: '0xd2d4de'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x161821'
+#     red:     '0xe27878'
+#     green:   '0xb4be82'
+#     yellow:  '0xe2a478'
+#     blue:    '0x84a0c6'
+#     magenta: '0xa093c7'
+#     cyan:    '0x89b8c2'
+#     white:   '0xc6c8d1'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x6b7089'
+#     red:     '0xe98989'
+#     green:   '0xc0ca8e'
+#     yellow:  '0xe9b189'
+#     blue:    '0x91acd1'
+#     magenta: '0xada0d3'
+#     cyan:    '0x95c4ce'
+#     white:   '0xd2d4de'
 
   # Indexed Colors
   #
@@ -291,16 +280,16 @@ cursor:
   unfocused_hollow: false
 
 # Live config reload (changes require restart)
-live_config_reload: false
+live_config_reload: true
 
 # Shell
 #
 # You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
 # Entries in `shell.args` are passed unmodified as arguments to the shell.
 shell:
- program: /usr/local/bin/zsh
- args:
-   - --login
+  program: /usr/local/bin/zsh
+  args:
+    - --login
 
 # Key bindings
 #
@@ -488,3 +477,13 @@ key_bindings:
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
+  - { key: Key1,      mods: Alt,       chars: "\x1b1"                       }
+  - { key: Key2,      mods: Alt,       chars: "\x1b2"                       }
+  - { key: Key3,      mods: Alt,       chars: "\x1b3"                       }
+  - { key: Key4,      mods: Alt,       chars: "\x1b4"                       }
+  - { key: Key5,      mods: Alt,       chars: "\x1b5"                       }
+  - { key: Key6,      mods: Alt,       chars: "\x1b6"                       }
+  - { key: Key7,      mods: Alt,       chars: "\x1b7"                       }
+  - { key: Key8,      mods: Alt,       chars: "\x1b8"                       }
+  - { key: Key9,      mods: Alt,       chars: "\x1b9"                       }
+  - { key: Key0,      mods: Alt,       chars: "\x1b0"                       }
