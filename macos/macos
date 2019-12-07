@@ -24,6 +24,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable font smoothing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
 
 # Enable subpixel font rendering on non-Apple LCDs
 # https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
