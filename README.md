@@ -76,20 +76,20 @@ Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 
 I use [Zplugin](https://github.com/zdharma/zplugin) to manage Zsh plugins. The file `.zshrc` will automatically install Zplugin if it's not installed and then load the plugins. I use a customized version of the theme [Zeit](https://github.com/zeit/zeit.zsh-theme). The only difference between them is my version doesn't contain any `Oh-My-Zsh` functions.
 
-## 0.15 milliseconds Zsh startup
+## 0.14 milliseconds Zsh startup
 
 ```sh
 $ for i in $(seq 1 10); do /usr/bin/time /bin/zsh -i -c exit; done
-        0.15 real         0.10 user         0.05 sys
         0.14 real         0.09 user         0.04 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.04 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.05 sys
-        0.15 real         0.09 user         0.05 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
+        0.14 real         0.09 user         0.04 sys
 ```
 
 This can be achieved thanks to the lazy-loading mechanism applied to virtual environment loaders like `Rbenv` and `Nvm`:
