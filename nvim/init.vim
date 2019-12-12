@@ -11,16 +11,20 @@ if has('nvim')
   endif
 endif
 
+" Disable netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 " Minpac
-packadd minpac
-let s:plugins = exists('*minpac#init')
-if !s:plugins "{{{
+try
+  packadd minpac
+catch
   fun! InstallPlug() " Bootstrap plugin manager on new systems.
     exe '!git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac'
   endfun
-else
+endtry
+if exists('*minpac#init') "{{{
 call minpac#init()
-" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`.
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
@@ -153,27 +157,12 @@ hi! link SignifySignChange DiffChange
 hi! link SignifySignDelete DiffDelete
 
 " Replace Gutentags
-command! Tags !ctags -R -I EXTERN -I INIT
-      \ --exclude='*.git'
-      \ --exclude='*.svg'
-      \ --exclude='*.hg'
-      \ --exclude='bin'
-      \ --exclude='docs'
-      \ --exclude='build*'
-      \ --exclude='.vim-src/**'
-      \ --exclude='node_modules/**'
-      \ --exclude='*.lock'
-      \ --exclude='tags*'
-      \ --exclude='venv/**'
-      \ --exclude='**/site-packages/**'
-      \ --exclude='data/**'
-      \ --exclude='dist/**'
-      \ --exclude='notebooks/**'
-      \ --exclude='Notebooks/**'
-      \ --exclude='*graphhopper_data/*.json'
-      \ --exclude='*graphhopper/*.json'
-      \ --exclude='*.json'
-      \ --exclude='qgis/**' *
+command! Tags !ctags -R -I EXTERN -I INIT --exclude='build*' --exclude='.vim-src/**' --exclude='node_modules/**' --exclude='venv/**'
+      \ --exclude='**/site-packages/**' --exclude='data/**' --exclude='dist/**' --exclude='notebooks/**' --exclude='Notebooks/**'
+      \ --exclude='*graphhopper_data/*.json' --exclude='*graphhopper/*.json' --exclude='*.json' --exclude='qgis/**' --exclude=.git
+      \ --exclude=.svn --exclude=.hg --exclude="*.cache.html" --exclude="*.nocache.js" --exclude="*.min.*" --exclude="*.map"
+      \ --exclude="*.swp" --exclude="*.bak" --exclude="*.pyc" --exclude="*.class" --exclude="*.sln" --exclude="*.Master" --exclude="*.csproj"
+      \ --exclude="*.csproj.user" --exclude="*.cache" --exclude="*.dll" --exclude="*.pdb" --exclude=tags --exclude="cscope.*" --exclude="*.tar.*"
 
 " Enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
