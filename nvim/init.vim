@@ -13,8 +13,7 @@ endif
 
 let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1 " Skip loading menu.vim, saves ~100ms
-let g:loaded_netrw = 1 " Disable netrw
-let g:loaded_netrwPlugin = 1 " Disable netrw
+let g:loaded_netrwPlugin = 1
 
 " Minpac
 try
@@ -52,9 +51,6 @@ call minpac#add('andreypopp/vim-colors-plain')
 call minpac#add('justinmk/vim-dirvish')
 endif "}}}
 
-" Define user commands for updating/cleaning the plugins.
-" Each of them loads minpac, reloads .vimrc to register the
-" information of plugins, then performs the task.
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
@@ -91,14 +87,22 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-set background=dark
+function! s:plain() abort
+  hi clear VertSplit
+  hi VertSplit guifg=#191919
+  hi! link PmenuSel TermCursor
+  hi! link Todo Comment
+  hi! Search guifg=#f3f99d guibg=NONE gui=underline,bold
+  hi! IncSearch guifg=#f3f99d guibg=NONE
+  hi! StatusLine guibg=NONE
+  hi! StatusLineNC guibg=NONE
+endfunction
+
+augroup colorscheme
+  autocmd ColorScheme plain call s:plain()
+augroup END
+
 colorscheme plain
-hi clear VertSplit
-hi VertSplit guifg=#191919
-hi! link PmenuSel TermCursor
-hi! link Todo Comment
-hi! Search guifg=#ffffff guibg=NONE gui=underline,Bold
-hi! IncSearch guifg=#ffffff guibg=NONE
 
 " Vim Sneak
 let g:sneak#label = 1
