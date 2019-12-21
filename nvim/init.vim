@@ -92,8 +92,8 @@ function! s:plain() abort
   hi VertSplit guifg=#191919
   hi! link PmenuSel TermCursor
   hi! link Todo Comment
-  hi! Search guifg=#f3f99d guibg=NONE gui=underline,bold
-  hi! IncSearch guifg=#f3f99d guibg=NONE
+  hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
+  hi! IncSearch guifg=#e32791 guibg=NONE
   hi! StatusLine guibg=NONE
   hi! StatusLineNC guibg=NONE
 endfunction
