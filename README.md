@@ -136,4 +136,4 @@ Visit Iosevka's main repo for more build instructions.
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles?ref=badge_large)
 
-This repository is available under the [MIT license](LICENSE). Feel free to fork and modify the dotfiles as you please.
+This repository is available under the [MIT license](./.github/LICENSE). Feel free to fork and modify the dotfiles as you please.
