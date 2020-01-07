@@ -93,7 +93,7 @@ function! s:plain() abort
   hi! link PmenuSel TermCursor
   hi! link Todo Comment
   hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
-  hi! IncSearch guifg=#e32791 guibg=NONE
+  hi! IncSearch guifg=#191919 guibg=#e32791
   hi! StatusLine guibg=NONE
   hi! StatusLineNC guibg=NONE
 endfunction
