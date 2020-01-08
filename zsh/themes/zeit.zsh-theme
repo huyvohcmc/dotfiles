@@ -1,9 +1,9 @@
 local resetColor="%{$reset_color%}"
 local hostname="%{$fg_bold[white]%}%m$resetColor$resetColor"
 local dir="%{$fg_bold[white]%}%~$resetColor$resetColor"
-local _separator="%{$fg[magenta]%}::$resetColor"
-local _return_status="%{$fg[red]%}%(?..⍉ )$resetColor"
-local _prompt_symbol="%{$fg[green]➜$resetColor"
+local _separator="%{$fg[magenta]%}::$resetColor$resetColor"
+local _return_status="%{$fg[red]%}%(?..⍉ )$resetColor$resetColor"
+local _prompt_symbol="%{$fg[green]➜$resetColor$resetColor"
 
 GIT_PROMPT_PREFIX="%{$fg[white]%}"
 GIT_PROMPT_SUFFIX="$resetColor "
