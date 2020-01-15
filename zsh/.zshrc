@@ -60,7 +60,6 @@ zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 # Theme
 AGKOZAK_MULTILINE=0
 AGKOZAK_LEFT_PROMPT_ONLY=1
-AGKOZAK_PROMPT_CHAR=( $ %# : )
 AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S')
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
