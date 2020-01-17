@@ -1,14 +1,12 @@
 local resetColor="%{$reset_color%}"
-local hostname="%{$fg_bold[white]%}%m$resetColor$resetColor"
-local dir="%{$fg_bold[white]%}%~$resetColor$resetColor"
-local _separator="%{$fg[magenta]%}::$resetColor$resetColor"
-local _return_status="%{$fg[red]%}%(?..⍉ )$resetColor$resetColor"
-local _prompt_symbol="%{$fg[green]➜$resetColor$resetColor"
+local logo="%{$fg_bold[white]%}▲$resetColor$resetColor"
+local hostname=`hostname`
+local dir="%{$fg_bold[white]%}%c$resetColor$resetColor"
 
-GIT_PROMPT_PREFIX="%{$fg[white]%}"
-GIT_PROMPT_SUFFIX="$resetColor "
-GIT_PROMPT_DIRTY="%{$fg[yellow]%}"
-GIT_PROMPT_CLEAN="%{$fg[green]%}"
+GIT_PROMPT_PREFIX="[%{$fg_bold[white]%}"
+GIT_PROMPT_SUFFIX="$resetColor] "
+GIT_PROMPT_DIRTY="%{$fg_bold[red]%}"
+GIT_PROMPT_CLEAN="%{$fg_bold[green]%}"
 
 function branch_is_dirty() {
   local STATUS=''
@@ -40,7 +38,7 @@ function git_current_branch() {
 }
 
 function git_prompt() {
-  branch=$(git_current_branch)
+  branch=`git_current_branch`
   if [ "$branch" = '' ]; then
     # not a git repo
     echo ''
@@ -53,4 +51,4 @@ function git_prompt() {
   fi
 }
 
-PROMPT='$hostname $_separator $dir $(git_prompt)$_return_status$_prompt_symbol '
+PROMPT='$logo ($hostname) $dir $(git_prompt)'
