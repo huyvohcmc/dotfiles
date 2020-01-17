@@ -48,7 +48,6 @@ autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
 # Load plugins
-zplugin load agkozak/agkozak-zsh-prompt
 zplugin load zsh-users/zsh-history-substring-search
 zplugin light zsh-users/zsh-autosuggestions
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
@@ -58,12 +57,8 @@ zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 [ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # Theme
-AGKOZAK_MULTILINE=0
-AGKOZAK_LEFT_PROMPT_ONLY=1
-AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S')
-AGKOZAK_COLORS_USER_HOST=magenta
-AGKOZAK_COLORS_PATH=white
-
+export THEMES=$HOME/dotfiles/zsh/themes
+source $THEMES/zeit.zsh-theme
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
 # Rbenv
