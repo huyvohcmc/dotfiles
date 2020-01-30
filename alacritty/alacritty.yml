@@ -532,6 +532,7 @@ mouse:
 # a no-op if you do not wish to receive input characters for that binding.
 key_bindings:
   # (macOS only)
+  - { key: Key0,   mods: Command,         action: ResetFontSize    }
   - { key: Equals, mods: Command,         action: IncreaseFontSize }
   - { key: Add,    mods: Command,         action: IncreaseFontSize }
   - { key: Minus,  mods: Command,         action: DecreaseFontSize }
@@ -543,11 +544,7 @@ key_bindings:
   - { key: Q,      mods: Command,         action: Quit             }
   - { key: W,      mods: Command,         action: Quit             }
   - { key: F,      mods: Command|Control, action: ToggleFullscreen }
-  - { key: Comma,  mods: Command,      command:
-    {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
   - { key: N,         mods: Command,      action: SpawnNewInstance       }
-  - { key: Space,     mods: Alt,          chars: " "                     }
-
 
   - { key: Paste,                    action: Paste                            }
   - { key: Copy,                     action: Copy                             }
