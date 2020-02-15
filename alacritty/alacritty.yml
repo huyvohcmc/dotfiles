@@ -182,83 +182,53 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Gravy)
-colors:
-  # Default colors
-  primary:
-    background: '0x202125'
-    foreground: '0xeff0eb'
+schemes:
+  xcode: &xcode
+    primary:
+      background: '0x292a30'
+      foreground: '0xdfdfe0'
+    normal:
+      black:   '0x393b44'
+      red:     '0xff8170'
+      green:   '0x78c2b3'
+      yellow:  '0xd9c97c'
+      blue:    '0x4eb0cc'
+      magenta: '0xff7ab2'
+      cyan:    '0xb281eb'
+      white:   '0xdfdfe0'
+    bright:
+      black:   '0x7f8c98'
+      red:     '0xff8170'
+      green:   '0xacf2e4'
+      yellow:  '0xffa14f'
+      blue:    '0x6bdfff'
+      magenta: '0xff7ab2'
+      cyan:    '0xdabaff'
+      white:   '0xdfdfe0'
+  gravy: &gravy
+    primary:
+      background: '0x202125'
+      foreground: '0xeff0eb'
+    normal:
+      black:   '0x282a36'
+      red:     '0xff5c57'
+      green:   '0x5af78e'
+      yellow:  '0xf3f99d'
+      blue:    '0x57c7ff'
+      magenta: '0xff6ac1'
+      cyan:    '0x9aedfe'
+      white:   '0xf1f1f0'
+    bright:
+      black:   '0x686868'
+      red:     '0xff5c57'
+      green:   '0x5af78e'
+      yellow:  '0xf3f99d'
+      blue:    '0x57c7ff'
+      magenta: '0xff6ac1'
+      cyan:    '0x9aedfe'
+      white:   '0xf1f1f0'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  #selection:
-  #  text: '0xeaeaea'
-  #  background: '0x404040'
-
-  # Normal colors
-  normal:
-    black:   '0x282a36'
-    red:     '0xff5c57'
-    green:   '0x5af78e'
-    yellow:  '0xf3f99d'
-    blue:    '0x57c7ff'
-    magenta: '0xff6ac1'
-    cyan:    '0x9aedfe'
-    white:   '0xf1f1f0'
-
-  # Bright colors
-  bright:
-    black:   '0x686868'
-    red:     '0xff5c57'
-    green:   '0x5af78e'
-    yellow:  '0xf3f99d'
-    blue:    '0x57c7ff'
-    magenta: '0xff6ac1'
-    cyan:    '0x9aedfe'
-    white:   '0xf1f1f0'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '0xff00ff' }`
-  #
-  #indexed_colors: []
+colors: *gravy
 
 # Visual Bell
 #
