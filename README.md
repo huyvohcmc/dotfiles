@@ -2,17 +2,9 @@
 
 Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration files.
 
-![screenshot](screenshot.png)
-
 ## Prerequisites
 
-- [Homebrew](https://brew.sh/)
-- [Git](https://git-scm.com/)
-- [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Rbenv](https://github.com/rbenv/rbenv)
-- [Nvm](https://github.com/nvm-sh/nvm)
-- [Neovim](https://neovim.io/)
-- [Tmux](https://github.com/tmux/tmux)
+Assume that you already installed [homebrew](https://brew.sh/), [git](https://git-scm.com/), [zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH), [rbenv](https://github.com/rbenv/rbenv), [nvm](https://github.com/nvm-sh/nvm), [neovim](https://neovim.io/), and [tmux](https://github.com/tmux/tmux).
 
 ## Installation
 
@@ -47,7 +39,7 @@ Install [minpac](https://github.com/k-takata/minpac), then open `nvim` and insta
 
 Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a `tmux` session to fetch the plugins listed in `.tmux.conf`.
 
-## Git config
+## Git Config
 
 To prevent people from accidentally committing under your name:
 
@@ -126,11 +118,20 @@ nvm() {
 
 Visit Iosevka's main repo for more build instructions.
 
-## Acknowledgement
+## Did I forget something?
+
+Oh right :point_down:
+
+![screenshot 1](screenshot1.png) | ![screenshot 2](screenshot2.png)
+:-: | :-:
+
+## Inspired By
 
 - [ahmedelgabri's dotfiles](https://github.com/ahmedelgabri/dotfiles)
 - [justinmk's dotfiles](https://github.com/justinmk/config)
 - [joshtronic's dotfiles](https://github.com/joshtronic/dotfiles)
+
+and some other dotfiles on the internet.
 
 ## License
 
