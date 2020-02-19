@@ -89,7 +89,7 @@ endif
 " Colorscheme
 function! s:plain() abort
   hi clear VertSplit
-  hi VertSplit guifg=#191919
+  hi VertSplit guifg=#000000
   hi! link PmenuSel TermCursor
   hi! link Todo Comment
   hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
