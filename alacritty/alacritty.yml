@@ -229,7 +229,7 @@ schemes:
       white:   '0xf1f1f0'
   taerminal: &taerminal
     primary:
-      background: '0x202125'
+      background: '0x17181a'
       foreground: '0xf0f0f0'
     cursor:
       background: '0xf0f0f0'
