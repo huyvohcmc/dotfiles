@@ -185,7 +185,7 @@ draw_bold_text_with_bright_colors: true
 schemes:
   xcode: &xcode
     primary:
-      background: '0x292a30'
+      background: '0x17181a'
       foreground: '0xdfdfe0'
     normal:
       black:   '0x393b44'
@@ -207,7 +207,7 @@ schemes:
       white:   '0xdfdfe0'
   gravy: &gravy
     primary:
-      background: '0x202125'
+      background: '0x17181a'
       foreground: '0xeff0eb'
     normal:
       black:   '0x282a36'
@@ -253,7 +253,7 @@ schemes:
       cyan:    '0xc0e9f8'
       white:   '0xffffff'
 
-colors: *taerminal
+colors: *xcode
 
 # Visual Bell
 #
