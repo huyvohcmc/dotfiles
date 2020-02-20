@@ -253,7 +253,7 @@ schemes:
       cyan:    '0xc0e9f8'
       white:   '0xffffff'
 
-colors: *xcode
+colors: *taerminal
 
 # Visual Bell
 #
