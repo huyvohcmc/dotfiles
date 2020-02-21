@@ -118,12 +118,8 @@ nvm() {
 
 Visit Iosevka's main repo for more build instructions.
 
-## Did I forget something?
-
-Oh right :point_down:
-
-![screenshot 1](screenshot1.png) | ![screenshot 2](screenshot2.png)
-:-: | :-:
+## Screenshot or it didn't happen
+![screenshot](screenshot.png)
 
 ## Inspired By
 
