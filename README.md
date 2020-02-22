@@ -1,6 +1,6 @@
-# Dotfiles for life
+# Greetings, traveler!
 
-Enter the eternal laziness with a set of nvim, zsh, git and tmux configuration files.
+This repository includes all of my opinionated configuration.
 
 ## Prerequisites
 
@@ -39,12 +39,12 @@ Install [minpac](https://github.com/k-takata/minpac), then open `nvim` and insta
 
 Install [Tmux plugin manager](https://github.com/tmux-plugins/tpm) and press `prefix` + `I` inside a `tmux` session to fetch the plugins listed in `.tmux.conf`.
 
-## Git Config
+## Git configuration
 
 To prevent people from accidentally committing under your name:
 
 ```sh
-# .gitconfig
+# ~/.gitconfig
 [include]
   path = ~/.gitconfig.local
 ```
@@ -63,6 +63,14 @@ I also use a `.gitmessage` template for co-authored commits on GitHub:
 # ~/.gitmessage
 Co-authored-by: Linus Torvalds <torvalds@transmeta.com>
 ```
+
+```sh
+# ~/.gitconfig
+[commit]
+  verbose = true
+  template = ~/.gitmessage
+```
+
 
 ## Zsh
 
@@ -84,7 +92,7 @@ $ for i in $(seq 1 10); do /usr/bin/time /bin/zsh -i -c exit; done
         0.14 real         0.09 user         0.04 sys
 ```
 
-This can be achieved thanks to the lazy-loading mechanism applied to virtual environment loaders like `Rbenv` and `Nvm`:
+This can be achieved thanks to the [lazy-loading mechanism](https://htr3n.github.io/2018/07/faster-zsh/) applied to virtual environment loaders like `Rbenv` and `Nvm`:
 
 ```sh
 # Rbenv
@@ -130,7 +138,5 @@ Visit Iosevka's main repo for more build instructions.
 and some other dotfiles on the internet.
 
 ## License
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhuyvohcmc%2Fdotfiles?ref=badge_large)
 
 This repository is available under the [MIT license](./.github/LICENSE). Feel free to fork and modify the dotfiles as you please.
