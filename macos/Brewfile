@@ -37,6 +37,7 @@ brew "libuv"
 brew "libyaml"
 brew "luajit", args: ["HEAD"]
 brew "mit-scheme"
+brew "navi"
 brew "ninja"
 brew "nnn"
 brew "pinentry-mac"
