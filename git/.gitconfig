@@ -21,7 +21,7 @@
   ff = only
 [commit]
   verbose = true
-  template = ~/.gitmessage
+  # template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
