@@ -68,4 +68,5 @@ brew "zsh"
 brew "caryll/tap/otfcc-mac64"
 brew "github/gh/gh"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "brooklyn"
 cask "react-native-debugger"
