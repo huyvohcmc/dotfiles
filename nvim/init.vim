@@ -136,7 +136,6 @@ augroup dirvish
   autocmd!
   autocmd FileType dirvish
         \  call fugitive#detect(@%)
-        \| nmap <silent> <buffer> q <Plug>(dirvish_quit)
         \| nmap <buffer> cc :DirvishCopy<cr>
         \| nmap <buffer> rr :DirvishRename<cr>
         \| nmap <buffer> mm :DirvishMove<cr>
