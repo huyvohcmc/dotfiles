@@ -1,6 +1,7 @@
 local resetColor="%{$reset_color%}"
 local logo="%{$fg_bold[white]%}▲$resetColor$resetColor"
-local hostname=`hostname`
+local host=`hostname`
+local hostname="$fg_bold[white]%}$host"
 local dir="%{$fg_bold[white]%}%c$resetColor$resetColor"
 
 GIT_PROMPT_PREFIX="%{$fg_bold[white]%}"
