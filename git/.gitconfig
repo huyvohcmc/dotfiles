@@ -20,8 +20,8 @@
 [merge]
   ff = only
 [commit]
+  template = ~/.gitmessage
   verbose = true
-  # template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
