@@ -174,28 +174,6 @@ font:
 draw_bold_text_with_bright_colors: true
 
 schemes:
-  xcode: &xcode
-    primary:
-      background: '0x17181a'
-      foreground: '0xdfdfe0'
-    normal:
-      black:   '0x393b44'
-      red:     '0xff8170'
-      green:   '0x78c2b3'
-      yellow:  '0xd9c97c'
-      blue:    '0x4eb0cc'
-      magenta: '0xff7ab2'
-      cyan:    '0xb281eb'
-      white:   '0xdfdfe0'
-    bright:
-      black:   '0x7f8c98'
-      red:     '0xff8170'
-      green:   '0xacf2e4'
-      yellow:  '0xffa14f'
-      blue:    '0x6bdfff'
-      magenta: '0xff7ab2'
-      cyan:    '0xdabaff'
-      white:   '0xdfdfe0'
   gravy: &gravy
     primary:
       background: '0x17181a'
@@ -243,8 +221,30 @@ schemes:
       magenta: '0xffc6ff'
       cyan:    '0xc0e9f8'
       white:   '0xffffff'
+  material: &material
+    primary:
+      background: '0x212121'
+      foreground: '0xeeffff'
+    normal:
+      black:   '0x212121'
+      red:     '0xf07178'
+      green:   '0xc3e88d'
+      yellow:  '0xffcb6b'
+      blue:    '0x82aaff'
+      magenta: '0xc792ea'
+      cyan:    '0x89ddff'
+      white:   '0xeeffff'
+    bright:
+      black:   '0x4a4a4a'
+      red:     '0xf07178'
+      green:   '0xc3e88d'
+      yellow:  '0xffcb6b'
+      blue:    '0x82aaff'
+      magenta: '0xc792ea'
+      cyan:    '0x89ddff'
+      white:   '0xffffff'
 
-colors: *taerminal
+colors: *material
 
 # Visual Bell
 #
