@@ -244,7 +244,7 @@ schemes:
       cyan:    '0x89ddff'
       white:   '0xffffff'
 
-colors: *material
+colors: *taerminal
 
 # Visual Bell
 #
