@@ -104,6 +104,9 @@ augroup END
 
 colorscheme plain
 
+" Automatic resizing of splits to equal sizes
+autocmd VimResized * wincmd =
+
 " Vim Sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
