@@ -135,6 +135,48 @@ vnoremap <tab> %
 " Dirvish
 let g:dirvish_mode = ':sort ,^.*[\/],'
 
+augroup dirvish_config
+  autocmd!
+  autocmd FileType dirvish nnoremap <buffer>mv :Dirvish %<CR>:call <SID>SetupCommandOnFile("mv -n")<CR>
+  autocmd FileType dirvish nnoremap <buffer>M :Dirvish %<CR>:call <SID>SetupCommandOnFile("mv -n")<CR>
+  autocmd FileType dirvish nnoremap <buffer>rd :Dirvish %<CR>:call <SID>SetupRemoveCommandOnFile()<CR>
+  autocmd FileType dirvish nnoremap <buffer>rm :Dirvish %<CR>:call <SID>SetupCommandOnFile("rm")<CR>
+  autocmd FileType dirvish nnoremap <buffer>R :Dirvish %<CR>:call <SID>SetupCommandOnFile("rm")<CR>
+  autocmd FileType dirvish nnoremap <buffer>cp :Dirvish %<CR>:call <SID>SetupCommandOnFile("cp")<CR>
+  autocmd FileType dirvish nnoremap <buffer>C :Dirvish %<CR>:call <SID>SetupCommandOnFile("cp")<CR>
+  autocmd FileType dirvish nnoremap <buffer>mk :Dirvish %<CR>:!mkdir
+augroup END
+
+function! s:SetupCommandOnFile(cmd) abort
+  let reg_save = @@
+  let reg_save2 = @*
+  silent exe "normal! ^yg_"
+  let filename_string = @@
+  let filename = fnameescape(expand(filename_string))
+  let @@ = a:cmd
+  " This doesn't use `silent` because `silent requires a `:redraw!` after
+  call feedkeys(':!' . a:cmd . " " . filename . " ")
+  let @@ = reg_save
+  let @* = reg_save2
+endfunction
+
+function! s:SetupRemoveCommandOnFile() abort
+  let reg_save = @@
+  let reg_save2 = @*
+  silent exe "normal! ^yg_"
+  let filename_string = @@
+  let filename = fnameescape(expand(filename_string))
+  if filereadable(filename_string)
+    let cmd = "rm"
+  else
+    let cmd = "rmdir"
+  endif
+  " This doesn't use `silent` because `silent requires a `:redraw!` after
+  call feedkeys(':!' . cmd . " " . filename)
+  let @@ = reg_save
+  let @* = reg_save2
+endfunction
+
 " FZF
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
