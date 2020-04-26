@@ -1,5 +1,6 @@
 alias v='nvim'
 alias vc='nvim ~/.config/nvim/init.vim'
+alias lg='lazygit'
 
 alias -g ...='../..'
 alias -g ....='../../..'
