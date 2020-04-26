@@ -2,7 +2,6 @@
 if has('nvim')
   let g:python_host_skip_check = 1
   let g:python3_host_skip_check = 1
-  let g:loaded_ruby_provider = 0
   if executable('python2')
     let g:python_host_prog = exepath('python2')
   endif
@@ -13,6 +12,7 @@ endif
 
 let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1 " Skip loading menu.vim, saves ~100ms
+let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 
 " Minpac
