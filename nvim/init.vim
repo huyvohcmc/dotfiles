@@ -10,8 +10,7 @@ if has('nvim')
   endif
 endif
 
-" Skip netrw
-let g:loaded_netrw = 1
+" Skip netrw plugin
 let g:loaded_netrwPlugin = 1
 
 " Minpac
