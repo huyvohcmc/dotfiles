@@ -61,7 +61,7 @@ export THEMES=$HOME/dotfiles/zsh/themes
 source $THEMES/zeit.zsh-theme
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
-# Rbenv
+# rbenv
 if [[ -s ~/.rbenv/shims/ruby ]]; then
   PATH=$HOME/.rbenv/shims:$PATH
 fi
@@ -70,7 +70,7 @@ rbenv() {
   rbenv "$@"
 }
 
-# Nvm
+# nvm
 export NVM_DIR=$HOME/.nvm
 if [ -f $HOME/.nvm/alias/default ]; then
   PATH=${PATH}:${HOME}/.nvm/versions/node/v$(cat ~/.nvm/alias/default)/bin
