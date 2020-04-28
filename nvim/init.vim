@@ -176,6 +176,7 @@ function! s:SetupRemoveCommandOnFile() abort
 endfunction
 
 " FZF
+let g:fzf_preview_window = ''
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
