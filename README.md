@@ -27,11 +27,20 @@ brew bundle
 make stow
 ```
 
-- To remove installed dotfiles
+## Uninstall
 
 ```sh
 make unstow
 ```
+
+## Workflow
+
+- Alacritty for the terminal
+- Zsh (without oh-my-zsh) as the default shell
+- Neovim as the text editor
+- Tmux to open multiple windows and panes in terminal
+- Rbenv to manage different Ruby versions (and nvm for NodeJS's)
+- Other tools like fzf, ripgrep, lazygit, nnn, z.lua, etc.
 
 ## Wiki
 
