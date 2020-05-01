@@ -2,16 +2,12 @@ _"This repository includes all of my opinionated configuration, on macos. But so
 
 ## Installation
 
-- Install homebrew: https://brew.sh/
+- Install [`homebrew`](https://brew.sh/), [`neovim`](https://neovim.io/), and [`alacritty`](https://github.com/alacritty/alacritty/)
 
-- Install neovim: https://neovim.io/
-
-- Install alacritty: https://github.com/alacritty/alacritty/
-
-- Clone this repository to `$HOME`
+- Clone this repository to your designated folder
 
 ```sh
-git clone git@github.com:huyvohcmc/dotfiles.git
+git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles
 ```
 
 - Install system dependencies in [`macos/Brewfile`](./macos/Brewfile)
@@ -23,9 +19,10 @@ brew bundle
 - Backup your existing dotfiles, then use [stow](https://www.gnu.org/software/stow/) to install new ones
 
 ```sh
-# cd $HOME/dotfiles
 make stow
 ```
+
+This will create the symlinks of this dotfiles in your home folder.
 
 ## Uninstall
 
@@ -33,15 +30,26 @@ make stow
 make unstow
 ```
 
-## Workflow
+This will remove all the symlinks of this dotfiles in your home folder.
 
-- Alacritty for the terminal
-- Zsh (without oh-my-zsh) as the default shell
-- Neovim as the text editor
-- Tmux to open multiple windows and panes in terminal
-- Rbenv to manage different Ruby versions (and nvm for NodeJS's)
-- Other tools like fzf, ripgrep, lazygit, nnn, z.lua, etc.
+## Screenshots
 
-## Wiki
+![](https://user-images.githubusercontent.com/17645203/80581688-b3a52380-8a37-11ea-9841-4622c3c5cca0.png)
 
-Visit wiki for more stuff: https://github.com/huyvohcmc/dotfiles/wiki
+## FAQ
+
+- What terminal emulator is shown on the screenshots?
+
+  This is [alacritty](https://github.com/alacritty/alacritty). A cross-platform, GPU-accelerated terminal emulator.
+
+- Why Neovim over Vim?
+
+  One of the main reason is neovim has better developer community.
+
+- Why no oh-my-zsh?
+
+  Setting up zsh with no oh-my-zsh will give you more understanding of zsh itself and how it works as a terminal shell.
+
+- What font is being used on the screenshots?
+
+  [JetBrains Mono](https://www.jetbrains.com/lp/mono/), 12pt.
