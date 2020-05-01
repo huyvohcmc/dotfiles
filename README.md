@@ -1,8 +1,8 @@
-_"This repository includes all of my opinionated configuration, on macos. But some of them can be used on other unix-like operating systems as well."_
+_"Even though this is my macos dotfiles, most of them can be used on other unix-like operating systems perfectly fine."_
 
 ## Installation
 
-- Install [`homebrew`](https://brew.sh/), [`neovim`](https://neovim.io/), and [`alacritty`](https://github.com/alacritty/alacritty/)
+- Install [homebrew](https://brew.sh/), [neovim](https://neovim.io/), and [alacritty](https://github.com/alacritty/alacritty/)
 
 - Clone this repository to your designated folder
 
@@ -22,15 +22,7 @@ brew bundle
 make stow
 ```
 
-This will create the symlinks of this dotfiles in your home folder.
-
-## Uninstall
-
-```sh
-make unstow
-```
-
-This will remove all the symlinks of this dotfiles in your home folder.
+This will create the symlinks of this dotfiles in your home folder. To **uninstall** this dotfiles, simply run `make unstow` to remove the symlinks.
 
 ## Screenshots
 
