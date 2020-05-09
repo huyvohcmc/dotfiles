@@ -199,9 +199,9 @@ schemes:
       magenta: '0xffc6ff'
       cyan:    '0xc0e9f8'
       white:   '0xffffff'
-  material_darker: &material_darker
+  material: &material
     primary:
-      background: '0x212121'
+      background: '0x000000'
       foreground: '0xeeffff'
     normal:
       black:   '0x212121'
@@ -221,30 +221,8 @@ schemes:
       magenta: '0xc792ea'
       cyan:    '0x89ddff'
       white:   '0xffffff'
-  custom: &custom
-    primary:
-      background: '0x000000'
-      foreground: '0xeeffff'
-    normal:
-      black:   '0x000000'
-      red:     '0xF07178'
-      green:   '0x13CA91'
-      yellow:  '0xFDF200'
-      blue:    '0x7898FB'
-      magenta: '0xFF2079'
-      cyan:    '0x00FECA'
-      white:   '0xEEFFFF'
-    bright:
-      black:   '0x4A4A4A'
-      red:     '0xF78C6C'
-      green:   '0x13CA91'
-      yellow:  '0xFDF200'
-      blue:    '0xB2CCD6'
-      magenta: '0xEEFFFF'
-      cyan:    '0xFF5370'
-      white:   '0xFFFFFF'
 
-colors: *custom
+colors: *material
 
 # Visual Bell
 #
