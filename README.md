@@ -1,4 +1,4 @@
-_"Even though this is my macos dotfiles, most of them can be used on other unix-like operating systems perfectly fine."_
+Even though this is my macos dotfiles, most of them can be used on other unix-like operating systems perfectly fine.
 
 ## Installation
 
@@ -26,7 +26,7 @@ This will create the symlinks of this dotfiles in your home folder. To **uninsta
 
 ## Screenshots
 
-![](https://user-images.githubusercontent.com/17645203/80581688-b3a52380-8a37-11ea-9841-4622c3c5cca0.png)
+![](https://user-images.githubusercontent.com/17645203/82208183-49481a80-9935-11ea-9218-a71d5916f339.png)
 
 ## FAQ
 
@@ -44,4 +44,4 @@ This will create the symlinks of this dotfiles in your home folder. To **uninsta
 
 - What font is being used on the screenshots?
 
-  [JetBrains Mono](https://www.jetbrains.com/lp/mono/), 12pt.
+  [Iosevka](https://github.com/be5invis/Iosevka/releases/tag/v3.0.0), 12pt.
