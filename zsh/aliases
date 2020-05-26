@@ -1,6 +1,8 @@
-alias v='nvim'
-alias vc='nvim ~/.config/nvim/init.vim'
+alias v='$EDITOR'
+alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias lg='lazygit'
+alias ec='$EDITOR ~/.zshrc'
+alias sc='source ~/.zshrc'
 
 alias -g ...='../..'
 alias -g ....='../../..'
