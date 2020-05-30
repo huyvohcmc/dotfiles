@@ -28,7 +28,7 @@ brew "python"
 brew "libtool"
 brew "graphviz"
 brew "htop"
-brew "imagemagick@6", link: true
+brew "imagemagick"
 brew "jq"
 brew "libidn"
 brew "libmikmod"
