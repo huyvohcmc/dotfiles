@@ -26,7 +26,7 @@ This will create the symlinks of this dotfiles in your home folder. To **uninsta
 
 ## Screenshots
 
-![](https://user-images.githubusercontent.com/17645203/82208183-49481a80-9935-11ea-9218-a71d5916f339.png)
+![](https://user-images.githubusercontent.com/17645203/83345244-16d9ec80-a33b-11ea-9acd-1dcf7cac41de.png)
 
 ## FAQ
 

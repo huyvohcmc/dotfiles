@@ -45,8 +45,8 @@ call minpac#add('ncm2/ncm2-tagprefix')
 call minpac#add('ncm2/ncm2-path')
 call minpac#add('roxma/nvim-yarp')
 call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('andreypopp/vim-colors-plain')
 call minpac#add('justinmk/vim-dirvish')
+call minpac#add('chuling/equinusocio-material.vim')
 endif "}}}
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
@@ -84,23 +84,8 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
-" Colorscheme
-function! s:plain() abort
-  hi clear VertSplit
-  hi VertSplit guifg=#4A4A4A
-  hi! link PmenuSel TermCursor
-  hi! link Todo Comment
-  hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
-  hi! IncSearch guifg=#191919 guibg=#e32791
-  hi! StatusLine guibg=NONE
-  hi! StatusLineNC guibg=NONE
-endfunction
-
-augroup colorscheme
-  autocmd ColorScheme plain call s:plain()
-augroup END
-
-colorscheme plain
+let g:equinusocio_material_darker = 1
+colorscheme equinusocio_material
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
