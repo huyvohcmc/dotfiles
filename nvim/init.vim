@@ -86,6 +86,7 @@ endif
 
 let g:equinusocio_material_darker = 1
 colorscheme equinusocio_material
+hi Normal guibg=#000000
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
