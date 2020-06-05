@@ -200,6 +200,9 @@ schemes:
     primary:
       background: '0x000000'
       foreground: '0xeeffff'
+    cursor:
+      text: '0x212121'
+      cursor: '0xeeffff'
     normal:
       black:   '0x212121'
       red:     '0xf07178'
