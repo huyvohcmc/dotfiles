@@ -176,8 +176,8 @@ schemes:
       background: '0x000000'
       foreground: '0xf0f0f0'
     cursor:
-      background: '0xf0f0f0'
-      foreground: '0x26282a'
+      text: '0x212121'
+      cursor: '0xf0f0f0'
     normal:
       black:   '0x26282a'
       red:     '0xff8878'
