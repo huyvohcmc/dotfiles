@@ -13,45 +13,41 @@ endif
 " Skip netrw plugin
 let g:loaded_netrwPlugin = 1
 
-" Minpac
-try
-  packadd minpac
-catch
-  fun! InstallPlug() " Bootstrap plugin manager on new systems.
-    exe '!git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac'
-  endfun
-endtry
-if exists('*minpac#init') "{{{
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('justinmk/vim-sneak')
-call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
-call minpac#add('junegunn/fzf.vim')
-call minpac#add('mhinz/vim-signify')
-call minpac#add('sheerun/vim-polyglot')
-call minpac#add('tomtom/tcomment_vim')
-call minpac#add('tpope/vim-endwise')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('tpope/vim-rails')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-rhubarb')
-call minpac#add('tpope/vim-surround')
-call minpac#add('w0rp/ale')
-call minpac#add('wellle/targets.vim')
-call minpac#add('rstacruz/vim-closer')
-call minpac#add('ncm2/ncm2')
-call minpac#add('ncm2/ncm2-bufword')
-call minpac#add('ncm2/ncm2-tagprefix')
-call minpac#add('ncm2/ncm2-path')
-call minpac#add('roxma/nvim-yarp')
-call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('justinmk/vim-dirvish')
-call minpac#add('chuling/equinusocio-material.vim')
-endif "}}}
+" Load packager only when you need it
+function! PackagerInit() abort
+  packadd vim-packager
+  call packager#init()
+  call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
+  call packager#add('junegunn/fzf', { 'do': './install --all && ln -s $(pwd) ~/.fzf'})
+  call packager#add('junegunn/fzf.vim')
+  call packager#add('justinmk/vim-sneak')
+  call packager#add('junegunn/fzf.vim')
+  call packager#add('mhinz/vim-signify')
+  call packager#add('sheerun/vim-polyglot')
+  call packager#add('tomtom/tcomment_vim')
+  call packager#add('tpope/vim-endwise')
+  call packager#add('tpope/vim-fugitive')
+  call packager#add('tpope/vim-rails')
+  call packager#add('tpope/vim-repeat')
+  call packager#add('tpope/vim-rhubarb')
+  call packager#add('tpope/vim-surround')
+  call packager#add('w0rp/ale')
+  call packager#add('wellle/targets.vim')
+  call packager#add('rstacruz/vim-closer')
+  call packager#add('ncm2/ncm2')
+  call packager#add('ncm2/ncm2-bufword')
+  call packager#add('ncm2/ncm2-tagprefix')
+  call packager#add('ncm2/ncm2-path')
+  call packager#add('roxma/nvim-yarp')
+  call packager#add('christoomey/vim-tmux-navigator')
+  call packager#add('justinmk/vim-dirvish')
+  call packager#add('chuling/equinusocio-material.vim')
+endfunction
 
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
+command! PackagerInstall call PackagerInit() | call packager#install()
+command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
+command! PackagerClean call PackagerInit() | call packager#clean()
+command! PackagerStatus call PackagerInit() | call packager#status()
 
 " General settings (see :h vim-differences)
 filetype plugin indent on
