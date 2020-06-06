@@ -64,10 +64,12 @@ set linebreak
 set list listchars=tab:.\ ,trail:.
 set matchpairs+=<:>
 set nobackup
+set nowritebackup
+set signcolumn=yes
 set noshowmode
 set noswapfile
 set scrolloff=5
-set shortmess+=cW
+set shortmess+=c
 set splitright
 set tags=./tags;,tags
 set termguicolors
