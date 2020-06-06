@@ -101,7 +101,7 @@ let mapleader = ","
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>s <c-w>w
-nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>r :source $MYVIMRC<cr>
 nnoremap <silent><leader><cr> :let @/ = ""<cr>
 
 " Navigate properly when lines are wrapped
