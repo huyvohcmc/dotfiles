@@ -119,14 +119,11 @@ let g:dirvish_mode = ':sort ,^.*[\/],'
 
 augroup dirvish_config
   autocmd!
-  autocmd FileType dirvish nnoremap <buffer>mv :Dirvish %<CR>:call <SID>SetupCommandOnFile("mv -n")<CR>
   autocmd FileType dirvish nnoremap <buffer>M :Dirvish %<CR>:call <SID>SetupCommandOnFile("mv -n")<CR>
-  autocmd FileType dirvish nnoremap <buffer>rd :Dirvish %<CR>:call <SID>SetupRemoveCommandOnFile()<CR>
-  autocmd FileType dirvish nnoremap <buffer>rm :Dirvish %<CR>:call <SID>SetupCommandOnFile("rm")<CR>
-  autocmd FileType dirvish nnoremap <buffer>R :Dirvish %<CR>:call <SID>SetupCommandOnFile("rm")<CR>
-  autocmd FileType dirvish nnoremap <buffer>cp :Dirvish %<CR>:call <SID>SetupCommandOnFile("cp")<CR>
+  autocmd FileType dirvish nnoremap <buffer>D :Dirvish %<CR>:call <SID>SetupRemoveCommandOnFile()<CR>
   autocmd FileType dirvish nnoremap <buffer>C :Dirvish %<CR>:call <SID>SetupCommandOnFile("cp")<CR>
   autocmd FileType dirvish nnoremap <buffer>mk :Dirvish %<CR>:!mkdir
+  autocmd FileType dirvish nnoremap <buffer>ma :Dirvish %<CR>:!touch
 augroup END
 
 function! s:SetupCommandOnFile(cmd) abort
