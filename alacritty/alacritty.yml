@@ -254,7 +254,7 @@ schemes:
       - { index: 20, color: '0xa5a5a9' }
       - { index: 21, color: '0xeff0eb' }
 
-colors: *taerminal
+colors: *snazzy
 
 # Visual Bell
 #
