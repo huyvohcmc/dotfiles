@@ -24,9 +24,7 @@ make stow
 
 This will create the symlinks of this dotfiles in your home folder. To **uninstall** this dotfiles, simply run `make unstow` to remove the symlinks.
 
-## Screenshots
-
-![](https://user-images.githubusercontent.com/17645203/83345244-16d9ec80-a33b-11ea-9acd-1dcf7cac41de.png)
+## Screenshots (in the [Wiki](https://github.com/huyvohcmc/dotfiles/wiki))
 
 ## FAQ
 
