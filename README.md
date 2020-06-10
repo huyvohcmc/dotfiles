@@ -4,25 +4,24 @@ Even though this is my macos dotfiles, most of them can be used on other unix-li
 
 - Install [homebrew](https://brew.sh/), [neovim](https://neovim.io/), and [alacritty](https://github.com/alacritty/alacritty/)
 
-- Clone this repository to your designated folder
+- Clone this repository into your home directory
 
 ```sh
 git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles
 ```
 
-- Install system dependencies in [`macos/Brewfile`](./macos/Brewfile)
+- Install system dependencies (bundled in [`macos/Brewfile`](./macos/Brewfile))
 
 ```sh
 brew bundle
 ```
 
-- Backup your existing dotfiles, then use [stow](https://www.gnu.org/software/stow/) to install new ones
-
+- Backup your existing dotfiles, then install this dotfiles
 ```sh
 make stow
 ```
 
-This will create the symlinks of this dotfiles in your home folder. To **uninstall** this dotfiles, simply run `make unstow` to remove the symlinks.
+This will symlink the files defined in [`Makefile`](./Makefile) to your home directory. To **remove** them, simply run `make unstow` to remove the symbolic links.
 
 ## Screenshots (in the [Wiki](https://github.com/huyvohcmc/dotfiles/wiki))
 
