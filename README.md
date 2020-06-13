@@ -6,9 +6,14 @@
 ## Installation
 
 ```zsh
-git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles # Clone this repository into your home directory
-brew bundle # Install system dependencies (bundled in macos/Brewfile)
-make stow # Install dotfiles
+# Clone this repository into your home directory
+git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles
+
+# Install system dependencies
+brew bundle
+
+# Then install dotfiles
+make stow
 ```
 
 This will symlink all the dotfiles to your home directory. To **remove** them, simply run `make unstow` to remove the symbolic links.
