@@ -1,27 +1,17 @@
-Even though this is my macos dotfiles, most of them can be used on other unix-like operating systems perfectly fine.
+## What's included
+
+- Neovim, tmux, zsh, alacritty, git, and ripgrep dotfiles
+- A snapshot of homebrew's installed packages (details in [`macos/Brewfile`](./macos/Brewfile))
 
 ## Installation
 
-- Install [homebrew](https://brew.sh/), [neovim](https://neovim.io/), and [alacritty](https://github.com/alacritty/alacritty/)
-
-- Clone this repository into your home directory
-
-```sh
-git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles
+```zsh
+git clone git@github.com:huyvohcmc/dotfiles.git && cd dotfiles # Clone this repository into your home directory
+brew bundle # Install system dependencies (bundled in macos/Brewfile)
+make stow # Install dotfiles
 ```
 
-- Install system dependencies (bundled in [`macos/Brewfile`](./macos/Brewfile))
-
-```sh
-brew bundle
-```
-
-- Backup your existing dotfiles, then install this dotfiles
-```sh
-make stow
-```
-
-This will symlink the files defined in [`Makefile`](./Makefile) to your home directory. To **remove** them, simply run `make unstow` to remove the symbolic links.
+This will symlink all the dotfiles to your home directory. To **remove** them, simply run `make unstow` to remove the symbolic links.
 
 Screenshots are in the [Wiki](https://github.com/huyvohcmc/dotfiles/wiki).
 
