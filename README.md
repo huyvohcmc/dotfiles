@@ -23,7 +23,7 @@ make stow
 
 This will symlink the files defined in [`Makefile`](./Makefile) to your home directory. To **remove** them, simply run `make unstow` to remove the symbolic links.
 
-## Screenshots (in the [Wiki](https://github.com/huyvohcmc/dotfiles/wiki))
+Screenshots are in the [Wiki](https://github.com/huyvohcmc/dotfiles/wiki).
 
 ## FAQ
 
