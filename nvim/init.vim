@@ -42,6 +42,7 @@ function! PackagerInit() abort
   call packager#add('christoomey/vim-tmux-navigator')
   call packager#add('justinmk/vim-dirvish')
   call packager#add('chuling/equinusocio-material.vim')
+  call packager#add('tpope/vim-eunuch')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
