@@ -41,8 +41,8 @@ function! PackagerInit() abort
   call packager#add('roxma/nvim-yarp')
   call packager#add('christoomey/vim-tmux-navigator')
   call packager#add('justinmk/vim-dirvish')
-  call packager#add('chuling/equinusocio-material.vim')
   call packager#add('tpope/vim-eunuch')
+  call packager#add('cocopon/iceberg.vim')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -83,9 +83,7 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
-let g:equinusocio_material_darker = 1
-colorscheme equinusocio_material
-hi Normal guibg=#000000
+colorscheme iceberg
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
