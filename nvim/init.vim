@@ -84,6 +84,7 @@ if !exists("g:syntax_on")
 endif
 
 colorscheme iceberg
+hi SignColumn guibg=NONE
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
