@@ -85,6 +85,10 @@ endif
 
 colorscheme iceberg
 hi SignColumn guibg=NONE
+hi VertSplit guibg=NONE guifg=#33374c
+hi clear StatusLine
+hi StatusLine guibg=#000000 guifg=#cad0de
+hi! Visual ctermbg=236 guibg=#363d5c
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
