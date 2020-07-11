@@ -5,7 +5,6 @@ source ~/.zinit/bin/zinit.zsh
 
 # Load plugins
 zinit light zsh-users/zsh-autosuggestions
-zinit light zdharma/fast-syntax-highlighting
 zinit load zdharma/history-search-multi-word
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
@@ -54,7 +53,7 @@ export THEMES=$HOME/dotfiles/zsh/themes
 source $THEMES/zeit.zsh-theme
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
-# rbenv
+# Rbenv
 if [[ -s ~/.rbenv/shims/ruby ]]; then
   PATH=$HOME/.rbenv/shims:$PATH
 fi
@@ -63,7 +62,7 @@ rbenv() {
   rbenv "$@"
 }
 
-# nvm
+# NVM
 export NVM_DIR=$HOME/.nvm
 if [ -f $HOME/.nvm/alias/default ]; then
   PATH=${PATH}:${HOME}/.nvm/versions/node/v$(cat ~/.nvm/alias/default)/bin
