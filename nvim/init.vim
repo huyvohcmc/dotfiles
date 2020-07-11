@@ -150,7 +150,7 @@ function! s:SetupRemoveCommandOnFile() abort
   if filereadable(filename_string)
     let cmd = "rm"
   else
-    let cmd = "rmdir"
+    let cmd = "rm -rf"
   endif
   " This doesn't use `silent` because `silent requires a `:redraw!` after
   call feedkeys(':!' . cmd . " " . filename)
