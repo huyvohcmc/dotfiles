@@ -23,7 +23,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10 # normal minimum is 15 (2
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Disable font smoothing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
 
 # Enable font smoothing
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
