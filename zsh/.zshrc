@@ -8,6 +8,7 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
 export EDITOR=nvim
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Completion
 autoload -U compinit && compinit
