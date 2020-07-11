@@ -71,7 +71,7 @@ bindkey '\C-x\C-e' edit-command-line
 [ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # Theme
-export THEMES=$HOME/dotfiles/zsh/themes
+export THEMES=$HOME/dotfiles/zsh-themes
 source $THEMES/zeit.zsh-theme
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
