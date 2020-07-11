@@ -15,9 +15,12 @@ zmodload -i zsh/complist
 
 # Colors
 autoload -U colors && colors
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
-# Turn on command substitution in the prompt
-setopt prompt_subst
+setopt prompt_subst # Turn on command substitution in the prompt
+setopt auto_cd # Auto cd if command can't be executed and is the name of a directory
 
 # Zstyle
 zstyle ':completion:*:*:*:*:*' menu select
@@ -105,9 +108,6 @@ alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias lg='lazygit'
 alias ec='$EDITOR ~/.zshrc'
 alias sc='source ~/.zshrc'
-alias -g ...='../..'
 alias lsa='ls -lah'
 alias ll='ls -lh'
-
-# Secrets
-[ -f ~/.secrets ] && source ~/.secrets
+alias ...='../..'
