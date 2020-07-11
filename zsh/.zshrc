@@ -1,5 +1,14 @@
-export PATH="/usr/local/sbin:$PATH"
 export EDITOR=nvim
+
+# Source Zinit
+source ~/.zinit/bin/zinit.zsh
+
+# Load plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+zinit load zdharma/history-search-multi-word
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
 # History file configuration
 HISTFILE=$HOME/.zsh_history
@@ -36,22 +45,6 @@ setopt prompt_subst
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
-# Install Zplugin if not already
-if [ ! -d $HOME/.zplugin ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
-fi
-
-### Added by Zplugin's installer
-source $HOME/.zplugin/bin/zplugin.zsh
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-
-# Load plugins
-zplugin load zsh-users/zsh-history-substring-search
-zplugin light zsh-users/zsh-autosuggestions
-zplugin snippet OMZ::plugins/git/git.plugin.zsh
-zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
 # Z.lua
 [ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
