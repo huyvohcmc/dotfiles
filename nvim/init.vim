@@ -83,10 +83,11 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+" Colorscheme
 colorscheme iceberg
 hi SignColumn guibg=NONE
 hi VertSplit guibg=NONE guifg=#33374c
-hi! Visual ctermbg=236 guibg=#363d5c
+hi Visual ctermbg=236 guibg=#363d5c
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
