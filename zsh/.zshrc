@@ -7,11 +7,19 @@ zinit load zdharma/history-search-multi-word
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
+# Z.lua
+[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once fzf)"
+
 export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Completion
-autoload -U compinit && compinit
+autoload -Uz compinit 
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 zmodload -i zsh/complist
 
 # Colors
@@ -67,9 +75,6 @@ setopt extended_history
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
-# Z.lua
-[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # Theme
 export THEMES=$HOME/dotfiles/zsh-themes
