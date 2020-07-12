@@ -81,6 +81,11 @@ export THEMES=$HOME/dotfiles/zsh-themes
 source $THEMES/zeit.zsh-theme
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case -g "!{.git,node_modules}"'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # Rbenv
 if [[ -s ~/.rbenv/shims/ruby ]]; then
   PATH=$HOME/.rbenv/shims:$PATH
@@ -99,14 +104,6 @@ nvm() {
   [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
   nvm "$@"
 }
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case -g "!{.git,node_modules}"'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-
-# Ripgrep
-export RIPGREP_CONFIG_PATH=$HOME/.rgrc
 
 # Aliases
 alias v='$EDITOR'
