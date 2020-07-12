@@ -12,6 +12,7 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
 export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 
 # Completion
 autoload -Uz compinit 
