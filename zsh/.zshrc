@@ -95,13 +95,14 @@ rbenv() {
 
 # NVM
 export NVM_DIR=$HOME/.nvm
-if [ -f $HOME/.nvm/alias/default ]; then
-  PATH=${PATH}:${HOME}/.nvm/versions/node/v$(cat ~/.nvm/alias/default)/bin
-fi
-nvm() {
-  [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
-  nvm "$@"
-}
+[ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
+# if [ -f $HOME/.nvm/alias/default ]; then
+#   PATH=${PATH}:${HOME}/.nvm/versions/node/v$(cat ~/.nvm/alias/default)/bin
+# fi
+# nvm() {
+#   [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
+#   nvm "$@"
+# }
 
 # Aliases
 alias v='$EDITOR'
