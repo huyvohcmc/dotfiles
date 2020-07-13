@@ -19,7 +19,6 @@ brew "mit-scheme"
 brew "ninja"
 brew "pkg-config"
 brew "postgresql", restart_service: true
-brew "python@3.7"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "ripgrep"
