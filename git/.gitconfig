@@ -28,3 +28,5 @@
   autosquash = true
 [pager]
   branch = false
+[pull]
+  ff = only
