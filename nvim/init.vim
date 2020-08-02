@@ -1,16 +1,31 @@
-" Faster loading (https://neovim.io/doc/user/provider.html)
-if has('nvim')
-  let g:python_host_skip_check = 1
-  let g:python3_host_skip_check = 1
-  if executable('python2')
-    let g:python_host_prog = exepath('python2')
-  endif
-  if executable('python3')
-    let g:python3_host_prog = exepath('python3')
-  endif
+" Providers {{{
+let g:python_host_skip_check = 1
+if executable('python2')
+  let g:python_host_prog = exepath('python2')
+else
+  let g:loaded_python_provider = 0
 endif
 
-" Skip netrw plugin
+let g:python3_host_skip_check = 1
+if executable('python3')
+  let g:python3_host_prog = exepath('python3')
+else
+  let g:loaded_python3_provider = 0
+endif
+
+let g:loaded_node_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
+" }}}
+
+" Enable syntax
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
+" Disable unused built-in plugins
+let g:loaded_rrhelper = 1
+let g:did_install_default_menus = 1
 let g:loaded_netrwPlugin = 1
 
 " Load packager only when you need it
@@ -41,22 +56,34 @@ function! PackagerInit() abort
   call packager#add('roxma/nvim-yarp')
   call packager#add('christoomey/vim-tmux-navigator')
   call packager#add('justinmk/vim-dirvish')
-  call packager#add('tpope/vim-eunuch')
-  call packager#add('arzg/vim-colors-xcode')
+  call packager#add('andreypopp/vim-colors-plain')
+  call packager#add('romainl/vim-cool')
 endfunction
 
+" Packager commands
 command! PackagerInstall call PackagerInit() | call packager#install()
 command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
-" General settings (see :h vim-differences)
-filetype plugin indent on
+" Colorscheme
+if has('termguicolors')
+  set termguicolors
+end
+set background=dark
+colorscheme plain
+hi! VertSplit gui=NONE guibg=NONE guifg=#333333
+hi! link Todo Comment
+hi! link PmenuSel TermCursor
+hi IncSearch guifg=#1f1f24 guibg=#fef937
+hi Search guifg=#ffffff guibg=#43454b
+hi! StatusLine guibg=NONE guifg=#cccccc
+hi! StatusLineNC guibg=NONE
+
+" General settings (:h vim-differences)
 set clipboard^=unnamed
 set completeopt=noinsert,menuone,noselect
 set copyindent
-" Don't mess with 'tabstop', with 'expandtab' it isn't used.
-" Instead set softtabstop=-1, then 'shiftwidth' is used.
 set expandtab shiftwidth=2 softtabstop=-1
 set hidden
 set incsearch hlsearch ignorecase smartcase
@@ -74,18 +101,9 @@ set scrolloff=5
 set shortmess+=c
 set splitright
 set tags=./tags;,tags
-set termguicolors
 set ttimeoutlen=0
 set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
 set wildmode=longest:full,list,full
-
-" Safeguard
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
-" Colorscheme
-colorscheme xcodedarkhc
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
@@ -105,7 +123,6 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>s <c-w>w
 nnoremap <leader>r :source $MYVIMRC<cr>
-nnoremap <silent><leader><cr> :let @/ = ""<cr>
 
 " Navigate properly when lines are wrapped
 nnoremap j gj
@@ -158,7 +175,6 @@ function! s:SetupRemoveCommandOnFile() abort
 endfunction
 
 " FZF
-let g:fzf_preview_window = ''
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
@@ -167,6 +183,10 @@ nnoremap <leader>t :Files<CR>
 noremap <leader>rg <esc>:Rg<space>
 noremap <leader>rw <esc>:Rg <c-r><c-w>
 noremap <leader>rh <esc>:Rg<up><cr>
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=plain --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 " Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
