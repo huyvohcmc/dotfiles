@@ -62,7 +62,8 @@ set hidden
 set incsearch hlsearch ignorecase smartcase
 set lazyredraw
 set linebreak
-set list listchars=tab:.\ ,trail:.
+set list
+set listchars=tab:··\ ,extends:›,precedes:‹,nbsp:·,trail:·
 set matchpairs+=<:>
 set nobackup
 set nowritebackup
