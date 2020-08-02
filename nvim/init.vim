@@ -88,7 +88,6 @@ colorscheme plain
 hi clear VertSplit
 hi VertSplit guifg=#4A4A4A
 hi! link PmenuSel TermCursor
-hi! link Todo Comment
 hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
 hi! IncSearch guifg=#191919 guibg=#e32791
 hi! StatusLine guibg=NONE guifg=#CCCCCC
