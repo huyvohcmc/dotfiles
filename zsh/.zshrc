@@ -25,6 +25,7 @@ zmodload -i zsh/complist
 # Colors
 autoload -U colors && colors
 export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
 
 setopt prompt_subst # Turn on command substitution in the prompt
 setopt auto_cd # Auto cd if command can't be executed and is the name of a directory
