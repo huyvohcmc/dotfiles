@@ -84,22 +84,15 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-function! s:plain() abort
-  hi clear VertSplit
-  hi VertSplit guifg=#4A4A4A
-  hi! link PmenuSel TermCursor
-  hi! link Todo Comment
-  hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
-  hi! IncSearch guifg=#191919 guibg=#e32791
-  hi! StatusLine guibg=NONE guifg=#CCCCCC
-  hi! StatusLineNC guibg=NONE
-endfunction
-
-augroup colorscheme
-  autocmd ColorScheme plain call s:plain()
-augroup END
-
 colorscheme plain
+hi clear VertSplit
+hi VertSplit guifg=#4A4A4A
+hi! link PmenuSel TermCursor
+hi! link Todo Comment
+hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
+hi! IncSearch guifg=#191919 guibg=#e32791
+hi! StatusLine guibg=NONE guifg=#CCCCCC
+hi! StatusLineNC guibg=NONE
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
