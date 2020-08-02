@@ -42,7 +42,7 @@ function! PackagerInit() abort
   call packager#add('christoomey/vim-tmux-navigator')
   call packager#add('justinmk/vim-dirvish')
   call packager#add('tpope/vim-eunuch')
-  call packager#add('andreypopp/vim-colors-plain')
+  call packager#add('arzg/vim-colors-xcode')
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
@@ -84,14 +84,7 @@ if !exists("g:syntax_on")
 endif
 
 " Colorscheme
-colorscheme plain
-hi clear VertSplit
-hi VertSplit guifg=#4A4A4A
-hi! link PmenuSel TermCursor
-hi! Search guifg=#e32791 guibg=NONE gui=underline,bold
-hi! IncSearch guifg=#191919 guibg=#e32791
-hi! StatusLine guibg=NONE guifg=#CCCCCC
-hi! StatusLineNC guibg=NONE
+colorscheme xcodedarkhc
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
