@@ -14,7 +14,7 @@ export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Completion
-autoload -Uz compinit 
+autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
 else
