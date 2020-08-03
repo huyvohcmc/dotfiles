@@ -180,13 +180,18 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
 " Ripgrep
-noremap <leader>rg <esc>:Rg<space>
-noremap <leader>rw <esc>:Rg <c-r><c-w>
-noremap <leader>rh <esc>:Rg<up><cr>
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=plain --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always -g "!*.lock" -g "!*lock.json" --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+nnoremap <leader>rg <esc>:RG<space>
+nnoremap <leader>rw <esc>:RG <c-r><c-w>
+nnoremap <leader>rh <esc>:RG<up><cr>
 
 " Vim-fugitive and vim-rhubarb
 noremap <silent> gb :Gblame<CR>
