@@ -181,7 +181,9 @@ nnoremap <leader>t :Files<CR>
 
 " Ripgrep
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always -g "!*.lock" -g "!*lock.json" --smart-case %s || true'
+  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always
+        \ -g "!*.lock" -g "!*lock.json" -g "!node_modules/**" -g "!flow-typed/**" -g "!.git/**"
+        \ --smart-case %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
