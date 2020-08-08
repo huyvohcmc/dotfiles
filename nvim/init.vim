@@ -67,18 +67,21 @@ command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
 " Colorscheme
-if has('termguicolors')
-  set termguicolors
-end
+set termguicolors
 set background=dark
-colorscheme plain
-hi! VertSplit gui=NONE guibg=NONE guifg=#333333
-hi! link Todo Comment
+silent! colorscheme plain
+
+" Custom colors
+hi! clear SignColumn
+hi! VertSplit gui=NONE guifg=#333333 guibg=NONE
 hi! link PmenuSel TermCursor
-hi IncSearch guifg=#1f1f24 guibg=#fef937
-hi Search guifg=#ffffff guibg=#43454b
-hi! StatusLine guibg=NONE guifg=#cccccc
+hi! link Todo Comment
+hi! link Conceal NonText
+hi! Comment gui=italic guifg=#666666
+hi! StatusLine gui=underline guifg=#cccccc guibg=NONE
 hi! StatusLineNC guibg=NONE
+hi IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
+hi Search guifg=#ffffff guibg=#43454b
 
 " General settings (:h vim-differences)
 set clipboard^=unnamed
