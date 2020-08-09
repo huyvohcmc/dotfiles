@@ -80,8 +80,8 @@ hi! link Conceal NonText
 hi! Comment gui=italic guifg=#666666
 hi! StatusLine gui=underline guifg=#cccccc guibg=NONE
 hi! StatusLineNC guibg=NONE
-hi IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
-hi Search guifg=#ffffff guibg=#43454b
+hi! IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
+hi! Search guifg=#ffffff guibg=#43454b
 
 " General settings (:h vim-differences)
 set clipboard^=unnamed
