@@ -1,34 +1,72 @@
-# Source Zinit
+export PATH="$HOME/.cargo/bin:$PATH"
+export EDITOR=nvim
+
+# History
+typeset -g HISTSIZE=290000 SAVEHIST=290000 HISTFILE=$HOME/.zsh_history
+
+# Setopts
+setopt prompt_subst
+setopt auto_cd
+setopt bang_hist
+setopt inc_append_history
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
+setopt hist_ignore_space
+setopt hist_save_no_dups
+setopt hist_verify
+setopt extended_history
+
+# Bindkeys
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
+bindkey '^A' beginning-of-line '^E' end-of-line '^W' backward-kill-word
+
+# Modules
+zmodload -i zsh/complist
+
+# Color
+autoload -Uz colors
+colors
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# Aliases
+alias v='$EDITOR'
+alias ev='$EDITOR ~/.config/nvim/init.vim'
+alias lg='lazygit'
+alias ec='$EDITOR ~/.zshrc'
+alias sc='source ~/.zshrc'
+alias lsa='ls -lah'
+alias ll='ls -lh'
+alias ...='../..'
+
+# Theme
+export THEMES=$HOME/dotfiles/zsh-themes
+source $THEMES/zeit.zsh-theme
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
+
+# Compinit
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit;
+else
+  compinit -C;
+fi;
+
+# Zinit
 source ~/.zinit/bin/zinit.zsh
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
 # Load plugins
 zinit light zsh-users/zsh-autosuggestions
 zinit load zdharma/history-search-multi-word
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
-
-# Z.lua
-[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once fzf)"
-
-export EDITOR=nvim
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Completion
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-  compinit
-else
-  compinit -C
-fi
-zmodload -i zsh/complist
-
-# Colors
-autoload -U colors && colors
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-
-setopt prompt_subst # Turn on command substitution in the prompt
-setopt auto_cd # Auto cd if command can't be executed and is the name of a directory
 
 # Zstyle
 zstyle ':completion:*:*:*:*:*' menu select
@@ -51,34 +89,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
 zstyle ':completion:*' rehash true
 
-# History
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=50000
-SAVEHIST=10000
-setopt appendhistory notify
-unsetopt beep nomatch
-
-setopt bang_hist
-setopt inc_append_history
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_all_dups
-setopt hist_find_no_dups
-setopt hist_ignore_space
-setopt hist_save_no_dups
-setopt hist_verify
-setopt extended_history
-
-# Edit the current command line in $EDITOR
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\C-x\C-e' edit-command-line
-
-# Theme
-export THEMES=$HOME/dotfiles/zsh-themes
-source $THEMES/zeit.zsh-theme
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
+# Z.lua
+[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once fzf)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -103,13 +115,3 @@ nvm() {
   [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
   nvm "$@"
 }
-
-# Aliases
-alias v='$EDITOR'
-alias ev='$EDITOR ~/.config/nvim/init.vim'
-alias lg='lazygit'
-alias ec='$EDITOR ~/.zshrc'
-alias sc='source ~/.zshrc'
-alias lsa='ls -lah'
-alias ll='ls -lh'
-alias ...='../..'
