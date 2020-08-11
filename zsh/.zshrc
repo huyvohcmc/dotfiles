@@ -1,5 +1,6 @@
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR=nvim
+export BAT_THEME="Dracula"
 
 # History
 typeset -g HISTSIZE=290000 SAVEHIST=290000 HISTFILE=$HOME/.zsh_history
