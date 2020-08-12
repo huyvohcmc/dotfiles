@@ -177,7 +177,7 @@ schemes:
       foreground: '#c5c8c6'
     cursor:
       text: '#161821'
-      cursor: '#20bbfc'
+      cursor: '#85e89d'
     normal:
       # black: '#1d1f21'
       # red: '#cc6666'
