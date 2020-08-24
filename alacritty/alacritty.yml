@@ -173,20 +173,12 @@ draw_bold_text_with_bright_colors: true
 schemes:
   plain: &plain
     primary:
-      background: '#111111'
+      background: '#050505'
       foreground: '#c5c8c6'
     cursor:
       text: '#161821'
       cursor: '#85e89d'
     normal:
-      # black: '#1d1f21'
-      # red: '#cc6666'
-      # green: '#b5bd68'
-      # yellow: '#f0c674'
-      # blue: '#81a2be'
-      # magenta: '#b294bb'
-      # cyan: '#8abeb7'
-      # white: '#c5c8c6'
       black: '#333333'
       red: '#f2777a'
       green: '#99cc99'
@@ -229,31 +221,6 @@ schemes:
       magenta: '0xada0d3'
       cyan:    '0x95c4ce'
       white:   '0xd2d4de'
-  taerminal: &taerminal
-    primary:
-      background: '0x000000'
-      foreground: '0xf0f0f0'
-    cursor:
-      text: '0x212121'
-      cursor: '0xf0f0f0'
-    normal:
-      black:   '0x26282a'
-      red:     '0xff8878'
-      green:   '0xb4fb73'
-      yellow:  '0xfffcb7'
-      blue:    '0x8bbce5'
-      magenta: '0xffb2fe'
-      cyan:    '0xa2e1f8'
-      white:   '0xf1f1f1'
-    bright:
-      black:   '0x6f6f6f'
-      red:     '0xfe978b'
-      green:   '0xd6fcba'
-      yellow:  '0xfffed5'
-      blue:    '0xc2e3ff'
-      magenta: '0xffc6ff'
-      cyan:    '0xc0e9f8'
-      white:   '0xffffff'
 
 colors: *plain
 
