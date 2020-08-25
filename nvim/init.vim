@@ -56,7 +56,7 @@ function! PackagerInit() abort
   call packager#add('roxma/nvim-yarp')
   call packager#add('christoomey/vim-tmux-navigator')
   call packager#add('justinmk/vim-dirvish')
-  call packager#add('andreypopp/vim-colors-plain')
+  call packager#add('co1ncidence/mountaineer')
   call packager#add('romainl/vim-cool')
 endfunction
 
@@ -69,17 +69,15 @@ command! PackagerStatus call PackagerInit() | call packager#status()
 " Colorscheme
 set termguicolors
 set background=dark
-silent! colorscheme plain
+silent! colorscheme mountaineer
 
 " Custom colors
-hi! clear SignColumn
 hi! VertSplit gui=NONE guifg=#333333 guibg=NONE
 hi! link PmenuSel TermCursor
 hi! link Todo Comment
 hi! link Conceal NonText
 hi! Comment gui=italic guifg=#666666
-hi! StatusLine gui=underline guifg=#cccccc guibg=NONE
-hi! StatusLineNC guibg=NONE
+hi! StatusLine gui=underline
 hi! IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
 hi! Search guifg=#ffffff guibg=#43454b
 
@@ -207,9 +205,6 @@ let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
 let g:signify_sign_change = '-'
-hi! link SignifySignAdd DiffAdd
-hi! link SignifySignChange DiffChange
-hi! link SignifySignDelete DiffDelete
 
 " Replace Gutentags
 command! Tags !ctags -R -I EXTERN -I INIT --exclude='build*' --exclude='.vim-src/**' --exclude='node_modules/**' --exclude='venv/**'
