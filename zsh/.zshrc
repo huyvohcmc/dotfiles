@@ -1,6 +1,3 @@
-export PATH="$HOME/.cargo/bin:$PATH"
-export EDITOR=nvim
-
 # History
 typeset -g HISTSIZE=290000 SAVEHIST=290000 HISTFILE=$HOME/.zsh_history
 
@@ -32,16 +29,6 @@ zmodload -i zsh/complist
 autoload -Uz colors && colors
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
-# Aliases
-alias v='$EDITOR'
-alias ev='$EDITOR ~/.config/nvim/init.vim'
-alias lg='lazygit'
-alias ec='$EDITOR ~/.zshrc'
-alias sc='source ~/.zshrc'
-alias lsa='ls -lah'
-alias ll='ls -lh'
-alias ...='../..'
 
 # Compinit
 autoload -Uz compinit
