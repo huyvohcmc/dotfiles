@@ -29,8 +29,7 @@ bindkey '^A' beginning-of-line '^E' end-of-line '^W' backward-kill-word
 zmodload -i zsh/complist
 
 # Color
-autoload -Uz colors
-colors
+autoload -Uz colors && colors
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
@@ -43,11 +42,6 @@ alias sc='source ~/.zshrc'
 alias lsa='ls -lah'
 alias ll='ls -lh'
 alias ...='../..'
-
-# Theme
-export THEMES=$HOME/dotfiles/zsh-themes
-source $THEMES/zeit.zsh-theme
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
 
 # Compinit
 autoload -Uz compinit
@@ -115,3 +109,8 @@ nvm() {
   [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
   nvm "$@"
 }
+
+# Theme
+export THEMES=$HOME/dotfiles/zsh-themes
+source $THEMES/custom.zsh-theme
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
