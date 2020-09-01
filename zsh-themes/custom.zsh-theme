@@ -3,7 +3,7 @@ prompt() {
 }
 
 session() {
-  echo "($USER.$HOST) "
+  echo "(%n.%m) "
 }
 
 path() {
