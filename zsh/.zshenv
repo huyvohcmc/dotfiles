@@ -6,7 +6,7 @@ export EDITOR=nvim
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Secret
-[ -f ~/.secret ] && source ~/.secret
+[ -f ~/.secrets ] && source ~/.secrets
 
 # Aliases
 alias v='$EDITOR'
