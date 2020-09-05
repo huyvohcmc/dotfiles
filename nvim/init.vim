@@ -58,6 +58,7 @@ function! PackagerInit() abort
   call packager#add('justinmk/vim-dirvish')
   call packager#add('co1ncidence/mountaineer')
   call packager#add('romainl/vim-cool')
+  call packager#add('fatih/vim-go')
 endfunction
 
 " Packager commands
