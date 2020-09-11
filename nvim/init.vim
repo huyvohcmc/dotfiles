@@ -79,6 +79,7 @@ hi! link Todo Comment
 hi! link Conceal NonText
 hi! Comment gui=italic guifg=#666666
 hi! StatusLine gui=underline
+hi! StatusLineNC guifg=#666666
 hi! IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
 hi! Search guifg=#ffffff guibg=#43454b
 
