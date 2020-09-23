@@ -67,21 +67,33 @@ command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'forc
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
+" Custom colors
+function! s:mountaineer() abort
+  hi! Visual guibg=#4c4c4c
+  hi! VertSplit guibg=NONE guifg=#333333
+  hi! link Todo Comment
+  hi! link Conceal NonText
+  hi! Comment gui=italic guifg=#666666
+  hi! StatusLine guifg=#e7e7e7
+  hi! StatusLineNC guifg=#666666
+  hi! SignColumn guibg=NONE
+  hi! SignifySignChange guifg=#ACA98A guibg=NONE
+endfunction
+
+augroup colorscheme
+  autocmd ColorScheme mountaineer call s:mountaineer()
+augroup END
+
 " Colorscheme
 set termguicolors
-set background=dark
-silent! colorscheme mountaineer
+colorscheme mountaineer
 
-" Custom colors
-hi! VertSplit gui=NONE guifg=#333333 guibg=NONE
-hi! link PmenuSel TermCursor
-hi! link Todo Comment
-hi! link Conceal NonText
-hi! Comment gui=italic guifg=#666666
-hi! StatusLine gui=underline
-hi! StatusLineNC guifg=#666666
-hi! IncSearch gui=underline guifg=#1f1f24 guibg=#fef937
-hi! Search guifg=#ffffff guibg=#43454b
+" Detect whitespace and color as gray
+hi! ExtraWhitespace guifg=#666666
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call  clearmatches()
 
 " General settings (:h vim-differences)
 set clipboard^=unnamed
@@ -206,7 +218,6 @@ noremap <silent> ghub :Gbrowse<CR>
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
-let g:signify_sign_change = '-'
 
 " Replace Gutentags
 command! Tags !ctags -R -I EXTERN -I INIT --exclude='build*' --exclude='.vim-src/**' --exclude='node_modules/**' --exclude='venv/**'
@@ -236,7 +247,3 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier'] }
 let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
-hi! link ALEError DiffDelete
-hi! link ALEErrorSign DiffDelete
-hi! link ALEWarning DiffChange
-hi! link ALEWarningSign DiffChange
