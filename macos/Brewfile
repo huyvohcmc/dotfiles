@@ -28,5 +28,6 @@ brew "redis", restart_service: true
 brew "ripgrep"
 brew "stow"
 brew "tmux"
+brew "watchman"
 brew "jesseduffield/lazygit/lazygit"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
