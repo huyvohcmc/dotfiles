@@ -1,9 +1,8 @@
 [alias]
-	l = log --graph --oneline --decorate
-	ll = log --stat --decorate --source -p
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
 [core]
-	# pager = delta
+	pager = delta
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	abbrev = 12
@@ -35,15 +34,14 @@
 [pager]
 	branch = false
 
-# [interactive]
-# 	diffFilter = delta --color-only
-#
-# [delta]
-# 	features = line-numbers decorations
-# 	syntax-theme = Dracula
-# 	whitespace-error-style = 22 reverse
-#
-# [delta "decorations"]
-# 	commit-decoration-style = bold yellow box ul
-# 	file-style = bold yellow ul
-# 	file-decoration-style = none
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
