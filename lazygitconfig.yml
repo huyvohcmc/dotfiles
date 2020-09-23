@@ -1,7 +1,0 @@
-reporting: "off"
-startuppopupversion: 1
-
-git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --24-bit-color=never

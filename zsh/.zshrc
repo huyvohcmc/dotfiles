@@ -68,7 +68,7 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case -g "!{.git,node_modules}"'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # Rbenv
 if [[ -s ~/.rbenv/shims/ruby ]]; then

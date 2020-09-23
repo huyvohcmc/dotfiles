@@ -170,60 +170,110 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
-# Colors
-schemes:
-  plain: &plain
-    primary:
-     background: '#050505'
-     foreground: '#c5c8c6'
-    cursor:
-     text: '#161821'
-     cursor: '#85e89d'
-    normal:
-     black:   '#1d1f21'
-     red:     '#cc6666'
-     green:   '#8aac8b'
-     yellow:  '#f0c674'
-     blue:    '#81a2be'
-     magenta: '#b294bb'
-     cyan:    '#8abeb7'
-     white:   '#c5c8c6'
-    bright:
-     black:   '#333333'
-     red:     '#f2777a'
-     green:   '#99cc99'
-     yellow:  '#ffcc66'
-     blue:    '#6699cc'
-     magenta: '#cc99cc'
-     cyan:    '#66cccc'
-     white:   '#dddddd'
-  mountaineer: &mountaineer
-    primary:
-     background: '#050505'
-     foreground: '#f0f0f0'
-    cursor:
-     text: '#161821'
-     cursor: '#8AAC8B'
-    normal:
-     black:   '#0f0f0f'
-     red:     '#AC8A8C'
-     green:   '#8AAC8B'
-     yellow:  '#ACA98A'
-     blue:    '#8F8AAC'
-     magenta: '#AC8AAC'
-     cyan:    '#8AABAC'
-     white:   '#e7e7e7'
-    bright:
-     black:   '#191919'
-     red:     '#C49EA0'
-     green:   '#9EC49F'
-     yellow:  '#C4C19E'
-     blue:    '#A39EC4'
-     magenta: '#C49EC4'
-     cyan:    '#9ec3c4'
-     white:   '#f5f5f5'
+# Colors (Plain)
+colors:
+  # Default colors
+  primary:
+   background: '#050505'
+   foreground: '#c5c8c6'
 
-colors: *mountaineer
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '#828482'
+    #bright_foreground: '#eaeaea'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  cursor:
+   text: '#161821'
+   cursor: '#85e89d'
+
+  # Vi mode cursor colors
+  #
+  # Colors for the cursor when the vi mode is active.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #vi_mode_cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area.
+  #
+  # Allowed values are CellForeground and CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  #selection:
+  #  text: CellBackground
+  #  background: CellForeground
+
+  # Search colors
+  #
+  # Colors used for the search bar and match highlighting.
+  #search:
+    # Allowed values are CellForeground and CellBackground, which reference the
+    # affected cell, or hexadecimal colors like #ff00ff.
+    #matches:
+    #  foreground: '#000000'
+    #  background: '#ffffff'
+
+    #bar:
+    #  background: '#c5c8c6'
+    #  foreground: '#1d1f21'
+
+  # Normal colors
+  normal:
+   black:   '#1d1f21'
+   red:     '#cc6666'
+   green:   '#8aac8b'
+   yellow:  '#f0c674'
+   blue:    '#81a2be'
+   magenta: '#b294bb'
+   cyan:    '#8abeb7'
+   white:   '#c5c8c6'
+
+  # Bright colors
+  bright:
+   black:   '#333333'
+   red:     '#f2777a'
+   green:   '#99cc99'
+   yellow:  '#ffcc66'
+   blue:    '#6699cc'
+   magenta: '#cc99cc'
+   cyan:    '#66cccc'
+   white:   '#dddddd'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  #dim:
+  #  black:   '#131415'
+  #  red:     '#864343'
+  #  green:   '#777c44'
+  #  yellow:  '#9e824c'
+  #  blue:    '#556a7d'
+  #  magenta: '#75617b'
+  #  cyan:    '#5b7d78'
+  #  white:   '#828482'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '#ff00ff' }`
+  #
+  #indexed_colors: []
 
 # Bell
 #
