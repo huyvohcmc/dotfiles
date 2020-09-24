@@ -78,6 +78,7 @@ function! s:mountaineer() abort
   hi! StatusLineNC guifg=#666666
   hi! SignColumn guibg=NONE
   hi! SignifySignChange guifg=#ACA98A guibg=NONE
+  hi! Search gui=underline guibg=NONE guifg=LightYellow
 endfunction
 
 augroup colorscheme
