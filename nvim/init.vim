@@ -94,6 +94,9 @@ set wrap
 set ttimeoutlen=0
 set matchpairs+=<:>
 set splitright
+set modelines=0
+set nomodeline
+set wildignore+=tags,gwt-unitCache/*,*/__pycache__/*,build/*,build.?/*
 
 " Safeguard
 if !exists("g:syntax_on")
