@@ -3,7 +3,7 @@ prompt() {
 }
 
 session() {
-  echo "(%n.%m) "
+  echo "%F{blue}(%n.%m)%f "
 }
 
 path() {
