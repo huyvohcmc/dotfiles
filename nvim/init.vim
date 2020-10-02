@@ -36,7 +36,6 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf', { 'do': './install --all && ln -s $(pwd) ~/.fzf'})
   call packager#add('junegunn/fzf.vim')
   call packager#add('justinmk/vim-sneak')
-  call packager#add('junegunn/fzf.vim')
   call packager#add('mhinz/vim-signify')
   call packager#add('sheerun/vim-polyglot')
   call packager#add('tomtom/tcomment_vim')
