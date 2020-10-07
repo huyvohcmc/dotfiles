@@ -35,15 +35,15 @@
 [pager]
 	branch = false
 
-# [interactive]
-# 	diffFilter = delta --color-only
-#
-# [delta]
-# 	features = line-numbers decorations
-# 	syntax-theme = Dracula
-# 	whitespace-error-style = 22 reverse
-#
-# [delta "decorations"]
-# 	commit-decoration-style = bold yellow box ul
-# 	file-style = bold yellow ul
-# 	file-decoration-style = none
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = line-numbers decorations
+	syntax-theme = base16
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
