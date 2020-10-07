@@ -68,16 +68,11 @@ command! PackagerStatus call PackagerInit() | call packager#status()
 
 " Custom colors
 function! s:mountaineer() abort
-  hi! Visual guibg=#4c4c4c
-  hi! VertSplit guibg=NONE guifg=#333333
-  hi! link Todo Comment
-  hi! link Conceal NonText
-  hi! Comment gui=italic guifg=#666666
-  hi! StatusLine guifg=#e7e7e7
-  hi! StatusLineNC guifg=#666666
+  hi! Visual guibg=#434146
+  hi! VertSplit guibg=NONE
+  hi! Comment guifg=#555458
   hi! SignColumn guibg=NONE
-  hi! SignifySignChange guifg=#ACA98A guibg=NONE
-  hi! Search gui=underline guibg=NONE guifg=LightYellow
+  hi! StatusLine guifg=white
 endfunction
 
 augroup colorscheme
@@ -218,6 +213,9 @@ noremap <silent> ghub :Gbrowse<CR>
 let g:signify_vcs_list = [ 'git' ]
 let g:signify_realtime = 1
 let g:signify_sign_show_count = 0
+let g:signify_sign_change = '~'
+hi! SignifySignChange guifg=#F7F6AF
+hi! SignifySignDelete guifg=#F7AFC0
 
 " Replace Gutentags
 command! Tags !ctags -R -I EXTERN -I INIT --exclude='build*' --exclude='.vim-src/**' --exclude='node_modules/**' --exclude='venv/**'
@@ -235,14 +233,15 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " ALE config
-nmap <leader>e <Plug>(ale_fix)
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format='%linter% %severity% (%code%): %s'
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
+let g:ale_fix_on_save = 1
+let g:ale_echo_msg_format='%severity%: %linter%: %s'
 let g:ale_set_highlights = 0
-let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
-let g:ale_linters = { 'ruby': ['rubocop'], 'javascript': ['eslint', 'prettier'] }
-let g:ale_fixers = { 'ruby': ['rubocop'], 'javascript': ['prettier'] }
+let g:ale_linters = {
+      \ 'ruby': ['rubocop'],
+      \ 'javascript': ['eslint', 'prettier']
+      \}
+let g:ale_fixers = {
+      \ 'ruby': ['rubocop'],
+      \ 'javascript': ['prettier']
+      \}

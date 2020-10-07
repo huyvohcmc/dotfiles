@@ -201,9 +201,6 @@ schemes:
     primary:
      background: '#050505'
      foreground: '#f0f0f0'
-    cursor:
-     text: '#191919'
-     cursor: '#85e89d'
     normal:
      black:   '#0f0f0f'
      red:     '#AC8A8C'
@@ -221,6 +218,28 @@ schemes:
      blue:    '#A39EC4'
      magenta: '#C49EC4'
      cyan:    '#9ec3c4'
+     white:   '#f5f5f5'
+  bliss: &bliss
+    primary:
+     background: '#121213'
+     foreground: '#fdf9f7'
+    normal:
+     black:   '#1c1b1d'
+     red:     '#DE9DAC'
+     green:   '#9DDEAF'
+     yellow:  '#DEDD9D'
+     blue:    '#9DACDE'
+     magenta: '#AF9DDE'
+     cyan:    '#9DCCDE'
+     white:   '#e7e7e7'
+    bright:
+     black:   '#262427'
+     red:     '#F7AFC0'
+     green:   '#AFF7C3'
+     yellow:  '#F7F6AF'
+     blue:    '#AFC0F7'
+     magenta: '#C3AFF7'
+     cyan:    '#AFE3F7'
      white:   '#f5f5f5'
 
 colors: *mountaineer
