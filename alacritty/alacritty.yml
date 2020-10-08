@@ -201,6 +201,9 @@ schemes:
     primary:
      background: '#050505'
      foreground: '#f0f0f0'
+    cursor:
+      text: '#0f0f0f'
+      cursor: '#e7e7e7'
     normal:
      black:   '#0f0f0f'
      red:     '#AC8A8C'
