@@ -68,7 +68,7 @@ command! PackagerStatus call PackagerInit() | call packager#status()
 
 " Custom colors
 function! s:mountaineer() abort
-  hi! Visual guibg=#434146
+  hi! Visual guibg=#79ffe1 guifg=#050505
   hi! VertSplit guifg=#262427 guibg=NONE
   hi! Comment guifg=#555458
   hi! SignColumn guibg=NONE
