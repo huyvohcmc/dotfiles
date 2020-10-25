@@ -18,11 +18,6 @@ let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 " }}}
 
-" Enable syntax
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
 " Disable unused built-in plugins
 let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1
@@ -67,29 +62,10 @@ command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'forc
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
-" Custom colors
-function! s:mountaineer() abort
-  hi! Visual guibg=#79ffe1 guifg=#050505
-  hi! VertSplit guifg=#262427 guibg=NONE
-  hi! Comment guifg=#555458
-  hi! SignColumn guibg=NONE
-  hi! StatusLine guifg=white
-endfunction
-
-augroup colorscheme
-  autocmd ColorScheme mountaineer call s:mountaineer()
-augroup END
-
-" Colorscheme
-set termguicolors
-colorscheme mountaineer
-
-" Detect whitespace and color as gray
-hi! ExtraWhitespace guifg=#666666
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call  clearmatches()
+" Enable syntax
+if !exists("g:syntax_on")
+  syntax enable
+endif
 
 " General settings (:h vim-differences)
 set clipboard^=unnamed
@@ -115,6 +91,30 @@ set tags=./tags;,tags
 set ttimeoutlen=0
 set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
 set wildmode=longest:full,list,full
+
+" Custom colors
+function! s:mountaineer() abort
+  hi! Visual guibg=#79ffe1 guifg=#050505
+  hi! VertSplit guifg=#262427 guibg=NONE
+  hi! Comment guifg=#555458
+  hi! SignColumn guibg=NONE
+  hi! StatusLine guifg=white
+endfunction
+
+augroup colorscheme
+  autocmd ColorScheme mountaineer call s:mountaineer()
+augroup END
+
+" Colorscheme
+set termguicolors
+colorscheme mountaineer
+
+" Detect whitespace and color as gray
+hi! ExtraWhitespace guifg=#666666
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call  clearmatches()
 
 " Tree-sitter
 lua << EOF
