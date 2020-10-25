@@ -32,7 +32,7 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf.vim')
   call packager#add('justinmk/vim-sneak')
   call packager#add('mhinz/vim-signify')
-  call packager#add('sheerun/vim-polyglot')
+  call packager#add('vim-ruby/vim-ruby')
   call packager#add('tomtom/tcomment_vim')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-fugitive')
