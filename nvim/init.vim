@@ -18,11 +18,6 @@ let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 " }}}
 
-" Enable syntax
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
 " Disable unused built-in plugins
 let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1
@@ -37,7 +32,7 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf.vim')
   call packager#add('justinmk/vim-sneak')
   call packager#add('mhinz/vim-signify')
-  call packager#add('sheerun/vim-polyglot')
+  call packager#add('vim-ruby/vim-ruby')
   call packager#add('tomtom/tcomment_vim')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-fugitive')
@@ -58,6 +53,7 @@ function! PackagerInit() abort
   call packager#add('co1ncidence/mountaineer')
   call packager#add('romainl/vim-cool')
   call packager#add('fatih/vim-go')
+  call packager#add('nvim-treesitter/nvim-treesitter')
 endfunction
 
 " Packager commands
@@ -66,29 +62,10 @@ command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'forc
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
 
-" Custom colors
-function! s:mountaineer() abort
-  hi! Visual guibg=#79ffe1 guifg=#050505
-  hi! VertSplit guifg=#262427 guibg=NONE
-  hi! Comment guifg=#555458
-  hi! SignColumn guibg=NONE
-  hi! StatusLine guifg=white
-endfunction
-
-augroup colorscheme
-  autocmd ColorScheme mountaineer call s:mountaineer()
-augroup END
-
-" Colorscheme
-set termguicolors
-colorscheme mountaineer
-
-" Detect whitespace and color as gray
-hi! ExtraWhitespace guifg=#666666
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call  clearmatches()
+" Enable syntax
+if !exists("g:syntax_on")
+  syntax enable
+endif
 
 " General settings (:h vim-differences)
 set clipboard^=unnamed
@@ -114,6 +91,41 @@ set tags=./tags;,tags
 set ttimeoutlen=0
 set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
 set wildmode=longest:full,list,full
+
+" Custom colors
+function! s:mountaineer() abort
+  hi! Visual guibg=#79ffe1 guifg=#050505
+  hi! VertSplit guifg=#262427 guibg=NONE
+  hi! Comment guifg=#555458
+  hi! SignColumn guibg=NONE
+  hi! StatusLine guifg=white
+endfunction
+
+augroup colorscheme
+  autocmd ColorScheme mountaineer call s:mountaineer()
+augroup END
+
+" Colorscheme
+set termguicolors
+colorscheme mountaineer
+
+" Detect whitespace and color as gray
+hi! ExtraWhitespace guifg=#666666
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call  clearmatches()
+
+" Tree-sitter
+lua << EOF
+vim.cmd('packadd nvim-treesitter')
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",     -- one of "all", "language", or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
