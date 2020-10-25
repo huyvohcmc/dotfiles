@@ -58,6 +58,7 @@ function! PackagerInit() abort
   call packager#add('co1ncidence/mountaineer')
   call packager#add('romainl/vim-cool')
   call packager#add('fatih/vim-go')
+  call packager#add('nvim-treesitter/nvim-treesitter')
 endfunction
 
 " Packager commands
@@ -114,6 +115,17 @@ set tags=./tags;,tags
 set ttimeoutlen=0
 set wildignore+=tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store
 set wildmode=longest:full,list,full
+
+" Tree-sitter
+lua << EOF
+vim.cmd('packadd nvim-treesitter')
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",     -- one of "all", "language", or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
