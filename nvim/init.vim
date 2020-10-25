@@ -245,7 +245,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " ALE config
-let g:ale_fix_on_save = 1
+nmap <leader>e <Plug>(ale_fix)
 let g:ale_echo_msg_format='%severity%: %linter%: %s'
 let g:ale_set_highlights = 0
 let g:ale_lint_on_insert_leave = 0
