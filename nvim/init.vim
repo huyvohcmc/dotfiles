@@ -32,7 +32,6 @@ function! PackagerInit() abort
   call packager#add('junegunn/fzf.vim')
   call packager#add('justinmk/vim-sneak')
   call packager#add('mhinz/vim-signify')
-  call packager#add('vim-ruby/vim-ruby')
   call packager#add('tomtom/tcomment_vim')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-fugitive')
@@ -52,7 +51,8 @@ function! PackagerInit() abort
   call packager#add('justinmk/vim-dirvish')
   call packager#add('co1ncidence/mountaineer')
   call packager#add('romainl/vim-cool')
-  call packager#add('fatih/vim-go')
+  call packager#add('fatih/vim-go', { 'type': 'opt' })
+  call packager#add('vim-ruby/vim-ruby', { 'type': 'opt' })
   call packager#add('nvim-treesitter/nvim-treesitter')
 endfunction
 
@@ -61,6 +61,12 @@ command! PackagerInstall call PackagerInit() | call packager#install()
 command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
 command! PackagerClean call PackagerInit() | call packager#clean()
 command! PackagerStatus call PackagerInit() | call packager#status()
+
+augroup packager_filetype
+  autocmd!
+  autocmd FileType go packadd vim-go
+  autocmd FileType ruby packadd vim-ruby
+augroup END
 
 " Enable syntax
 if !exists("g:syntax_on")
@@ -117,7 +123,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call  clearmatches()
 
 " Tree-sitter
-lua << EOF
+lua <<EOF
 vim.cmd('packadd nvim-treesitter')
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",     -- one of "all", "language", or a list of languages
