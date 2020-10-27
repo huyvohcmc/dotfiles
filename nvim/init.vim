@@ -23,46 +23,42 @@ let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1
 let g:loaded_netrwPlugin = 1
 
-" Load packager only when you need it
-function! PackagerInit() abort
-  packadd vim-packager
-  call packager#init()
-  call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
-  call packager#add('junegunn/fzf', { 'do': './install --all && ln -s $(pwd) ~/.fzf'})
-  call packager#add('junegunn/fzf.vim')
-  call packager#add('justinmk/vim-sneak')
-  call packager#add('mhinz/vim-signify')
-  call packager#add('tomtom/tcomment_vim')
-  call packager#add('tpope/vim-endwise')
-  call packager#add('tpope/vim-fugitive')
-  call packager#add('tpope/vim-rails')
-  call packager#add('tpope/vim-repeat')
-  call packager#add('tpope/vim-rhubarb')
-  call packager#add('tpope/vim-surround')
-  call packager#add('w0rp/ale')
-  call packager#add('wellle/targets.vim')
-  call packager#add('rstacruz/vim-closer')
-  call packager#add('ncm2/ncm2')
-  call packager#add('ncm2/ncm2-bufword')
-  call packager#add('ncm2/ncm2-tagprefix')
-  call packager#add('ncm2/ncm2-path')
-  call packager#add('roxma/nvim-yarp')
-  call packager#add('christoomey/vim-tmux-navigator')
-  call packager#add('justinmk/vim-dirvish')
-  call packager#add('co1ncidence/mountaineer')
-  call packager#add('romainl/vim-cool')
-  call packager#add('fatih/vim-go', { 'type': 'opt' })
-  call packager#add('vim-ruby/vim-ruby', { 'type': 'opt' })
-  call packager#add('nvim-treesitter/nvim-treesitter')
-endfunction
+packadd minpac
 
-" Packager commands
-command! PackagerInstall call PackagerInit() | call packager#install()
-command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
-command! PackagerClean call PackagerInit() | call packager#clean()
-command! PackagerStatus call PackagerInit() | call packager#status()
+call minpac#init()
+call minpac#add('k-takata/minpac', { 'type': 'opt' })
+call minpac#add('junegunn/fzf', { 'do': { -> fzf#install() } })
+call minpac#add('junegunn/fzf.vim')
+call minpac#add('justinmk/vim-sneak')
+call minpac#add('mhinz/vim-signify')
+call minpac#add('tomtom/tcomment_vim')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-repeat')
+call minpac#add('tpope/vim-rhubarb')
+call minpac#add('tpope/vim-surround')
+call minpac#add('w0rp/ale')
+call minpac#add('wellle/targets.vim')
+call minpac#add('rstacruz/vim-closer')
+call minpac#add('ncm2/ncm2')
+call minpac#add('ncm2/ncm2-bufword')
+call minpac#add('ncm2/ncm2-tagprefix')
+call minpac#add('ncm2/ncm2-path')
+call minpac#add('roxma/nvim-yarp')
+call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('justinmk/vim-dirvish')
+call minpac#add('co1ncidence/mountaineer')
+call minpac#add('romainl/vim-cool')
+call minpac#add('fatih/vim-go', { 'type': 'opt' })
+call minpac#add('vim-ruby/vim-ruby', { 'type': 'opt' })
+call minpac#add('nvim-treesitter/nvim-treesitter')
 
-augroup packager_filetype
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+command! PackStatus packadd minpac | call minpac#status()
+
+augroup pack_filetype
   autocmd!
   autocmd FileType go packadd vim-go
   autocmd FileType ruby packadd vim-ruby
