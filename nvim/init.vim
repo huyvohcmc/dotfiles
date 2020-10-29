@@ -23,11 +23,12 @@ let g:loaded_rrhelper = 1
 let g:did_install_default_menus = 1
 let g:loaded_netrwPlugin = 1
 
+set rtp+=/usr/local/opt/fzf
+
 packadd minpac
 
 call minpac#init()
 call minpac#add('k-takata/minpac', { 'type': 'opt' })
-call minpac#add('junegunn/fzf', { 'do': { -> fzf#install() } })
 call minpac#add('junegunn/fzf.vim')
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('mhinz/vim-signify')
@@ -98,7 +99,7 @@ set wildmode=longest:full,list,full
 function! s:mountaineer() abort
   hi! Visual guibg=#9EC49F guifg=#050505
   hi! VertSplit guifg=#262427 guibg=NONE
-  hi! Comment guifg=#555458
+  hi! Comment guifg=#6f6f6f
   hi! SignColumn guibg=NONE
   hi! StatusLine guifg=white
 endfunction
@@ -199,15 +200,28 @@ function! s:SetupRemoveCommandOnFile() abort
 endfunction
 
 " FZF
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 nnoremap <leader>h :History<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>t :Files<CR>
 
-" Ripgrep
+" Advanced ripgrep integration
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always
-        \ -g "!*.lock" -g "!*lock.json" -g "!node_modules/**" -g "!flow-typed/**" -g "!.git/**"
-        \ --smart-case %s || true'
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
