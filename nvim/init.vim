@@ -98,8 +98,6 @@ set wildmode=longest:full,list,full
 " Custom colors
 function! s:mountaineer() abort
   hi! Visual guibg=#9EC49F guifg=#050505
-  hi! VertSplit guifg=#4c4c4c guibg=NONE
-  hi! Comment guifg=#6f6f6f
   hi! SignColumn guibg=NONE
   hi! StatusLine guifg=white
 endfunction
