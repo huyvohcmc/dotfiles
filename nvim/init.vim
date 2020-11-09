@@ -97,6 +97,7 @@ function! s:mountaineer() abort
   hi! StatusLine guifg=white
   hi! Comment guifg=#545454
   hi! VertSplit guibg=NONE
+  hi! Normal guibg=NONE
 endfunction
 
 augroup colorscheme
