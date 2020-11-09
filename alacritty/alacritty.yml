@@ -222,30 +222,32 @@ schemes:
      magenta: '#C49EC4'
      cyan:    '#9ec3c4'
      white:   '#f5f5f5'
-  bliss: &bliss
+  mountain: &mountain
     primary:
-     background: '#121213'
-     foreground: '#fdf9f7'
+      background: '0x0f0f0f'
+      foreground: '0xf0f0f0'
     normal:
-     black:   '#1c1b1d'
-     red:     '#DE9DAC'
-     green:   '#9DDEAF'
-     yellow:  '#DEDD9D'
-     blue:    '#9DACDE'
-     magenta: '#AF9DDE'
-     cyan:    '#9DCCDE'
-     white:   '#e7e7e7'
+      black:   '0x262626'
+      red:     '0xac8a8c'
+      green:   '0x8aac8b'
+      yellow:  '0xaca98a'
+      blue:    '0x8f8aac'
+      magenta: '0xac8aac'
+      cyan:    '0x8aabac'
+      white:   '0xe7e7e7'
+      orange:  '0xc6a679' #Here for reference
     bright:
-     black:   '#262427'
-     red:     '#F7AFC0'
-     green:   '#AFF7C3'
-     yellow:  '#F7F6AF'
-     blue:    '#AFC0F7'
-     magenta: '#C3AFF7'
-     cyan:    '#AFE3F7'
-     white:   '#f5f5f5'
+      black:   '0x4c4c4c'
+      red:     '0xc49ea0'
+      green:   '0x9ec49f'
+      yellow:  '0xc4c19e'
+      blue:    '0xa39ec4'
+      magenta: '0xc49ec4'
+      cyan:    '0x9ec3c4'
+      white:   '0xf5f5f5'
+      orange:  '0xceb188' #Here for reference
 
-colors: *mountaineer
+colors: *mountain
 
 # Bell
 #
