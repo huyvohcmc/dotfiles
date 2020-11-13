@@ -49,6 +49,7 @@ call minpac#add('romainl/vim-cool')
 call minpac#add('fatih/vim-go', { 'type': 'opt' })
 call minpac#add('vim-ruby/vim-ruby', { 'type': 'opt' })
 call minpac#add('nvim-treesitter/nvim-treesitter')
+call minpac#add('norcalli/nvim-colorizer.lua')
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
@@ -125,6 +126,9 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+" Colorizer
+lua require'colorizer'.setup()
 
 " Automatic resizing of splits to equal sizes
 autocmd VimResized * wincmd =
