@@ -20,9 +20,7 @@ function autocmd.load_autocmds()
     };
 
     wins = {
-      {"BufWinEnter,InsertEnter,InsertLeave", "*", [[tabdo match ExtraWhitespace /\s\+$/]]};
-      {"BufWinLeave", "*", [[tabdo call clearmatches()]]};
-      {"VimResized", "*", [[tabdo wincmd =]]};
+      {"VimResized", "*", "wincmd ="};
     };
 
     ft = {
