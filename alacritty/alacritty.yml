@@ -173,31 +173,6 @@ draw_bold_text_with_bright_colors: false
 
 # Colors
 schemes:
-  plain: &plain
-    primary:
-     background: '#050505'
-     foreground: '#c5c8c6'
-    cursor:
-     text: '#161821'
-     cursor: '#85e89d'
-    normal:
-     black:   '#1d1f21'
-     red:     '#cc6666'
-     green:   '#8aac8b'
-     yellow:  '#f0c674'
-     blue:    '#81a2be'
-     magenta: '#b294bb'
-     cyan:    '#8abeb7'
-     white:   '#c5c8c6'
-    bright:
-     black:   '#333333'
-     red:     '#f2777a'
-     green:   '#99cc99'
-     yellow:  '#ffcc66'
-     blue:    '#6699cc'
-     magenta: '#cc99cc'
-     cyan:    '#66cccc'
-     white:   '#dddddd'
   mountaineer: &mountaineer
     primary:
      background: '#050505'
@@ -223,35 +198,8 @@ schemes:
      magenta: '#C49EC4'
      cyan:    '#9ec3c4'
      white:   '#f5f5f5'
-  mountain: &mountain
-    primary:
-      background: '0x0f0f0f'
-      foreground: '0xf0f0f0'
-    cursor:
-      text: '#0f0f0f'
-      cursor: '#e7e7e7'
-    normal:
-      black:   '0x262626'
-      red:     '0xac8a8c'
-      green:   '0x8aac8b'
-      yellow:  '0xaca98a'
-      blue:    '0x8f8aac'
-      magenta: '0xac8aac'
-      cyan:    '0x8aabac'
-      white:   '0xe7e7e7'
-      orange:  '0xc6a679' #Here for reference
-    bright:
-      black:   '0x4c4c4c'
-      red:     '0xc49ea0'
-      green:   '0x9ec49f'
-      yellow:  '0xc4c19e'
-      blue:    '0xa39ec4'
-      magenta: '0xc49ec4'
-      cyan:    '0x9ec3c4'
-      white:   '0xf5f5f5'
-      orange:  '0xceb188' #Here for reference
 
-colors: *mountain
+colors: *mountaineer
 
 # Bell
 #
