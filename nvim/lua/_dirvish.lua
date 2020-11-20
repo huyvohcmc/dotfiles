@@ -1,4 +1,3 @@
-vim.g.loaded_netrwPlugin = 0
 vim.g.dirvish_mode = ":sort ,^.*[/],"
 vim.g.dirvish_git_indicators = {
   Modified = '✗',
