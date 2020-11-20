@@ -8,7 +8,6 @@ function theme:load_colorscheme()
   vim.cmd('hi! StatusLine guifg=white')
   vim.cmd('hi! Comment guifg=#545454')
   vim.cmd('hi! VertSplit guibg=NONE')
-  vim.cmd('hi! Normal guibg=NONE')
   vim.cmd('hi! ExtraWhitespace guifg=#666666')
 end
 
