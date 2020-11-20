@@ -28,7 +28,7 @@ function M.init()
   require'_treesitter'
   require'_colorizer'
   require'_sneak'
-  require'_tree'
+  require'_dirvish'
   require'_fzf'
   require'_fugitive'
   require'_signify'
