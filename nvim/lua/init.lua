@@ -24,7 +24,6 @@ function M.init()
   vim.g.loaded_2html_plugin      = 1
   vim.g.loaded_logiPat           = 1
   vim.g.loaded_rrhelper          = 1
-  -- vim.g.loaded_netrw             = 1
   vim.g.loaded_netrwPlugin       = 1
   vim.g.loaded_netrwSettings     = 1
   vim.g.loaded_netrwFileHandlers = 1
@@ -48,7 +47,7 @@ function M.init()
   require'_treesitter'
   require'_colorizer'
   require'_sneak'
-  require'_dirvish'
+  require'_tree'.setup()
   require'_fzf'
   require'_fugitive'
   require'_signify'

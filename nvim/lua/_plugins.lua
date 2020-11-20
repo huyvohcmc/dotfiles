@@ -31,9 +31,7 @@ return require('packer').startup(function()
   use 'romainl/vim-cool'
   use 'nvim-treesitter/nvim-treesitter'
   use 'norcalli/nvim-colorizer.lua'
-  -- use 'kyazdani42/nvim-tree.lua'
-  use 'justinmk/vim-dirvish'
-  use 'kristijanhusak/vim-dirvish-git'
+  use 'kyazdani42/nvim-tree.lua'
 
   -- Load on a combination of conditions: specific filetypes or commands
   -- Also run code after load (see the "config" key)
