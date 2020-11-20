@@ -6,7 +6,9 @@ function M.setup()
   g.lua_tree_ignore = { '.git', 'node_modules', '.DS_Store' }
   g.lua_tree_auto_open = 1
   g.lua_tree_auto_close = 0
+  g.lua_tree_quit_on_open = 1
   g.lua_tree_follow = 1
+  g.lua_tree_git_hl = 1
   g.lua_tree_tab_open = 1
   g.lua_tree_show_icons = {
     git = 1,
