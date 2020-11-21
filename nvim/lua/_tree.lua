@@ -3,6 +3,7 @@ local g = vim.g
 local M = {}
 
 function M.setup()
+  g.lua_tree_width = 40
   g.lua_tree_ignore = { '.git', 'node_modules', '.DS_Store' }
   g.lua_tree_auto_open = 1
   g.lua_tree_auto_close = 0
@@ -42,4 +43,4 @@ function M.setup()
   ]], '')
 end
 
-return M
+M.setup()

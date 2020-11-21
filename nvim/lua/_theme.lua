@@ -1,8 +1,7 @@
-local theme = {}
+local M = {}
 
-function theme:load_colorscheme()
+function M.setup()
   vim.cmd('colorscheme mountaineer')
-
   vim.cmd('hi! Visual guibg=#9EC49F guifg=#050505')
   vim.cmd('hi! SignColumn guibg=NONE')
   vim.cmd('hi! StatusLine guifg=white')
@@ -10,4 +9,4 @@ function theme:load_colorscheme()
   vim.cmd('hi! VertSplit guibg=NONE')
 end
 
-return theme
+return M

@@ -1,13 +1,9 @@
-local providers = require'_providers'
-local options = require'_options'
-local autocmd = require'_autocmd'
-local mapping = require'_mapping'
-local theme = require'_theme'
+-- local autocmd = require'_autocmd'
 local M = {}
 
-function M.init()
+function M.setup()
   -- Skip providers
-  providers:skip()
+  require'_providers'
 
   -- Disable distribution plugins
   vim.g.loaded_gzip              = 1
@@ -32,22 +28,22 @@ function M.init()
   require'_plugins'
 
   -- Load options
-  options:load_options()
+  require'_options'.setup()
 
   -- Load mapping
-  mapping:load_mapping()
+  require'_mapping'.setup()
 
   -- Load colorscheme
-  theme:load_colorscheme()
+  require'_theme'.setup()
 
   -- Load autocmd
-  autocmd.load_autocmds()
+  require'_autocmd'.setup()
 
   -- Other settings
   require'_treesitter'
   require'_colorizer'
   require'_sneak'
-  require'_tree'.setup()
+  require'_tree'
   require'_fzf'
   require'_fugitive'
   require'_signify'
@@ -56,4 +52,4 @@ function M.init()
   require'_ctags'
 end
 
-M.init()
+M.setup()

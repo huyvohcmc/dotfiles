@@ -1,8 +1,8 @@
-local options = setmetatable({}, { __index = { global_local = {}, buffer_local = {}, window_local = {} } })
+local M = setmetatable({}, { __index = { global_local = {}, buffer_local = {}, window_local = {} } })
 
-function options:load_options()
+function M.setup()
   -- Global
-  self.global_local = {
+  global_local = {
     clipboard = 'unnamedplus';
     completeopt = 'noinsert,menuone,noselect';
     hidden = true;
@@ -32,25 +32,25 @@ function options:load_options()
     copyindent = true;
   }
   -- Local to buffer
-  self.buffer_local = {
+  buffer_local = {
     expandtab = true;
     shiftwidth = 2;
     softtabstop = -1;
     copyindent = true;
   }
   -- Local to window
-  self.window_local = {
+  window_local = {
     signcolumn = 'yes';
     linebreak = true;
   }
 
-  for name, value in pairs(self.global_local) do
+  for name, value in pairs(global_local) do
     vim.o[name] = value
   end
-  for name, value in pairs(self.buffer_local) do
+  for name, value in pairs(buffer_local) do
     vim.bo[name] = value
   end
-  for name, value in pairs(self.window_local) do
+  for name, value in pairs(window_local) do
     vim.wo[name] = value
   end
 
@@ -59,4 +59,4 @@ function options:load_options()
   end
 end
 
-return options
+return M

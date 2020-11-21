@@ -1,6 +1,6 @@
-local autocmd = {}
+local M = {}
 
-function autocmd.nvim_create_augroups(definitions)
+function M.nvim_create_augroups(definitions)
   for group_name, definition in pairs(definitions) do
     vim.api.nvim_command('augroup '..group_name)
     vim.api.nvim_command('autocmd!')
@@ -12,7 +12,7 @@ function autocmd.nvim_create_augroups(definitions)
   end
 end
 
-function autocmd.load_autocmds()
+function M.setup()
   local definitions = {
     bufs = {
       -- Automatically run :PackerCompile whenever plugins.lua is updated
@@ -30,7 +30,7 @@ function autocmd.load_autocmds()
     };
   }
 
-  autocmd.nvim_create_augroups(definitions)
+  M.nvim_create_augroups(definitions)
 end
 
-return autocmd
+return M
