@@ -16,17 +16,17 @@ function M.setup()
   local definitions = {
     bufs = {
       -- Automatically run :PackerCompile whenever plugins.lua is updated
-      {"BufWritePost", "_plugins.lua", "PackerCompile"};
+      { 'BufWritePost', '_plugins.lua', 'PackerCompile' },
     };
 
     wins = {
-      {"VimResized", "*", "wincmd ="};
+      { 'VimResized', '*', 'wincmd =' },
     };
 
     ft = {
-      {"FileType", "c", "set shiftwidth=4"},
-      {"FileType", "python", "set shiftwidth=4"},
-      {"FileType", "go", "set shiftwidth=8"},
+      { 'FileType', 'c', 'set shiftwidth=4' },
+      { 'FileType', 'python', 'set shiftwidth=4' },
+      { 'FileType', 'go', 'set shiftwidth=8' },
     };
   }
 

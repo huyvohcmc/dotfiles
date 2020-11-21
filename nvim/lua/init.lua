@@ -1,4 +1,3 @@
--- local autocmd = require'_autocmd'
 local M = {}
 
 function M.setup()
