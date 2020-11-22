@@ -27,6 +27,7 @@ function M.setup()
       { 'FileType', 'c', 'set shiftwidth=4' },
       { 'FileType', 'python', 'set shiftwidth=4' },
       { 'FileType', 'go', 'set shiftwidth=8' },
+      { 'FileType', 'LuaTree', "lua vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>t', ':wincmd l | :Files<CR>', {})" },
     };
   }
 
