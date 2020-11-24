@@ -19,7 +19,7 @@ function M.setup()
     showmode = false;
     swapfile = false;
     scrolloff = 5;
-    shortmess = 'aoOTIcF';
+    shortmess = 'filnxtToOFc';
     splitright = true;
     tags = './tags;,tags';
     ttimeoutlen = 0;
