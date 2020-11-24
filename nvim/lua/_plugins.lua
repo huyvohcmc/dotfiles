@@ -46,8 +46,17 @@ return require('packer').startup(function()
     config = 'vim.cmd[[ALEEnable]]'
   }
 
-  use {'vim-ruby/vim-ruby', ft = 'rb'}
+  use {
+    'vim-ruby/vim-ruby',
+    opt = true,
+    ft = 'ruby'
+  }
 
   -- Plugins can have post-install/update hooks
-  use {'fatih/vim-go', ft = 'go', cmd = 'GoUpdateBinaries'}
+  use {
+    'fatih/vim-go',
+    run = ':GoUpdateBinaries',
+    opt = true,
+    ft = 'go'
+  }
 end)
