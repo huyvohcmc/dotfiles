@@ -21,6 +21,8 @@ function M.setup()
 
     wins = {
       { 'VimResized', '*', 'wincmd =' },
+      { 'BufWinEnter', '*', 'highlight ExtraWhitespace guibg=#666666' },
+      { 'BufWinEnter', '*', [[match ExtraWhitespace /\s\+$/]] },
     };
 
     ft = {
