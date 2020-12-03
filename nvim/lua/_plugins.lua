@@ -41,7 +41,7 @@ return require('packer').startup(function()
   -- Also run code after load (see the "config" key)
   use {
     'w0rp/ale',
-    ft = {'rb', 'js', 'go'},
+    ft = {'ruby', 'javascript', 'go'},
     cmd = 'ALEEnable',
     config = 'vim.cmd[[ALEEnable]]'
   }
