@@ -31,6 +31,8 @@ return require('packer').startup(function()
   use 'romainl/vim-cool'
   use 'nvim-treesitter/nvim-treesitter'
   use 'norcalli/nvim-colorizer.lua'
+  use 'chuling/equinusocio-material.vim'
+
   use {
     'kyazdani42/nvim-tree.lua',
     opt = true
