@@ -1,9 +1,9 @@
 prompt() {
-  echo '%(?.%f.%F{red})%B▲%b%f '
+  echo '%B▲%b '
 }
 
 session() {
-  echo "%F{blue}(%n.%m)%f "
+  echo "%B(%n.%m)%B "
 }
 
 path() {
