@@ -3,7 +3,7 @@ prompt() {
 }
 
 session() {
-  echo "%B(%n.%m)%B "
+  echo "(%n.%m) "
 }
 
 path() {
