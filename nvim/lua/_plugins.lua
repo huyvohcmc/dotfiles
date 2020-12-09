@@ -29,9 +29,13 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'co1ncidence/mountaineer'
   use 'romainl/vim-cool'
-  use 'nvim-treesitter/nvim-treesitter'
   use 'norcalli/nvim-colorizer.lua'
   use 'chuling/equinusocio-material.vim'
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   use {
     'kyazdani42/nvim-tree.lua',
