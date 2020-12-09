@@ -12,7 +12,7 @@ function M.setup()
     smartcase = true;
     lazyredraw = true;
     list = true;
-    listchars = 'tab:>·,nbsp:+,trail:·,extends:→,precedes:←';
+    listchars = 'tab:· ,nbsp:+,trail:·,extends:→,precedes:←';
     matchpairs = '(:),{:},[:],<:>';
     backup = false;
     writebackup = false;
