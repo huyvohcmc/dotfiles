@@ -15,11 +15,6 @@ end
 
 function autocmd.setup()
   local definitions = {
-    bufs = {
-      -- Automatically run :PackerCompile whenever plugins.lua is updated
-      { 'BufWritePost', 'plugins.lua', 'PackerCompile' },
-    };
-
     wins = {
       { 'VimResized', '*', 'wincmd =' },
       { 'BufWinEnter', '*', 'highlight ExtraWhitespace guifg=#666666' },
