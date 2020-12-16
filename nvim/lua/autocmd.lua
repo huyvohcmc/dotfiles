@@ -16,7 +16,7 @@ function M.setup()
   local definitions = {
     bufs = {
       -- Automatically run :PackerCompile whenever plugins.lua is updated
-      { 'BufWritePost', '_plugins.lua', 'PackerCompile' },
+      { 'BufWritePost', 'plugins.lua', 'PackerCompile' },
     };
 
     wins = {

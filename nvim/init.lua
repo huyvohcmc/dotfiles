@@ -1,55 +1,55 @@
-local M = {}
+local g = vim.g
 
-function M.setup()
+local setup = function()
   -- Skip providers
-  require'_providers'
+  require'providers'
 
   -- Disable distribution plugins
-  vim.g.loaded_gzip              = 1
-  vim.g.loaded_tar               = 1
-  vim.g.loaded_tarPlugin         = 1
-  vim.g.loaded_zip               = 1
-  vim.g.loaded_zipPlugin         = 1
-  vim.g.loaded_getscript         = 1
-  vim.g.loaded_getscriptPlugin   = 1
-  vim.g.loaded_vimball           = 1
-  vim.g.loaded_vimballPlugin     = 1
-  vim.g.loaded_matchit           = 1
-  vim.g.loaded_matchparen        = 1
-  vim.g.loaded_2html_plugin      = 1
-  vim.g.loaded_logiPat           = 1
-  vim.g.loaded_rrhelper          = 1
-  vim.g.loaded_netrwPlugin       = 1
-  vim.g.loaded_netrwSettings     = 1
-  vim.g.loaded_netrwFileHandlers = 1
+  g.loaded_gzip              = 1
+  g.loaded_tar               = 1
+  g.loaded_tarPlugin         = 1
+  g.loaded_zip               = 1
+  g.loaded_zipPlugin         = 1
+  g.loaded_getscript         = 1
+  g.loaded_getscriptPlugin   = 1
+  g.loaded_vimball           = 1
+  g.loaded_vimballPlugin     = 1
+  g.loaded_matchit           = 1
+  g.loaded_matchparen        = 1
+  g.loaded_2html_plugin      = 1
+  g.loaded_logiPat           = 1
+  g.loaded_rrhelper          = 1
+  g.loaded_netrwPlugin       = 1
+  g.loaded_netrwSettings     = 1
+  g.loaded_netrwFileHandlers = 1
 
   -- Load plugins
-  require'_plugins'
+  require'plugins'
 
   -- Load options
-  require'_options'.setup()
+  require'options'.setup()
 
   -- Load mapping
-  require'_mapping'.setup()
+  require'mapping'.setup()
 
   -- Load colorscheme
-  require'_theme'.setup()
+  require'theme'.setup()
 
   -- Load autocmd
-  require'_autocmd'.setup()
+  require'autocmd'.setup()
 
   -- Other settings
-  require'_treesitter'
+  require'treesitter'
   require'_colorizer'
-  require'_sneak'
+  require'sneak'
   -- require'_tree'
-  require'_dirvish'
-  require'_fzf'
-  require'_fugitive'
-  require'_signify'
-  require'_ncm2'
-  require'_ale'
-  require'_ctags'
+  require'dirvish'
+  require'fzf'
+  require'fugitive'
+  require'signify'
+  require'ncm2'
+  require'ale'
+  require'ctags'
 end
 
-M.setup()
+setup()
