@@ -1,8 +1,8 @@
 local g = vim.g
 local api = vim.api
-local mapping = {}
+local keybinds = {}
 
-function mapping.setup()
+function keybinds.setup()
   g.mapleader = ','
   api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', {noremap = true, silent = false})
   api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', {noremap = true, silent = false})
@@ -14,4 +14,4 @@ function mapping.setup()
   api.nvim_set_keymap('v', '<Tab>', '%', {noremap = true})
 end
 
-return mapping
+return keybinds

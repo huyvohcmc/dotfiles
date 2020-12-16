@@ -1,10 +1,16 @@
 local g = vim.g
 
-local setup = function()
-  -- Skip providers
-  require'providers'.setup()
+local skip_providers = function()
+  g.python_host_skip_check = 1
+  g.python_host_prog = '/usr/bin/python2'
+  g.python3_host_skip_check = 1
+  g.python3_host_prog = '/usr/local/bin/python3'
+  g.loaded_node_provider = 0
+  g.loaded_ruby_provider = 0
+  g.loaded_perl_provider = 0
+end
 
-  -- Disable distribution plugins
+local disable_distribution_plugins = function()
   g.loaded_gzip              = 1
   g.loaded_tar               = 1
   g.loaded_tarPlugin         = 1
@@ -22,34 +28,38 @@ local setup = function()
   g.loaded_netrwPlugin       = 1
   g.loaded_netrwSettings     = 1
   g.loaded_netrwFileHandlers = 1
+end
 
-  -- Load plugins
-  require'plugins'
+local setup = function()
+  skip_providers()
+  disable_distribution_plugins()
 
   -- Load options
   require'options'.setup()
 
   -- Load mapping
-  require'mapping'.setup()
-
-  -- Load colorscheme
-  require'theme'.setup()
+  require'keybinds'.setup()
 
   -- Load autocmd
   require'autocmd'.setup()
 
-  -- Other settings
-  require'treesitter'
-  require'_colorizer'
-  require'sneak'
-  -- require'_tree'
-  require'dirvish'
-  require'fzf'
-  require'fugitive'
-  require'signify'
-  require'ncm2'
-  require'ale'
+  -- Ctags command
   require'ctags'
+
+  -- Load plugins
+  require'plugins'
+
+  -- Other settings
+  require'plugins/theme'
+  require'plugins/treesitter'
+  require'plugins/colorizer'
+  require'plugins/sneak'
+  require'plugins/dirvish'
+  require'plugins/fzf'
+  require'plugins/fugitive'
+  require'plugins/signify'
+  require'plugins/ncm2'
+  require'plugins/ale'
 end
 
 setup()
