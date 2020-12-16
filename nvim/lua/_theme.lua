@@ -2,7 +2,6 @@ local M = {}
 
 function M.setup()
   vim.g.equinusocio_material_style = 'pure'
-  vim.g.equinusocio_material_less = 20
   vim.cmd('colorscheme equinusocio_material')
   -- vim.cmd('hi! Normal guibg=NONE')
   -- vim.cmd('hi! Visual guibg=#9EC49F guifg=#050505')
