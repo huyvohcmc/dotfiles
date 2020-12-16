@@ -1,6 +1,11 @@
-local M = setmetatable({}, { __index = { global_local = {}, buffer_local = {}, window_local = {} } })
+local o = vim.o
+local bo = vim.bo
+local wo = vim.wo
+local fn = vim.fn
+local api = vim.api
+local options = setmetatable({}, { __index = { global_local = {}, buffer_local = {}, window_local = {} } })
 
-function M.setup()
+function options.setup()
   -- Global
   global_local = {
     clipboard = 'unnamedplus';
@@ -45,18 +50,18 @@ function M.setup()
   }
 
   for name, value in pairs(global_local) do
-    vim.o[name] = value
+    o[name] = value
   end
   for name, value in pairs(buffer_local) do
-    vim.bo[name] = value
+    bo[name] = value
   end
   for name, value in pairs(window_local) do
-    vim.wo[name] = value
+    wo[name] = value
   end
 
-  if vim.fn.has('vim_starting') == 1 then
-    vim.api.nvim_command('syntax enable')
+  if fn.has('vim_starting') == 1 then
+    api.nvim_command('syntax enable')
   end
 end
 
-return M
+return options

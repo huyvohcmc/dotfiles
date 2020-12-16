@@ -1,8 +1,10 @@
-local M = {}
+local g = vim.g
+local cmd = vim.cmd
+local theme = {}
 
-function M.setup()
-  vim.g.equinusocio_material_style = 'pure'
-  vim.cmd('colorscheme equinusocio_material')
+function theme.setup()
+  g.equinusocio_material_style = 'pure'
+  cmd('colorscheme equinusocio_material')
   -- vim.cmd('hi! Normal guibg=NONE')
   -- vim.cmd('hi! Visual guibg=#9EC49F guifg=#050505')
   -- vim.cmd('hi! SignColumn guibg=NONE')
@@ -11,4 +13,4 @@ function M.setup()
   -- vim.cmd('hi! VertSplit guibg=NONE')
 end
 
-return M
+return theme

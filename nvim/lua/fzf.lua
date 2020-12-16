@@ -17,7 +17,7 @@ g.fzf_colors = {
   header  = { 'fg', 'Comment' }
 }
 
-vim.api.nvim_exec([[
+api.nvim_exec([[
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always --smart-case --glob "!{.git,node_modules,flow-typed}" -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))

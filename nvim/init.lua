@@ -2,7 +2,7 @@ local g = vim.g
 
 local setup = function()
   -- Skip providers
-  require'providers'
+  require'providers'.setup()
 
   -- Disable distribution plugins
   g.loaded_gzip              = 1

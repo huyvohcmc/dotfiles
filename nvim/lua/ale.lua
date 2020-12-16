@@ -1,4 +1,5 @@
 local g = vim.g
+local api = vim.api
 
 g.ale_echo_msg_format = '%severity%: %linter%: %s'
 g.ale_set_highlights = 0
@@ -13,4 +14,4 @@ g.ale_fixers = {
   javascript = {'prettier'}
 }
 
-vim.api.nvim_set_keymap('n', '<leader>e', '<Plug>(ale_fix)', { noremap = false, silent = false })
+api.nvim_set_keymap('n', '<leader>e', '<Plug>(ale_fix)', { noremap = false, silent = false })

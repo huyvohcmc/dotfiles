@@ -1,8 +1,8 @@
 local api = vim.api
 local g = vim.g
-local M = {}
+local tree = {}
 
-function M.setup()
+function tree.setup()
   g.lua_tree_width = 40
   g.lua_tree_ignore = { '.git', 'node_modules', '.DS_Store' }
   g.lua_tree_auto_open = 1
@@ -43,4 +43,4 @@ function M.setup()
   ]], '')
 end
 
-M.setup()
+return tree
