@@ -1,7 +1,7 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",     -- one of "all", "language", or a list of languages
+  ensure_installed = {'bash', 'c', 'cpp', 'go', 'java', 'javascript', 'json', 'lua', 'python', 'ruby', 'toml'},
   highlight = {
-    enable = true,              -- false will disable the whole extension
+    enable = true,
   },
   indent = {
     enable = true,
