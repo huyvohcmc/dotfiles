@@ -31,21 +31,15 @@ return require('packer').startup(function()
   use 'ncm2/ncm2-path'
   use 'roxma/nvim-yarp'
   use 'christoomey/vim-tmux-navigator'
-  use 'co1ncidence/mountaineer'
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
   use 'chuling/equinusocio-material.vim'
+  use 'justinmk/vim-dirvish'
 
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
-  use {
-    'kyazdani42/nvim-tree.lua',
-    opt = true
-  }
-  use 'justinmk/vim-dirvish'
 
   -- Load on a combination of conditions: specific filetypes or commands
   -- Also run code after load (see the "config" key)
