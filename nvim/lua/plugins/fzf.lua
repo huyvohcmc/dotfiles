@@ -17,6 +17,12 @@ g.fzf_colors = {
   header  = { 'fg', 'Comment' }
 }
 
+g.fzf_layout = {
+  window = { width = 0.9, height = 0.8 }
+}
+
+g.fzf_preview_window = { 'right:40%' }
+
 api.nvim_exec([[
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --hidden --column --line-number --no-heading --color=always --smart-case --glob "!{.git,node_modules,flow-typed}" -- %s || true'
