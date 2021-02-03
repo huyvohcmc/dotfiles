@@ -45,7 +45,7 @@ function options.setup()
   }
   -- Local to window
   window_local = {
-    signcolumn = 'yes';
+    signcolumn = 'auto';
     linebreak = true;
   }
 
