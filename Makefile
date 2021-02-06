@@ -3,7 +3,7 @@ all: stow
 
 .PHONY: stow
 stow:
-	@stow -t ~ tmux zsh git
+	@stow -t ~ tmux zsh git asdf
 	@stow -t ~/.config/nvim nvim
 	@stow -t ~/.config/alacritty alacritty
 

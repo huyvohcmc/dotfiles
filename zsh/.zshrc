@@ -40,6 +40,10 @@ zstyle ':completion:*:*:*:*:*' menu yes select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# asdf
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
 # Autoload
 autoload -Uz compinit
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
@@ -69,22 +73,3 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!{.git,node_modules,flow-typed}"'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
-
-# Rbenv
-if [[ -s ~/.rbenv/shims/ruby ]]; then
-  PATH=$HOME/.rbenv/shims:$PATH
-fi
-rbenv() {
-  eval "$(command rbenv init - --no-rehash)"
-  rbenv "$@"
-}
-
-# NVM
-export NVM_DIR=$HOME/.nvm
-if [ -f $HOME/.nvm/alias/default ]; then
-  PATH=${PATH}:${HOME}/.nvm/versions/node/$(cat ~/.nvm/alias/default)/bin
-fi
-nvm() {
-  [ -s $NVM_DIR/nvm.sh ] && source $NVM_DIR/nvm.sh
-  nvm "$@"
-}
