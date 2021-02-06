@@ -3,7 +3,6 @@
 	ll = log --stat --decorate --source -p
 
 [core]
-	# pager = delta
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	abbrev = 12
@@ -37,13 +36,3 @@
 
 [interactive]
 	diffFilter = delta --color-only
-
-[delta]
-	features = line-numbers decorations
-	syntax-theme = base16
-	whitespace-error-style = 22 reverse
-
-[delta "decorations"]
-	commit-decoration-style = bold yellow box ul
-	file-style = bold yellow ul
-	file-decoration-style = none
