@@ -43,6 +43,9 @@ local setup = function()
   -- Load autocmd
   require'autocmd'.setup()
 
+  -- Colorscheme
+  require'colorscheme'
+
   -- Ctags command
   require'ctags'
 
@@ -50,7 +53,6 @@ local setup = function()
   require'plugins'
 
   -- Other settings
-  require'plugins/theme'
   require'plugins/treesitter'
   require'plugins/colorizer'
   require'plugins/sneak'
