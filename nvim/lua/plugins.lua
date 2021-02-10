@@ -35,6 +35,10 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'chuling/equinusocio-material.vim'
   use 'justinmk/vim-dirvish'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 
   use {
     'nvim-treesitter/nvim-treesitter',

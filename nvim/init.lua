@@ -62,6 +62,7 @@ local setup = function()
   require'plugins/signify'
   require'plugins/ncm2'
   require'plugins/ale'
+  require'plugins/telescope'
 end
 
 setup()
