@@ -33,8 +33,9 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
-  use 'chuling/equinusocio-material.vim'
   use 'justinmk/vim-dirvish'
+  use 'chuling/ci_dark'
+
   use {
     'nvim-telescope/telescope.nvim',
     requires = {

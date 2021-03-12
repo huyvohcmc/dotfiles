@@ -165,30 +165,33 @@ schemes:
       magenta: '#c792ea'
       cyan:    '#89ddff'
       white:   '#ffffff'
-  tomorrow: &tomorrow
+  ci: &ci
     primary:
       background: '#000000'
-      foreground: '#eaeaea'
+      foreground: '#ffffff'
+    cursor:
+      text: '#000000'
+      cursor: '#85e89d'
     normal:
       black:   '#000000'
-      red:     '#df6566'
-      green:   '#c5d15c'
-      yellow:  '#ecce58'
-      blue:    '#8cb6e1'
-      magenta: '#cfabe0'
-      cyan:    '#81cabf'
-      white:   '#ffffff'
+      red:     '#f97583'
+      green:   '#85e89d'
+      yellow:  '#ffea7f'
+      blue:    '#79b8ff'
+      magenta: '#b392f0'
+      cyan:    '#73e3ff'
+      white:   '#f6f8fa'
     bright:
-      black:   '#666666'
-      red:     '#df6566'
-      green:   '#c5d15c'
-      yellow:  '#ecce58'
-      blue:    '#8cb6e1'
-      magenta: '#cfabe0'
-      cyan:    '#81cabf'
-      white:   '#ffffff'
+      black:   '#000000'
+      red:     '#f97583'
+      green:   '#85e89d'
+      yellow:  '#ffea7f'
+      blue:    '#79b8ff'
+      magenta: '#b392f0'
+      cyan:    '#73e3ff'
+      white:   '#f6f8fa'
 
-colors: *pure
+colors: *ci
 
 # Bell
 #
