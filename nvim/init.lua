@@ -57,7 +57,7 @@ local setup = function()
   require'plugins/colorizer'
   require'plugins/sneak'
   require'plugins/dirvish'
-  require'plugins/fzf'
+  -- require'plugins/fzf'
   require'plugins/fugitive'
   require'plugins/signify'
   require'plugins/ncm2'

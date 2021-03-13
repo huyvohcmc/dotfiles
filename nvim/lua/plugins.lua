@@ -12,8 +12,8 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Simple plugins can be specified as strings
-  use '/usr/local/opt/fzf'
-  use 'junegunn/fzf.vim'
+  -- use '/usr/local/opt/fzf'
+  -- use 'junegunn/fzf.vim'
   use 'justinmk/vim-sneak'
   use 'mhinz/vim-signify'
   use 'tomtom/tcomment_vim'
@@ -35,6 +35,7 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'justinmk/vim-dirvish'
   use 'chuling/ci_dark'
+  use 'Yggdroot/indentLine'
 
   use {
     'nvim-telescope/telescope.nvim',
