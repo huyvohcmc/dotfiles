@@ -18,7 +18,6 @@ telescope.setup{
     selection_strategy = 'reset',
     sorting_strategy = 'ascending',
     prompt_position = 'top',
-    scroll_strategy = 'cycle',
     file_sorter = require'telescope.sorters'.get_fzy_sorter,
     file_ignore_patterns = {'node_modules', 'flow%-typed'},
     layout_defaults = {
