@@ -57,9 +57,8 @@ local setup = function()
   require'plugins/colorizer'
   require'plugins/sneak'
   require'plugins/dirvish'
-  -- require'plugins/fzf'
   require'plugins/fugitive'
-  require'plugins/signify'
+  require('gitsigns').setup()
   require'plugins/ncm2'
   require'plugins/ale'
   require'plugins/telescope'
