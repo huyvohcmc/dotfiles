@@ -1,10 +1,8 @@
 local g = vim.g
 
 local skip_providers = function()
-  g.python_host_skip_check = 1
-  g.python_host_prog = '/usr/bin/python2'
-  g.python3_host_skip_check = 1
-  g.python3_host_prog = '/usr/local/bin/python3'
+  g.loaded_python_provider = 0
+  g.loaded_python3_provider = 0
   g.loaded_node_provider = 0
   g.loaded_ruby_provider = 0
   g.loaded_perl_provider = 0
@@ -59,7 +57,7 @@ local setup = function()
   require'plugins/dirvish'
   require'plugins/fugitive'
   require('gitsigns').setup()
-  require'plugins/ncm2'
+  require'plugins/compe'
   require'plugins/ale'
   require'plugins/telescope'
 end

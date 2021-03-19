@@ -9,7 +9,7 @@ function options.setup()
   -- Global
   global_local = {
     clipboard = 'unnamedplus';
-    completeopt = 'noinsert,menuone,noselect';
+    completeopt = 'menuone,noselect';
     hidden = true;
     incsearch = true;
     hlsearch = true;
