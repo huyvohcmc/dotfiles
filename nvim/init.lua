@@ -56,7 +56,7 @@ local setup = function()
   require'plugins/sneak'
   require'plugins/dirvish'
   require'plugins/fugitive'
-  require('gitsigns').setup()
+  require'plugins/gitsigns'
   require'plugins/compe'
   require'plugins/ale'
   require'plugins/telescope'
