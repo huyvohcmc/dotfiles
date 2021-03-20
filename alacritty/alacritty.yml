@@ -107,7 +107,6 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: JuliaMono
     family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
