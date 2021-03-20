@@ -55,7 +55,7 @@ local setup = function()
   require'plugins/colorizer'
   require'plugins/sneak'
   require'plugins/dirvish'
-  require'plugins/fugitive'
+  require'plugins/git-blame'
   require'plugins/gitsigns'
   require'plugins/compe'
   require'plugins/ale'

@@ -15,10 +15,8 @@ return require('packer').startup(function()
   use 'justinmk/vim-sneak'
   use 'tomtom/tcomment_vim'
   use 'tpope/vim-endwise'
-  use 'tpope/vim-fugitive'
   use 'tpope/vim-rails'
   use 'tpope/vim-repeat'
-  use 'tpope/vim-rhubarb'
   use 'tpope/vim-surround'
   use 'wellle/targets.vim'
   use 'rstacruz/vim-closer'
@@ -29,6 +27,7 @@ return require('packer').startup(function()
   use 'justinmk/vim-dirvish'
   use 'chuling/ci_dark'
   use 'Yggdroot/indentLine'
+  use 'f-person/git-blame.nvim'
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
