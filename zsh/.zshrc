@@ -73,3 +73,16 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!{.git,node_modules,flow-typed}"'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+
+# Env
+export EDITOR=nvim
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Paths
+export PATH="/usr/local/sbin:$PATH"
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
