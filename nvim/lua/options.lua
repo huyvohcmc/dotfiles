@@ -8,7 +8,6 @@ local options = setmetatable({}, { __index = { global_local = {}, buffer_local =
 function options.setup()
   -- Global
   global_local = {
-    clipboard = 'unnamedplus';
     completeopt = 'menuone,noselect';
     hidden = true;
     incsearch = true;
