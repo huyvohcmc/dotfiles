@@ -13,7 +13,7 @@ return require('packer').startup(function()
 
   -- Simple plugins can be specified as strings
   use 'justinmk/vim-sneak'
-  use 'tomtom/tcomment_vim'
+  use 'b3nj5m1n/kommentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
   use 'tpope/vim-repeat'
