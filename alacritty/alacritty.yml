@@ -172,7 +172,7 @@ schemes:
       text: '#000000'
       cursor: '#85e89d'
     normal:
-      black:   '#000000'
+      black:   '#24292e'
       red:     '#f97583'
       green:   '#85e89d'
       yellow:  '#ffea7f'
@@ -181,7 +181,7 @@ schemes:
       cyan:    '#73e3ff'
       white:   '#f6f8fa'
     bright:
-      black:   '#000000'
+      black:   '#24292e'
       red:     '#f97583'
       green:   '#85e89d'
       yellow:  '#ffea7f'
