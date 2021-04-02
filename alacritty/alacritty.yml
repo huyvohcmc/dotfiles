@@ -139,58 +139,30 @@ draw_bold_text_with_bright_colors: false
 
 # Colors
 schemes:
-  pure: &pure
+  onedark: &onedark
     primary:
-      background: '#000000'
-      foreground: '#e7e7e7'
-    cursor:
-      text: '#0f0f0f'
-      cursor: '#e7e7e7'
+      background: '#0e1013'
+      foreground: '#dcdfe4'
     normal:
-      black:   '#000000'
-      red:     '#ff5370'
-      green:   '#c3e88d'
-      yellow:  '#ffcb6b'
-      blue:    '#82aaff'
-      magenta: '#c792ea'
-      cyan:    '#89ddff'
-      white:   '#ffffff'
+      black: '#282c34'
+      red: '#e06c75'
+      green: '#98c379'
+      yellow: '#e5c07b'
+      blue: '#61afef'
+      magenta: '#c678dd'
+      cyan: '#56b6c2'
+      white: '#dcdfe4'
     bright:
-      black:   '#484848'
-      red:     '#FF5370'
-      green:   '#c3e88d'
-      yellow:  '#ffcb6b'
-      blue:    '#82aaff'
-      magenta: '#c792ea'
-      cyan:    '#89ddff'
-      white:   '#ffffff'
-  ci: &ci
-    primary:
-      background: '#000000'
-      foreground: '#ffffff'
-    cursor:
-      text: '#000000'
-      cursor: '#85e89d'
-    normal:
-      black:   '#24292e'
-      red:     '#f97583'
-      green:   '#85e89d'
-      yellow:  '#ffea7f'
-      blue:    '#79b8ff'
-      magenta: '#b392f0'
-      cyan:    '#73e3ff'
-      white:   '#f6f8fa'
-    bright:
-      black:   '#24292e'
-      red:     '#f97583'
-      green:   '#85e89d'
-      yellow:  '#ffea7f'
-      blue:    '#79b8ff'
-      magenta: '#b392f0'
-      cyan:    '#73e3ff'
-      white:   '#f6f8fa'
+      black: '#282c34'
+      red: '#e06c75'
+      green: '#98c379'
+      yellow: '#e5c07b'
+      blue: '#61afef'
+      magenta: '#c678dd'
+      cyan: '#56b6c2'
+      white: '#dcdfe4'
 
-colors: *ci
+colors: *onedark
 
 # Bell
 #
