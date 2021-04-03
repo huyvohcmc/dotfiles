@@ -25,7 +25,6 @@ return require('packer').startup(function()
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
   use 'justinmk/vim-dirvish'
-  use 'chuling/ci_dark'
   use 'Yggdroot/indentLine'
   use 'f-person/git-blame.nvim'
   use 'norcalli/nvim-base16.lua'
