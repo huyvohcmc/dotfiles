@@ -3,9 +3,15 @@ local cmd = vim.cmd
 local api = vim.api
 
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 
 telescope.setup{
   defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = actions.close,
+      },
+    },
     vimgrep_arguments = {
       'rg',
       '--color=never',
@@ -38,7 +44,7 @@ telescope.setup{
 
 telescope.load_extension('fzy_native')
 
-api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope fd<cr>', { noremap = true })
+api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>h', '<cmd>Telescope oldfiles<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>rg', '<cmd>Telescope live_grep<cr>', { noremap = true })
