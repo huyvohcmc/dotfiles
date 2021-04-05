@@ -25,7 +25,7 @@ telescope.setup{
     sorting_strategy = 'ascending',
     prompt_position = 'top',
     file_sorter = require'telescope.sorters'.get_fzy_sorter,
-    file_ignore_patterns = {'node_modules', 'flow%-typed'},
+    file_ignore_patterns = {'.git', 'node_modules', 'flow%-typed'},
     layout_defaults = {
       horizontal = {
         width_padding = 0.1,
@@ -44,7 +44,7 @@ telescope.setup{
 
 telescope.load_extension('fzy_native')
 
-api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files<cr>', { noremap = true })
+api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>h', '<cmd>Telescope oldfiles<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>rg', '<cmd>Telescope live_grep<cr>', { noremap = true })
