@@ -27,7 +27,7 @@ return require('packer').startup(function()
   use 'justinmk/vim-dirvish'
   use 'Yggdroot/indentLine'
   use 'f-person/git-blame.nvim'
-  use 'norcalli/nvim-base16.lua'
+  use 'chuling/ci_dark'
   use {
     'lewis6991/gitsigns.nvim',
     requires = {

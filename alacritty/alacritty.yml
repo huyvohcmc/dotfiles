@@ -46,7 +46,7 @@ window:
   #  y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  #dynamic_padding: false
 
   # Window decorations
   #
@@ -139,30 +139,33 @@ draw_bold_text_with_bright_colors: false
 
 # Colors
 schemes:
-  onedark: &onedark
+  ci: &ci
     primary:
-      background: '#0e1013'
-      foreground: '#dcdfe4'
+      background: '#141414'
+      foreground: '#f6f8fa'
+    cursor:
+      text: '#1e1e1e'
+      cursor: '#85e89d'
     normal:
-      black: '#282c34'
-      red: '#e06c75'
-      green: '#98c379'
-      yellow: '#e5c07b'
-      blue: '#61afef'
-      magenta: '#c678dd'
-      cyan: '#56b6c2'
-      white: '#dcdfe4'
+      black:   '#24292e'
+      red:     '#f97583'
+      green:   '#85e89d'
+      yellow:  '#ffea7f'
+      blue:    '#79b8ff'
+      magenta: '#b392f0'
+      cyan:    '#73e3ff'
+      white:   '#f6f8fa'
     bright:
-      black: '#282c34'
-      red: '#e06c75'
-      green: '#98c379'
-      yellow: '#e5c07b'
-      blue: '#61afef'
-      magenta: '#c678dd'
-      cyan: '#56b6c2'
-      white: '#dcdfe4'
+      black:   '#24292e'
+      red:     '#f97583'
+      green:   '#85e89d'
+      yellow:  '#ffea7f'
+      blue:    '#79b8ff'
+      magenta: '#b392f0'
+      cyan:    '#73e3ff'
+      white:   '#f6f8fa'
 
-colors: *onedark
+colors: *ci
 
 # Bell
 #
