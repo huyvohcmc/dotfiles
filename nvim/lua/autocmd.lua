@@ -28,7 +28,6 @@ function autocmd.setup()
       { 'FileType', 'go', 'set shiftwidth=4' },
       { 'FileType', 'go', 'set softtabstop=4' },
       { 'FileType', 'go', 'set tabstop=4' },
-      { 'FileType', 'LuaTree', "lua vim.api.nvim_buf_set_keymap(0, 'n', '<Leader>t', ':wincmd l | :Files<CR>', {})" },
     };
   }
 
