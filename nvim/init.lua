@@ -60,6 +60,7 @@ local setup = function()
   require'plugins/compe'
   require'plugins/ale'
   require'plugins/telescope'
+  require'plugins/kommentary'
 end
 
 setup()
