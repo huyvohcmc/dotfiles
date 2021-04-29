@@ -143,31 +143,6 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 schemes:
-  edge_dark: &edge_dark
-    primary:
-      background: "#151618"
-      foreground: "#c5cdd9"
-    cursor:
-      text: "#151618"
-      cursor: "#c5cdd9"
-    normal:
-      black: "#363a4e"
-      red: "#ec7279"
-      green: "#a0c980"
-      yellow: "#deb974"
-      blue: "#6cb6eb"
-      magenta: "#d38aea"
-      cyan: "#5dbbc1"
-      white: "#c5cdd9"
-    bright:
-      black: "#363a4e"
-      red: "#ec7279"
-      green: "#a0c980"
-      yellow: "#deb974"
-      blue: "#6cb6eb"
-      magenta: "#d38aea"
-      cyan: "#5dbbc1"
-      white: "#c5cdd9"
   material: &material
     primary:
       background: "#0F111A"
