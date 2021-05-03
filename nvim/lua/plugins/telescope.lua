@@ -4,35 +4,38 @@ local api = vim.api
 
 local telescope = require('telescope')
 local actions = require('telescope.actions')
+local sorters = require('telescope.sorters')
 
 telescope.setup{
   defaults = {
-    mappings = {
-      i = {
-        ["<esc>"] = actions.close,
-      },
-    },
-    vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case'
-    },
-    selection_strategy = 'reset',
-    sorting_strategy = 'ascending',
-    prompt_position = 'top',
-    file_sorter = require'telescope.sorters'.get_fzy_sorter,
-    file_ignore_patterns = {'.git', 'node_modules', 'flow%-typed'},
+    winblend = 0,
+    preview_cutoff = 120,
+
+    layout_strategy = 'horizontal',
     layout_defaults = {
       horizontal = {
         width_padding = 0.1,
         height_padding = 0.1,
         preview_width = 0.6,
       },
+      vertical = {
+        width_padding = 0.05,
+        height_padding = 1,
+        preview_height = 0.5,
+      }
     },
+
+    selection_strategy = 'reset',
+    prompt_position = 'bottom',
+    sorting_strategy = 'descending',
+    scroll_strategy = 'cycle',
+
+    file_sorter = sorters.get_fzy_sorter,
+    file_ignore_patterns = {'.git', 'node_modules', 'flow%-typed'},
+
+    file_previewer   = require('telescope.previewers').vim_buffer_cat.new,
+    grep_previewer   = require('telescope.previewers').vim_buffer_vimgrep.new,
+    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
   },
   extensions = {
     fzy_native = {
