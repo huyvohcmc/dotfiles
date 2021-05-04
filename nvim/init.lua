@@ -1,8 +1,8 @@
 -- General
-require('settings')
-require('mappings')
-require('autocmd')
-require('ctags')
+require('general/settings')
+require('general/mappings')
+require('general/autocmd')
+require('general/ctags')
 
 -- Colorscheme
 require('colorschemes/tokyonight')
