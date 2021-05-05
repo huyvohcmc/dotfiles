@@ -16,7 +16,6 @@ local definitions = {
     { 'VimResized', '*', 'wincmd =' },
     { 'BufWinEnter', '*', 'highlight ExtraWhitespace guifg=#666666' },
     { 'BufWinEnter', '*', [[match ExtraWhitespace /\s\+$/]] },
-    { 'VimEnter', '*', "if bufname('%') == '' | IndentLinesDisable | endif" },
   };
 
   ft = {

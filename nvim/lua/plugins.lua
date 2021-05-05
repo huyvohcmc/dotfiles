@@ -25,7 +25,6 @@ return require('packer').startup(function()
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
   use 'justinmk/vim-dirvish'
-  use 'Yggdroot/indentLine'
   use 'f-person/git-blame.nvim'
   use 'marko-cerovac/material.nvim'
   use 'folke/tokyonight.nvim'
@@ -73,4 +72,6 @@ return require('packer').startup(function()
     opt = true,
     ft = 'go'
   }
+
+  use 'glepnir/indent-guides.nvim'
 end)
