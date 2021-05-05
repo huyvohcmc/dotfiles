@@ -1,9 +1,9 @@
   require'gitsigns'.setup{
     signs = {
-      add          = { text= '┃' },
-      change       = { text= '┃' },
-      delete       = { text= '_' },
-      topdelete    = { text= '‾' },
-      changedelete = { text= '≃' },
+      add          = { hl = 'GitGutterAdd', text = '▋' },
+      change       = { hl = 'GitGutterChange', text = '▋' },
+      delete       = { hl = 'GitGutterDelete', text = '▋' },
+      topdelete    = { hl = 'GitGutterDeleteChange', text = '▔' },
+      changedelete = { hl = 'GitGutterChange', text = '▎' },
     }
   }
