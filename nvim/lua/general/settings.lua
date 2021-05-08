@@ -55,17 +55,14 @@ global_local = {
   wildignore = 'tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store';
   wildmode = 'longest:full,list,full';
   termguicolors = true;
-  expandtab = true;
-  shiftwidth = 2;
-  softtabstop = -1;
-  copyindent = true;
 }
 -- Local to buffer
 buffer_local = {
   expandtab = true;
+  autoindent = true;
+  tabstop = 2;
   shiftwidth = 2;
   softtabstop = -1;
-  copyindent = true;
 }
 -- Local to window
 window_local = {

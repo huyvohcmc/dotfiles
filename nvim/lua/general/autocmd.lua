@@ -17,14 +17,6 @@ local definitions = {
     { 'BufWinEnter', '*', 'highlight ExtraWhitespace guifg=#666666' },
     { 'BufWinEnter', '*', [[match ExtraWhitespace /\s\+$/]] },
   };
-
-  ft = {
-    { 'FileType', 'c,python', 'set shiftwidth=4' },
-    { 'FileType', 'go', 'set noexpandtab' },
-    { 'FileType', 'go', 'set shiftwidth=4' },
-    { 'FileType', 'go', 'set softtabstop=4' },
-    { 'FileType', 'go', 'set tabstop=4' },
-  };
 }
 
 nvim_create_augroup('autocmd', definitions)
