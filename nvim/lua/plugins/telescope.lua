@@ -38,14 +38,14 @@ telescope.setup{
     qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
   },
   extensions = {
-    fzy_native = {
+    fzf = {
       override_generic_sorter = true,
       override_file_sorter = true,
     }
   }
 }
 
-telescope.load_extension('fzy_native')
+telescope.load_extension('fzf')
 
 api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true })
 api.nvim_set_keymap('n', '<Leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })
