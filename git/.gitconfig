@@ -36,3 +36,6 @@
 
 [interactive]
 	diffFilter = delta --color-only
+
+[remote "origin"]
+	prune = true
