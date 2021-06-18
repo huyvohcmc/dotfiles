@@ -74,10 +74,16 @@ zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!{.git,node_modules,flow-typed}"'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
-# Env
+# ENV
 export EDITOR=nvim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Custom functions
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
 
 # $PATH
 export PATH="/usr/local/sbin:$PATH"
