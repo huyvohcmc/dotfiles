@@ -28,14 +28,12 @@ return require('packer').startup(function()
   use 'f-person/git-blame.nvim'
   use 'marko-cerovac/material.nvim'
   use 'folke/tokyonight.nvim'
-
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
     }
   }
-
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -43,14 +41,11 @@ return require('packer').startup(function()
       {'nvim-lua/plenary.nvim'},
     }
   }
-
-  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
+  use { 'nvim-telescope/telescope-fzy-native.nvim' }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
   -- Load on a combination of conditions: specific filetypes or commands
   -- Also run code after load (see the "config" key)
   use {
@@ -59,13 +54,11 @@ return require('packer').startup(function()
     cmd = 'ALEEnable',
     config = 'vim.cmd[[ALEEnable]]'
   }
-
   use {
     'vim-ruby/vim-ruby',
     opt = true,
     ft = 'ruby'
   }
-
   -- Plugins can have post-install/update hooks
   use {
     'fatih/vim-go',
@@ -73,6 +66,5 @@ return require('packer').startup(function()
     opt = true,
     ft = 'go'
   }
-
   use 'glepnir/indent-guides.nvim'
 end)
