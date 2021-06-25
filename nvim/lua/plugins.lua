@@ -21,7 +21,7 @@ return require('packer').startup(function()
   use 'wellle/targets.vim'
   use 'rstacruz/vim-closer'
   use 'hrsh7th/nvim-compe'
-  use 'christoomey/vim-tmux-navigator'
+  use 'aserowy/tmux.nvim'
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
   use 'justinmk/vim-dirvish'
