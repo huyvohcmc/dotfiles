@@ -21,7 +21,6 @@ return require('packer').startup(function()
   use 'wellle/targets.vim'
   use 'rstacruz/vim-closer'
   use 'hrsh7th/nvim-compe'
-  use 'aserowy/tmux.nvim'
   use 'romainl/vim-cool'
   use 'norcalli/nvim-colorizer.lua'
   use 'justinmk/vim-dirvish'
@@ -41,7 +40,7 @@ return require('packer').startup(function()
       {'nvim-lua/plenary.nvim'},
     }
   }
-  use { 'nvim-telescope/telescope-fzy-native.nvim' }
+  use 'nvim-telescope/telescope-fzy-native.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -67,4 +66,5 @@ return require('packer').startup(function()
     ft = 'go'
   }
   use 'glepnir/indent-guides.nvim'
+  use 'aserowy/tmux.nvim'
 end)
