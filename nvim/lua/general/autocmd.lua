@@ -16,7 +16,10 @@ local definitions = {
     { 'VimResized', '*', 'wincmd =' },
     { 'BufWinEnter', '*', 'highlight ExtraWhitespace guifg=#666666' },
     { 'BufWinEnter', '*', [[match ExtraWhitespace /\s\+$/]] },
-  };
+  },
+  ft = {
+    { 'FileType', 'go', 'setlocal noexpandtab tabstop=4 shiftwidth=4' },
+  },
 }
 
 nvim_create_augroup('autocmd', definitions)
