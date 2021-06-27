@@ -66,5 +66,14 @@ return require('packer').startup(function()
     ft = 'go'
   }
   use 'glepnir/indent-guides.nvim'
-  use 'aserowy/tmux.nvim'
+  use({
+    "aserowy/tmux.nvim",
+    config = function()
+        require("tmux").setup({
+            navigation = {
+                enable_default_keybindings = true,
+            },
+        })
+    end
+})
 end)
