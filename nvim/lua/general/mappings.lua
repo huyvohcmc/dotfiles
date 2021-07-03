@@ -10,6 +10,6 @@ api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
 api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
 api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
 -- Make Y consistent with C and D
-api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
+-- api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
 -- Copy selection to gui-clipboard
-api.nvim_set_keymap('x', 'Y', '"+y', { noremap = true })
+-- api.nvim_set_keymap('x', 'Y', '"+y', { noremap = true })

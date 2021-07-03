@@ -61,6 +61,7 @@ local function load_options()
     wildignore = 'tags,*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.swp,*~,*/.DS_Store';
     wildmode = 'longest:full,list,full';
     termguicolors = true;
+    clipboard = "unnamedplus";
   }
 
   local bw_local = {
