@@ -69,11 +69,11 @@ return require('packer').startup(function()
   use({
     "aserowy/tmux.nvim",
     config = function()
-        require("tmux").setup({
-            navigation = {
-                enable_default_keybindings = true,
-            },
-        })
+      require("tmux").setup({
+        navigation = {
+          enable_default_keybindings = true,
+        },
+      })
     end
-})
+  })
 end)
