@@ -1,5 +1,5 @@
 -- General
-require('general/settings')
+require('general/options')
 require('general/mappings')
 require('general/autocmd')
 require('general/ctags')
