@@ -77,4 +77,5 @@ return require('packer').startup(function()
     end
   })
   use 'kyazdani42/nvim-web-devicons'
+  use {'glepnir/galaxyline.nvim', branch = 'main'}
 end)
