@@ -71,7 +71,7 @@ local function load_options()
     shiftwidth = 2;
     softtabstop = -1;
     linebreak = true;
-    signcolumn = 'auto';
+    signcolumn = 'yes';
   }
 
   for name, value in pairs(global_local) do
