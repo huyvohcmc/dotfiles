@@ -1,3 +1,3 @@
 require('indent_guides').setup({
-  indent_tab_guides = false;
+  indent_tab_guides = false,
 })
