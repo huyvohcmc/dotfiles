@@ -76,5 +76,4 @@ return require('packer').startup(function()
       })
     end
   })
-  -- use {'glepnir/galaxyline.nvim', branch = 'main'}
 end)
