@@ -58,14 +58,6 @@ return require('packer').startup(function()
     opt = true,
     ft = 'ruby'
   }
-  -- Plugins can have post-install/update hooks
-  use {
-    'fatih/vim-go',
-    run = ':GoUpdateBinaries',
-    opt = true,
-    ft = 'go'
-  }
-  use 'glepnir/indent-guides.nvim'
   use({
     "aserowy/tmux.nvim",
     config = function()
@@ -76,4 +68,5 @@ return require('packer').startup(function()
       })
     end
   })
+  use 'glepnir/indent-guides.nvim'
 end)

@@ -198,7 +198,7 @@ schemes:
       - { index: 16, color: '0xff9e64' }
       - { index: 17, color: '0xdb4b4b' }
 
-colors: *night
+colors: *material
 
 # Bell
 #

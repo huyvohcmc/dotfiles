@@ -5,7 +5,7 @@ require('general/autocmd')
 require('general/ctags')
 
 -- Colorscheme
-require('colorschemes/tokyonight')
+require('colorschemes/material')
 
 -- Plugins
 require('plugins')
@@ -13,7 +13,7 @@ require('plugins/treesitter')
 require('plugins/colorizer')
 require('plugins/sneak')
 require('plugins/dirvish')
-require('plugins/git-blame')
+require('plugins/git_blame')
 require('plugins/gitsigns')
 require('plugins/compe')
 require('plugins/ale')
