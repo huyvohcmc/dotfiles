@@ -1,3 +1,5 @@
+vim.g.mapleader = ','
+
 -- General
 require('general/options')
 require('general/mappings')

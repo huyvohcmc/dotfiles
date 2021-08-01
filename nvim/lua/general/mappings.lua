@@ -1,7 +1,5 @@
-local g = vim.g
 local api = vim.api
 
-g.mapleader = ','
 api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = false })
 api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', { noremap = true, silent = false })
 api.nvim_set_keymap('n', '<Leader>s', '<C-W>w', { noremap = true, silent = false })
