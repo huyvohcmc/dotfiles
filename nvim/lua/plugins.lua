@@ -68,5 +68,5 @@ return require('packer').startup(function()
       })
     end
   })
-  use 'glepnir/indent-guides.nvim'
+  use 'lukas-reineke/indent-blankline.nvim'
 end)
