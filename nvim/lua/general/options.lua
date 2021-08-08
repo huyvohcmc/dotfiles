@@ -33,7 +33,6 @@ for _, plugin in pairs(disabled_built_ins) do
   vim.g['loaded_' .. plugin] = 1
 end
 
-opt.termguicolors = true
 opt.completeopt = 'menuone,noselect'
 opt.hidden = true
 opt.incsearch = true

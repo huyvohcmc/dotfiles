@@ -15,3 +15,5 @@ g.ale_fixers = {
 }
 
 api.nvim_set_keymap('n', '<leader>e', '<Plug>(ale_fix)', { noremap = false, silent = false })
+
+vim.cmd[[ ALEEnable ]]
