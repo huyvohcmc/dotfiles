@@ -7,7 +7,10 @@ api.nvim_set_keymap('n', 'j', 'gj', { noremap = true })
 api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
 api.nvim_set_keymap('n', '<Tab>', '%', { noremap = true })
 api.nvim_set_keymap('v', '<Tab>', '%', { noremap = true })
+
 -- Make Y consistent with C and D
 -- api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
 -- Copy selection to gui-clipboard
 -- api.nvim_set_keymap('x', 'Y', '"+y', { noremap = true })
+
+api.nvim_exec('command! Tags !ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp --exclude=public --exclude=vendor --exclude=app/assets . $(bundle list --paths)', '')

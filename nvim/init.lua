@@ -4,7 +4,6 @@ vim.g.mapleader = ','
 require('general/options')
 require('general/mappings')
 require('general/autocmd')
-require('general/ctags')
 
 -- Colorscheme
 require('colorschemes/material')
