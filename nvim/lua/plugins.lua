@@ -1,7 +1,5 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
 local cmd = vim.cmd
 
--- Only required if you have packer in your `opt` pack
 cmd [[ packadd packer.nvim ]]
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated
@@ -11,8 +9,6 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
-  -- Simple plugins can be specified as strings
-  use 'justinmk/vim-sneak'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-endwise'
   use 'tpope/vim-rails'
@@ -27,6 +23,7 @@ return require('packer').startup(function()
   use 'f-person/git-blame.nvim'
   use 'marko-cerovac/material.nvim'
   use 'folke/tokyonight.nvim'
+
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -40,24 +37,27 @@ return require('packer').startup(function()
       {'nvim-lua/plenary.nvim'},
     }
   }
+
   use 'nvim-telescope/telescope-fzy-native.nvim'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  -- Load on a combination of conditions: specific filetypes or commands
-  -- Also run code after load (see the "config" key)
+
   use {
     'w0rp/ale',
     ft = {'ruby', 'javascript', 'go'},
     cmd = 'ALEEnable',
     config = 'vim.cmd[[ALEEnable]]'
   }
+
   use {
     'vim-ruby/vim-ruby',
     opt = true,
     ft = 'ruby'
   }
+
   use({
     "aserowy/tmux.nvim",
     config = function()
@@ -68,5 +68,11 @@ return require('packer').startup(function()
       })
     end
   })
+
   use 'lukas-reineke/indent-blankline.nvim'
+
+  use {
+    'phaazon/hop.nvim',
+    as = 'hop'
+  }
 end)
