@@ -24,7 +24,7 @@ return require('packer').startup(function()
 
   use {
     'f-person/git-blame.nvim',
-    config = function() require'plugins.git_blame' end
+    config = function() require'plugins.blame' end
   }
 
   use 'marko-cerovac/material.nvim'
@@ -35,7 +35,7 @@ return require('packer').startup(function()
     requires = {
       'nvim-lua/plenary.nvim'
     },
-    config = function() require'plugins.gitsigns' end
+    config = function() require'plugins.signs' end
   }
 
   use {
