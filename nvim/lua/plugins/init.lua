@@ -108,4 +108,10 @@ return require('packer').startup(function()
     'windwp/nvim-autopairs',
     config = function() require'plugins.autopairs' end
   }
+
+  use {
+    'sindrets/diffview.nvim',
+    opt = true,
+    cmd = {'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles'}
+  }
 end)
