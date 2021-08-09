@@ -8,9 +8,15 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
-  use 'tpope/vim-surround'
   use 'wellle/targets.vim'
   use 'romainl/vim-cool'
+
+  use {
+    'blackCauldron7/surround.nvim',
+    config = function()
+      require "surround".setup {}
+    end
+  }
 
   use {
     'hrsh7th/nvim-compe',
