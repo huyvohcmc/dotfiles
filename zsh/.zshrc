@@ -87,3 +87,6 @@ mkcd () {
 
 # PATH
 export PATH="/usr/local/sbin:$PATH"
+
+# Golang
+export GOPATH=$HOME/go
