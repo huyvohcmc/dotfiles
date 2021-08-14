@@ -114,4 +114,9 @@ return require('packer').startup(function()
     opt = true,
     cmd = {'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles'}
   }
+
+  use {
+    'neovim/nvim-lspconfig',
+    ocnfig = function() require'plugins.lsp' end
+  }
 end)
