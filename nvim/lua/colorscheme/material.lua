@@ -1,6 +1,9 @@
-vim.g.material_style = 'deep ocean'
-vim.g.material_borders = true
-vim.g.material_contrast = true
-vim.g.material_lighter_contrast = true
+local g = vim.g
+
+g.material_style = 'deep ocean'
+g.material_borders = true
+g.material_contrast = true
+g.material_lighter_contrast = true
+g.material_italic_comments = true
 
 require('material').set()
