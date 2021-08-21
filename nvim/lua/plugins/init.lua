@@ -119,4 +119,11 @@ return require('packer').startup(function()
     'neovim/nvim-lspconfig',
     ocnfig = function() require'plugins.lsp' end
   }
+
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  }
 end)
