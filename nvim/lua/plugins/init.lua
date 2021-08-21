@@ -53,7 +53,7 @@ return require('packer').startup(function()
     config = function() require'plugins.telescope' end
   }
 
-  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   use {
     'nvim-treesitter/nvim-treesitter',

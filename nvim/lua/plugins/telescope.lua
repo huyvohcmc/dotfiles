@@ -52,7 +52,6 @@ require("telescope").setup {
 
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 
-    file_sorter = sorters.get_fzy_sorter,
     file_ignore_patterns = {'.git', 'node_modules', 'flow%-typed'},
 
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
@@ -61,14 +60,16 @@ require("telescope").setup {
   },
 
   extensions = {
-    fzy_native = {
+    fzf_native = {
+      fuzzy = true,
       override_generic_sorter = true,
       override_file_sorter = true,
+      case_mode = "smart_case",
     },
   },
 }
 
-require("telescope").load_extension("fzy_native")
+require("telescope").load_extension("fzf")
 
 vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })
