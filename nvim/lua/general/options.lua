@@ -47,13 +47,14 @@ opt.writebackup = false
 opt.showmode = false
 opt.swapfile = false
 opt.scrolloff = 5
-opt.shortmess = 'aoOTIcF'
+opt.shortmess:append 'c'
 opt.splitright = true
 opt.tags = './tags;,tags'
 opt.ttimeoutlen = 10
 opt.wildignorecase = true
 opt.wildignore = '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**';
 opt.clipboard = 'unnamedplus'
+opt.termguicolors = true
 
 opt.expandtab = true
 opt.autoindent = true
