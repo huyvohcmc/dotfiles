@@ -13,7 +13,7 @@ require("telescope").setup {
       width = 0.95,
       height = 0.85,
       -- preview_cutoff = 120,
-      prompt_position = "top",
+      prompt_position = "bottom",
 
       horizontal = {
         preview_width = function(_, cols, _)
@@ -39,7 +39,7 @@ require("telescope").setup {
     },
 
     selection_strategy = "reset",
-    sorting_strategy = "ascending",
+    sorting_strategy = "descending",
     scroll_strategy = "cycle",
     color_devicons = false,
 
