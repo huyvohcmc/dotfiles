@@ -1,9 +1,25 @@
-local g = vim.g
+vim.g.material_style = "deep ocean"
 
-g.material_style = 'deep ocean'
-g.material_borders = true
-g.material_contrast = true
-g.material_lighter_contrast = true
-g.material_italic_comments = true
+require('material').setup {
+  contrast = true,
+  borders = true,
+  italics = {
+    comments = true,
+    keywords = false,
+    functions = false,
+    strings = false,
+    variables = false,
+  },
 
-require('material').set()
+  contrast_windows = {
+    "terminal",
+    "packer",
+  },
+
+  text_contrast = {
+    lighter = true,
+    darker = false,
+  },
+}
+
+vim.cmd[[colorscheme material]]
