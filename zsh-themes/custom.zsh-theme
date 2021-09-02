@@ -33,8 +33,4 @@ git_status() {
   fi
 }
 
-t() {
-  echo '%D{%L:%M:%S} $ '
-}
-
-PS1='$(prompt)$(session)$(path)$(git_status)$(t)'
+PS1='$(prompt)$(session)$(path)$(git_status)'
