@@ -1,4 +1,4 @@
-local nvim_lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -12,9 +12,20 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 end
 
-require'lspconfig'.gopls.setup{
+lspconfig.gopls.setup {
+  cmd = { 'gopls', '--remote=auto' },
   on_attach = on_attach,
-  cmd = { "gopls" },
-  filetypes = { "go", "gomod" },
-  flags = {debounce_text_changes = 150}
+}
+
+lspconfig.solargraph.setup {
+  cmd = { 'solargraph', 'stdio' },
+  filetypes = { 'ruby' },
+  init_options = {
+    formatting = true,
+  },
+  settings = {
+    solargraph = {
+      diagnostics = true,
+    },
+  },
 }
