@@ -90,3 +90,4 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Golang
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
