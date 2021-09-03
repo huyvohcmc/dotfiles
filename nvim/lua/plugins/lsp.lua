@@ -12,20 +12,24 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
 lspconfig.gopls.setup {
   cmd = { 'gopls', '--remote=auto' },
   on_attach = on_attach,
+  capabilities = capabilities,
 }
 
 lspconfig.solargraph.setup {
   cmd = { 'solargraph', 'stdio' },
-  filetypes = { 'ruby' },
-  init_options = {
-    formatting = true,
-  },
-  settings = {
-    solargraph = {
-      diagnostics = true,
-    },
-  },
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
