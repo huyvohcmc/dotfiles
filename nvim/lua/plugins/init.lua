@@ -62,13 +62,6 @@ return require('packer').startup(function()
   }
 
   use {
-    'w0rp/ale',
-    ft = {'ruby', 'javascript', 'go'},
-    cmd = 'ALEEnable',
-    config = function() require'plugins.ale' end
-  }
-
-  use {
     'tpope/vim-rails',
     opt = true,
     ft = 'ruby'
@@ -125,5 +118,15 @@ return require('packer').startup(function()
     config = function()
       require("which-key").setup {}
     end
+  }
+
+  use {
+    'mhartington/formatter.nvim',
+    config = function() require'plugins.format' end
+  }
+
+  use {
+    'folke/trouble.nvim',
+    config = function() require'plugins.trouble' end
   }
 end)
