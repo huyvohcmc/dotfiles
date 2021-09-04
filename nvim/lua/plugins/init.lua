@@ -1,8 +1,13 @@
 local cmd = vim.cmd
 
-cmd [[packadd packer.nvim]]
+cmd[[packadd packer.nvim]]
 
-cmd [[autocmd BufWritePost init.lua PackerCompile]]
+cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost init.lua PackerCompile
+  augroup end
+]])
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
