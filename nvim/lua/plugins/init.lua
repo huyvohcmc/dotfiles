@@ -1,7 +1,5 @@
 local cmd = vim.cmd
 
-cmd[[packadd packer.nvim]]
-
 cmd([[
   augroup packer_user_config
     autocmd!
@@ -9,7 +7,17 @@ cmd([[
   augroup end
 ]])
 
-return require('packer').startup(function()
+local packer = nil
+
+local function init()
+  if packer == nil then
+    packer = require 'packer'
+    packer.init {disable_commands = true, log = {level = 'info'}}
+  end
+
+  local use = packer.use
+  packer.reset()
+
   use 'wbthomason/packer.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
@@ -134,4 +142,13 @@ return require('packer').startup(function()
     'folke/trouble.nvim',
     config = function() require'plugins.trouble' end
   }
-end)
+end
+
+local plugins = setmetatable({}, {
+  __index = function(_, key)
+    init()
+    return packer[key]
+  end,
+})
+
+return plugins

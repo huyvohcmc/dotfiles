@@ -20,5 +20,3 @@ local definitions = {
 }
 
 nvim_create_augroup('autocmd', definitions)
-
-
