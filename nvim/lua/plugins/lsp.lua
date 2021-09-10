@@ -26,10 +26,12 @@ lspconfig.gopls.setup {
   cmd = { 'gopls', '--remote=auto' },
   on_attach = on_attach,
   capabilities = capabilities,
+  flags = { debounce_text_changes = 150 },
 }
 
 lspconfig.solargraph.setup {
   cmd = { 'solargraph', 'stdio' },
   on_attach = on_attach,
   capabilities = capabilities,
+  flags = { debounce_text_changes = 150 },
 }
