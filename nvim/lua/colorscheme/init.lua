@@ -1,1 +1,1 @@
-require('colorscheme/material')
+require('colorscheme/tokyonight')
