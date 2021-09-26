@@ -111,7 +111,6 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: JetBrainsMonoNL Nerd Font Mono
     family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
