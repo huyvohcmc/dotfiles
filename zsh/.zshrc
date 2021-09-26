@@ -1,93 +1,82 @@
 # History
-HISTSIZE=50000
-SAVEHIST=50000
-HISTFILE=$HOME/.zsh_history
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=100000
+export HISTFILESIZE=${HISTSIZE}
+export HISTTIMEFORMAT="[%F %T] "
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+
+# Auto cd
+setopt AUTO_CD
+
+# Turns on command substitution in the prompt
+setopt PROMPT_SUBST
 
 # Prompt
 source $HOME/dotfiles/zsh-themes/custom.zsh-theme
 
-# Shell aliases
+export EDITOR=nvim
+export LC_ALL=en_us.utf-8
+export LANG=en_US.UTF-8
+
 alias v='$EDITOR'
-alias ev='$EDITOR ~/.config/nvim/init.vim'
 alias lg='lazygit'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias lsa='ls -lahG'
 
-# Bindkeys
+# Edit command line in full screen editor
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 bindkey '^A' beginning-of-line '^E' end-of-line '^W' backward-kill-word
-
-# Setopts
-setopt AUTO_CD
-setopt BANG_HIST
-setopt EXTENDED_HISTORY
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_NO_FUNCTIONS
-setopt HIST_REDUCE_BLANKS
-setopt HIST_SAVE_NO_DUPS
-setopt HIST_VERIFY
-setopt SHARE_HISTORY
-setopt PROMPT_SUBST
-
-# Completion and ls colors
-zstyle ':completion:*' menu select
-zstyle ':completion:*:*:*:*:*' menu yes select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-# asdf
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
-
-# Autoload
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-  compinit;
-else
-  compinit -C;
-fi;
-autoload -Uz colors && colors
-zmodload -i zsh/complist
-
-# Zinit
-source ~/.zinit/bin/zinit.zsh
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load plugins
-zinit light zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=121'
-zinit load zdharma/history-search-multi-word
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
 # Z.lua
 [ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once fzf)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!{.git,node_modules,flow-typed}"'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 
-# ENV
-export EDITOR=nvim
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# ASDF
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
 
-# Custom functions
-mkcd () {
-  mkdir "$1"
-  cd "$1"
-}
+# Secrets
+[ -f ~/.secrets ] && source ~/.secrets
+
+# Completion
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+zstyle ':completion:*' menu yes select
 
 # PATH
 export PATH="/usr/local/sbin:$PATH"
+export PATH=$PATH:$(go env GOPATH)/bin
 
-# Golang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit's installer chunk
+
+# Zinit plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/history-search-multi-word
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
