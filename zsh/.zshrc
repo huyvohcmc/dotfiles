@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # History
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=100000
@@ -13,11 +20,9 @@ setopt SHARE_HISTORY
 # Auto cd
 setopt AUTO_CD
 
-# Turns on command substitution in the prompt
-setopt PROMPT_SUBST
-
-# Prompt
-source $HOME/dotfiles/zsh-themes/custom.zsh-theme
+# Colors
+autoload -U colors && colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
 
 export EDITOR=nvim
 export LC_ALL=en_us.utf-8
@@ -80,3 +85,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/history-search-multi-word
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
