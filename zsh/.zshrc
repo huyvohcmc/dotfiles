@@ -80,7 +80,7 @@ zinit wait lucid for \
 zstyle ':completion:*' menu yes select
 
 # Z.lua
-[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once fzf)"
+[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
