@@ -68,6 +68,9 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zinit light trapd00r/LS_COLORS
 
+zinit ice atload"eval $(lua ~/.zinit/plugins/skywind3000---z.lua/z.lua --init zsh once enhanced)"
+zinit light skywind3000/z.lua
+
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # OMZ plugins
@@ -78,9 +81,6 @@ zinit wait lucid for \
 
 # Completion menu
 zstyle ':completion:*' menu yes select
-
-# Z.lua
-[ -f $HOME/.zsh/z.lua/z.lua ] && eval "$(lua $HOME/.zsh/z.lua/z.lua --init zsh enhanced once)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
