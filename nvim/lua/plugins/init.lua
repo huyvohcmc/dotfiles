@@ -92,11 +92,6 @@ local function init()
   })
 
   use {
-    'lukas-reineke/indent-blankline.nvim',
-    config = function() require'plugins.indent_blankline' end
-  }
-
-  use {
     'phaazon/hop.nvim',
     as = 'hop',
     config = function()
