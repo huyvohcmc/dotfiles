@@ -116,10 +116,7 @@ local function init()
     cmd = {'DiffviewOpen', 'DiffviewClose', 'DiffviewToggleFiles', 'DiffviewFocusFiles'}
   }
 
-  use {
-    'neovim/nvim-lspconfig',
-    config = function() require'plugins.lsp' end
-  }
+  use 'neovim/nvim-lspconfig'
 
   use {
     "folke/which-key.nvim",
@@ -129,13 +126,13 @@ local function init()
   }
 
   use {
-    'mhartington/formatter.nvim',
-    config = function() require'plugins.formatter' end
+    'folke/trouble.nvim',
+    config = function() require'plugins.trouble' end
   }
 
   use {
-    'folke/trouble.nvim',
-    config = function() require'plugins.trouble' end
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' }
   }
 end
 

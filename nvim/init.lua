@@ -25,3 +25,6 @@ cmd [[command! PackerCompile packadd packer.nvim | lua require('plugins').compil
 
 -- Colorscheme
 require('colorscheme')
+
+-- LSP
+require('lsp')
