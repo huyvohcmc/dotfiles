@@ -42,6 +42,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
   properties = { 'documentation', 'detail', 'additionalTextEdits' },
 }
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 lspconfig.gopls.setup {
   on_attach = on_attach,
