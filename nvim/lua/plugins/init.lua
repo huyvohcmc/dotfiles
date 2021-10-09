@@ -139,6 +139,12 @@ local function init()
     'jose-elias-alvarez/null-ls.nvim',
     requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' }
   }
+
+  use {
+    'ruifm/gitlinker.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function() require'plugins.gitlinker' end
+  }
 end
 
 local plugins = setmetatable({}, {
