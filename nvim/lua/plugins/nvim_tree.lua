@@ -25,7 +25,6 @@ require'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
-  lsp_diagnostics     = false,
   auto_close          = false,
   hijack_cursor       = true,
   update_cwd          = true,
