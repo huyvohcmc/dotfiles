@@ -54,14 +54,13 @@ autoload -Uz _zinit
 
 # Zinit plugins
 zinit wait lucid for \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
-    zdharma/fast-syntax-highlighting \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
   atinit'zstyle ":history-search-multi-word" page-size "7"' \
     zdharma/history-search-multi-word \
-  blockf \
-    zsh-users/zsh-completions
+
+zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" blockf for \
+  zsh-users/zsh-completions
 
 zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
