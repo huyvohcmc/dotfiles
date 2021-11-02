@@ -1,41 +1,30 @@
 [alias]
 	l = log --graph --oneline --decorate
 	ll = log --stat --decorate --source -p
-
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	abbrev = 12
 	ignorecase = false
-
 [color]
 	ui = auto
-
 [commit]
 	template = ~/.gitmessage
-
 [diff]
 	renames = copies
-
 [include]
 	path = ~/.gitconfig.local
-
 [merge]
 	ff = only
 	conflictstyle = diff3
-
 [push]
 	default = simple
 	followTags = true
-
 [pull]
 	ff = only
-
 [pager]
 	branch = false
-
 [interactive]
 	diffFilter = delta --color-only
-
 [remote "origin"]
 	prune = true
