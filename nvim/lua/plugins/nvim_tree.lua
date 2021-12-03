@@ -2,7 +2,6 @@ local g = vim.g
 local api = vim.api
 
 g.nvim_tree_quit_on_open = 1
-g.nvim_tree_gitignore = 1
 g.nvim_tree_show_icons = {
   git = 0,
   folders = 0,
@@ -37,5 +36,8 @@ require'nvim-tree'.setup {
   system_open = {
     cmd  = nil,
     args = {}
+  },
+  git = {
+    ignore = true,
   },
 }
