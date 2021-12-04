@@ -3,6 +3,7 @@ vim.g.material_style = "deep ocean"
 require('material').setup {
   contrast = true,
   borders = true,
+
   italics = {
     comments = true,
     keywords = false,
@@ -17,7 +18,7 @@ require('material').setup {
   },
 
   text_contrast = {
-    lighter = true,
+    lighter = false,
     darker = false,
   },
 }

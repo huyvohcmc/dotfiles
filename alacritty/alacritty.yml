@@ -147,10 +147,10 @@ schemes:
   material: &material
     primary:
       background: "#0F111A"
-      foreground: "#EEFFFF"
+      foreground: "#A6ACCD"
     cursor:
       text: "#0F111A"
-      cursor: "#EEFFFF"
+      cursor: "#A6ACCD"
     normal:
       black: "#000000"
       red: "#F07178"
