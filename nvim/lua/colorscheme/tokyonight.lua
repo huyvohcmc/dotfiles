@@ -6,4 +6,4 @@ vim.g.tokyonight_colors = {
   bg_sidebar = '#1a1b26',
 }
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd('colorscheme tokyonight')
