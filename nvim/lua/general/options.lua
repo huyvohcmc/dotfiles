@@ -52,6 +52,7 @@ opt.wildignorecase = true
 opt.wildignore = '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**';
 opt.clipboard = 'unnamedplus'
 opt.termguicolors = true
+opt.number = true
 
 opt.expandtab = true
 opt.autoindent = true
