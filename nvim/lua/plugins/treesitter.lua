@@ -1,5 +1,18 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'bash', 'c', 'cpp', 'go', 'java', 'javascript', 'json', 'lua', 'python', 'ruby', 'toml'},
+  ensure_installed = {
+    'bash',
+    'c',
+    'cpp',
+    'go',
+    'java',
+    'javascript',
+    'json',
+    'lua',
+    'python',
+    'ruby',
+    'toml',
+    'markdown',
+  },
   highlight = {
     enable = true,
   },
