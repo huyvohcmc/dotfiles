@@ -14,8 +14,6 @@ end
 local definitions = {
   wins = {
     { 'VimResized', '*', 'wincmd =' },
-    { 'BufWinEnter', '*', 'highlight ExtraWhitespace guifg=#666666' },
-    { 'BufWinEnter', '*', [[match ExtraWhitespace /\s\+$/]] },
   },
 }
 
