@@ -51,8 +51,6 @@ require("telescope").setup {
 
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 
-    file_ignore_patterns = { "^.git/", "^node_modules/", "^flow-typed/" },
-
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
     grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
     qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
@@ -70,8 +68,15 @@ require("telescope").setup {
 
 require("telescope").load_extension("fzf")
 
-vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>Telescope find_files hidden=true<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>b', '<cmd>Telescope buffers<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>h', '<cmd>Telescope oldfiles<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>rg', '<cmd>Telescope live_grep<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>rw', '<cmd>Telescope grep_string<cr>', { noremap = true })
+local api = vim.api
+
+local opts = {
+  noremap = true,
+  silent = true,
+}
+
+api.nvim_set_keymap("n", "<Leader>t", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>rg", "<cmd>lua require('telescope.builtin').live_grep({previewer=false})<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>rw", "<cmd>lua require('telescope.builtin').grep_string({previewer=false})<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>h", "<cmd>lua require('telescope.builtin').oldfiles()<CR>", opts)
