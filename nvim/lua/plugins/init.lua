@@ -19,6 +19,7 @@ local function init()
   packer.reset()
 
   use 'wbthomason/packer.nvim'
+  use 'lewis6991/impatient.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
   use 'wellle/targets.vim'
