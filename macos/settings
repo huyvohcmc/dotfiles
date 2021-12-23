@@ -23,14 +23,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10 # normal minimum is 15 (2
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Disable font smoothing
-# defaults write -g CGFontRenderingFontSmoothingDisabled -bool YES
-
-# Enable font smoothing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
-
-# Enable subpixel font rendering on non-Apple LCDs
-# https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
-defaults write NSGlobalDomain AppleFontSmoothing -int 1
+# https://tonsky.me/blog/monitors/#turn-off-font-smoothing
+ defaults -currentHost write -g AppleFontSmoothing -int 1
 
 # Lock the Dock size
 defaults write com.apple.Dock size-immutable -bool yes; killall Dock
