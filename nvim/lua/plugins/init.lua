@@ -52,7 +52,6 @@ local function init()
     config = function() require'plugins.blame' end
   }
 
-  use 'marko-cerovac/material.nvim'
   use 'folke/tokyonight.nvim'
 
   use {

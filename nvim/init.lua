@@ -22,7 +22,7 @@ cmd "command! PackerClean packadd packer.nvim | lua require('plugins').clean()"
 cmd "command! PackerCompile packadd packer.nvim | lua require('plugins').compile()"
 
 -- Colorscheme
-require('colorscheme')
+require('colorscheme/tokyonight')
 
 -- LSP
 require('lsp')
