@@ -13,6 +13,7 @@ local function init()
     packer.init {
       disable_commands = true,
       log = { level = 'info' },
+      compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua',
     }
   end
 
@@ -20,6 +21,7 @@ local function init()
   packer.reset()
 
   use 'wbthomason/packer.nvim'
+  use 'lewis6991/impatient.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
   use 'wellle/targets.vim'

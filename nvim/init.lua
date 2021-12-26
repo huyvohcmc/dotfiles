@@ -1,3 +1,5 @@
+require'impatient'.enable_profile()
+
 local cmd = vim.cmd
 
 if require "general/first_load"() then
@@ -26,3 +28,5 @@ require('colorscheme/tokyonight')
 
 -- LSP
 require('lsp')
+
+require'packer_compiled'
