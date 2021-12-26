@@ -75,8 +75,9 @@ local opts = {
   silent = true,
 }
 
-api.nvim_set_keymap("n", "<Leader>t", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>rg", "<cmd>lua require('telescope.builtin').live_grep({previewer=false})<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>rw", "<cmd>lua require('telescope.builtin').grep_string({previewer=false})<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>h", "<cmd>lua require('telescope.builtin').oldfiles()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>ft", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>fg", "<cmd>lua require('telescope.builtin').live_grep({previewer=false})<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>gw", "<cmd>lua require('telescope.builtin').grep_string({previewer=false})<CR>", opts)
+api.nvim_set_keymap("n", "<Leader>fo", "<cmd>lua require('telescope.builtin').oldfiles()<CR>", opts)
