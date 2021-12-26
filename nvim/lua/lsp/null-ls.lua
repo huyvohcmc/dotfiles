@@ -9,4 +9,5 @@ null_ls.setup({
     formatting.gofmt,
     diagnostics.rubocop,
   },
+  diagnostics_format = "#{s}: #{m} (#{c})",
 })
