@@ -60,19 +60,3 @@ opt.shiftwidth = 2
 opt.softtabstop = -1
 opt.linebreak = true
 opt.signcolumn = 'yes'
-
-local os_name = vim.loop.os_uname().sysname
-if os_name == 'Darwin' then
-  g.clipboard = {
-    name = "macOS-clipboard",
-    copy = {
-      ["+"] = "pbcopy",
-      ["*"] = "pbcopy",
-    },
-    paste = {
-      ["+"] = "pbpaste",
-      ["*"] = "pbpaste",
-    },
-    cache_enabled = 0
-  }
-end

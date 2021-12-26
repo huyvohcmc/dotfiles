@@ -1,5 +1,4 @@
 local lspconfig = require("lspconfig")
-local null_ls = require("null-ls")
 
 local on_attach = function(client, bufnr)
   vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
@@ -44,11 +43,4 @@ lspconfig.solargraph.setup {
   flags = { debounce_text_changes = 150 },
 }
 
-null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.rubocop,
-    null_ls.builtins.formatting.gofmt,
-    null_ls.builtins.diagnostics.rubocop,
-  },
-  on_attach = on_attach,
-})
+require 'lsp.null-ls'

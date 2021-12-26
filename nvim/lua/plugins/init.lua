@@ -1,25 +1,25 @@
-local cmd = vim.cmd
-
-cmd([[
+vim.cmd [[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost init.lua PackerCompile
   augroup end
-]])
+]]
 
 local packer = nil
 
 local function init()
   if packer == nil then
     packer = require 'packer'
-    packer.init {disable_commands = true, log = {level = 'info'}}
+    packer.init {
+      disable_commands = true,
+      log = { level = 'info' },
+    }
   end
 
   local use = packer.use
   packer.reset()
 
   use 'wbthomason/packer.nvim'
-  use 'lewis6991/impatient.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
   use 'wellle/targets.vim'
@@ -97,15 +97,6 @@ local function init()
   })
 
   use {
-    'phaazon/hop.nvim',
-    as = 'hop',
-    config = function()
-      vim.api.nvim_set_keymap("n", "s", ":HopChar1<CR>", {silent = true, noremap = false})
-      vim.api.nvim_set_keymap("n", "S", ":HopChar2<CR>", {silent = true, noremap = false})
-    end
-  }
-
-  use {
     'kyazdani42/nvim-tree.lua',
     config = function() require'plugins.nvim_tree' end
   }
@@ -132,6 +123,7 @@ local function init()
 
   use {
     'folke/trouble.nvim',
+    cmd = 'TroubleToggle',
     config = function() require'plugins.trouble' end
   }
 
