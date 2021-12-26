@@ -137,6 +137,12 @@ local function init()
     requires = 'nvim-lua/plenary.nvim',
     config = function() require'plugins.gitlinker' end
   }
+
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1',
+    config = function() require'plugins.hop' end
+  }
 end
 
 local plugins = setmetatable({}, {
