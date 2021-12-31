@@ -24,6 +24,7 @@ local function init()
   use 'lewis6991/impatient.nvim'
   use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
+  use 'tpope/vim-projectionist'
   use 'wellle/targets.vim'
   use 'romainl/vim-cool'
 
@@ -79,12 +80,6 @@ local function init()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function() require'plugins.treesitter' end,
-  }
-
-  use {
-    'tpope/vim-rails',
-    opt = true,
-    ft = 'ruby'
   }
 
   use({
