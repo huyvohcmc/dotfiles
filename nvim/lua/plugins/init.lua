@@ -82,6 +82,8 @@ local function init()
     config = function() require'plugins.treesitter' end,
   }
 
+  use 'RRethy/nvim-treesitter-endwise'
+
   use({
     "aserowy/tmux.nvim",
     config = function()

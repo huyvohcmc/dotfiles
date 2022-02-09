@@ -25,4 +25,7 @@ require'nvim-treesitter.configs'.setup {
       node_decremental = "grm",
     },
   },
+  endwise = {
+    enable = true,
+  },
 }
