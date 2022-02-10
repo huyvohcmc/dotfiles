@@ -146,10 +146,10 @@ schemes:
   material: &material
     primary:
       background: "#0F111A"
-      foreground: "#A6ACCD"
+      foreground: "#EEFFFF"
     cursor:
       text: "#0F111A"
-      cursor: "#A6ACCD"
+      cursor: "#EEFFFF"
     normal:
       black: "#000000"
       red: "#F07178"
@@ -160,7 +160,7 @@ schemes:
       cyan: "#89DDFF"
       white: "#EEFFFF"
     bright:
-      black: "#000000"
+      black: "#464B5D"
       red: "#F07178"
       green: "#C3E88D"
       yellow: "#FFCB6B"
