@@ -28,12 +28,7 @@ local function init()
   use 'wellle/targets.vim'
   use 'romainl/vim-cool'
 
-  use {
-    'blackCauldron7/surround.nvim',
-    config = function()
-      require "surround".setup {}
-    end
-  }
+  use 'machakann/vim-sandwich'
 
   use {
     'hrsh7th/nvim-cmp',
