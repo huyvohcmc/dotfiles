@@ -8,13 +8,7 @@ g.nvim_tree_show_icons = {
   folder_arrows = 1
 }
 g.nvim_tree_group_empty = 1
-g.nvim_tree_window_picker_exclude = {
-  filetype = {
-    "packer",
-    "qf",
-    "Trouble"
-  }
-}
+
 api.nvim_set_keymap('n', '-', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>n', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', {noremap = true, silent = true})
@@ -48,4 +42,14 @@ require'nvim-tree'.setup {
     ignore = true,
     timeout = 400,
   },
+  actions = {
+    open_file = {
+      window_picker = {
+        exclude = {
+          filetype = { "packer", "qf", "Trouble", "diff" },
+          buftype  = { "nofile", "terminal", "help" },
+        }
+      }
+    }
+  }
 }
