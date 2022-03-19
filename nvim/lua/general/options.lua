@@ -53,6 +53,7 @@ opt.wildignore = '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,*
 opt.clipboard = 'unnamedplus'
 opt.termguicolors = true
 opt.number = true
+opt.laststatus = 3
 
 opt.expandtab = true
 opt.autoindent = true
