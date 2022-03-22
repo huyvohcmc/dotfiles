@@ -146,7 +146,7 @@ schemes:
   material: &material
     primary:
       background: "#0F111A"
-      foreground: "#EEFFFF"
+      foreground: "#A6ACCD"
     cursor:
       text: "#0F111A"
       cursor: "#EEFFFF"
