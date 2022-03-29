@@ -47,42 +47,33 @@ alias lsa='ls -lahG'
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
-# Zinit
-source ~/.zinit/bin/zinit.zsh
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# Clone zcomet if necessary
+if [[ ! -f ${HOME}/.zcomet/bin/zcomet.zsh ]]; then
+  command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
+fi
 
-# Zinit plugins
-zinit wait lucid for \
-  atload"!_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions \
-  atinit'zstyle ":history-search-multi-word" page-size "7"' \
-    zdharma/history-search-multi-word \
+source ${HOME}/.zcomet/bin/zcomet.zsh
 
-zinit wait lucid atload"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" blockf for \
-  zsh-users/zsh-completions
+zcomet load skywind3000/z.lua
+zcomet load ohmyzsh lib git.zsh
+zcomet load ohmyzsh plugins/git
+zcomet load ohmyzsh plugins/docker-compose
+zcomet load romkatv/powerlevel10k
+zcomet load zdharma-continuum/history-search-multi-word
+zcomet load zsh-users/zsh-completions
+zcomet load zsh-users/zsh-autosuggestions
 
-zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
-    atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
-zinit light trapd00r/LS_COLORS
-
-zinit ice atload"eval $(lua ~/.zinit/plugins/skywind3000---z.lua/z.lua --init zsh once enhanced)"
-zinit light skywind3000/z.lua
-
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
-# OMZ plugins
-zinit wait lucid for \
-  OMZL::git.zsh \
-  OMZP::git \
-  OMZP::docker-compose
+# Run compinit and compile its cache
+zcomet compinit
 
 # Completion menu
 zstyle ':completion:*' menu yes select
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Z.lua
+eval "$(lua ~/.zcomet/repos/skywind3000/z.lua/z.lua --init zsh once enhanced)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
