@@ -17,7 +17,6 @@ require'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
-  auto_close          = false,
   hijack_cursor       = true,
   update_cwd          = true,
   update_focused_file = {
@@ -44,7 +43,10 @@ require'nvim-tree'.setup {
   },
   actions = {
     open_file = {
+      quit_on_open = false,
+      resize_window = true,
       window_picker = {
+        enable = false,
         exclude = {
           filetype = { "packer", "qf", "Trouble", "diff" },
           buftype  = { "nofile", "terminal", "help" },
