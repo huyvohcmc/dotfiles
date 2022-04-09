@@ -118,7 +118,6 @@ local function init()
 
   use {
     'folke/trouble.nvim',
-    cmd = 'TroubleToggle',
     config = function() require'plugins.trouble' end
   }
 
