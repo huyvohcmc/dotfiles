@@ -12,6 +12,9 @@ require'nvim-treesitter.configs'.setup {
     'ruby',
     'toml',
     'markdown',
+    'yaml',
+    'gomod',
+    'dockerfile'
   },
   highlight = {
     enable = true,
