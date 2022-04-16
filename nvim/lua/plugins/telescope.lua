@@ -1,7 +1,7 @@
 local actions = require('telescope.actions')
 local sorters = require('telescope.sorters')
 
-require("telescope").setup {
+require'telescope'.setup {
   defaults = {
     prompt_prefix = "❯ ",
     selection_caret = "❯ ",
@@ -49,8 +49,6 @@ require("telescope").setup {
       },
     },
 
-    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
     grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
     qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
@@ -68,16 +66,28 @@ require("telescope").setup {
 
 require("telescope").load_extension("fzf")
 
-local api = vim.api
+local set = vim.keymap.set
 
-local opts = {
-  noremap = true,
-  silent = true,
-}
+set('n', '<leader>t', function()
+  require('telescope.builtin').find_files()
+end)
 
-api.nvim_set_keymap("n", "<Leader>t", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>gt", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>rg", "<cmd>lua require('telescope.builtin').live_grep({previewer=false})<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>rw", "<cmd>lua require('telescope.builtin').grep_string({previewer=false})<CR>", opts)
-api.nvim_set_keymap("n", "<Leader>h", "<cmd>lua require('telescope.builtin').oldfiles()<CR>", opts)
+set('n', '<leader>gt', function()
+  require('telescope.builtin').git_files()
+end)
+
+set('n', '<leader>b', function()
+  require('telescope.builtin').buffers()
+end)
+
+set('n', '<leader>rg', function()
+  require('telescope.builtin').live_grep({previewer=false})
+end)
+
+set('n', '<leader>rw', function()
+  require('telescope.builtin').grep_string({previewer=false})
+end)
+
+set('n', '<leader>h', function()
+  require('telescope.builtin').oldfiles()
+end)

@@ -1,5 +1,5 @@
 local g = vim.g
-local api = vim.api
+local set = vim.keymap.set
 
 g.nvim_tree_show_icons = {
   git = 0,
@@ -9,9 +9,9 @@ g.nvim_tree_show_icons = {
 }
 g.nvim_tree_group_empty = 1
 
-api.nvim_set_keymap('n', '-', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
-api.nvim_set_keymap('n', '<leader>n', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-api.nvim_set_keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', {noremap = true, silent = true})
+set('n', '-', ':NvimTreeFindFile<CR>')
+set('n', '<leader>n', ':NvimTreeToggle<CR>')
+set('n', '<leader>r', ':NvimTreeRefresh<CR>')
 
 require'nvim-tree'.setup {
   disable_netrw       = true,

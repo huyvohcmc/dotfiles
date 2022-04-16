@@ -63,5 +63,5 @@ opt.expandtab = true
 opt.autoindent = true
 opt.shiftwidth = 2
 opt.softtabstop = -1
-opt.linebreak = true
+opt.breakindent = true
 opt.signcolumn = 'yes'

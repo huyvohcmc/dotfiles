@@ -1,8 +1,11 @@
-local group = vim.api.nvim_create_augroup("PackerUserConfig", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePost", {
+local api = vim.api
+
+local packer_group = api.nvim_create_augroup("Packer", { clear = true })
+
+api.nvim_create_autocmd("BufWritePost", {
   pattern = "*/plugins/init.lua",
   command = "PackerCompile",
-  group = group
+  group = packer_group
 })
 
 local packer = nil
@@ -22,10 +25,8 @@ local function init()
 
   use 'wbthomason/packer.nvim'
   use 'lewis6991/impatient.nvim'
-  use 'b3nj5m1n/kommentary'
   use 'tpope/vim-repeat'
   use 'tpope/vim-projectionist'
-  use 'wellle/targets.vim'
   use 'romainl/vim-cool'
 
   use 'machakann/vim-sandwich'
@@ -77,6 +78,7 @@ local function init()
     run = ':TSUpdate',
     config = function() require'plugins.treesitter' end,
   }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
 
   use 'RRethy/nvim-treesitter-endwise'
 
@@ -142,6 +144,13 @@ local function init()
     "kwkarlwang/bufresize.nvim",
     config = function()
       require("bufresize").setup()
+    end
+  }
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
     end
   }
 end
