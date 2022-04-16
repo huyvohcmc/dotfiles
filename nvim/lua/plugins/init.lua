@@ -137,6 +137,13 @@ local function init()
     branch = 'v1',
     config = function() require'plugins.hop' end
   }
+
+  use {
+    "kwkarlwang/bufresize.nvim",
+    config = function()
+      require("bufresize").setup()
+    end
+  }
 end
 
 local plugins = setmetatable({}, {
