@@ -11,7 +11,6 @@ require('material').setup({
   },
   italics = {
     comments = true,
-    keywords = true,
   },
   contrast_filetypes = {
     "terminal",
