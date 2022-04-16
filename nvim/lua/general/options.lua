@@ -1,6 +1,10 @@
 local g = vim.g
 local opt = vim.opt
 
+-- Lua filetype detection
+g.do_filetype_lua = 1
+g.did_load_filetypes = 0
+
 -- Skip providers
 g.loaded_python_provider = 0
 g.loaded_python3_provider = 0

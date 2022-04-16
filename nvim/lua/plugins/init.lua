@@ -1,9 +1,9 @@
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost init.lua PackerCompile
-  augroup end
-]]
+local group = vim.api.nvim_create_augroup("PackerUserConfig", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*/plugins/init.lua",
+  command = "PackerCompile",
+  group = group
+})
 
 local packer = nil
 
