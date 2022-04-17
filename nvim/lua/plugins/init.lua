@@ -147,12 +147,7 @@ local function init()
     end
   }
 
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
+  use 'b3nj5m1n/kommentary'
 end
 
 local plugins = setmetatable({}, {
