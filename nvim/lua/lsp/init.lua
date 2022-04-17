@@ -1,4 +1,5 @@
 local lspconfig = require 'lspconfig'
+local set = vim.keymap.set
 
 local on_attach = function(client, bufnr)
   vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
@@ -9,17 +10,16 @@ local on_attach = function(client, bufnr)
     update_in_insert = true,
   })
 
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
-  buf_set_keymap('n', 'gD', vim.lsp.buf.declaration)
-  buf_set_keymap('n', 'gd', vim.lsp.buf.definition)
-  buf_set_keymap('n', 'gr', vim.lsp.buf.references)
-  buf_set_keymap('n', 'gi', vim.lsp.buf.implementation)
-  buf_set_keymap("n", "[d", vim.diagnostic.goto_prev)
-  buf_set_keymap("n", "]d", im.diagnostic.goto_next)
+  local opts = { buffer = bufnr }
+  set('n', 'gD', vim.lsp.buf.declaration, opts)
+  set('n', 'gd', vim.lsp.buf.definition, opts)
+  set('n', 'gr', vim.lsp.buf.references, opts)
+  set('n', 'gi', vim.lsp.buf.implementation, opts)
+  set("n", "[d", vim.diagnostic.goto_prev, opts)
+  set("n", "]d", vim.diagnostic.goto_next, opts)
 
   if client.resolved_capabilities.document_formatting then
-    buf_set_keymap('n', '<leader>f', vim.lsp.buf.formatting)
+    set('n', '<leader>f', vim.lsp.buf.formatting, opts)
   end
 end
 
