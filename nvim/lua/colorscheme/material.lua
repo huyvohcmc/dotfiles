@@ -1,6 +1,6 @@
-vim.g.material_style = "deep ocean"
+vim.g.material_style = 'deep ocean'
 
-require('material').setup({
+require'material'.setup {
   contrast = {
     sidebars = true,
     floating_windows = true,
@@ -13,17 +13,13 @@ require('material').setup({
     comments = true,
   },
   contrast_filetypes = {
-    "terminal",
-    "packer",
-    "qf",
-  },
-  high_visibility = {
-    darker = true,
+    'packer',
+    'qf',
   },
   disable = {
     borders = true,
     eob_lines = true,
   },
-})
+}
 
 vim.cmd 'colorscheme material'
