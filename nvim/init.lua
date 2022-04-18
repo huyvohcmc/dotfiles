@@ -12,7 +12,7 @@ vim.g.mapleader = ','
 -- General
 require('general/options')
 require('general/mappings')
-require('general/autocmd')
+require('general/commands')
 
 -- Plugins
 require('plugins')
