@@ -120,6 +120,8 @@ local function init()
 
   use {
     'folke/trouble.nvim',
+    event = 'BufReadPre',
+    cmd = { 'TroubleToggle', 'Trouble' },
     config = function() require'plugins.trouble' end
   }
 
