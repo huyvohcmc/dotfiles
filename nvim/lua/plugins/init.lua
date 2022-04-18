@@ -136,13 +136,6 @@ local function init()
     config = function() require'plugins.gitlinker' end
   }
 
-  use {
-    "kwkarlwang/bufresize.nvim",
-    config = function()
-      require("bufresize").setup()
-    end
-  }
-
   use 'b3nj5m1n/kommentary'
   use 'ggandor/lightspeed.nvim'
 end
