@@ -1,6 +1,8 @@
 local lspconfig = require 'lspconfig'
 local set = vim.keymap.set
 
+set('n', '<leader>x', vim.diagnostic.open_float)
+
 local on_attach = function(client, bufnr)
   vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 
