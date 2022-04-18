@@ -137,12 +137,6 @@ local function init()
   }
 
   use {
-    'phaazon/hop.nvim',
-    branch = 'v1',
-    config = function() require'plugins.hop' end
-  }
-
-  use {
     "kwkarlwang/bufresize.nvim",
     config = function()
       require("bufresize").setup()
@@ -150,6 +144,7 @@ local function init()
   }
 
   use 'b3nj5m1n/kommentary'
+  use 'ggandor/lightspeed.nvim'
 end
 
 local plugins = setmetatable({}, {
