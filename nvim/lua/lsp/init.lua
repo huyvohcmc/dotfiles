@@ -10,6 +10,7 @@ local on_attach = function(client, bufnr)
     virtual_text = false,
     signs = true,
     update_in_insert = true,
+    underline = false,
   })
 
   local opts = { buffer = bufnr }
