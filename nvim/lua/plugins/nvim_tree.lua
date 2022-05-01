@@ -34,9 +34,6 @@ require'nvim-tree'.setup {
     custom = { '^.git$', 'node_modules/', '.DS_Store' },
     exclude = { '.env', 'application.yml' },
   },
-  view = {
-    auto_resize = true,
-  },
   git = {
     enable = true,
     ignore = true,
