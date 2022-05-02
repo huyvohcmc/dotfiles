@@ -1,6 +1,8 @@
-vim.g.tokyonight_style = 'night'
-vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-vim.g.tokyonight_dark_sidebar = true
-vim.g.tokyonight_dark_float = true
+local g = vim.g
+
+g.tokyonight_style = 'night'
+g.tokyonight_sidebars = { "qf", "terminal", "packer" }
+g.tokyonight_dark_sidebar = true
+g.tokyonight_dark_float = true
 
 vim.cmd('colorscheme tokyonight')
