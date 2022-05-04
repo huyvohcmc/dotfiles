@@ -16,7 +16,6 @@ local function init()
     packer.init {
       disable_commands = true,
       log = { level = 'info' },
-      compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua',
     }
   end
 

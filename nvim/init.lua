@@ -28,5 +28,3 @@ require('colorscheme/tokyonight')
 
 -- LSP
 require('lsp')
-
-require'packer_compiled'
