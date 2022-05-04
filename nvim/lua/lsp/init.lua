@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
   set("n", "[d", vim.diagnostic.goto_prev, opts)
   set("n", "]d", vim.diagnostic.goto_next, opts)
 
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     set('n', '<leader>f', vim.lsp.buf.formatting, opts)
   end
 end
