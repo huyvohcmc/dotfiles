@@ -1,11 +1,19 @@
-require'gitlinker'.setup {
+local linker = require 'gitlinker'
+local actions = linker.actions
+local set = vim.keymap.set
+
+linker.setup {
   mappings = nil,
 }
 
-vim.keymap.set('n', 'gl', function()
-  require'gitlinker'.get_buf_range_url('n', {action_callback = require'gitlinker.actions'.open_in_browser})
+set('n', 'gl', function()
+  linker.get_buf_range_url('n', {action_callback = actions.open_in_browser})
 end)
 
-vim.keymap.set('v', 'gl', function()
-  require'gitlinker'.get_buf_range_url('v', {action_callback = require"gitlinker.actions".open_in_browser})
+set('v', 'gl', function()
+  linker.get_buf_range_url('v', {action_callback = actions.open_in_browser})
+end)
+
+set('n', 'gB', function()
+  linker.get_repo_url({action_callback = actions.open_in_browser})
 end)
