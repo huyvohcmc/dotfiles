@@ -1,14 +1,6 @@
 local g = vim.g
 local set = vim.keymap.set
 
-g.nvim_tree_show_icons = {
-  git = 0,
-  folders = 0,
-  files = 0,
-  folder_arrows = 1
-}
-g.nvim_tree_group_empty = 1
-
 set('n', '-', ':NvimTreeFindFile<CR>')
 set('n', '<leader>n', ':NvimTreeToggle<CR>')
 set('n', '<leader>r', ':NvimTreeRefresh<CR>')
@@ -51,5 +43,16 @@ require'nvim-tree'.setup {
         }
       }
     }
-  }
+  },
+  renderer = {
+    group_empty = false,
+    icons = {
+      show = {
+        file = false,
+        folder = false,
+        folder_arrow = false,
+        git = false,
+      }
+    }
+  },
 }
