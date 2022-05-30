@@ -141,6 +141,11 @@ local function init()
     'karb94/neoscroll.nvim',
     config = function() require('neoscroll').setup() end
   }
+
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
 end
 
 local plugins = setmetatable({}, {
