@@ -8,6 +8,22 @@ catppuccin.setup({
     keywords = "italic",
   },
   integrations = {
+    treesitter = true,
+    native_lsp = {
+      enabled = true,
+      virtual_text = {
+        errors = "NONE",
+        hints = "NONE",
+        warnings = "NONE",
+        information = "NONE",
+      },
+      underlines = {
+        errors = "underline",
+        hints = "NONE",
+        warnings = "NONE",
+        information = "NONE",
+      },
+    },
     lsp_trouble = true,
     nvimtree = {
       enabled = true,
