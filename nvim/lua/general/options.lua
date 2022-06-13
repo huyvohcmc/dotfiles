@@ -58,6 +58,7 @@ opt.clipboard = 'unnamedplus'
 opt.termguicolors = true
 opt.number = true
 opt.laststatus = 3
+opt.cmdheight = 0
 
 opt.expandtab = true
 opt.autoindent = true
