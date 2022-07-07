@@ -6,7 +6,6 @@ g.do_filetype_lua = 1
 g.did_load_filetypes = 0
 
 -- Skip providers
-g.loaded_python_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_node_provider = 0
 g.loaded_ruby_provider = 0
