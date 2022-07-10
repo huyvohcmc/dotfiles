@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
     'bash',
     'c',
@@ -7,13 +7,14 @@ require'nvim-treesitter.configs'.setup {
     'go',
     'gomod',
     'gowork',
+    'hcl',
     'help',
     'html',
-    'http',
     'javascript',
     'json',
     'lua',
     'make',
+    'markdown',
     'proto',
     'python',
     'ruby',
@@ -24,14 +25,11 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  autopairs = {
+    enable = true,
+  },
   incremental_selection = {
     enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
   },
   endwise = {
     enable = true,

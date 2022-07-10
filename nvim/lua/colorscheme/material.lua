@@ -1,6 +1,6 @@
 vim.g.material_style = 'deep ocean'
 
-require'material'.setup {
+require('material').setup {
   contrast = {
     sidebars = true,
     floating_windows = true,
@@ -22,4 +22,4 @@ require'material'.setup {
   },
 }
 
-vim.cmd 'colorscheme material'
+vim.api.nvim_command 'colorscheme material'

@@ -19,7 +19,7 @@
 	ff = only
 	conflictstyle = diff3
 [push]
-	default = simple
+	default = current
 	followTags = true
 [pull]
 	ff = only

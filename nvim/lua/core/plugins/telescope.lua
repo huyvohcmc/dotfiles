@@ -1,18 +1,18 @@
-local actions = require('telescope.actions')
-local sorters = require('telescope.sorters')
+local actions = require 'telescope.actions'
+local sorters = require 'telescope.sorters'
 
-require'telescope'.setup {
+require('telescope').setup {
   defaults = {
-    prompt_prefix = "❯ ",
-    selection_caret = "❯ ",
+    prompt_prefix = '❯ ',
+    selection_caret = '❯ ',
 
     winblend = 0,
 
-    layout_strategy = "horizontal",
+    layout_strategy = 'horizontal',
     layout_config = {
       width = 0.95,
       height = 0.85,
-      prompt_position = "top",
+      prompt_position = 'top',
 
       horizontal = {
         preview_width = function(_, cols, _)
@@ -37,21 +37,21 @@ require'telescope'.setup {
       },
     },
 
-    selection_strategy = "reset",
-    sorting_strategy = "ascending",
+    selection_strategy = 'reset',
+    sorting_strategy = 'ascending',
     -- scroll_strategy = "cycle",
     color_devicons = false,
 
     mappings = {
       i = {
-        ["<C-x>"] = false,
-        ["<C-s>"] = actions.select_horizontal,
+        ['<C-x>'] = false,
+        ['<C-s>'] = actions.select_horizontal,
       },
     },
 
-    file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-    grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-    qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+    file_previewer = require('telescope.previewers').vim_buffer_cat.new,
+    grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
   },
 
   extensions = {
@@ -59,12 +59,12 @@ require'telescope'.setup {
       fuzzy = true,
       override_generic_sorter = true,
       override_file_sorter = true,
-      case_mode = "smart_case",
+      case_mode = 'smart_case',
     },
   },
 }
 
-require("telescope").load_extension("fzf")
+require('telescope').load_extension 'fzf'
 
 local set = vim.keymap.set
 
@@ -81,11 +81,11 @@ set('n', '<leader>b', function()
 end)
 
 set('n', '<leader>rg', function()
-  require('telescope.builtin').live_grep({previewer=false})
+  require('telescope.builtin').live_grep { previewer = false }
 end)
 
 set('n', '<leader>rw', function()
-  require('telescope.builtin').grep_string({previewer=false})
+  require('telescope.builtin').grep_string { previewer = false }
 end)
 
 set('n', '<leader>h', function()

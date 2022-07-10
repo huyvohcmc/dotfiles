@@ -5,21 +5,21 @@ set('n', '-', ':NvimTreeFindFile<CR>')
 set('n', '<leader>n', ':NvimTreeToggle<CR>')
 set('n', '<leader>r', ':NvimTreeRefresh<CR>')
 
-require'nvim-tree'.setup {
-  disable_netrw       = true,
-  hijack_netrw        = true,
-  open_on_setup       = false,
-  hijack_cursor       = true,
-  update_cwd          = true,
+require('nvim-tree').setup {
+  disable_netrw = true,
+  hijack_netrw = true,
+  open_on_setup = false,
+  hijack_cursor = true,
+  update_cwd = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
-    ignore_list = { 'fzf', 'help', 'git' }
+    ignore_list = { 'fzf', 'help', 'git' },
   },
   ignore_ft_on_setup = { 'git', 'man', 'help' },
   system_open = {
-    cmd  = nil,
-    args = {}
+    cmd = nil,
+    args = {},
   },
   filters = {
     dotfiles = false,
@@ -38,11 +38,11 @@ require'nvim-tree'.setup {
       window_picker = {
         enable = false,
         exclude = {
-          filetype = { "packer", "qf", "Trouble", "diff" },
-          buftype  = { "nofile", "terminal", "help" },
-        }
-      }
-    }
+          filetype = { 'packer', 'qf', 'Trouble', 'diff' },
+          buftype = { 'nofile', 'terminal', 'help' },
+        },
+      },
+    },
   },
   renderer = {
     group_empty = false,
@@ -52,7 +52,7 @@ require'nvim-tree'.setup {
         folder = false,
         folder_arrow = false,
         git = false,
-      }
-    }
+      },
+    },
   },
 }
