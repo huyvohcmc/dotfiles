@@ -1,9 +1,6 @@
 local g = vim.g
 local opt = vim.opt
 
--- Disable filetype.nvim
-g.did_load_filetypes = 0
-
 -- Skip providers
 g.loaded_python3_provider = 0
 g.loaded_node_provider = 0
