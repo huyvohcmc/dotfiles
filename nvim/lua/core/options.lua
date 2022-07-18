@@ -1,8 +1,7 @@
 local g = vim.g
 local opt = vim.opt
 
--- Lua filetype detection
-g.do_filetype_lua = 1
+-- Disable filetype.nvim
 g.did_load_filetypes = 0
 
 -- Skip providers
