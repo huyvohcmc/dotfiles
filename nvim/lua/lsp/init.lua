@@ -14,32 +14,11 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = false,
 })
 
--- Handle formatting in a smarter way
-vim.lsp.handlers['textDocument/formatting'] = function(err, result, ctx, _)
-  if err ~= nil or result == nil then
-    return
-  end
-
-  -- If the buffer hasn't been modified before the formatting has finished,
-  -- update the buffer
-  if not vim.api.nvim_buf_get_option(ctx.bufnr, 'modified') then
-    local view = vim.fn.winsaveview()
-    local client = vim.lsp.get_client_by_id(ctx.client_id)
-    vim.lsp.util.apply_text_edits(result, ctx.bufnr, client.offset_encoding)
-    vim.fn.winrestview(view)
-    if ctx.bufnr == vim.api.nvim_get_current_buf() or not ctx.bufnr then
-      vim.api.nvim_command 'noautocmd :update'
-    end
-  end
-end
-
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
 })
 
 local on_attach = function(client, bufnr)
-  vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
-
   local opts = { noremap = true, silent = true }
   set('n', 'gd', vim.lsp.buf.definition, opts)
   set('n', 'gD', vim.lsp.buf.declaration, opts)
