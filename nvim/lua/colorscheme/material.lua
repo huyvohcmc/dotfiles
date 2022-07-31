@@ -22,4 +22,4 @@ require('material').setup {
   },
 }
 
-vim.api.nvim_command 'colorscheme material'
+vim.cmd.colorscheme 'material'
