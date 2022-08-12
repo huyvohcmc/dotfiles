@@ -69,7 +69,6 @@ opt.history = 100
 opt.signcolumn = 'yes'
 opt.pumheight = 10
 opt.updatetime = 300
-
 opt.expandtab = true
 opt.autoindent = true
 opt.copyindent = true
@@ -78,3 +77,4 @@ opt.tabstop = 2
 opt.softtabstop = 2
 opt.breakindent = true
 opt.preserveindent = true
+opt.mouse = ''
