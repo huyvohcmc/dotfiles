@@ -23,7 +23,7 @@ cmd "command! PackerClean packadd packer.nvim | lua require('core.plugins').clea
 cmd "command! PackerCompile packadd packer.nvim | lua require('core.plugins').compile()"
 
 -- Colorscheme
-require 'colorscheme.material'
+require 'colorschemes.material'
 
 -- LSP
 require 'lsp'
