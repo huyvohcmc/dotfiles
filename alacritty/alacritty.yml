@@ -161,7 +161,7 @@ schemes:
       background: "#0F111A"
       foreground: "#A6ACCD"
     cursor:
-      text: "#090B10"
+      text: "#272727"
       cursor: "#FFCC00"
     normal:
       black: "#000000"
@@ -207,7 +207,7 @@ schemes:
       - { index: 16, color: '#ff9e64' }
       - { index: 17, color: '#db4b4b' }
 
-colors: *tokyonight
+colors: *material
 
 # Bell
 #
