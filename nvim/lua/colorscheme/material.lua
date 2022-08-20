@@ -2,12 +2,8 @@ vim.g.material_style = 'deep ocean'
 
 require('material').setup {
   contrast = {
-    sidebars = true,
-    floating_windows = true,
-    line_numbers = true,
-    sign_column = true,
-    non_current_windows = true,
-    popup_menu = true,
+    sidebars = false,
+    -- floating_windows = true,
   },
   italics = {
     comments = true,
@@ -17,9 +13,12 @@ require('material').setup {
     'qf',
   },
   disable = {
-    borders = true,
+    -- borders = true,
     eob_lines = true,
   },
 }
+
+vim.api.nvim_set_hl(0, 'LspDiagnosticsLineNrError', { fg = '#F07178', bg = NONE })
+vim.api.nvim_set_hl(0, 'LspDiagnosticsLineNrWarning', { fg = '#FFCB6B', bg = NONE })
 
 vim.cmd.colorscheme 'material'
