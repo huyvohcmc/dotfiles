@@ -149,6 +149,12 @@ local function init()
       require 'core.plugins.indent-line'
     end,
   }
+  use {
+    'nvim-lualine/lualine.nvim',
+    config = function()
+      require 'core.plugins.lualine'
+    end,
+  }
 end
 
 local plugins = setmetatable({}, {
