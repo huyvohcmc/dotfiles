@@ -102,7 +102,7 @@ local function init()
     end,
   }
   use {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     config = function()
       require 'core.plugins.nvim_tree'
     end,
