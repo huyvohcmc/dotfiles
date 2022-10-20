@@ -3,22 +3,39 @@ vim.g.material_style = 'deep ocean'
 require('material').setup {
   contrast = {
     sidebars = false,
-    -- floating_windows = true,
+    non_current_windows = false,
+    filetypes = {
+      'packer',
+      'qf',
+    },
   },
-  italics = {
-    comments = true,
+  styles = {
+    comments = { italic = true },
   },
-  contrast_filetypes = {
-    'packer',
-    'qf',
+  plugins = {
+    'gitsigns',
+    'hop',
+    'indent-blankline',
+    'nvim-cmp',
+    'nvim-tree',
+    'telescope',
+    'which-key',
   },
   disable = {
-    -- borders = true,
     eob_lines = true,
   },
+  lualine_style = 'default',
+  async_loading = false,
+  custom_highlights = {
+    LspDiagnosticsLineNrError = {
+      fg = '#F07178',
+      bg = NONE,
+    },
+    LspDiagnosticsLineNrWarning = {
+      fg = '#FFCB6B',
+      bg = NONE,
+    },
+  },
 }
-
-vim.api.nvim_set_hl(0, 'LspDiagnosticsLineNrError', { fg = '#F07178', bg = NONE })
-vim.api.nvim_set_hl(0, 'LspDiagnosticsLineNrWarning', { fg = '#FFCB6B', bg = NONE })
 
 vim.cmd.colorscheme 'material'
