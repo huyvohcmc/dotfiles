@@ -22,8 +22,8 @@ local function init()
   local use = packer.use
   packer.reset()
 
-  use 'nvim-lua/plenary.nvim'
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
   use 'lewis6991/impatient.nvim'
   use 'tpope/vim-projectionist'
   use 'romainl/vim-cool'
@@ -113,10 +113,8 @@ local function init()
       require 'core.plugins.autopairs'
     end,
   }
-  use {
-    'neovim/nvim-lspconfig',
-    requires = { 'jose-elias-alvarez/null-ls.nvim' },
-  }
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'neovim/nvim-lspconfig'
   use {
     'folke/which-key.nvim',
     config = function()

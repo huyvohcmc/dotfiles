@@ -1,11 +1,11 @@
 local lspconfig = require 'lspconfig'
 
 local M = {}
-M.setup = function(on_attach, capabilities)
+M.setup = function(options)
   lspconfig.solargraph.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = { debounce_text_changes = 200 },
+    on_attach = options.on_attach,
+    capabilities = options.capabilities,
+    flags = options.flags,
   }
 end
 

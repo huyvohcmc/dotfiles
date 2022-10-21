@@ -2,7 +2,7 @@ local null_ls = require 'null-ls'
 local b = null_ls.builtins
 
 local M = {}
-M.setup = function(on_attach)
+M.setup = function(options)
   null_ls.setup {
     sources = {
       b.diagnostics.rubocop.with {
@@ -16,8 +16,10 @@ M.setup = function(on_attach)
       b.diagnostics.golangci_lint,
       b.formatting.gofmt,
     },
-    diagnostics_format = '#{m} [#{c}]',
-    on_attach = on_attach,
+    diagnostics_format = "[#{c}] #{m} (#{s})",
+    on_attach = options.on_attach,
+    flags = options.flags,
+    root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".nvim.settings.json", ".git"),
   }
 end
 

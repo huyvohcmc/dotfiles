@@ -1,19 +1,22 @@
 local lspconfig = require 'lspconfig'
 local set = vim.keymap.set
-
--- Highlight line numbers for diagnostics
-vim.fn.sign_define('DiagnosticSignError', { numhl = 'LspDiagnosticsLineNrError', text = '' })
-vim.fn.sign_define('DiagnosticSignWarn', { numhl = 'LspDiagnosticsLineNrWarning', text = '' })
-vim.fn.sign_define('DiagnosticSignInfo', { text = '' })
-vim.fn.sign_define('DiagnosticSignHint', { text = '' })
+local fn = vim.fn
 
 -- Configure diagnostics displaying
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   virtual_text = false,
-  signs = true,
   update_in_insert = false,
+  signs = true,
+  severity_sort = true,
 })
 
+-- Highlight line numbers for diagnostics
+fn.sign_define('DiagnosticSignError', { text = '', numhl = 'LspDiagnosticsLineNrError' })
+fn.sign_define('DiagnosticSignWarn', { text = '', numhl = 'LspDiagnosticsLineNrWarning' })
+fn.sign_define('DiagnosticSignInfo', { text = '' })
+fn.sign_define('DiagnosticSignHint', { text = '' })
+
+-- Change border of hover window
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
 })
@@ -43,13 +46,19 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+local options = {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+}
 for _, server in ipairs {
-  'null-ls',
   'gopls',
   'solargraph',
+  'null-ls',
 } do
-  require('lsp.' .. server).setup(on_attach, capabilities)
+  require('lsp.' .. server).setup(options)
 end
