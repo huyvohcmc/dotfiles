@@ -26,7 +26,7 @@ require('lualine').setup {
       }
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {'searchcount', 'progress'},
     lualine_z = {'location'}
   },
   inactive_sections = {
