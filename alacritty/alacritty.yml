@@ -201,7 +201,7 @@ schemes:
       - { index: 16, color: '#ff9e64' }
       - { index: 17, color: '#db4b4b' }
 
-colors: *material
+colors: *tokyonight
 
 # Bell
 #
