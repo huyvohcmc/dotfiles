@@ -36,6 +36,10 @@ require('material').setup {
       bg = NONE,
     },
   },
+
+  custom_colors = function(colors)
+    colors.editor.cursor = "#EEFFFF"
+  end
 }
 
 vim.cmd.colorscheme 'material'
