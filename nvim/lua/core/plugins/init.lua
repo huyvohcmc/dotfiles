@@ -119,8 +119,10 @@ local function init()
       require 'core.plugins.autopairs'
     end,
   }
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use {
     'folke/which-key.nvim',
     config = function()

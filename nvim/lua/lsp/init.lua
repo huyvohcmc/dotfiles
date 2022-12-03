@@ -1,64 +1,111 @@
-local lspconfig = require 'lspconfig'
-local set = vim.keymap.set
-local fn = vim.fn
-
--- Configure diagnostics displaying
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
-  update_in_insert = false,
-  signs = true,
-  severity_sort = true,
+require('mason').setup({
+  ui = {
+    border = 'rounded',
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
+    }
+  }
 })
 
--- Highlight line numbers for diagnostics
-fn.sign_define('DiagnosticSignError', { text = '', numhl = 'LspDiagnosticsLineNrError' })
-fn.sign_define('DiagnosticSignWarn', { text = '', numhl = 'LspDiagnosticsLineNrWarning' })
-fn.sign_define('DiagnosticSignInfo', { text = '' })
-fn.sign_define('DiagnosticSignHint', { text = '' })
-
--- Change border of hover window
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = 'rounded',
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'solargraph',
+    'gopls',
+  }
 })
 
-local on_attach = function(client, bufnr)
-  local opts = { noremap = true, silent = true }
-  set('n', 'gd', vim.lsp.buf.definition, opts)
-  set('n', 'gD', vim.lsp.buf.declaration, opts)
-  set('n', 'gr', vim.lsp.buf.references, opts)
-  set('n', 'gi', vim.lsp.buf.implementation, opts)
-  set('n', 'K', vim.lsp.buf.hover, opts)
-
-  set('n', '[g', function()
-    vim.diagnostic.goto_prev { float = { border = 'rounded' } }
-  end, opts)
-  set('n', ']g', function()
-    vim.diagnostic.goto_next { float = { border = 'rounded' } }
-  end, opts)
-  set('n', '<leader>d', function()
-    vim.diagnostic.open_float(0, { scope = 'line', border = 'rounded' })
-  end)
-
-  if client.supports_method 'textDocument/formatting' then
-    set('n', '<leader>f', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
-  end
-end
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-local options = {
-  on_attach = on_attach,
-  capabilities = capabilities,
+local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
   },
+  capabilities = require('cmp_nvim_lsp').default_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
+  on_attach = function(client, bufnr)
+    vim.api.nvim_exec_autocmds('User', {pattern = 'LspAttached'})
+  end
 }
-for _, server in ipairs {
-  'gopls',
-  'solargraph',
-  'null-ls',
-} do
-  require('lsp.' .. server).setup(options)
+
+local lspconfig = require('lspconfig')
+
+lspconfig.util.default_config = vim.tbl_deep_extend(
+  'force',
+  lspconfig.util.default_config,
+  lsp_defaults
+)
+
+-- Diagnostic customization
+local sign = function(opts)
+  -- See :help sign_define()
+  vim.fn.sign_define(opts.name, {
+    texthl = opts.name,
+    text = opts.text,
+    numhl = ''
+  })
 end
+
+sign({name = 'DiagnosticSignError', text = '', numhl = 'LspDiagnosticsLineNrError'})
+sign({name = 'DiagnosticSignWarn', text = '', numhl = 'LspDiagnosticsLineNrWarning'})
+sign({name = 'DiagnosticSignHint', text = ''})
+sign({name = 'DiagnosticSignInfo', text = ''})
+
+vim.diagnostic.config({
+  virtual_text = false,
+  severity_sort = true,
+  update_in_insert = false,
+  signs = true,
+  float = {
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = '',
+  },
+})
+
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {border = 'rounded'}
+)
+
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
+  vim.lsp.handlers.signature_help,
+  {border = 'rounded'}
+)
+
+-- Keybindings
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'LspAttached',
+  group = group,
+  desc = 'LSP actions',
+  callback = function()
+    local bufmap = function(mode, lhs, rhs)
+      local opts = {buffer = true}
+      vim.keymap.set(mode, lhs, rhs, opts)
+    end
+
+    bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+    bufmap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+    bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+    bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+    bufmap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+    bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+    bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+    bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+    bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+  end
+})
+
+-- Servers
+local default_handler = function(server)
+  lspconfig[server].setup({})
+end
+
+require('mason-lspconfig').setup_handlers({
+  default_handler,
+})
