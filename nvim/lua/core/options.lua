@@ -52,7 +52,6 @@ o.ttimeoutlen = 10
 o.wildignorecase = true
 o.wildignore =
   '.git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**'
-o.clipboard = 'unnamedplus'
 o.termguicolors = true
 o.number = true
 o.laststatus = 3
@@ -80,3 +79,4 @@ opt.listchars = {
   precedes = '«',
 }
 opt.shortmess:append 'c'
+opt.clipboard:append 'unnamedplus'
