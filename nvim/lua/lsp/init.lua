@@ -1,21 +1,3 @@
-require('mason').setup {
-  ui = {
-    border = 'rounded',
-    icons = {
-      package_installed = '✓',
-      package_pending = '➜',
-      package_uninstalled = '✗',
-    },
-  },
-}
-
-require('mason-lspconfig').setup {
-  ensure_installed = {
-    'solargraph',
-    'gopls',
-  },
-}
-
 local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
@@ -87,10 +69,11 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
-require('mason-lspconfig').setup_handlers {
-  function(server_name)
-    lspconfig[server_name].setup {}
-  end,
-}
+for _, server in ipairs {
+  'gopls',
+  'solargraph',
+} do
+  lspconfig[server].setup {}
+end
 
 require('lsp.null-ls').setup()
