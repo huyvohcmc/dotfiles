@@ -104,3 +104,5 @@ require('mason-lspconfig').setup_handlers {
     lspconfig[server_name].setup {}
   end
 }
+
+require('lsp.null-ls').setup()
