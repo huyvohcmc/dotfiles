@@ -42,20 +42,18 @@ local sign = function(opts)
   vim.fn.sign_define(opts.name, {
     texthl = opts.name,
     text = opts.text,
-    numhl = ''
+    numhl = opts.numhl,
   })
 end
 
 sign({name = 'DiagnosticSignError', text = '', numhl = 'LspDiagnosticsLineNrError'})
 sign({name = 'DiagnosticSignWarn', text = '', numhl = 'LspDiagnosticsLineNrWarning'})
-sign({name = 'DiagnosticSignHint', text = ''})
-sign({name = 'DiagnosticSignInfo', text = ''})
+sign({name = 'DiagnosticSignHint', text = '', numhl = ''})
+sign({name = 'DiagnosticSignInfo', text = '', numhl = ''})
 
 vim.diagnostic.config({
   virtual_text = false,
   severity_sort = true,
-  update_in_insert = false,
-  signs = true,
   float = {
     border = 'rounded',
     source = 'always',
@@ -101,11 +99,8 @@ vim.api.nvim_create_autocmd('User', {
   end
 })
 
--- Servers
-local default_handler = function(server)
-  lspconfig[server].setup({})
-end
-
-require('mason-lspconfig').setup_handlers({
-  default_handler,
-})
+require('mason-lspconfig').setup_handlers {
+  function(server_name)
+    lspconfig[server_name].setup {}
+  end
+}
