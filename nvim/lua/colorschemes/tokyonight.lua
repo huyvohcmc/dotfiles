@@ -12,7 +12,7 @@ require('tokyonight').setup {
     sidebars = 'dark',
     floats = 'dark',
   },
-  sidebars = { 'qf', 'help', 'terminal', 'packer' }
+  sidebars = { 'qf', 'help', 'terminal', 'packer' },
 }
 
 api.nvim_set_hl(0, 'LspDiagnosticsLineNrError', { fg = '#db4b4b', bg = NONE })

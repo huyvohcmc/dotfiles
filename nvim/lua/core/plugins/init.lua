@@ -31,7 +31,7 @@ local function init()
     event = 'BufRead',
     config = function()
       require('hlsearch').setup()
-    end
+    end,
   }
   use 'machakann/vim-sandwich'
   use {

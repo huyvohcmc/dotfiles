@@ -32,7 +32,7 @@ g.loaded_netrwSettings = 1
 g.loaded_remote_plugins = 1
 
 -- Options
-opt.completeopt = {'menu', 'menuone', 'noselect'}
+opt.completeopt = { 'menu', 'menuone', 'noselect' }
 opt.hidden = true
 opt.incsearch = true
 opt.hlsearch = true

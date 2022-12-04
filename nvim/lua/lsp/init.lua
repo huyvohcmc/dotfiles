@@ -1,40 +1,34 @@
-require('mason').setup({
+require('mason').setup {
   ui = {
     border = 'rounded',
     icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗"
-    }
-  }
-})
+      package_installed = '✓',
+      package_pending = '➜',
+      package_uninstalled = '✗',
+    },
+  },
+}
 
-require('mason-lspconfig').setup({
+require('mason-lspconfig').setup {
   ensure_installed = {
     'solargraph',
     'gopls',
-  }
-})
+  },
+}
 
 local lsp_defaults = {
   flags = {
     debounce_text_changes = 150,
   },
-  capabilities = require('cmp_nvim_lsp').default_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
+  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   on_attach = function(client, bufnr)
-    vim.api.nvim_exec_autocmds('User', {pattern = 'LspAttached'})
-  end
+    vim.api.nvim_exec_autocmds('User', { pattern = 'LspAttached' })
+  end,
 }
 
-local lspconfig = require('lspconfig')
+local lspconfig = require 'lspconfig'
 
-lspconfig.util.default_config = vim.tbl_deep_extend(
-  'force',
-  lspconfig.util.default_config,
-  lsp_defaults
-)
+lspconfig.util.default_config = vim.tbl_deep_extend('force', lspconfig.util.default_config, lsp_defaults)
 
 -- Diagnostic customization
 local sign = function(opts)
@@ -46,12 +40,12 @@ local sign = function(opts)
   })
 end
 
-sign({name = 'DiagnosticSignError', text = '', numhl = 'LspDiagnosticsLineNrError'})
-sign({name = 'DiagnosticSignWarn', text = '', numhl = 'LspDiagnosticsLineNrWarning'})
-sign({name = 'DiagnosticSignHint', text = '', numhl = ''})
-sign({name = 'DiagnosticSignInfo', text = '', numhl = ''})
+sign { name = 'DiagnosticSignError', text = '', numhl = 'LspDiagnosticsLineNrError' }
+sign { name = 'DiagnosticSignWarn', text = '', numhl = 'LspDiagnosticsLineNrWarning' }
+sign { name = 'DiagnosticSignHint', text = '', numhl = '' }
+sign { name = 'DiagnosticSignInfo', text = '', numhl = '' }
 
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = false,
   severity_sort = true,
   float = {
@@ -60,17 +54,11 @@ vim.diagnostic.config({
     header = '',
     prefix = '',
   },
-})
+}
 
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  {border = 'rounded'}
-)
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
 
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help,
-  {border = 'rounded'}
-)
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
 
 -- Keybindings
 vim.api.nvim_create_autocmd('User', {
@@ -79,7 +67,7 @@ vim.api.nvim_create_autocmd('User', {
   desc = 'LSP actions',
   callback = function()
     local bufmap = function(mode, lhs, rhs)
-      local opts = {buffer = true}
+      local opts = { buffer = true }
       vim.keymap.set(mode, lhs, rhs, opts)
     end
 
@@ -96,13 +84,13 @@ vim.api.nvim_create_autocmd('User', {
     bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
     bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
     bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
-  end
+  end,
 })
 
 require('mason-lspconfig').setup_handlers {
   function(server_name)
     lspconfig[server_name].setup {}
-  end
+  end,
 }
 
 require('lsp.null-ls').setup()
