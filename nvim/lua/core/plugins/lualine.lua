@@ -25,8 +25,8 @@ require('lualine').setup {
         path = 3,
       },
     },
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    lualine_y = { 'searchcount', 'progress' },
+    lualine_x = { 'encoding', 'fileformat', 'searchcount', 'filetype' },
+    lualine_y = { 'progress' },
     lualine_z = { 'location' },
   },
   inactive_sections = {
