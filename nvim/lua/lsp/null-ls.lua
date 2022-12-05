@@ -27,10 +27,6 @@ local config = {
     })
   end,
   sources = {
-    diagnostics.rubocop.with {
-      command = 'bundle',
-      args = vim.list_extend({ 'exec', 'rubocop' }, diagnostics.rubocop._opts.args),
-    },
     formatting.rubocop.with {
       command = 'bundle',
       args = vim.list_extend({ 'exec', 'rubocop' }, formatting.rubocop._opts.args),
