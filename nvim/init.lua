@@ -8,10 +8,10 @@ end
 vim.g.mapleader = ','
 
 -- Core
+require 'core.mappings'
 require 'core.options'
 require 'core.autocmds'
 require 'core.commands'
-require 'core.mappings'
 require 'core.plugins'
 
 local cmd = vim.cmd
