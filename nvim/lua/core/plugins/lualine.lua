@@ -22,7 +22,7 @@ require('lualine').setup {
       {
         'filename',
         file_status = true,
-        path = 3,
+        path = 1,
       },
     },
     lualine_x = { 'encoding', 'fileformat', 'searchcount', 'filetype' },
