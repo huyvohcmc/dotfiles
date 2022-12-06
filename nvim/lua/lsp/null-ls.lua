@@ -11,7 +11,6 @@ local config = {
     local format_cmd = function(input)
       vim.lsp.buf.format {
         id = client.id,
-        timeout_ms = 5000,
         async = input.bang,
       }
     end
