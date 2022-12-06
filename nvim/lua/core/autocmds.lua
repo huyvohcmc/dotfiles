@@ -4,11 +4,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-local hl_ns = vim.api.nvim_create_namespace('hl_search')
+local hl_ns = vim.api.nvim_create_namespace 'hl_search'
 local manage_hlsearch = function(char)
-  if vim.fn.mode() == "n" then
-    local new_hlsearch = vim.tbl_contains({ "<CR>", "n", "N", "*", "#", "?", "/" }, vim.fn.keytrans(char))
-    if vim.opt.hlsearch:get() ~= new_hlsearch then vim.opt.hlsearch = new_hlsearch end
+  if vim.fn.mode() == 'n' then
+    local new_hlsearch = vim.tbl_contains({ '<CR>', 'n', 'N', '*', '#', '?', '/' }, vim.fn.keytrans(char))
+    if vim.opt.hlsearch:get() ~= new_hlsearch then
+      vim.opt.hlsearch = new_hlsearch
+    end
   end
 end
 
