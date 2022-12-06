@@ -9,6 +9,12 @@ autocmd('TextYankPost', {
   end,
 })
 
+autocmd("VimResized", {
+  group = augroup,
+  pattern = "*",
+  command = "wincmd =",
+})
+
 local hl_ns = vim.api.nvim_create_namespace('hl_search')
 local manage_hlsearch = function(char)
   if vim.fn.mode() == "n" then
