@@ -26,13 +26,6 @@ local function init()
   use 'nvim-lua/plenary.nvim'
   use 'lewis6991/impatient.nvim'
   use 'tpope/vim-projectionist'
-  use {
-    'glepnir/hlsearch.nvim',
-    event = 'BufRead',
-    config = function()
-      require('hlsearch').setup()
-    end,
-  }
   use 'machakann/vim-sandwich'
   use {
     'rafamadriz/friendly-snippets',
