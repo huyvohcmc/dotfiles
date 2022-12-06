@@ -76,5 +76,5 @@ opt.listchars = {
   extends = '»',
   precedes = '«',
 }
+opt.clipboard = 'unnamedplus'
 opt.shortmess:append 'c'
-opt.clipboard:append 'unnamedplus'
