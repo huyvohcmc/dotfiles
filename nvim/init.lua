@@ -8,9 +8,8 @@ end
 vim.g.mapleader = ','
 
 -- Core
-require 'core.mappings'
-require 'core.options'
-require 'core.autocmds'
+require 'core.keymaps'
+require 'core.settings'
 require 'core.commands'
 require 'core.plugins'
 
