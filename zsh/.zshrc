@@ -5,6 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Clone zcomet if necessary
+if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
+  command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
+fi
+
+source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
+
+zcomet load ohmyzsh lib git.zsh
+zcomet load ohmyzsh plugins/git
+zcomet load ohmyzsh plugins/docker-compose
+zcomet load zdharma-continuum/history-search-multi-word
+zcomet load zsh-users/zsh-completions
+zcomet load zsh-users/zsh-autosuggestions
+
+# Run compinit and compile its cache
+zcomet compinit
+
 # Powerlevel10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -72,25 +89,3 @@ eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
 # PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:$(go env GOPATH)/bin
-
-# Zi
-source <(curl -sL git.io/zi-loader); zzinit
-if [[ ! -f $HOME/.zi/bin/zi.zsh ]]; then
-  print -P "%F{33}▓▒░ %F{160}Installing (%F{33}z-shell/zi%F{160})…%f"
-  command mkdir -p "$HOME/.zi" && command chmod go-rwX "$HOME/.zi"
-  command git clone -q --depth=1 --branch "main" https://github.com/z-shell/zi "$HOME/.zi/bin" && \
-    print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-    print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-source "$HOME/.zi/bin/zi.zsh"
-autoload -Uz _zi
-(( ${+_comps} )) && _comps[zi]=_zi
-# examples here -> https://wiki.zshell.dev/ecosystem/category/-annexes
-zicompinit # <- https://wiki.zshell.dev/docs/guides/commands
-
-zi snippet OMZL::git.zsh
-zi snippet OMZP::git
-zi snippet OMZP::docker-compose
-zi light zsh-users/zsh-completions
-zi light zsh-users/zsh-autosuggestions
-zi light zdharma-continuum/history-search-multi-word
