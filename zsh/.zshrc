@@ -13,8 +13,8 @@ fi
 source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 
 zcomet load ohmyzsh lib git.zsh
-zcomet load ohmyzsh plugins/git
-zcomet load ohmyzsh plugins/docker-compose
+zcomet snippet OMZ::plugins/git/git.plugin.zsh
+zcomet snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 zcomet load zdharma-continuum/history-search-multi-word
 zcomet load zsh-users/zsh-completions
 zcomet load zsh-users/zsh-autosuggestions
