@@ -65,6 +65,7 @@ local function init()
   }
   use 'folke/tokyonight.nvim'
   use 'marko-cerovac/material.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
