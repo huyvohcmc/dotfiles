@@ -1,20 +1,17 @@
 require('catppuccin').setup {
-  flavour = "mocha",
-  background = {
-    dark = "mocha",
-  },
+  flavour = 'mocha',
   transparent_background = false,
-  term_colors = false,
+  term_colors = true,
   dim_inactive = {
     enabled = false,
-    shade = "dark",
+    shade = 'dark',
     percentage = 0.15,
   },
-  no_italic = false, -- Force no italic
-  no_bold = true, -- Force no bold
+  no_italic = false,
+  no_bold = true,
   styles = {
-    comments = { "italic" },
-    conditionals = { "italic" },
+    comments = { 'italic' },
+    conditionals = { 'italic' },
     loops = {},
     functions = {},
     keywords = {},
