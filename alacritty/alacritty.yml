@@ -150,32 +150,6 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 schemes:
-  material: &material
-    primary:
-      background: "#0F111A"
-      foreground: "#A6ACCD"
-    cursor:
-      text: "#272727"
-      # cursor: "#FFCC00"
-      cursor: '#EEFFFF'
-    normal:
-      black: "#000000"
-      red: "#F07178"
-      green: "#C3E88D"
-      yellow: "#FFCB6B"
-      blue: "#82AAFF"
-      magenta: "#C792EA"
-      cyan: "#89DDFF"
-      white: "#EEFFFF"
-    bright:
-      black: "#464B5D"
-      red: "#F07178"
-      green: "#C3E88D"
-      yellow: "#FFCB6B"
-      blue: "#82AAFF"
-      magenta: "#C792EA"
-      cyan: "#89DDFF"
-      white: "#EEFFFF"
   tokyonight_night: &tokyonight_night
     primary:
       background: '#1a1b26'
