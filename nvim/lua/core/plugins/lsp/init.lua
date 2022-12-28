@@ -52,6 +52,7 @@ function M.config()
   vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
 
   -- Keybindings
+  local group = vim.api.nvim_create_augroup('lsp_cmds', { clear = true })
   vim.api.nvim_create_autocmd('User', {
     pattern = 'LspAttached',
     group = group,
@@ -84,6 +85,16 @@ function M.config()
   } do
     lspconfig[server].setup {}
   end
+
+  lspconfig.sumneko_lua.setup {
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim' },
+        },
+      },
+    },
+  }
 
   require('core.plugins.null-ls').setup()
 end

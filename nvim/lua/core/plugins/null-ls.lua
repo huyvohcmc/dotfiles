@@ -34,6 +34,7 @@ function M.setup()
       },
       formatting.gofumpt,
       diagnostics.golangci_lint,
+      formatting.stylua,
     },
   }
 end
