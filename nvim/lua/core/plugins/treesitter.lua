@@ -42,6 +42,9 @@ function M.config()
     incremental_selection = {
       enable = true,
     },
+    indent = {
+      enable = true
+    },
     endwise = {
       enable = true,
     },
