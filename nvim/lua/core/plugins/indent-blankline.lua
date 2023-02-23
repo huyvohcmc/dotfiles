@@ -1,7 +1,10 @@
 local M = {
   'lukas-reineke/indent-blankline.nvim',
   event = 'BufReadPre',
-  config = {
+}
+
+function M.config()
+  require('indent_blankline').setup {
     buftype_exclude = {
       'nofile',
       'terminal',
@@ -39,7 +42,7 @@ local M = {
     use_treesitter = true,
     char = '▏',
     context_char = '▏',
-  },
-}
+  }
+end
 
 return M

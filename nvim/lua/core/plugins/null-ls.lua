@@ -2,7 +2,7 @@ local M = {
   'jose-elias-alvarez/null-ls.nvim',
 }
 
-function M.setup()
+function M.config()
   local nls = require 'null-ls'
   local diagnostics = nls.builtins.diagnostics
   local formatting = nls.builtins.formatting

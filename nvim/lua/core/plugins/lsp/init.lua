@@ -96,7 +96,7 @@ function M.config()
     },
   }
 
-  require('core.plugins.null-ls').setup()
+  require('core.plugins.null-ls')
 end
 
 return M
