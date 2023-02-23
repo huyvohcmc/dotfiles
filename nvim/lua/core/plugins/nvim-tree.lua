@@ -13,7 +13,6 @@ function M.config()
   require('nvim-tree').setup {
     disable_netrw = true,
     hijack_netrw = true,
-    open_on_setup = false,
     hijack_cursor = true,
     update_cwd = true,
     update_focused_file = {
@@ -21,7 +20,6 @@ function M.config()
       update_cwd = true,
       ignore_list = { 'fzf', 'help', 'git' },
     },
-    ignore_ft_on_setup = { 'git', 'man', 'help' },
     system_open = {
       cmd = nil,
       args = {},
