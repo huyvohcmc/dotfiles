@@ -7,7 +7,7 @@ function M.config()
   require('lualine').setup {
     options = {
       icons_enabled = false,
-      theme = 'tokyonight',
+      theme = 'catppuccin',
       component_separators = '',
       section_separators = '',
       disabled_filetypes = {
