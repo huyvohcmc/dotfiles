@@ -84,3 +84,4 @@ eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
 # PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
