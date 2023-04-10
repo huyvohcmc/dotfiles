@@ -28,6 +28,9 @@ function M.config()
   vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
 
   require('nvim-tree').setup {
+    view = {
+      width = 40
+    },
     disable_netrw = true,
     hijack_netrw = true,
     hijack_cursor = true,
