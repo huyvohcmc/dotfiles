@@ -22,6 +22,7 @@ function M.config()
       end,
     },
     sources = {
+      { name = 'copilot' },
       { name = 'path' },
       { name = 'nvim_lsp', keyword_length = 3 },
       { name = 'buffer', keyword_length = 3 },
