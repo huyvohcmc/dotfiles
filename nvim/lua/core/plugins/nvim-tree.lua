@@ -19,7 +19,9 @@ function M.config()
     end
 
     -- change to the directory
-    vim.cmd.cd(data.file)
+    if directory then
+      vim.cmd.cd(data.file)
+    end
 
     -- open the tree
     require('nvim-tree.api').tree.open()
@@ -29,7 +31,7 @@ function M.config()
 
   require('nvim-tree').setup {
     view = {
-      width = 40
+      width = 40,
     },
     disable_netrw = true,
     hijack_netrw = true,
