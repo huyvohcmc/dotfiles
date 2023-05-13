@@ -5,10 +5,10 @@ local M = {
 }
 
 function M.config()
-  require("catppuccin").setup {
-    flavour = "mocha",
+  require('catppuccin').setup {
+    flavour = 'mocha',
     background = {
-      dark = 'mocha'
+      dark = 'mocha',
     },
     no_bold = true,
     styles = {
@@ -28,16 +28,16 @@ function M.config()
       native_lsp = {
         enabled = true,
         virtual_text = {
-          errors = { "italic" },
-          hints = { "italic" },
-          warnings = { "italic" },
-          information = { "italic" },
+          errors = { 'italic' },
+          hints = { 'italic' },
+          warnings = { 'italic' },
+          information = { 'italic' },
         },
         underlines = {
-          errors = { "underline" },
-          hints = { "underline" },
-          warnings = { "underline" },
-          information = { "underline" },
+          errors = { 'underline' },
+          hints = { 'underline' },
+          warnings = { 'underline' },
+          information = { 'underline' },
         },
       },
       treesitter = true,
