@@ -1,6 +1,6 @@
 local M = {
   'lukas-reineke/indent-blankline.nvim',
-  event = 'BufReadPre',
+  event = { 'BufReadPost', 'BufNewFile' },
 }
 
 function M.config()
