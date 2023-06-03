@@ -9,6 +9,7 @@ function M.config()
   local telescope = require 'telescope'
   local actions = require 'telescope.actions'
   local builtin = require 'telescope.builtin'
+  local themes = require 'telescope.themes'
 
   telescope.setup {
     defaults = {
@@ -93,6 +94,9 @@ function M.config()
   end)
   set('n', '<leader>h', function()
     builtin.oldfiles()
+  end)
+  set('n', ';', function()
+    builtin.resume(themes.get_ivy {})
   end)
 end
 
