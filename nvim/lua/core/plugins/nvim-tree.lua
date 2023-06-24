@@ -1,5 +1,9 @@
 local M = {
   'nvim-tree/nvim-tree.lua',
+  version = '*',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
 }
 
 function M.config()
@@ -70,18 +74,7 @@ function M.config()
       },
     },
     renderer = {
-      group_empty = false,
-      icons = {
-        show = {
-          git = false,
-          file = false,
-          folder = false,
-          folder_arrow = false,
-        },
-        glyphs = {
-          symlink = '',
-        },
-      },
+      group_empty = true,
     },
   }
 end
