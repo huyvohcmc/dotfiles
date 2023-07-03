@@ -1,6 +1,6 @@
 local M = {
   'catppuccin/nvim',
-  lazy = false,
+  lazy = true,
   priority = 1000,
 }
 
