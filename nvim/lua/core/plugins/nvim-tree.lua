@@ -7,7 +7,6 @@ local M = {
 }
 
 function M.config()
-  local g = vim.g
   local set = vim.keymap.set
 
   set('n', '-', ':NvimTreeFindFile<CR>')
@@ -75,6 +74,16 @@ function M.config()
     },
     renderer = {
       group_empty = true,
+      icons = {
+        git_placement = 'after',
+        glyphs = {
+          default = '',
+          folder = {
+            default = '',
+            open = '',
+          },
+        },
+      },
     },
   }
 end
