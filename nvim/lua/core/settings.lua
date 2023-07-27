@@ -54,7 +54,7 @@ opt.listchars = {
   extends = '»',
   precedes = '«',
 }
-opt.mouse = 'a'
+opt.mouse = ''
 opt.number = true
 opt.preserveindent = true
 opt.pumheight = 10
