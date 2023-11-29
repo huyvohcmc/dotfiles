@@ -4,10 +4,10 @@
 defaults write com.apple.Dock size-immutable -bool no; killall Dock
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.Dock autohide-delay -float 0; killall Dock
 
 # Remove the animation when hiding/showing the Dock
-defaults write com.apple.Dock autohide-time-modifier -float 0
+defaults write com.apple.Dock autohide-time-modifier -float 0; killall Dock
 
 # Set the icon size of Dock items
 defaults write com.apple.Dock tilesize -int 28
