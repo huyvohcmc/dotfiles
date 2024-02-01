@@ -19,7 +19,6 @@ function M.config()
       'gomod',
       'gowork',
       'hcl',
-      'help',
       'html',
       'javascript',
       'json',
@@ -30,6 +29,7 @@ function M.config()
       'python',
       'ruby',
       'toml',
+      'vimdoc',
       'yaml',
     },
     highlight = {
