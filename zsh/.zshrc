@@ -72,6 +72,9 @@ zstyle ':completion:*' menu select
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# GOLANG
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -83,5 +86,4 @@ eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
 
 # PATH
 export PATH="/usr/local/sbin:$PATH"
-export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
