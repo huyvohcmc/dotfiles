@@ -32,8 +32,6 @@ function M.config()
         command = 'bundle',
         args = vim.list_extend({ 'exec', 'rubocop' }, formatting.rubocop._opts.args),
       },
-      formatting.gofumpt,
-      diagnostics.golangci_lint,
       formatting.stylua,
     },
   }

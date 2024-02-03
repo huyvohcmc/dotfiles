@@ -80,7 +80,6 @@ function M.config()
   })
 
   for _, server in ipairs {
-    'gopls',
     'solargraph',
   } do
     lspconfig[server].setup {}
