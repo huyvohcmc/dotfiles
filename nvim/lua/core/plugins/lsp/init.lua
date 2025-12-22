@@ -78,24 +78,6 @@ function M.config()
       bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
     end,
   })
-
-  for _, server in ipairs {
-    'solargraph',
-  } do
-    lspconfig[server].setup {}
-  end
-
-  lspconfig.lua_ls.setup {
-    settings = {
-      Lua = {
-        diagnostics = {
-          globals = { 'vim' },
-        },
-      },
-    },
-  }
-
-  require('core.plugins.null-ls')
 end
 
 return M
