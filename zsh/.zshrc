@@ -68,10 +68,6 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*' menu select
 
-# Asdf
-. $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
-
 # GOLANG
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
@@ -85,5 +81,5 @@ eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
 [ -f ~/.secrets ] && source ~/.secrets
 
 # PATH
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
