@@ -11,11 +11,17 @@ config.font = wezterm.font {
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
 
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 
 config.window_decorations = 'RESIZE'
 
 config.window_close_confirmation = 'NeverPrompt'
+
+config.hide_tab_bar_if_only_one_tab = false
+
+config.use_fancy_tab_bar = false
+
+config.tab_and_split_indices_are_zero_based = true
 
 config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 10000 }
 
