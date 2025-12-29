@@ -11,6 +11,11 @@ config.font = wezterm.font {
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
 
+config.inactive_pane_hsb = {
+  saturation = 0.8,
+  brightness = 0.7,
+}
+
 config.enable_tab_bar = true
 
 config.window_decorations = 'RESIZE'
@@ -23,7 +28,7 @@ config.use_fancy_tab_bar = false
 
 config.tab_and_split_indices_are_zero_based = true
 
-config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 10000 }
+config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1500 }
 
 config.keys = {
   {

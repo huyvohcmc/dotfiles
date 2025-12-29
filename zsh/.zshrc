@@ -83,3 +83,5 @@ eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
 # PATH
 export PATH=$PATH:$HOME/.local/bin
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+export DISABLE_SPRING=true
