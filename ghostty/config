@@ -1,0 +1,30 @@
+# --- Theme ---
+theme = Nvim Dark
+
+# --- Window ---
+macos-titlebar-style = tabs
+window-save-state = always
+window-padding-balance = true
+window-inherit-working-directory = true
+quit-after-last-window-closed = true
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor,sudo,title,ssh-env
+
+# --- Font ---
+font-family = "Iosevka"
+font-size = 14
+
+# --- Input / clipboard ---
+macos-option-as-alt = true
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+clipboard-trim-trailing-spaces = true
+
+# --- Scrollback (bytes) ---
+scrollback-limit = 50000000
+
+# --- Splits ---
+unfocused-split-opacity = 0.85

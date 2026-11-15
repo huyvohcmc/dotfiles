@@ -1,87 +1,57 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# --- History ---
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt HIST_IGNORE_ALL_DUPS HIST_IGNORE_SPACE SHARE_HISTORY INC_APPEND_HISTORY
 
-# $EDITOR
-export EDITOR=nvim
+# --- Shell behavior ---
+setopt AUTO_CD
+setopt INTERACTIVE_COMMENTS
 
-# Clone zcomet if necessary
-if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
-  command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
-fi
-
-source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
-
-zcomet load ohmyzsh lib git.zsh
-zcomet snippet OMZ::plugins/git/git.plugin.zsh
-zcomet snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
-zcomet load zdharma-continuum/history-search-multi-word
-zcomet load zsh-users/zsh-completions
-zcomet load zsh-users/zsh-autosuggestions
-
-# Run compinit and compile its cache
-zcomet compinit
-
-# Powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Aliases
+# --- General aliases ---
 alias v='$EDITOR'
-alias lg='lazygit'
+# alias ls='ls -G'
+# alias ll='ls -lG'
+# alias lsa='ls -lahG'
+
 alias ls='ls -G'
-alias ll='ls -lG'
-alias lsa='ls -lahG'
+alias ll='ls -lah'
+alias la='ls -A'
+alias l='ls -CF'
 
-# History settings
-export HISTFILE=$HOME/.zsh_history
-export HISTFILESIZE=50000
-export HISTSIZE=50000
-export HISTTIMEFORMAT="[%F %T] "
-setopt extended_history share_history
-setopt hist_find_no_dups hist_reduce_blanks
-
-# cd without the need of typing cd
-setopt auto_cd
-
-# Edit command line in full screen editor
-autoload edit-command-line
-zle -N edit-command-line
-bindkey '^X^E' edit-command-line
-
-# Moving around line
-bindkey '^A' beginning-of-line '^E' end-of-line '^W' backward-kill-word
-
-# Completions
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' completer _complete _match _approximate
-zstyle ':completion:*:match:*' original only
-zstyle -e ':completion:*:approximate:*' \
-  max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
-zstyle ':completion:*' format '%BCompleting %d%b'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+# --- Completion ---
+fpath=("$(brew --prefix)/share/zsh-completions" $fpath)
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
-# GOLANG
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+# --- Prompt (pure) ---
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit && promptinit
+prompt pure
 
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# --- Tools ---
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
 
-# Z.lua
-eval "$(lua ~/z.lua/z.lua --init zsh once enhanced)"
+# --- Aliases: git ---
+alias gst='git status'
+alias gd='git diff'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gp='git push'
+alias gl='git pull'
+alias ga='git add'
+alias gaa='git add --all'
+alias gc='git commit -v'
+alias gcmsg='git commit -m'
+alias gb='git branch'
+alias glog='git log --oneline --decorate --graph'
+alias gsta='git stash push'
+alias gstp='git stash pop'
 
-# Secrets
-[ -f ~/.secrets ] && source ~/.secrets
+# --- Plugins (Homebrew) ---
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-# PATH
-export PATH=$PATH:$HOME/.local/bin
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
-export DISABLE_SPRING=true
+# fast-syntax-highlighting must be last
+source "$(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
