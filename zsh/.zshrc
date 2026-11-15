@@ -10,10 +10,6 @@ setopt INTERACTIVE_COMMENTS
 
 # --- General aliases ---
 alias v='$EDITOR'
-# alias ls='ls -G'
-# alias ll='ls -lG'
-# alias lsa='ls -lahG'
-
 alias ls='ls -G'
 alias ll='ls -lah'
 alias la='ls -A'
