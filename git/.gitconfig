@@ -1,31 +1,4 @@
-[alias]
-	l = log --graph --oneline --decorate
-	ll = log --stat --decorate --source -p
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
-[core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-	abbrev = 12
-	ignorecase = false
-[color]
-	ui = auto
-[commit]
-	template = ~/.gitmessage
-[diff]
-	renames = copies
-[include]
-	path = ~/.gitconfig.local
-[merge]
-	ff = only
-	conflictstyle = diff3
-[push]
-	default = current
-	followTags = true
-[pull]
-	ff = only
-[pager]
-	branch = false
-[interactive]
-	diffFilter = delta --color-only
-[remote "origin"]
-	prune = true
+# This is Git's per-user configuration file.
+[user]
+	name = Huy Vo
+	email = huyvohcmc@gmail.com
