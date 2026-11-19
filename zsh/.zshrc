@@ -48,6 +48,3 @@ alias gstp='git stash pop'
 
 # --- Plugins (Homebrew) ---
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# fast-syntax-highlighting must be last
-source "$(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"

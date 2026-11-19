@@ -1,6 +1,3 @@
-# --- Theme ---
-theme = Nvim Dark
-
 # --- Window ---
 macos-titlebar-style = tabs
 window-padding-balance = true
@@ -11,7 +8,7 @@ shell-integration-features = no-cursor
 
 # --- Font ---
 font-family = "Iosevka"
-font-size = 14
+font-size = 14.5
 
 # --- Input / clipboard ---
 macos-option-as-alt = true
