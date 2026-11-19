@@ -9,6 +9,7 @@ shell-integration-features = no-cursor
 # --- Font ---
 font-family = "Iosevka"
 font-size = 14.5
+font-feature = -calt, -liga, -dlig
 
 # --- Input / clipboard ---
 macos-option-as-alt = true
